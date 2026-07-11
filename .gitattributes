@@ -1,0 +1,6 @@
+# Shell scripts must stay LF to run in WSL; never normalize collected data.
+* text=auto
+*.sh text eol=lf
+*.vbs text eol=crlf
+*.ndjson -text
+*.json text eol=lf
