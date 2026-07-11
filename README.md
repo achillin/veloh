@@ -67,13 +67,14 @@ npm run train      # rebuild public/model/profiles.json from collected data
 
 ## Scheduling collection
 
-**Locally (WSL)** — [`collector/run-local.sh`](collector/run-local.sh) runs
-`collect.mjs --loop 60 --tag local` (single-instance via `flock`). Because WSL doesn't boot by
-itself at Windows logon, [`collector/autostart-wsl.vbs`](collector/autostart-wsl.vbs) placed in
-the Windows Startup folder (`shell:startup`) starts the distro and the collector at every logon.
+**Locally (WSL)** — run [`collector/install-autostart.sh`](collector/install-autostart.sh) once:
+it starts [`collector/run-local.sh`](collector/run-local.sh) (`collect.mjs --loop 60 --tag local`,
+single-instance via `flock`) and drops a tiny generated launcher into the Windows Startup folder
+so the collector revives at every logon — WSL can't boot itself when Windows starts, so that one
+generated artifact is unavoidable; all maintained logic is bash.
 Local snapshots go to `data/snapshots-YYYY-MM-local.ndjson` — a different file than CI writes,
 so pulls never conflict, and the trainer de-duplicates overlapping minutes anyway.
-To stop it: delete the Startup copy and `pkill -f collect.mjs` in WSL.
+Uninstall with `collector/install-autostart.sh --remove`.
 
 **GitHub Actions** (free on public repos, runs even when your PC is off) — already included as
 [`.github/workflows/collect.yml`](.github/workflows/collect.yml). GitHub's cron floor is
