@@ -4,6 +4,7 @@ import MapView from './components/MapView.vue'
 import TopBar from './components/TopBar.vue'
 import TimeScrubber from './components/TimeScrubber.vue'
 import StationPanel from './components/StationPanel.vue'
+import SearchBox from './components/SearchBox.vue'
 import { fetchStations } from './lib/gbfs.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
@@ -16,6 +17,16 @@ const now = ref(new Date())
 const offsetHours = ref(0)
 const selectedId = ref(null)
 const error = ref('')
+const flyTarget = ref(null)
+
+function onGoto(t) {
+  if (t.stationId) {
+    selectedId.value = t.stationId
+    flyTarget.value = { lon: t.lon, lat: t.lat, zoom: 15.5, ts: Date.now() }
+  } else {
+    flyTarget.value = { lon: t.lon, lat: t.lat, zoom: 16, pin: true, label: t.label, ts: Date.now() }
+  }
+}
 
 let statusTimer = null
 let weatherTimer = null
@@ -97,7 +108,13 @@ const selectedSeries = computed(() => {
 
 <template>
   <div class="shell">
-    <MapView :stations="displayStations" :selected-id="selectedId" @select="selectedId = $event" />
+    <MapView
+      :stations="displayStations"
+      :selected-id="selectedId"
+      :fly-to="flyTarget"
+      @select="selectedId = $event"
+    />
+    <SearchBox :stations="stations" @goto="onGoto" />
     <TopBar
       :stations="stations"
       :weather="weather"

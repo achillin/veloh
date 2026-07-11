@@ -113,6 +113,33 @@ body,
   }
 }
 
+/* pin dropped on a searched address */
+.place-pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--accent-2);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+  animation: pin-drop 0.35s ease-out;
+}
+
+.place-pin::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@keyframes pin-drop {
+  from {
+    transform: rotate(-45deg) translate(14px, -14px);
+    opacity: 0;
+  }
+}
+
 /* ---------- shared bits ---------- */
 
 .chip {

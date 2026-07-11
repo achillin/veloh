@@ -6,12 +6,14 @@ import { fracColor } from '../lib/colors.js'
 const props = defineProps({
   stations: { type: Array, required: true }, // display objects: {id, lat, lon, name, frac, bikes, closed, predicted}
   selectedId: { type: String, default: null },
+  flyTo: { type: Object, default: null }, // {lon, lat, zoom, pin?, label?, ts}
 })
 const emit = defineEmits(['select'])
 
 const container = ref(null)
 let map = null
 let triedFallback = false
+let placeMarker = null // pin dropped on a searched address
 const markers = new Map() // id → { marker, el }
 
 const STYLE_PRIMARY = 'https://tiles.openfreemap.org/styles/dark'
@@ -105,8 +107,27 @@ onMounted(() => {
 onBeforeUnmount(() => {
   markers.forEach((m) => m.marker.remove())
   markers.clear()
+  placeMarker?.remove()
   map?.remove()
 })
+
+watch(
+  () => props.flyTo,
+  (t) => {
+    if (!t || !map) return
+    placeMarker?.remove()
+    placeMarker = null
+    if (t.pin) {
+      const el = document.createElement('div')
+      el.className = 'place-pin'
+      el.title = t.label ?? ''
+      placeMarker = new maplibregl.Marker({ element: el, anchor: 'bottom' })
+        .setLngLat([t.lon, t.lat])
+        .addTo(map)
+    }
+    map.flyTo({ center: [t.lon, t.lat], zoom: t.zoom ?? 15, essential: true })
+  }
+)
 
 watch(
   () => [props.stations, props.selectedId],
