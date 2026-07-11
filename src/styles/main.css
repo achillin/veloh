@@ -1,0 +1,168 @@
+:root {
+  --bg: #0b0e14;
+  --panel: rgba(17, 21, 31, 0.72);
+  --panel-solid: #141926;
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #eef2f8;
+  --text-dim: #94a0b4;
+  --accent: #2ee6a6;
+  --accent-2: #4da3ff;
+  --danger: #ff4d5e;
+  --warn: #ffb020;
+  --radius: 16px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', var(--font);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  overflow: hidden;
+}
+
+.glass {
+  background: var(--panel);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- station markers (DOM markers on the MapLibre canvas) ---------- */
+
+.stn {
+  cursor: pointer;
+}
+
+.stn-inner {
+  width: 38px;
+  height: 38px;
+  transform: scale(var(--mscale, 1));
+  transition: transform 0.2s ease;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.stn-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--col) calc(var(--frac) * 360deg), rgba(255, 255, 255, 0.14) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px));
+  transition: background 0.35s ease;
+}
+
+.stn-core {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: rgba(11, 14, 20, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.stn.is-pred .stn-core {
+  font-style: italic;
+  color: #cdd6e4;
+}
+
+.stn.is-pred .stn-ring {
+  opacity: 0.85;
+}
+
+.stn.is-closed .stn-inner {
+  opacity: 0.35;
+}
+
+.stn.is-selected .stn-inner::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 2px solid var(--col);
+  animation: pulse 1.6s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+/* ---------- shared bits ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.chip b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.chip .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.maplibregl-ctrl-attrib {
+  background: rgba(11, 14, 20, 0.6) !important;
+  color: var(--text-dim);
+}
+
+.maplibregl-ctrl-attrib a {
+  color: var(--text-dim) !important;
+}
+
+.maplibregl-ctrl-group {
+  background: var(--panel-solid) !important;
+  border: 1px solid var(--border);
+}
+
+.maplibregl-ctrl-group button span {
+  filter: invert(0.9);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}

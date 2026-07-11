@@ -1,0 +1,32 @@
+# Nightly retrain: rebuilds public/model/profiles.json from all collected
+# snapshots so the deployed app's predictions improve as data accumulates.
+name: train
+on:
+  schedule:
+    - cron: '20 3 * * *' # 03:20 UTC nightly
+  workflow_dispatch:
+
+concurrency:
+  group: collect # serialize with the collector to avoid push races
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node model/train.mjs
+      - name: Commit model
+        run: |
+          git config user.name "trainer-bot"
+          git config user.email "actions@github.com"
+          git add public/model/profiles.json
+          git diff --cached --quiet && exit 0
+          git commit -m "retrain $(date -u +%F)"
+          git pull --rebase origin ${GITHUB_REF_NAME}
+          git push

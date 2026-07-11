@@ -1,0 +1,41 @@
+# 1-minute-resolution collection despite GitHub's 5-minute cron floor:
+# the job starts every 15 minutes and takes 14 snapshots 60 s apart inside
+# one run, then commits them in a single push. Public repos run this free.
+#
+# Note: GitHub cron is best-effort — starts are routinely delayed by a few
+# minutes at busy times, so expect occasional small gaps between bursts.
+name: collect
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Collect 14 snapshots, 60 s apart
+        env:
+          # Optional richer fields from the official JCDecaux API:
+          # add a repo secret JCDECAUX_API_KEY (free key from developer.jcdecaux.com)
+          JCDECAUX_API_KEY: ${{ secrets.JCDECAUX_API_KEY }}
+        run: node collector/collect.mjs --burst 14 --every 60
+      - name: Commit data
+        run: |
+          git config user.name "collector-bot"
+          git config user.email "actions@github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "snapshots $(date -u +%FT%TZ)"
+          git pull --rebase origin ${GITHUB_REF_NAME}
+          git push

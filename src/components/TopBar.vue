@@ -1,0 +1,137 @@
+<script setup>
+import { computed } from 'vue'
+import { describeWmo } from '../lib/weather.js'
+
+const props = defineProps({
+  stations: { type: Array, required: true }, // live station objects
+  weather: { type: Object, default: null },
+  profiles: { type: Object, default: null },
+  updatedAt: { type: Date, default: null },
+  error: { type: String, default: '' },
+})
+
+const bikesNow = computed(() => props.stations.reduce((a, s) => a + s.bikes, 0))
+const emptyCount = computed(() => props.stations.filter((s) => s.renting && s.bikes === 0).length)
+const fullCount = computed(() => props.stations.filter((s) => s.returning && s.docks === 0).length)
+
+const wx = computed(() => {
+  if (!props.weather) return null
+  const { icon, label } = describeWmo(props.weather.current.code)
+  return { icon, label, temp: Math.round(props.weather.current.temp) }
+})
+
+const modelLabel = computed(() =>
+  props.profiles
+    ? `Model · ${Number(props.profiles.snapshots ?? 0).toLocaleString('en')} snapshots`
+    : 'Learning mode — collecting data'
+)
+
+const updatedLabel = computed(() => {
+  if (!props.updatedAt) return '…'
+  return props.updatedAt.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+})
+</script>
+
+<template>
+  <header class="topbar glass">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 100 100" width="26" height="26">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="var(--accent)" stroke-width="12" stroke-dasharray="180 84" stroke-linecap="round" transform="rotate(-90 50 50)" />
+          <circle cx="50" cy="50" r="14" fill="var(--accent)" />
+        </svg>
+      </div>
+      <div>
+        <h1>vel'OH <span>pulse</span></h1>
+        <p>Luxembourg · live availability &amp; forecast</p>
+      </div>
+    </div>
+
+    <div class="chips">
+      <span class="chip"><span class="dot" style="background: var(--accent)"></span><b>{{ bikesNow }}</b>&nbsp;bikes now</span>
+      <span class="chip"><b>{{ stations.length }}</b>&nbsp;stations</span>
+      <span class="chip" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
+      <span class="chip" v-if="fullCount"><span class="dot" style="background: var(--warn)"></span><b>{{ fullCount }}</b>&nbsp;full</span>
+      <span class="chip" v-if="wx">{{ wx.icon }}&nbsp;<b>{{ wx.temp }}°C</b>&nbsp;{{ wx.label }}</span>
+      <span class="chip model" :class="{ trained: !!profiles }">{{ modelLabel }}</span>
+      <span class="chip">⟳ {{ updatedLabel }}</span>
+    </div>
+
+    <p v-if="error" class="err">{{ error }}</p>
+  </header>
+</template>
+
+<style scoped>
+.topbar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 18px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(46, 230, 166, 0.1);
+  border: 1px solid rgba(46, 230, 166, 0.25);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+h1 span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand p {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin-top: 1px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  align-items: center;
+}
+
+.chip.model {
+  border-color: rgba(255, 176, 32, 0.35);
+  color: var(--warn);
+}
+
+.chip.model.trained {
+  border-color: rgba(46, 230, 166, 0.35);
+  color: var(--accent);
+}
+
+.err {
+  flex-basis: 100%;
+  color: var(--danger);
+  font-size: 12.5px;
+}
+</style>

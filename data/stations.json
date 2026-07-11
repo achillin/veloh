@@ -1,0 +1,881 @@
+{
+ "fetchedAt": "2026-07-11T19:04:13.480Z",
+ "stations": {
+  "1": {
+   "name": "#00001-LEON XIII",
+   "lat": 49.598211,
+   "lon": 6.137526,
+   "capacity": 20
+  },
+  "2": {
+   "name": "#00002-GARE CENTRALE 2",
+   "lat": 49.601051,
+   "lon": 6.133744,
+   "capacity": 21
+  },
+  "3": {
+   "name": "#00003-STROOSSBUERGER PLAZ",
+   "lat": 49.600415,
+   "lon": 6.129234,
+   "capacity": 20
+  },
+  "4": {
+   "name": "#00004-ROCADE",
+   "lat": 49.602989,
+   "lon": 6.136083,
+   "capacity": 25
+  },
+  "5": {
+   "name": "#00005-PARAISER PLAZ",
+   "lat": 49.603694,
+   "lon": 6.130189,
+   "capacity": 25
+  },
+  "6": {
+   "name": "#00006-AL BRÉCK",
+   "lat": 49.60481,
+   "lon": 6.133404,
+   "capacity": 15
+  },
+  "7": {
+   "name": "#00007-ROUSEGAERTCHEN",
+   "lat": 49.605818,
+   "lon": 6.129062,
+   "capacity": 15
+  },
+  "8": {
+   "name": "#00008-METZER PLAZ",
+   "lat": 49.607346,
+   "lon": 6.12762,
+   "capacity": 20
+  },
+  "9": {
+   "name": "#00009-CONVICT",
+   "lat": 49.6059,
+   "lon": 6.1199,
+   "capacity": 20
+  },
+  "10": {
+   "name": "#00010-MÄRELER PARC",
+   "lat": 49.608146,
+   "lon": 6.111627,
+   "capacity": 15
+  },
+  "11": {
+   "name": "#00011-WINSTON CHURCHILL",
+   "lat": 49.611317,
+   "lon": 6.120003,
+   "capacity": 15
+  },
+  "12": {
+   "name": "#00012-HAMILIUS",
+   "lat": 49.610738,
+   "lon": 6.126743,
+   "capacity": 20
+  },
+  "13": {
+   "name": "#00013-GELLE FRA",
+   "lat": 49.60951,
+   "lon": 6.128503,
+   "capacity": 25
+  },
+  "14": {
+   "name": "#00014-KNUEDLER",
+   "lat": 49.610126,
+   "lon": 6.132084,
+   "capacity": 23
+  },
+  "15": {
+   "name": "#00015-THEATER PLAZ",
+   "lat": 49.612782,
+   "lon": 6.131208,
+   "capacity": 20
+  },
+  "16": {
+   "name": "#00016-AMELIE",
+   "lat": 49.613339,
+   "lon": 6.125794,
+   "capacity": 20
+  },
+  "17": {
+   "name": "#00017-ROBERT SCHUMAN",
+   "lat": 49.616669,
+   "lon": 6.126069,
+   "capacity": 25
+  },
+  "18": {
+   "name": "#00018-CAMPUS LAMPERTSBIERG",
+   "lat": 49.6219,
+   "lon": 6.1118,
+   "capacity": 19
+  },
+  "19": {
+   "name": "#00019-PHILHARMONIE",
+   "lat": 49.619345,
+   "lon": 6.143907,
+   "capacity": 25
+  },
+  "20": {
+   "name": "#00020-COQUE",
+   "lat": 49.62297,
+   "lon": 6.15497,
+   "capacity": 20
+  },
+  "21": {
+   "name": "#00021-JEAN MONNET",
+   "lat": 49.625714,
+   "lon": 6.148347,
+   "capacity": 20
+  },
+  "22": {
+   "name": "#00022-CAMPUS KIRCHBIERG",
+   "lat": 49.6264,
+   "lon": 6.1613,
+   "capacity": 20
+  },
+  "23": {
+   "name": "#00023-REIMERWEE",
+   "lat": 49.629448,
+   "lon": 6.157348,
+   "capacity": 18
+  },
+  "24": {
+   "name": "#00024-WEICKER",
+   "lat": 49.631952,
+   "lon": 6.17048,
+   "capacity": 20
+  },
+  "25": {
+   "name": "#00025-KIEM",
+   "lat": 49.634283,
+   "lon": 6.166633,
+   "capacity": 20
+  },
+  "26": {
+   "name": "#00026-HOLLERECHER PLAZ",
+   "lat": 49.598613,
+   "lon": 6.117957,
+   "capacity": 25
+  },
+  "27": {
+   "name": "#00027-MERCIER",
+   "lat": 49.5986,
+   "lon": 6.132119,
+   "capacity": 15
+  },
+  "28": {
+   "name": "#00028-CHARLY'S GARE",
+   "lat": 49.61258,
+   "lon": 6.12391,
+   "capacity": 20
+  },
+  "29": {
+   "name": "#00029-MONTEREY",
+   "lat": 49.609583,
+   "lon": 6.119523,
+   "capacity": 20
+  },
+  "30": {
+   "name": "#00030-MERKELS PLAZ",
+   "lat": 49.599846,
+   "lon": 6.122565,
+   "capacity": 20
+  },
+  "31": {
+   "name": "#00031-PLACE DE FRANCE",
+   "lat": 49.60625,
+   "lon": 6.105961,
+   "capacity": 20
+  },
+  "32": {
+   "name": "#00032-PISCINE OLYMPIQUE",
+   "lat": 49.623901,
+   "lon": 6.150013,
+   "capacity": 20
+  },
+  "33": {
+   "name": "#00033-K. ADENAUER",
+   "lat": 49.620586,
+   "lon": 6.138998,
+   "capacity": 15
+  },
+  "34": {
+   "name": "#00034-KOLLEISCH",
+   "lat": 49.604577,
+   "lon": 6.111927,
+   "capacity": 30
+  },
+  "35": {
+   "name": "#00035-GASTON DIDERICH",
+   "lat": 49.609904,
+   "lon": 6.106099,
+   "capacity": 15
+  },
+  "36": {
+   "name": "#00036-J.B. GELLE",
+   "lat": 49.596838,
+   "lon": 6.140615,
+   "capacity": 15
+  },
+  "37": {
+   "name": "#00037-GAULOIS",
+   "lat": 49.60164,
+   "lon": 6.13736,
+   "capacity": 15
+  },
+  "38": {
+   "name": "#00038-HELLEG GEESCHT",
+   "lat": 49.60771,
+   "lon": 6.13456,
+   "capacity": 20
+  },
+  "39": {
+   "name": "#00039-KRAIZGRENNCHEN",
+   "lat": 49.613316,
+   "lon": 6.117582,
+   "capacity": 20
+  },
+  "40": {
+   "name": "#00040-GLACIS KAPELL",
+   "lat": 49.6147,
+   "lon": 6.1211,
+   "capacity": 15
+  },
+  "41": {
+   "name": "#00041-PLACE LAURENT",
+   "lat": 49.620066,
+   "lon": 6.122905,
+   "capacity": 20
+  },
+  "42": {
+   "name": "#00042-SQUARE ANDRE",
+   "lat": 49.6238,
+   "lon": 6.1188,
+   "capacity": 20
+  },
+  "43": {
+   "name": "#00043-LYCEE TECHNIQUE DE BONNEVOIE",
+   "lat": 49.5911,
+   "lon": 6.1416,
+   "capacity": 20
+  },
+  "44": {
+   "name": "#00044-ARELER STROOSS",
+   "lat": 49.6162,
+   "lon": 6.0984,
+   "capacity": 20
+  },
+  "45": {
+   "name": "#00045-AUBEPINES",
+   "lat": 49.61212,
+   "lon": 6.09749,
+   "capacity": 20
+  },
+  "46": {
+   "name": "#00046-LONKECHER STROOSS",
+   "lat": 49.60563,
+   "lon": 6.10003,
+   "capacity": 15
+  },
+  "47": {
+   "name": "#00047-LEOPOLD GOEBEL",
+   "lat": 49.6122,
+   "lon": 6.1072,
+   "capacity": 20
+  },
+  "48": {
+   "name": "#00048-BGL BNP PARIBAS",
+   "lat": 49.632179,
+   "lon": 6.174446,
+   "capacity": 20
+  },
+  "50": {
+   "name": "#00050-EUROPAPARLAMENT",
+   "lat": 49.620607,
+   "lon": 6.147885,
+   "capacity": 20
+  },
+  "51": {
+   "name": "#00051-SAUERWISS",
+   "lat": 49.594088,
+   "lon": 6.125123,
+   "capacity": 20
+  },
+  "52": {
+   "name": "#00052-BEI DER AUER",
+   "lat": 49.591404,
+   "lon": 6.125333,
+   "capacity": 20
+  },
+  "53": {
+   "name": "#00053-LUDWIG VAN BEETHOVEN",
+   "lat": 49.59,
+   "lon": 6.1172,
+   "capacity": 20
+  },
+  "54": {
+   "name": "#00054-CLOCHE D'OR",
+   "lat": 49.583377,
+   "lon": 6.115817,
+   "capacity": 20
+  },
+  "55": {
+   "name": "#00055-SCHAARFEN ECK",
+   "lat": 49.58043,
+   "lon": 6.11465,
+   "capacity": 20
+  },
+  "56": {
+   "name": "#00056-FISCHERHAFF",
+   "lat": 49.5911,
+   "lon": 6.1057,
+   "capacity": 25
+  },
+  "57": {
+   "name": "#00057-BOUILLON",
+   "lat": 49.60001,
+   "lon": 6.10826,
+   "capacity": 35
+  },
+  "58": {
+   "name": "#00058-SCHLUECHTHAUS",
+   "lat": 49.60136,
+   "lon": 6.11581,
+   "capacity": 20
+  },
+  "59": {
+   "name": "#00059-ST HUBERT",
+   "lat": 49.60289,
+   "lon": 6.09322,
+   "capacity": 20
+  },
+  "60": {
+   "name": "#00060-BOCH",
+   "lat": 49.61925,
+   "lon": 6.10842,
+   "capacity": 20
+  },
+  "61": {
+   "name": "#00061-FRIEDEN",
+   "lat": 49.636754,
+   "lon": 6.16333,
+   "capacity": 20
+  },
+  "62": {
+   "name": "#00062-LEYDENBACH",
+   "lat": 49.62915,
+   "lon": 6.173101,
+   "capacity": 20
+  },
+  "63": {
+   "name": "#00063-LABOURS",
+   "lat": 49.6301,
+   "lon": 6.16843,
+   "capacity": 20
+  },
+  "64": {
+   "name": "#00064-GRENIER",
+   "lat": 49.59383,
+   "lon": 6.14327,
+   "capacity": 20
+  },
+  "65": {
+   "name": "#00065-BEI DER SCHOUL",
+   "lat": 49.58421,
+   "lon": 6.14202,
+   "capacity": 20
+  },
+  "66": {
+   "name": "#00066-BEIM TENNIS",
+   "lat": 49.579231,
+   "lon": 6.134018,
+   "capacity": 20
+  },
+  "67": {
+   "name": "#00067-MAIRIE DE HESPERANGE",
+   "lat": 49.571924,
+   "lon": 6.15965,
+   "capacity": 20
+  },
+  "68": {
+   "name": "#00068-UM SCHLASS",
+   "lat": 49.57337,
+   "lon": 6.14397,
+   "capacity": 15
+  },
+  "69": {
+   "name": "#00069-UM REIMERWEE",
+   "lat": 49.61769,
+   "lon": 6.08276,
+   "capacity": 20
+  },
+  "70": {
+   "name": "#00070-GEMENG STROOSSEN",
+   "lat": 49.61909,
+   "lon": 6.07227,
+   "capacity": 20
+  },
+  "71": {
+   "name": "#00071-LES THERMES",
+   "lat": 49.61489,
+   "lon": 6.07275,
+   "capacity": 20
+  },
+  "72": {
+   "name": "#00072-AN DER BOURMICHT",
+   "lat": 49.61086,
+   "lon": 6.08097,
+   "capacity": 20
+  },
+  "73": {
+   "name": "#00073-JEANNE D'ARC",
+   "lat": 49.59691,
+   "lon": 6.147957,
+   "capacity": 20
+  },
+  "74": {
+   "name": "#00074-SAINTE CUNEGONDE",
+   "lat": 49.6146,
+   "lon": 6.14283,
+   "capacity": 15
+  },
+  "75": {
+   "name": "#00075-BEINCHEN",
+   "lat": 49.61561,
+   "lon": 6.13097,
+   "capacity": 15
+  },
+  "76": {
+   "name": "#00076-SAUVAGE",
+   "lat": 49.62521,
+   "lon": 6.13938,
+   "capacity": 15
+  },
+  "77": {
+   "name": "#00077-FUNICULAIRE",
+   "lat": 49.618823,
+   "lon": 6.136324,
+   "capacity": 20
+  },
+  "78": {
+   "name": "#00078-ST MATHIEU",
+   "lat": 49.619061,
+   "lon": 6.1323,
+   "capacity": 18
+  },
+  "79": {
+   "name": "#00079-GARE CENTRALE",
+   "lat": 49.6017,
+   "lon": 6.1331,
+   "capacity": 20
+  },
+  "80": {
+   "name": "#00080-INS",
+   "lat": 49.612542,
+   "lon": 6.147918,
+   "capacity": 20
+  },
+  "81": {
+   "name": "#00081-CARMEL",
+   "lat": 49.62019,
+   "lon": 6.172682,
+   "capacity": 20
+  },
+  "82": {
+   "name": "#00082-GARE CENTS-HAMM",
+   "lat": 49.614749,
+   "lon": 6.164772,
+   "capacity": 20
+  },
+  "83": {
+   "name": "#00083-PULVERMÜHL",
+   "lat": 49.608758,
+   "lon": 6.149591,
+   "capacity": 20
+  },
+  "84": {
+   "name": "#00084-BITBOURG",
+   "lat": 49.61349,
+   "lon": 6.17066,
+   "capacity": 20
+  },
+  "85": {
+   "name": "#00085-EINSTEIN",
+   "lat": 49.5842,
+   "lon": 6.1249,
+   "capacity": 18
+  },
+  "86": {
+   "name": "#00086-PWC - BD KOCKELSCHEUER",
+   "lat": 49.580242,
+   "lon": 6.120862,
+   "capacity": 20
+  },
+  "87": {
+   "name": "#00087-NATIONALBIBLIOTHEIK",
+   "lat": 49.629865,
+   "lon": 6.166252,
+   "capacity": 20
+  },
+  "88": {
+   "name": "#00088-SERRA",
+   "lat": 49.6354391284749,
+   "lon": 6.17623092845448,
+   "capacity": 30
+  },
+  "89": {
+   "name": "#00089-PLACE THORN",
+   "lat": 49.60361,
+   "lon": 6.10278,
+   "capacity": 20
+  },
+  "90": {
+   "name": "#00090-HUBERTY (MÜHLENBACH)",
+   "lat": 49.6294701613971,
+   "lon": 6.11780413988129,
+   "capacity": 20
+  },
+  "91": {
+   "name": "#00091-MERSCH (MÜHLENBACH)",
+   "lat": 49.627834,
+   "lon": 6.122333,
+   "capacity": 20
+  },
+  "92": {
+   "name": "#00092-BRILL (CESSANGE)",
+   "lat": 49.58914,
+   "lon": 6.099213,
+   "capacity": 20
+  },
+  "93": {
+   "name": "#00093-GODCHAUX (BONNEVOIE)",
+   "lat": 49.601652,
+   "lon": 6.145533,
+   "capacity": 20
+  },
+  "94": {
+   "name": "#00094-HAMM-COLONIE",
+   "lat": 49.606983,
+   "lon": 6.154863,
+   "capacity": 20
+  },
+  "95": {
+   "name": "#00095-MAIRIE DE BERTRANGE",
+   "lat": 49.61093,
+   "lon": 6.051527,
+   "capacity": 20
+  },
+  "96": {
+   "name": "#00096-BERTRANGE - GARE",
+   "lat": 49.613161,
+   "lon": 6.060382,
+   "capacity": 15
+  },
+  "97": {
+   "name": "#00097-HELFENT (PARKING)",
+   "lat": 49.603644,
+   "lon": 6.077783,
+   "capacity": 15
+  },
+  "98": {
+   "name": "#00098-CITY CONCORDE",
+   "lat": 49.600592,
+   "lon": 6.065794,
+   "capacity": 20
+  },
+  "99": {
+   "name": "#00099-CAMPUS CENTS",
+   "lat": 49.617566,
+   "lon": 6.165165,
+   "capacity": 20
+  },
+  "100": {
+   "name": "#00100-FORT NIEDERGRÜNEWALD",
+   "lat": 49.619439,
+   "lon": 6.140894,
+   "capacity": 20
+  },
+  "101": {
+   "name": "#00101-MÜNCHEN-TESCH",
+   "lat": 49.628293,
+   "lon": 6.133301,
+   "capacity": 20
+  },
+  "102": {
+   "name": "#00102-FENTANGE HIEHL",
+   "lat": 49.567771,
+   "lon": 6.152463,
+   "capacity": 14
+  },
+  "103": {
+   "name": "#00103-ALZINGEN GÄSSEL",
+   "lat": 49.568074,
+   "lon": 6.163927,
+   "capacity": 15
+  },
+  "104": {
+   "name": "#00104-ITZIG VILLAGE/PLACE MANDERSCHEID",
+   "lat": 49.58574,
+   "lon": 6.171965,
+   "capacity": 15
+  },
+  "105": {
+   "name": "#00105-ITZIG PLATEAU/HUBERTUSPAD",
+   "lat": 49.587633,
+   "lon": 6.170123,
+   "capacity": 14
+  },
+  "106": {
+   "name": "#00106-LEUDELANGE CENTRE",
+   "lat": 49.567305,
+   "lon": 6.064291,
+   "capacity": 15
+  },
+  "107": {
+   "name": "#00107-LEUDELANGE GARE",
+   "lat": 49.586736,
+   "lon": 6.05966,
+   "capacity": 20
+  },
+  "108": {
+   "name": "#00108-EDELECK",
+   "lat": 49.565477,
+   "lon": 6.079436,
+   "capacity": 20
+  },
+  "109": {
+   "name": "#00109-FOYER",
+   "lat": 49.569178,
+   "lon": 6.08175,
+   "capacity": 15
+  },
+  "110": {
+   "name": "#00110-ROND-POINT GAASSCHTBIERG",
+   "lat": 49.627159,
+   "lon": 6.031948,
+   "capacity": 20
+  },
+  "111": {
+   "name": "#00111-HALL SPORTIF NICOLAS FRANTZ",
+   "lat": 49.623154,
+   "lon": 6.024879,
+   "capacity": 20
+  },
+  "112": {
+   "name": "#00112-PLACE DE L'INDEPENDANCE",
+   "lat": 49.62635,
+   "lon": 6.022996,
+   "capacity": 20
+  },
+  "113": {
+   "name": "#00113-EDEMER",
+   "lat": 49.629363,
+   "lon": 6.017927,
+   "capacity": 20
+  },
+  "114": {
+   "name": "#00114-ROND-POINT MOTEL",
+   "lat": 49.641375,
+   "lon": 6.001651,
+   "capacity": 16
+  },
+  "115": {
+   "name": "#00115-CENTRE CULTUREL CAP",
+   "lat": 49.645239,
+   "lon": 5.987938,
+   "capacity": 15
+  },
+  "116": {
+   "name": "#00116-CHARLY'S STATION",
+   "lat": 49.649823,
+   "lon": 6.225796,
+   "capacity": 20
+  },
+  "117": {
+   "name": "#00117-SYRDALL SCHWEMM",
+   "lat": 49.65314,
+   "lon": 6.245365,
+   "capacity": 20
+  },
+  "118": {
+   "name": "#00118-PESCHER 4",
+   "lat": 49.622956,
+   "lon": 6.074244,
+   "capacity": 15
+  },
+  "119": {
+   "name": "#00119-RIEDGEN",
+   "lat": 49.619953,
+   "lon": 6.063326,
+   "capacity": 15
+  },
+  "120": {
+   "name": "#00120-A RILSPERT",
+   "lat": 49.60751,
+   "lon": 6.045842,
+   "capacity": 15
+  },
+  "121": {
+   "name": "#00121-BARTRENG - RUE KIEM",
+   "lat": 49.617394,
+   "lon": 6.047817,
+   "capacity": 15
+  },
+  "122": {
+   "name": "#00122-DICKS",
+   "lat": 49.604944,
+   "lon": 6.05228,
+   "capacity": 15
+  },
+  "123": {
+   "name": "#00123-BELLE ETOILE",
+   "lat": 49.62187,
+   "lon": 6.051072,
+   "capacity": 20
+  },
+  "124": {
+   "name": "#00124-BARTRENG - CITE RIEDGEN",
+   "lat": 49.616795,
+   "lon": 6.058614,
+   "capacity": 15
+  },
+  "125": {
+   "name": "#00125-POLICE CAPELLEN",
+   "lat": 49.644089,
+   "lon": 5.992759,
+   "capacity": 15
+  },
+  "126": {
+   "name": "#00126-SALLES DES FÊTES HOLZEM",
+   "lat": 49.615901,
+   "lon": 5.993194,
+   "capacity": 20
+  },
+  "127": {
+   "name": "#00127-MAMBRA",
+   "lat": 49.63189,
+   "lon": 6.021562,
+   "capacity": 20
+  },
+  "128": {
+   "name": "#00128-GARE MAMER",
+   "lat": 49.625695,
+   "lon": 6.020409,
+   "capacity": 20
+  },
+  "129": {
+   "name": "#00129-GARE CAPELLEN",
+   "lat": 49.638604,
+   "lon": 5.982361,
+   "capacity": 20
+  },
+  "130": {
+   "name": "#00130-LYCÉE JOSY BARTEL MAMER",
+   "lat": 49.622397,
+   "lon": 6.036232,
+   "capacity": 20
+  },
+  "131": {
+   "name": "#00131-EUROPASCHOUL MAMER",
+   "lat": 49.618073,
+   "lon": 6.037591,
+   "capacity": 20
+  },
+  "132": {
+   "name": "#00132-CENTRE DE TENNIS PAUL GLÜCK",
+   "lat": 49.642519,
+   "lon": 5.99179,
+   "capacity": 20
+  },
+  "133": {
+   "name": "#00133-HALANZY",
+   "lat": 49.645359,
+   "lon": 6.128075,
+   "capacity": 20
+  },
+  "134": {
+   "name": "#00134-STADE HENRI-DUNANT",
+   "lat": 49.646906,
+   "lon": 6.134279,
+   "capacity": 20
+  },
+  "135": {
+   "name": "#00135-HAMMES",
+   "lat": 49.623341,
+   "lon": 6.143717,
+   "capacity": 20
+  },
+  "136": {
+   "name": "#00136-NENNIG",
+   "lat": 49.633322,
+   "lon": 6.136676,
+   "capacity": 20
+  },
+  "137": {
+   "name": "#00137-PARC GASPERICH",
+   "lat": 49.586766,
+   "lon": 6.122404,
+   "capacity": 20
+  },
+  "138": {
+   "name": "#00138-A SCHOMMESCH",
+   "lat": 49.659778,
+   "lon": 6.241714,
+   "capacity": 20
+  },
+  "139": {
+   "name": "#00139-HUESCHTERT",
+   "lat": 49.657941,
+   "lon": 6.231683,
+   "capacity": 15
+  },
+  "140": {
+   "name": "#00140-LAACH",
+   "lat": 49.651348,
+   "lon": 6.255547,
+   "capacity": 20
+  },
+  "142": {
+   "name": "#00142-BERELER SCHOUL",
+   "lat": 49.653525,
+   "lon": 6.127049,
+   "capacity": 15
+  },
+  "143": {
+   "name": "#00143-MAIRIE DE WALFERDANGE",
+   "lat": 49.658862,
+   "lon": 6.130167,
+   "capacity": 20
+  },
+  "144": {
+   "name": "#00144-WALFERDANGE GARE",
+   "lat": 49.66151,
+   "lon": 6.135785,
+   "capacity": 15
+  },
+  "145": {
+   "name": "#00145-PÔLE D'ÉCHANGE HOWALD",
+   "lat": 49.580898,
+   "lon": 6.131494,
+   "capacity": 20
+  },
+  "146": {
+   "name": "#00146-STADE DE LUXEMBOURG",
+   "lat": 49.57681,
+   "lon": 6.110465,
+   "capacity": 25
+  },
+  "147": {
+   "name": "#00147-VERLUEREKASCHT",
+   "lat": 49.6051104,
+   "lon": 6.1411026,
+   "capacity": 15
+  },
+  "65009": {
+   "name": "BORNE ATELIER LUX",
+   "lat": 49.6168333870108,
+   "lon": 6.05420384349982,
+   "capacity": 4
+  }
+ }
+}
