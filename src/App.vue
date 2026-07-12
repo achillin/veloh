@@ -98,6 +98,7 @@ async function refreshRadar() {
 }
 
 const radarFrame = computed(() => radarFrames.value[radarIdx.value] ?? null)
+const radarTemplates = computed(() => radarFrames.value.map((f) => f.template))
 
 // Makes a rain-free (fully transparent) radar overlay legible as "working,
 // just dry" — and points at the nearest rain so you know where to look.
@@ -318,7 +319,8 @@ const selectedSeries = computed(() => {
       :user-pos="userPos"
       :start-pos="customStart"
       :route="walkRoute"
-      :radar="radarFrame?.template ?? null"
+      :radar-frames="radarTemplates"
+      :radar-idx="radarIdx"
       @select="selectedId = $event"
       @setstart="onSetStart"
     />

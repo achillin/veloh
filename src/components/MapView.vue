@@ -10,7 +10,8 @@ const props = defineProps({
   userPos: { type: Object, default: null }, // {lat, lon}
   route: { type: Object, default: null }, // { geometry: GeoJSON LineString }
   startPos: { type: Object, default: null }, // custom route origin {lat, lon, label?}
-  radar: { type: String, default: null }, // rain-radar raster tile URL template
+  radarFrames: { type: Array, default: () => [] }, // radar tile URL templates, one per frame
+  radarIdx: { type: Number, default: 0 }, // which frame is visible
 })
 const emit = defineEmits(['select', 'setstart'])
 
@@ -47,40 +48,57 @@ function ensureRouteLayers() {
   })
 }
 
-const RADAR_SRC = 'rain-radar'
+const RADAR_PREFIX = 'rain-radar-'
+let radarCount = 0 // how many frame layers are currently on the map
 let styleReady = false // set on first (and every) style load
 
-// Raster tile URLs can't be swapped in place — drop & re-add the source.
-// Also re-applied after a style swap (which wipes custom sources).
+// Animation without flicker: every frame gets its own always-loaded raster
+// layer once, and stepping the animation only flips raster-opacity — no
+// source teardown, so no tile-loading gap between frames.
 // NB: not gated on isStyleLoaded() — that flag flaps during tile loads.
-function applyRadar() {
+function applyRadarFrames() {
   if (!map || !styleReady) return
   try {
-    if (map.getLayer('rain-radar-layer')) map.removeLayer('rain-radar-layer')
-    if (map.getSource(RADAR_SRC)) map.removeSource(RADAR_SRC)
-    if (!props.radar) return
-    map.addSource(RADAR_SRC, {
-      type: 'raster',
-      tiles: [props.radar],
-      tileSize: 512,
-      // RainViewer's radar composite serves real data only up to z7 (probed:
-      // z8+ returns "Zoom level not supported" images) — overzoom from there
-      maxzoom: 7,
-      attribution: 'Radar © RainViewer',
-    })
-    map.addLayer(
-      {
-        id: 'rain-radar-layer',
+    for (let i = 0; i < radarCount; i++) {
+      if (map.getLayer(`${RADAR_PREFIX}layer-${i}`)) map.removeLayer(`${RADAR_PREFIX}layer-${i}`)
+      if (map.getSource(`${RADAR_PREFIX}${i}`)) map.removeSource(`${RADAR_PREFIX}${i}`)
+    }
+    radarCount = props.radarFrames.length
+    props.radarFrames.forEach((template, i) => {
+      map.addSource(`${RADAR_PREFIX}${i}`, {
         type: 'raster',
-        source: RADAR_SRC,
-        // no fade-in: the animation swaps frames every ~800 ms and cached
-        // tiles should appear instantly instead of blinking
-        paint: { 'raster-opacity': 0.6, 'raster-fade-duration': 0 },
-      },
-      map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
-    )
+        tiles: [template],
+        tileSize: 512,
+        // RainViewer's radar composite serves real data only up to z7 (probed:
+        // z8+ returns "Zoom level not supported" images) — overzoom from there
+        maxzoom: 7,
+        attribution: 'Radar © RainViewer',
+      })
+      map.addLayer(
+        {
+          id: `${RADAR_PREFIX}layer-${i}`,
+          type: 'raster',
+          source: `${RADAR_PREFIX}${i}`,
+          paint: {
+            'raster-opacity': i === props.radarIdx ? 0.6 : 0,
+            'raster-fade-duration': 0,
+          },
+        },
+        map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
+      )
+    })
   } catch {
-    map.once('idle', applyRadar) // style mid-swap — retry when settled
+    map.once('idle', applyRadarFrames) // style mid-swap — retry when settled
+  }
+}
+
+function applyRadarIdx() {
+  if (!map || !styleReady) return
+  for (let i = 0; i < radarCount; i++) {
+    const id = `${RADAR_PREFIX}layer-${i}`
+    if (map.getLayer(id)) {
+      map.setPaintProperty(id, 'raster-opacity', i === props.radarIdx ? 0.6 : 0)
+    }
   }
 }
 
@@ -164,7 +182,7 @@ onMounted(() => {
   const onStyleReady = () => {
     styleReady = true
     ensureRouteLayers()
-    applyRadar()
+    applyRadarFrames()
   }
   map.on('load', onStyleReady)
   map.on('style.load', onStyleReady)
@@ -195,7 +213,8 @@ onBeforeUnmount(() => {
   map?.remove()
 })
 
-watch(() => props.radar, applyRadar)
+watch(() => props.radarFrames, applyRadarFrames)
+watch(() => props.radarIdx, applyRadarIdx)
 
 watch(
   () => props.startPos,
