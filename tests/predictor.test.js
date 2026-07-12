@@ -13,6 +13,11 @@ describe('predict', () => {
     expect(p).toEqual({ frac: 0.5, bikes: 10, kind: 'live' })
   })
 
+  it('treats past targets as live (radar-history scrubbing)', () => {
+    const p = predict(station, hoursAhead(-1.5), baseCtx)
+    expect(p).toEqual({ frac: 0.5, bikes: 10, kind: 'live' })
+  })
+
   it('clamps live fraction when bikes exceed capacity', () => {
     const p = predict({ id: '1', capacity: 10, bikes: 15 }, now, baseCtx)
     expect(p.frac).toBe(1)

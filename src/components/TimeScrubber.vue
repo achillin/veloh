@@ -11,7 +11,10 @@ const props = defineProps({
 })
 const emit = defineEmits(['update:offsetHours'])
 
-const HORIZON = 48
+// -2 h of radar history … +48 h of forecast, in 10-minute steps
+const MIN = -2
+const MAX = 48
+const STEP = 1 / 6
 
 const target = computed(() => new Date(props.now.getTime() + props.offsetHours * 3.6e6))
 const holiday = computed(() => holidayName(target.value))
@@ -30,7 +33,7 @@ const label = computed(() => {
 // Within radar range (~2 h) the rain call comes from the radar nowcast,
 // which beats the hourly model; beyond that, the model forecast decides.
 const radarRain = computed(() => {
-  if (!props.radarPoints?.length || props.offsetHours === 0) return null
+  if (!props.radarPoints?.length || props.offsetHours <= 0) return null
   const t = target.value.getTime()
   const windowPts = props.radarPoints.filter((p) => Math.abs(p.time.getTime() - t) <= 30 * 60_000)
   if (!windowPts.length) return null
@@ -48,14 +51,19 @@ const wx = computed(() => {
 })
 
 function onInput(e) {
-  emit('update:offsetHours', Number(e.target.value))
+  // snap to clean 10-minute steps despite float step accumulation
+  emit('update:offsetHours', Math.round(Number(e.target.value) * 6) / 6)
 }
 
-const ticks = [0, 12, 24, 36, 48]
-function tickLabel(h) {
-  if (h === 0) return 'now'
-  return `+${h}h`
-}
+const ticks = [
+  { h: -2, label: '-2h' },
+  { h: 0, label: 'now' },
+  { h: 12, label: '+12h' },
+  { h: 24, label: '+24h' },
+  { h: 36, label: '+36h' },
+  { h: 48, label: '+48h' },
+]
+const tickLeft = (h) => `${(((h - MIN) / (MAX - MIN)) * 100).toFixed(2)}%`
 </script>
 
 <template>
@@ -67,18 +75,24 @@ function tickLabel(h) {
       <span v-if="holiday" class="chip holiday">🎉 {{ holiday }}</span>
       <span v-if="wx" class="chip" :title="wx.byRadar ? 'Rain call from radar nowcast' : 'Rain call from model forecast'">{{ wx.icon }} <b>{{ wx.temp }}°C</b><template v-if="wx.rain">&nbsp;· rain{{ wx.byRadar ? ' (radar)' : ' likely' }}</template></span>
       <span v-if="offsetHours > 0" class="chip fc">forecast</span>
+      <span v-if="offsetHours < 0" class="chip hist">radar history</span>
     </div>
     <input
       type="range"
-      min="0"
-      :max="HORIZON"
-      step="1"
+      :min="MIN"
+      :max="MAX"
+      :step="STEP"
       :value="offsetHours"
       @input="onInput"
-      aria-label="Forecast time"
+      aria-label="Time"
     />
     <div class="ticks">
-      <span v-for="t in ticks" :key="t">{{ tickLabel(t) }}</span>
+      <span
+        v-for="(t, i) in ticks"
+        :key="t.h"
+        :style="{ left: tickLeft(t.h) }"
+        :class="{ first: i === 0, last: i === ticks.length - 1 }"
+      >{{ t.label }}</span>
     </div>
   </div>
 </template>
@@ -139,13 +153,18 @@ function tickLabel(h) {
   border-color: rgba(255, 176, 32, 0.35);
 }
 
+.chip.hist {
+  color: var(--accent-2);
+  border-color: rgba(77, 163, 255, 0.35);
+}
+
 input[type='range'] {
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  background: linear-gradient(90deg, rgba(77, 163, 255, 0.7) 0%, var(--accent) 4%, var(--accent-2) 100%);
   outline: none;
   cursor: pointer;
 }
@@ -170,10 +189,24 @@ input[type='range']::-moz-range-thumb {
 }
 
 .ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 15px;
   margin-top: 6px;
   font-size: 10.5px;
   color: var(--text-dim);
+}
+
+.ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.ticks span.first {
+  transform: none;
+}
+
+.ticks span.last {
+  transform: translateX(-100%);
 }
 </style>

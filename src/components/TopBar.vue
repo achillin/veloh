@@ -33,15 +33,17 @@ const bikesNow = computed(() => props.stations.reduce((a, s) => a + s.bikes, 0))
 const emptyCount = computed(() => props.stations.filter((s) => s.renting && s.bikes === 0).length)
 const fullCount = computed(() => props.stations.filter((s) => s.returning && s.docks === 0).length)
 
-// Follows the time scrubber: current conditions at "now", the hourly
-// forecast when scrubbed into the future.
+// Follows the time scrubber: current conditions at "now", the hourly value
+// for the scrubbed time otherwise (the hourly series covers today's past
+// hours too, so radar-history scrubbing keeps a sensible temperature).
 const wx = computed(() => {
   if (!props.weather) return null
-  if (props.offsetHours > 0 && props.target) {
+  if (props.offsetHours !== 0 && props.target) {
     const f = forecastAt(props.weather, props.target)
-    if (!f) return null
-    const { icon, label } = describeWmo(f.code)
-    return { icon, label, temp: Math.round(f.temp), forecast: true }
+    if (f) {
+      const { icon, label } = describeWmo(f.code)
+      return { icon, label, temp: Math.round(f.temp), forecast: props.offsetHours > 0 }
+    }
   }
   const { icon, label } = describeWmo(props.weather.current.code)
   return { icon, label, temp: Math.round(props.weather.current.temp), forecast: false }

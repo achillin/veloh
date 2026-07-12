@@ -49,7 +49,8 @@ const path = computed(() => {
 
 const dot = computed(() => {
   const pts = props.series
-  const idx = Math.min(Math.max(props.offsetHours, 0), pts.length - 1)
+  // series is hourly — snap the (possibly fractional/negative) offset
+  const idx = Math.min(Math.max(Math.round(props.offsetHours), 0), pts.length - 1)
   if (!pts.length) return null
   const step = (W - 2 * PAD) / (pts.length - 1)
   const p = pts[idx]

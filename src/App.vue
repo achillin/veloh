@@ -30,6 +30,8 @@ const radarFrames = shallowRef([]) // ~2 h of radar + 30 min nowcast, 10-min ste
 const radarIdx = ref(0) // animation position
 const radarInfo = shallowRef(null) // { coverage, nearest: { km, dir } | null } around the city
 
+const target = computed(() => new Date(now.value.getTime() + offsetHours.value * 3.6e6))
+
 function onGoto(t) {
   if (t.stationId) {
     selectedId.value = t.stationId
@@ -103,8 +105,14 @@ const radarTemplates = computed(() => radarFrames.value.map((f) => f.template))
 // Makes a rain-free (fully transparent) radar overlay legible as "working,
 // just dry" — and points at the nearest rain so you know where to look.
 const radarNote = computed(() => {
+  if (!radarOn.value || !radarFrames.value.length) return null
   const f = radarFrame.value
-  if (!radarOn.value || !f) return null
+  if (!f) {
+    // RainViewer's nowcast list fluctuates — report the real horizon
+    const last = radarFrames.value.at(-1)
+    const lt = last.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+    return `🕒 radar ends ${lt} — model forecast beyond`
+  }
   const t = f.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
   const when = f.nowcast ? `${t} +forecast` : t
   const info = radarInfo.value
@@ -114,22 +122,49 @@ const radarNote = computed(() => {
   return `🕒 ${when} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
 })
 
+function stepRadar() {
+  const n = radarFrames.value.length
+  if (n) radarIdx.value = ((radarIdx.value < 0 ? -1 : radarIdx.value) + 1) % n
+}
+
+// Live view (offset 0): auto-play the past-2h → +30min loop.
+// Scrubbed: show the frame nearest the target time; beyond the radar
+// horizon hide the overlay (radarIdx -1 → all layers transparent).
+function syncRadarPlayback() {
+  clearInterval(radarAnimTimer)
+  radarAnimTimer = null
+  if (!radarOn.value || !radarFrames.value.length) return
+  if (offsetHours.value === 0) {
+    if (radarIdx.value < 0) radarIdx.value = 0
+    radarAnimTimer = setInterval(stepRadar, 800)
+    return
+  }
+  const t = target.value.getTime()
+  let best = -1
+  let bestD = Infinity
+  radarFrames.value.forEach((f, i) => {
+    const d = Math.abs(f.time.getTime() - t)
+    if (d < bestD) {
+      bestD = d
+      best = i
+    }
+  })
+  radarIdx.value = bestD <= 20 * 60_000 ? best : -1
+}
+
 watch(radarOn, (on) => {
   clearInterval(radarTimer)
-  clearInterval(radarAnimTimer)
   if (on) {
     refreshRadar()
     radarTimer = setInterval(refreshRadar, 5 * 60_000)
-    // classic rain-radar loop: past 2 h → 30 min nowcast, then repeat
-    radarAnimTimer = setInterval(() => {
-      const n = radarFrames.value.length
-      if (n) radarIdx.value = (radarIdx.value + 1) % n
-    }, 800)
   } else {
     radarFrames.value = []
     radarIdx.value = 0
   }
+  syncRadarPlayback()
 })
+
+watch([() => target.value.getTime(), radarFrames], syncRadarPlayback)
 
 function initGeolocation() {
   // ?at=lat,lon simulates a position (testing, or "if I were there")
@@ -175,8 +210,6 @@ const predictionCtx = computed(() => ({
   profiles: profiles.value,
   globalLiveMean: globalMeanFraction(stations.value),
 }))
-
-const target = computed(() => new Date(now.value.getTime() + offsetHours.value * 3.6e6))
 
 // What the map shows: live values at offset 0, model output otherwise.
 const displayStations = computed(() => {
