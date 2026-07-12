@@ -1,0 +1,23 @@
+# Unit tests on every code push. Data-collection commits (bot-authored,
+# touching only data/ and the trained model) are excluded to avoid burning
+# a CI run every 15 minutes.
+name: test
+on:
+  push:
+    paths-ignore:
+      - 'data/**'
+      - 'public/model/**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test

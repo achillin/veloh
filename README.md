@@ -79,9 +79,14 @@ Nobody publishes vel'OH *history*, so the model trains on data **you collect you
 ```sh
 npm install
 npm run dev        # app on http://localhost:5173
+npm test           # unit tests (vitest) — also run in CI on every code push
 npm run collect    # one training snapshot
 npm run train      # rebuild public/model/profiles.json from collected data
 ```
+
+Unit tests cover the logic layer (`src/lib/`): holiday/Easter rules, the predictor's
+blending and shrinkage, GBFS merging, radar nowcast parsing, routing helpers, WMO mapping
+and color scales — see [`tests/`](tests/). UI components are verified manually for now.
 
 ## Scheduling collection
 

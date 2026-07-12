@@ -3,13 +3,9 @@
 //   Covers Benelux incl. Luxembourg (nearest radar: Wideumont, ~40 km).
 // - RainViewer: composite radar imagery as map tiles.
 
-export async function fetchRainNowcast(lat = 49.61, lon = 6.13) {
-  const res = await fetch(
-    `https://gpsgadget.buienradar.nl/data/raintext?lat=${lat.toFixed(2)}&lon=${lon.toFixed(2)}`
-  )
-  if (!res.ok) throw new Error(`buienradar → HTTP ${res.status}`)
-  const text = await res.text()
-  const now = new Date()
+/** Parses Buienradar "raintext" ("value|HH:MM" lines, value 0–255 log scale)
+ *  into [{time, mmh}]. Exported separately for testability. */
+export function parseRaintext(text, now = new Date()) {
   const points = []
   for (const line of text.trim().split('\n')) {
     const m = line.trim().match(/^(\d{1,3})\|(\d{1,2}):(\d{2})$/)
@@ -17,9 +13,18 @@ export async function fetchRainNowcast(lat = 49.61, lon = 6.13) {
     const t = new Date(now)
     t.setHours(Number(m[2]), Number(m[3]), 0, 0)
     if (t.getTime() < now.getTime() - 30 * 60_000) t.setDate(t.getDate() + 1) // series wraps midnight
-    const v = Number(m[1]) // 0–255, log scale
+    const v = Number(m[1])
     points.push({ time: t, mmh: v > 0 ? +Math.pow(10, (v - 109) / 32).toFixed(2) : 0 })
   }
+  return points
+}
+
+export async function fetchRainNowcast(lat = 49.61, lon = 6.13) {
+  const res = await fetch(
+    `https://gpsgadget.buienradar.nl/data/raintext?lat=${lat.toFixed(2)}&lon=${lon.toFixed(2)}`
+  )
+  if (!res.ok) throw new Error(`buienradar → HTTP ${res.status}`)
+  const points = parseRaintext(await res.text())
   if (!points.length) throw new Error('no nowcast data')
   return points
 }
