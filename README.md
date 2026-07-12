@@ -12,6 +12,12 @@ system (operated by JCDecaux). Vue 3 · Vite · MapLibre GL.
 - **Time scrubber** — drag up to +48 h into the future; markers recolor to the model's estimate.
   Luxembourg public holidays and the Open-Meteo weather forecast are shown for the selected hour.
 - **Station panel** — bikes / docks / out-of-service counts and a 24 h prediction sparkline.
+- **Search** — find stations by name/address, or geocode any Luxembourg address (Nominatim);
+  results fly the map there.
+- **Walking guidance** — with location access granted (or `?at=lat,lon` in the URL to simulate a
+  position), the map always shows the fastest walking route to the nearest station that has
+  bikes, with ETA and distance; clicking the chip opens that station. Falls back to a beeline
+  estimate if the router is unreachable.
 
 ## Data sources (all keyless & open)
 
@@ -19,6 +25,9 @@ system (operated by JCDecaux). Vue 3 · Vite · MapLibre GL.
 |---|---|---|
 | `api.cyclocity.fr/contracts/luxembourg/gbfs/v3` | station info + live status (1 min refresh) | [JCDecaux Open Licence](https://developer.jcdecaux.com/files/Open-Licence-en.pdf) |
 | [Open-Meteo](https://open-meteo.com/) | current weather + 3-day hourly forecast | CC BY 4.0 |
+| [Nominatim](https://nominatim.org/) | address search (geocoding) | ODbL / fair use |
+| [FOSSGIS OSRM](https://routing.openstreetmap.de/) | walking routes to the nearest station | ODbL / fair use |
+| [aviationweather.gov](https://aviationweather.gov/) | measured METAR observations (collector) | public domain |
 | Computed locally | Luxembourg public holidays | — |
 
 No scraping of the VDL map is needed — the city links to this official feed from

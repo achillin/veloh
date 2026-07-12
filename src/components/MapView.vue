@@ -7,6 +7,8 @@ const props = defineProps({
   stations: { type: Array, required: true }, // display objects: {id, lat, lon, name, frac, bikes, closed, predicted}
   selectedId: { type: String, default: null },
   flyTo: { type: Object, default: null }, // {lon, lat, zoom, pin?, label?, ts}
+  userPos: { type: Object, default: null }, // {lat, lon}
+  route: { type: Object, default: null }, // { geometry: GeoJSON LineString }
 })
 const emit = defineEmits(['select'])
 
@@ -14,7 +16,33 @@ const container = ref(null)
 let map = null
 let triedFallback = false
 let placeMarker = null // pin dropped on a searched address
+let userMarker = null // the user's position
 const markers = new Map() // id → { marker, el }
+
+const ROUTE_SRC = 'walk-route'
+const EMPTY_FC = { type: 'FeatureCollection', features: [] }
+let lastRouteGeo = EMPTY_FC
+
+// (Re-)adds the route source + layers; called on load and after any
+// setStyle (a style swap drops all custom sources).
+function ensureRouteLayers() {
+  if (!map || map.getSource(ROUTE_SRC)) return
+  map.addSource(ROUTE_SRC, { type: 'geojson', data: lastRouteGeo })
+  map.addLayer({
+    id: 'walk-route-casing',
+    type: 'line',
+    source: ROUTE_SRC,
+    layout: { 'line-cap': 'round', 'line-join': 'round' },
+    paint: { 'line-color': '#0b0e14', 'line-width': 8, 'line-opacity': 0.55 },
+  })
+  map.addLayer({
+    id: 'walk-route-line',
+    type: 'line',
+    source: ROUTE_SRC,
+    layout: { 'line-cap': 'round', 'line-join': 'round' },
+    paint: { 'line-color': '#4da3ff', 'line-width': 4, 'line-opacity': 0.9 },
+  })
+}
 
 const STYLE_PRIMARY = 'https://tiles.openfreemap.org/styles/dark'
 const STYLE_FALLBACK = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
@@ -92,6 +120,8 @@ onMounted(() => {
   })
 
   map.on('click', () => emit('select', null))
+  map.on('load', ensureRouteLayers)
+  map.on('style.load', ensureRouteLayers)
 
   const applyScale = () => {
     const z = map.getZoom()
@@ -108,8 +138,40 @@ onBeforeUnmount(() => {
   markers.forEach((m) => m.marker.remove())
   markers.clear()
   placeMarker?.remove()
+  userMarker?.remove()
   map?.remove()
 })
+
+watch(
+  () => props.userPos,
+  (p) => {
+    if (!map) return
+    if (!p) {
+      userMarker?.remove()
+      userMarker = null
+      return
+    }
+    if (!userMarker) {
+      const el = document.createElement('div')
+      el.className = 'user-dot'
+      el.title = 'You are here'
+      userMarker = new maplibregl.Marker({ element: el }).setLngLat([p.lon, p.lat]).addTo(map)
+    } else {
+      userMarker.setLngLat([p.lon, p.lat])
+    }
+  },
+  { immediate: true }
+)
+
+watch(
+  () => props.route,
+  (r) => {
+    lastRouteGeo = r?.geometry
+      ? { type: 'Feature', properties: {}, geometry: r.geometry }
+      : EMPTY_FC
+    map?.getSource(ROUTE_SRC)?.setData(lastRouteGeo)
+  }
+)
 
 watch(
   () => props.flyTo,
