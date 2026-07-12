@@ -58,23 +58,62 @@ export async function fetchRadarTiles() {
   }
 }
 
-/** Fraction of precipitation pixels in the radar tile around (lat, lon) —
- *  tells the UI whether a transparent overlay means "dry" or "broken".
- *  A z6 tile spans roughly 400 km at this latitude. */
-export async function sampleRadarCoverage(template, { z = 6, lat = 49.61, lon = 6.13 } = {}) {
+const COMPASS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+
+/** Scans the 2×2 block of z6 radar tiles centred on (lat, lon) — roughly
+ *  an 800 km box — and reports precipitation coverage plus the distance and
+ *  compass direction of the nearest rain. Tells the UI whether a transparent
+ *  overlay means "dry here" (and where the action is) or "broken". */
+export async function analyzeRadar(template, { z = 6, lat = 49.61, lon = 6.13 } = {}) {
   const n = 2 ** z
-  const x = Math.floor(((lon + 180) / 360) * n)
   const rad = (lat * Math.PI) / 180
-  const y = Math.floor(((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * n)
-  const url = template.replace('{z}', String(z)).replace('{x}', String(x)).replace('{y}', String(y))
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`radar tile → HTTP ${res.status}`)
-  const bmp = await createImageBitmap(await res.blob())
-  const canvas = new OffscreenCanvas(bmp.width, bmp.height)
-  const ctx = canvas.getContext('2d', { willReadFrequently: true })
-  ctx.drawImage(bmp, 0, 0)
-  const a = ctx.getImageData(0, 0, bmp.width, bmp.height).data
+  const cx = ((lon + 180) / 360) * n * 512 // centre, in world pixels
+  const cy = ((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * n * 512
+  const kmPerPx = (40075 * Math.cos(rad)) / (n * 512) // local Mercator scale
+
+  const tx0 = Math.floor(cx / 512 - 0.5)
+  const ty0 = Math.floor(cy / 512 - 0.5)
+
   let wet = 0
-  for (let i = 3; i < a.length; i += 4) if (a[i] > 0) wet++
-  return wet / (a.length / 4)
+  let total = 0
+  let bestD2 = Infinity
+  let bestDx = 0
+  let bestDy = 0
+
+  for (const tx of [tx0, tx0 + 1]) {
+    for (const ty of [ty0, ty0 + 1]) {
+      const url = template
+        .replace('{z}', String(z))
+        .replace('{x}', String(tx))
+        .replace('{y}', String(ty))
+      const res = await fetch(url)
+      if (!res.ok) continue
+      const bmp = await createImageBitmap(await res.blob())
+      const canvas = new OffscreenCanvas(bmp.width, bmp.height)
+      const ctx = canvas.getContext('2d', { willReadFrequently: true })
+      ctx.drawImage(bmp, 0, 0)
+      const a = ctx.getImageData(0, 0, bmp.width, bmp.height).data
+      total += a.length / 4
+      for (let i = 3; i < a.length; i += 4) {
+        if (a[i] === 0) continue
+        wet++
+        const p = (i - 3) / 4
+        const dx = tx * 512 + (p % bmp.width) - cx
+        const dy = ty * 512 + Math.floor(p / bmp.width) - cy
+        const d2 = dx * dx + dy * dy
+        if (d2 < bestD2) {
+          bestD2 = d2
+          bestDx = dx
+          bestDy = dy
+        }
+      }
+    }
+  }
+
+  if (!total) throw new Error('no radar tiles readable')
+  if (!wet) return { coverage: 0, nearest: null }
+  const km = Math.sqrt(bestD2) * kmPerPx
+  const deg = (Math.atan2(bestDx, -bestDy) * 180) / Math.PI // north-up bearing
+  const dir = COMPASS[Math.round((((deg % 360) + 360) % 360) / 45) % 8]
+  return { coverage: wet / total, nearest: { km, dir } }
 }

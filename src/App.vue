@@ -9,7 +9,7 @@ import { fetchStations } from './lib/gbfs.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
-import { fetchRainNowcast, summarizeNowcast, fetchRadarTiles, sampleRadarCoverage } from './lib/radar.js'
+import { fetchRainNowcast, summarizeNowcast, fetchRadarTiles, analyzeRadar } from './lib/radar.js'
 
 const stations = shallowRef([])
 const profiles = shallowRef(null)
@@ -28,7 +28,7 @@ const nowcastPoints = shallowRef(null) // raw 5-min radar precipitation series
 const radarOn = ref(false)
 const radarTiles = ref(null)
 const radarTime = ref(null)
-const radarCoverage = ref(null) // precipitation fraction in the ~400 km tile around the city
+const radarInfo = shallowRef(null) // { coverage, nearest: { km, dir } | null } around the city
 
 function onGoto(t) {
   if (t.stationId) {
@@ -86,9 +86,9 @@ async function refreshRadar() {
     const { template, time } = await fetchRadarTiles()
     radarTiles.value = template
     radarTime.value = time
-    sampleRadarCoverage(template)
-      .then((c) => (radarCoverage.value = c))
-      .catch(() => (radarCoverage.value = null))
+    analyzeRadar(template)
+      .then((info) => (radarInfo.value = info))
+      .catch(() => (radarInfo.value = null))
   } catch {
     radarTiles.value = null
     radarTime.value = null
@@ -96,16 +96,17 @@ async function refreshRadar() {
 }
 
 // Makes a rain-free (fully transparent) radar overlay legible as "working,
-// just dry" instead of looking broken.
+// just dry" — and points at the nearest rain so you know where to look.
 const radarNote = computed(() => {
   if (!radarOn.value || !radarTiles.value) return null
   const t = radarTime.value
     ? radarTime.value.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
     : '…'
-  if (radarCoverage.value === null) return `frame ${t}`
-  return radarCoverage.value > 0.001
-    ? `frame ${t} · precipitation in range`
-    : `frame ${t} · no rain within ~200 km`
+  const info = radarInfo.value
+  if (!info) return `frame ${t}`
+  if (!info.nearest) return `frame ${t} · no rain within ~400 km`
+  if (info.nearest.km < 15) return `frame ${t} · rain overhead`
+  return `frame ${t} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
 })
 
 watch(radarOn, (on) => {
