@@ -43,19 +43,26 @@ export function summarizeNowcast(points) {
   return { raining: false, startsAt: start?.time ?? null, maxMmh }
 }
 
-/** Latest composite radar frame: tile URL template + frame time. */
-export async function fetchRadarTiles() {
+/** All available composite radar frames: ~2 h of measurements plus ~30 min
+ *  of radar extrapolation ("nowcast"), 10-minute steps — the material every
+ *  rain-radar animation loops over. */
+export async function fetchRadarFrames() {
   const res = await fetch('https://api.rainviewer.com/public/weather-maps.json')
   if (!res.ok) throw new Error(`rainviewer → HTTP ${res.status}`)
   const j = await res.json()
-  const frame = j?.radar?.past?.at(-1)
-  if (!frame) throw new Error('no radar frames')
-  return {
-    // 512px tiles, color scheme 2 (universal blue), smoothed, snow shown.
-    // Real data exists only up to z7 — the map overzooms beyond (see MapView).
-    template: `${j.host}${frame.path}/512/{z}/{x}/{y}/2/1_1.png`,
-    time: new Date(frame.time * 1000),
-  }
+  // 512px tiles, color scheme 2 (universal blue), smoothed, snow shown.
+  // Real data exists only up to z7 — the map overzooms beyond (see MapView).
+  const mk = (f, nowcast) => ({
+    time: new Date(f.time * 1000),
+    nowcast,
+    template: `${j.host}${f.path}/512/{z}/{x}/{y}/2/1_1.png`,
+  })
+  const frames = [
+    ...(j?.radar?.past ?? []).map((f) => mk(f, false)),
+    ...(j?.radar?.nowcast ?? []).map((f) => mk(f, true)),
+  ]
+  if (!frames.length) throw new Error('no radar frames')
+  return frames
 }
 
 const COMPASS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']

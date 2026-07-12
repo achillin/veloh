@@ -69,7 +69,14 @@ function applyRadar() {
       attribution: 'Radar © RainViewer',
     })
     map.addLayer(
-      { id: 'rain-radar-layer', type: 'raster', source: RADAR_SRC, paint: { 'raster-opacity': 0.6 } },
+      {
+        id: 'rain-radar-layer',
+        type: 'raster',
+        source: RADAR_SRC,
+        // no fade-in: the animation swaps frames every ~800 ms and cached
+        // tiles should appear instantly instead of blinking
+        paint: { 'raster-opacity': 0.6, 'raster-fade-duration': 0 },
+      },
       map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
     )
   } catch {

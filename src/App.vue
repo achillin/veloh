@@ -9,7 +9,7 @@ import { fetchStations } from './lib/gbfs.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
-import { fetchRainNowcast, summarizeNowcast, fetchRadarTiles, analyzeRadar } from './lib/radar.js'
+import { fetchRainNowcast, summarizeNowcast, fetchRadarFrames, analyzeRadar } from './lib/radar.js'
 
 const stations = shallowRef([])
 const profiles = shallowRef(null)
@@ -26,8 +26,8 @@ const walkRoute = shallowRef(null) // {geometry, durationSec, distanceM, station
 const nowcast = shallowRef(null) // radar rain summary for the next ~2 h
 const nowcastPoints = shallowRef(null) // raw 5-min radar precipitation series
 const radarOn = ref(false)
-const radarTiles = ref(null)
-const radarTime = ref(null)
+const radarFrames = shallowRef([]) // ~2 h of radar + 30 min nowcast, 10-min steps
+const radarIdx = ref(0) // animation position
 const radarInfo = shallowRef(null) // { coverage, nearest: { km, dir } | null } around the city
 
 function onGoto(t) {
@@ -49,6 +49,7 @@ let statusTimer = null
 let weatherTimer = null
 let nowcastTimer = null
 let radarTimer = null
+let radarAnimTimer = null
 let geoWatchId = null
 
 async function refreshStations() {
@@ -83,39 +84,49 @@ async function refreshNowcast() {
 
 async function refreshRadar() {
   try {
-    const { template, time } = await fetchRadarTiles()
-    radarTiles.value = template
-    radarTime.value = time
-    analyzeRadar(template)
+    const frames = await fetchRadarFrames()
+    radarFrames.value = frames
+    if (radarIdx.value >= frames.length) radarIdx.value = 0
+    // analyze the newest measured frame (not the extrapolated ones)
+    const latest = [...frames].reverse().find((f) => !f.nowcast) ?? frames.at(-1)
+    analyzeRadar(latest.template)
       .then((info) => (radarInfo.value = info))
       .catch(() => (radarInfo.value = null))
   } catch {
-    radarTiles.value = null
-    radarTime.value = null
+    radarFrames.value = []
   }
 }
+
+const radarFrame = computed(() => radarFrames.value[radarIdx.value] ?? null)
 
 // Makes a rain-free (fully transparent) radar overlay legible as "working,
 // just dry" — and points at the nearest rain so you know where to look.
 const radarNote = computed(() => {
-  if (!radarOn.value || !radarTiles.value) return null
-  const t = radarTime.value
-    ? radarTime.value.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
-    : '…'
+  const f = radarFrame.value
+  if (!radarOn.value || !f) return null
+  const t = f.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+  const when = f.nowcast ? `${t} +forecast` : t
   const info = radarInfo.value
-  if (!info) return `frame ${t}`
-  if (!info.nearest) return `frame ${t} · no rain within ~400 km`
-  if (info.nearest.km < 15) return `frame ${t} · rain overhead`
-  return `frame ${t} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
+  if (!info) return `🕒 ${when}`
+  if (!info.nearest) return `🕒 ${when} · no rain within ~400 km`
+  if (info.nearest.km < 15) return `🕒 ${when} · rain overhead`
+  return `🕒 ${when} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
 })
 
 watch(radarOn, (on) => {
   clearInterval(radarTimer)
+  clearInterval(radarAnimTimer)
   if (on) {
     refreshRadar()
     radarTimer = setInterval(refreshRadar, 5 * 60_000)
+    // classic rain-radar loop: past 2 h → 30 min nowcast, then repeat
+    radarAnimTimer = setInterval(() => {
+      const n = radarFrames.value.length
+      if (n) radarIdx.value = (radarIdx.value + 1) % n
+    }, 800)
   } else {
-    radarTiles.value = null
+    radarFrames.value = []
+    radarIdx.value = 0
   }
 })
 
@@ -154,6 +165,7 @@ onBeforeUnmount(() => {
   clearInterval(weatherTimer)
   clearInterval(nowcastTimer)
   clearInterval(radarTimer)
+  clearInterval(radarAnimTimer)
   if (geoWatchId != null) navigator.geolocation.clearWatch(geoWatchId)
 })
 
@@ -306,7 +318,7 @@ const selectedSeries = computed(() => {
       :user-pos="userPos"
       :start-pos="customStart"
       :route="walkRoute"
-      :radar="radarTiles"
+      :radar="radarFrame?.template ?? null"
       @select="selectedId = $event"
       @setstart="onSetStart"
     />
