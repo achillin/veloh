@@ -62,7 +62,10 @@ function applyRadar() {
     map.addSource(RADAR_SRC, {
       type: 'raster',
       tiles: [props.radar],
-      tileSize: 256,
+      tileSize: 512,
+      // RainViewer's max native zoom — beyond this MapLibre scales the
+      // z12 tiles instead of requesting "Zoom level not supported" images
+      maxzoom: 12,
       attribution: 'Radar © RainViewer',
     })
     map.addLayer(

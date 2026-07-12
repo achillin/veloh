@@ -295,6 +295,8 @@ const selectedSeries = computed(() => {
       :updated-at="updatedAt"
       :nowcast="nowcast"
       :radar-on="radarOn"
+      :offset-hours="offsetHours"
+      :target="target"
       :error="error"
       @toggle-radar="radarOn = !radarOn"
     >

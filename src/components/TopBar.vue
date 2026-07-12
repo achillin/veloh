@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { describeWmo } from '../lib/weather.js'
+import { describeWmo, forecastAt } from '../lib/weather.js'
 
 const props = defineProps({
   stations: { type: Array, required: true }, // live station objects
@@ -9,6 +9,8 @@ const props = defineProps({
   updatedAt: { type: Date, default: null },
   nowcast: { type: Object, default: null }, // radar rain summary (~2 h)
   radarOn: { type: Boolean, default: false },
+  offsetHours: { type: Number, default: 0 }, // scrubbed time offset
+  target: { type: Date, default: null }, // scrubbed target time
   error: { type: String, default: '' },
 })
 
@@ -30,10 +32,18 @@ const bikesNow = computed(() => props.stations.reduce((a, s) => a + s.bikes, 0))
 const emptyCount = computed(() => props.stations.filter((s) => s.renting && s.bikes === 0).length)
 const fullCount = computed(() => props.stations.filter((s) => s.returning && s.docks === 0).length)
 
+// Follows the time scrubber: current conditions at "now", the hourly
+// forecast when scrubbed into the future.
 const wx = computed(() => {
   if (!props.weather) return null
+  if (props.offsetHours > 0 && props.target) {
+    const f = forecastAt(props.weather, props.target)
+    if (!f) return null
+    const { icon, label } = describeWmo(f.code)
+    return { icon, label, temp: Math.round(f.temp), forecast: true }
+  }
   const { icon, label } = describeWmo(props.weather.current.code)
-  return { icon, label, temp: Math.round(props.weather.current.temp) }
+  return { icon, label, temp: Math.round(props.weather.current.temp), forecast: false }
 })
 
 const modelLabel = computed(() =>
@@ -71,7 +81,7 @@ const updatedLabel = computed(() => {
       <span class="chip"><b>{{ stations.length }}</b>&nbsp;stations</span>
       <span class="chip" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
       <span class="chip" v-if="fullCount"><span class="dot" style="background: var(--warn)"></span><b>{{ fullCount }}</b>&nbsp;full</span>
-      <span class="chip" v-if="wx">{{ wx.icon }}&nbsp;<b>{{ wx.temp }}°C</b>&nbsp;{{ wx.label }}</span>
+      <span class="chip" v-if="wx" :class="{ fc: wx.forecast }">{{ wx.icon }}&nbsp;<b>{{ wx.temp }}°C</b>&nbsp;{{ wx.label }}<template v-if="wx.forecast">&nbsp;· forecast</template></span>
       <span class="chip rain" v-if="rain" :class="rain.cls" title="Radar nowcast (Buienradar)">{{ rain.text }}</span>
       <span class="chip model" :class="{ trained: !!profiles }">{{ modelLabel }}</span>
       <span class="chip">⟳ {{ updatedLabel }}</span>
@@ -155,6 +165,11 @@ h1 span {
 }
 
 .chip.rain.soon {
+  color: var(--warn);
+  border-color: rgba(255, 176, 32, 0.35);
+}
+
+.chip.fc {
   color: var(--warn);
   border-color: rgba(255, 176, 32, 0.35);
 }

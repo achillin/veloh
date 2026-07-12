@@ -50,6 +50,7 @@ export async function fetchRadarTiles() {
   const j = await res.json()
   const frame = j?.radar?.past?.at(-1)
   if (!frame) throw new Error('no radar frames')
-  // color scheme 2 (universal blue), smoothed, snow shown
-  return `${j.host}${frame.path}/256/{z}/{x}/{y}/2/1_1.png`
+  // 512px tiles, color scheme 2 (universal blue), smoothed, snow shown.
+  // RainViewer serves zoom ≤ 12 — the map overzooms beyond that (see MapView).
+  return `${j.host}${frame.path}/512/{z}/{x}/{y}/2/1_1.png`
 }
