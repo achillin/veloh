@@ -9,14 +9,17 @@ const props = defineProps({
   flyTo: { type: Object, default: null }, // {lon, lat, zoom, pin?, label?, ts}
   userPos: { type: Object, default: null }, // {lat, lon}
   route: { type: Object, default: null }, // { geometry: GeoJSON LineString }
+  startPos: { type: Object, default: null }, // custom route origin {lat, lon, label?}
+  radar: { type: String, default: null }, // rain-radar raster tile URL template
 })
-const emit = defineEmits(['select'])
+const emit = defineEmits(['select', 'setstart'])
 
 const container = ref(null)
 let map = null
 let triedFallback = false
 let placeMarker = null // pin dropped on a searched address
 let userMarker = null // the user's position
+let startMarker = null // custom route origin
 const markers = new Map() // id → { marker, el }
 
 const ROUTE_SRC = 'walk-route'
@@ -42,6 +45,33 @@ function ensureRouteLayers() {
     layout: { 'line-cap': 'round', 'line-join': 'round' },
     paint: { 'line-color': '#4da3ff', 'line-width': 4, 'line-opacity': 0.9 },
   })
+}
+
+const RADAR_SRC = 'rain-radar'
+let styleReady = false // set on first (and every) style load
+
+// Raster tile URLs can't be swapped in place — drop & re-add the source.
+// Also re-applied after a style swap (which wipes custom sources).
+// NB: not gated on isStyleLoaded() — that flag flaps during tile loads.
+function applyRadar() {
+  if (!map || !styleReady) return
+  try {
+    if (map.getLayer('rain-radar-layer')) map.removeLayer('rain-radar-layer')
+    if (map.getSource(RADAR_SRC)) map.removeSource(RADAR_SRC)
+    if (!props.radar) return
+    map.addSource(RADAR_SRC, {
+      type: 'raster',
+      tiles: [props.radar],
+      tileSize: 256,
+      attribution: 'Radar © RainViewer',
+    })
+    map.addLayer(
+      { id: 'rain-radar-layer', type: 'raster', source: RADAR_SRC, paint: { 'raster-opacity': 0.6 } },
+      map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
+    )
+  } catch {
+    map.once('idle', applyRadar) // style mid-swap — retry when settled
+  }
 }
 
 const STYLE_PRIMARY = 'https://tiles.openfreemap.org/styles/dark'
@@ -110,6 +140,7 @@ onMounted(() => {
     attributionControl: { compact: true },
   })
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right')
+  if (import.meta.env.DEV) window.__map = map // debugging aid, dev builds only
 
   map.on('error', (e) => {
     // If the primary vector style is unreachable, fall back to Carto dark matter.
@@ -120,8 +151,19 @@ onMounted(() => {
   })
 
   map.on('click', () => emit('select', null))
-  map.on('load', ensureRouteLayers)
-  map.on('style.load', ensureRouteLayers)
+  const onStyleReady = () => {
+    styleReady = true
+    ensureRouteLayers()
+    applyRadar()
+  }
+  map.on('load', onStyleReady)
+  map.on('style.load', onStyleReady)
+
+  // right-click (long-press on touch) sets a custom route origin
+  map.on('contextmenu', (e) => {
+    e.preventDefault()
+    emit('setstart', { lat: e.lngLat.lat, lon: e.lngLat.lng })
+  })
 
   const applyScale = () => {
     const z = map.getZoom()
@@ -139,8 +181,34 @@ onBeforeUnmount(() => {
   markers.clear()
   placeMarker?.remove()
   userMarker?.remove()
+  startMarker?.remove()
   map?.remove()
 })
+
+watch(() => props.radar, applyRadar)
+
+watch(
+  () => props.startPos,
+  (p) => {
+    if (!map) return
+    if (!p) {
+      startMarker?.remove()
+      startMarker = null
+      return
+    }
+    if (!startMarker) {
+      const el = document.createElement('div')
+      el.className = 'start-pin'
+      startMarker = new maplibregl.Marker({ element: el, anchor: 'bottom' })
+        .setLngLat([p.lon, p.lat])
+        .addTo(map)
+    } else {
+      startMarker.setLngLat([p.lon, p.lat])
+    }
+    startMarker.getElement().title = p.label ?? 'Route start'
+  },
+  { immediate: true }
+)
 
 watch(
   () => props.userPos,

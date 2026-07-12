@@ -8,7 +8,8 @@ import SearchBox from './components/SearchBox.vue'
 import { fetchStations } from './lib/gbfs.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
-import { walkingRoute, nearestWithBikes } from './lib/routing.js'
+import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
+import { fetchRainNowcast, summarizeNowcast, fetchRadarTiles } from './lib/radar.js'
 
 const stations = shallowRef([])
 const profiles = shallowRef(null)
@@ -19,20 +20,33 @@ const offsetHours = ref(0)
 const selectedId = ref(null)
 const error = ref('')
 const flyTarget = ref(null)
-const userPos = ref(null) // {lat, lon}
+const userPos = ref(null) // {lat, lon} from geolocation (or ?at= override)
+const customStart = ref(null) // {lat, lon, label} — user-chosen route origin
 const walkRoute = shallowRef(null) // {geometry, durationSec, distanceM, station, approx}
+const nowcast = shallowRef(null) // radar rain summary for the next ~2 h
+const nowcastPoints = shallowRef(null) // raw 5-min radar precipitation series
+const radarOn = ref(false)
+const radarTiles = ref(null)
 
 function onGoto(t) {
   if (t.stationId) {
     selectedId.value = t.stationId
     flyTarget.value = { lon: t.lon, lat: t.lat, zoom: 15.5, ts: Date.now() }
   } else {
-    flyTarget.value = { lon: t.lon, lat: t.lat, zoom: 16, pin: true, label: t.label, ts: Date.now() }
+    // searched address becomes the route origin
+    customStart.value = { lat: t.lat, lon: t.lon, label: t.label?.split(',')[0] ?? 'Search result' }
+    flyTarget.value = { lon: t.lon, lat: t.lat, zoom: 16, ts: Date.now() }
   }
+}
+
+function onSetStart(p) {
+  customStart.value = { ...p, label: 'Pinned start' }
 }
 
 let statusTimer = null
 let weatherTimer = null
+let nowcastTimer = null
+let radarTimer = null
 let geoWatchId = null
 
 async function refreshStations() {
@@ -53,6 +67,35 @@ async function refreshWeather() {
     weather.value = null // weather is optional context; the app works without it
   }
 }
+
+async function refreshNowcast() {
+  try {
+    const points = await fetchRainNowcast()
+    nowcastPoints.value = points
+    nowcast.value = summarizeNowcast(points)
+  } catch {
+    nowcastPoints.value = null
+    nowcast.value = null
+  }
+}
+
+async function refreshRadar() {
+  try {
+    radarTiles.value = await fetchRadarTiles()
+  } catch {
+    radarTiles.value = null
+  }
+}
+
+watch(radarOn, (on) => {
+  clearInterval(radarTimer)
+  if (on) {
+    refreshRadar()
+    radarTimer = setInterval(refreshRadar, 5 * 60_000)
+  } else {
+    radarTiles.value = null
+  }
+})
 
 function initGeolocation() {
   // ?at=lat,lon simulates a position (testing, or "if I were there")
@@ -75,16 +118,20 @@ function initGeolocation() {
 
 onMounted(async () => {
   refreshWeather()
+  refreshNowcast()
   loadProfiles().then((p) => (profiles.value = p))
   initGeolocation()
   await refreshStations()
   statusTimer = setInterval(refreshStations, 60_000)
   weatherTimer = setInterval(refreshWeather, 30 * 60_000)
+  nowcastTimer = setInterval(refreshNowcast, 5 * 60_000)
 })
 
 onBeforeUnmount(() => {
   clearInterval(statusTimer)
   clearInterval(weatherTimer)
+  clearInterval(nowcastTimer)
+  clearInterval(radarTimer)
   if (geoWatchId != null) navigator.geolocation.clearWatch(geoWatchId)
 })
 
@@ -115,52 +162,65 @@ const displayStations = computed(() => {
   })
 })
 
-// ---- walking route to the nearest station that has bikes ----
+// ---- walking route ----
+// Origin: pinned/searched start if set, else the user's position.
+// Target: the explicitly selected station, else the nearest one with bikes.
+
+const origin = computed(() => customStart.value ?? userPos.value)
 
 const nearest = computed(() =>
-  userPos.value ? nearestWithBikes(displayStations.value, userPos.value) : null
+  origin.value ? nearestWithBikes(displayStations.value, origin.value) : null
 )
+
+const routeTarget = computed(() => {
+  if (selectedId.value) {
+    const s = displayStations.value.find((x) => x.id === selectedId.value)
+    if (s) return s
+  }
+  return nearest.value?.station ?? null
+})
 
 let routeTimer = null
 let routeAbort = null
 let lastRouteKey = null
 
-watch([userPos, () => nearest.value?.station.id ?? null], () => {
+watch([origin, () => routeTarget.value?.id ?? null], () => {
   clearTimeout(routeTimer)
   routeTimer = setTimeout(updateRoute, 350)
 })
 
 async function updateRoute() {
-  const pos = userPos.value
-  const near = nearest.value
-  if (!pos || !near) {
+  const pos = origin.value
+  const dest = routeTarget.value
+  if (!pos || !dest) {
     walkRoute.value = null
     lastRouteKey = null
     return
   }
   // ~11 m position grid: don't re-route for GPS jitter
-  const key = `${near.station.id}:${pos.lat.toFixed(4)},${pos.lon.toFixed(4)}`
+  const key = `${dest.id}:${pos.lat.toFixed(4)},${pos.lon.toFixed(4)}`
   if (key === lastRouteKey && walkRoute.value) return
   routeAbort?.abort()
   routeAbort = new AbortController()
   try {
-    const r = await walkingRoute(pos, near.station, routeAbort.signal)
-    walkRoute.value = { ...r, station: near.station, approx: false }
+    const r = await walkingRoute(pos, dest, routeAbort.signal)
+    walkRoute.value = { ...r, station: dest, approx: false }
     lastRouteKey = key
   } catch (e) {
     if (e.name === 'AbortError') return
     // Router unreachable → straight-line fallback at ~4.9 km/h
+    const d = haversineM(pos, dest)
     walkRoute.value = {
       geometry: {
         type: 'LineString',
         coordinates: [
           [pos.lon, pos.lat],
-          [near.station.lon, near.station.lat],
+          [dest.lon, dest.lat],
         ],
       },
-      durationSec: near.distanceM / 1.35,
-      distanceM: near.distanceM,
-      station: near.station,
+      durationSec: d / 1.35,
+      distanceM: d,
+      station: dest,
       approx: true,
     }
     lastRouteKey = key
@@ -181,6 +241,8 @@ const routeChip = computed(() => {
     id: st.id,
     lat: st.lat,
     lon: st.lon,
+    from: customStart.value?.label ?? null,
+    toSelected: selectedId.value === st.id,
   }
 })
 
@@ -189,6 +251,10 @@ function focusRouteStation() {
   if (!c) return
   selectedId.value = c.id
   flyTarget.value = { lon: c.lon, lat: c.lat, zoom: 15.5, ts: Date.now() }
+}
+
+function clearStart() {
+  customStart.value = null
 }
 
 // ---- selected station panel ----
@@ -216,8 +282,11 @@ const selectedSeries = computed(() => {
       :selected-id="selectedId"
       :fly-to="flyTarget"
       :user-pos="userPos"
+      :start-pos="customStart"
       :route="walkRoute"
+      :radar="radarTiles"
       @select="selectedId = $event"
+      @setstart="onSetStart"
     />
     <SearchBox :stations="stations" @goto="onGoto" />
     <TopBar
@@ -225,8 +294,12 @@ const selectedSeries = computed(() => {
       :weather="weather"
       :profiles="profiles"
       :updated-at="updatedAt"
+      :nowcast="nowcast"
       :error="error"
     />
+    <button class="radar-toggle glass" :class="{ on: radarOn }" @click="radarOn = !radarOn" title="Rain radar overlay (RainViewer)">
+      ☔ Radar
+    </button>
     <StationPanel
       v-if="selectedStation && selectedDisplay"
       :station="selectedStation"
@@ -235,15 +308,25 @@ const selectedSeries = computed(() => {
       :offset-hours="offsetHours"
       @close="selectedId = null"
     />
-    <button v-if="routeChip" class="route-chip glass" @click="focusRouteStation">
-      <span class="walk">🚶</span>
-      <span class="eta">{{ routeChip.min }} min</span>
-      <span class="sub">
-        {{ routeChip.dist }}{{ routeChip.approx ? ' (beeline)' : '' }} →
-        {{ routeChip.name }} · {{ routeChip.bikes }} 🚲
-      </span>
-    </button>
-    <TimeScrubber v-model:offset-hours="offsetHours" :now="now" :weather="weather" />
+    <div v-if="routeChip" class="route-chip glass">
+      <button class="route-main" @click="focusRouteStation">
+        <span class="walk">🚶</span>
+        <span class="eta">{{ routeChip.min }} min</span>
+        <span class="sub">
+          <template v-if="routeChip.from">from {{ routeChip.from }} · </template>
+          {{ routeChip.dist }}{{ routeChip.approx ? ' (beeline)' : '' }} →
+          {{ routeChip.name }}<template v-if="!routeChip.toSelected"> (nearest)</template> ·
+          {{ routeChip.bikes }} 🚲
+        </span>
+      </button>
+      <button v-if="routeChip.from" class="clear-start" title="Back to my position" @click.stop="clearStart">✕</button>
+    </div>
+    <TimeScrubber
+      v-model:offset-hours="offsetHours"
+      :now="now"
+      :weather="weather"
+      :radar-points="nowcastPoints"
+    />
   </div>
 </template>
 
@@ -260,13 +343,21 @@ const selectedSeries = computed(() => {
   z-index: 10;
   display: flex;
   align-items: center;
+  max-width: min(460px, calc(100% - 32px));
+}
+
+.route-main {
+  display: flex;
+  align-items: center;
   gap: 9px;
   padding: 11px 15px;
   cursor: pointer;
   color: var(--text);
   font-family: var(--font);
-  max-width: min(420px, calc(100% - 32px));
+  background: none;
+  border: none;
   text-align: left;
+  min-width: 0;
 }
 
 .route-chip:hover {
@@ -291,5 +382,38 @@ const selectedSeries = computed(() => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.clear-start {
+  flex-shrink: 0;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.clear-start:hover {
+  color: var(--text);
+}
+
+.radar-toggle {
+  position: absolute;
+  top: 150px;
+  left: 16px;
+  z-index: 10;
+  padding: 9px 14px;
+  cursor: pointer;
+  color: var(--text-dim);
+  font: 600 12.5px var(--font);
+}
+
+.radar-toggle.on {
+  color: var(--accent-2);
+  border-color: rgba(77, 163, 255, 0.45);
 }
 </style>

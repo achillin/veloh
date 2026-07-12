@@ -16,8 +16,15 @@ system (operated by JCDecaux). Vue 3 · Vite · MapLibre GL.
   results fly the map there.
 - **Walking guidance** — with location access granted (or `?at=lat,lon` in the URL to simulate a
   position), the map always shows the fastest walking route to the nearest station that has
-  bikes, with ETA and distance; clicking the chip opens that station. Falls back to a beeline
-  estimate if the router is unreachable.
+  bikes, with ETA and distance; clicking the chip opens that station. Selecting a station
+  reroutes to it; right-clicking the map (or searching an address) sets a custom start point
+  (✕ on the chip reverts to your position). Falls back to a beeline estimate if the router is
+  unreachable.
+- **Rain radar ("RegenRadar")** — the ☔ Radar button overlays live composite radar imagery
+  (RainViewer) on the map, and the top bar shows a radar-based nowcast ("dry next 2 h" /
+  "rain ~18:45", Buienradar 5-min extrapolation). Within the ~2 h radar horizon the time
+  scrubber's rain call also comes from the radar; beyond that, the hourly model forecast —
+  radar nowcasts physically don't reach further.
 
 ## Data sources (all keyless & open)
 
@@ -27,6 +34,8 @@ system (operated by JCDecaux). Vue 3 · Vite · MapLibre GL.
 | [Open-Meteo](https://open-meteo.com/) | current weather + 3-day hourly forecast | CC BY 4.0 |
 | [Nominatim](https://nominatim.org/) | address search (geocoding) | ODbL / fair use |
 | [FOSSGIS OSRM](https://routing.openstreetmap.de/) | walking routes to the nearest station | ODbL / fair use |
+| [Buienradar](https://www.buienradar.nl/) | radar rain nowcast, ~2 h (covers Luxembourg) | free / fair use |
+| [RainViewer](https://www.rainviewer.com/) | radar imagery overlay on the map | free tier |
 | [aviationweather.gov](https://aviationweather.gov/) | measured METAR observations (collector) | public domain |
 | Computed locally | Luxembourg public holidays | — |
 

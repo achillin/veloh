@@ -7,6 +7,7 @@ const props = defineProps({
   offsetHours: { type: Number, required: true },
   now: { type: Date, required: true },
   weather: { type: Object, default: null },
+  radarPoints: { type: Array, default: null }, // 5-min radar rain nowcast (~2 h)
 })
 const emit = defineEmits(['update:offsetHours'])
 
@@ -26,13 +27,24 @@ const label = computed(() => {
   })
 })
 
+// Within radar range (~2 h) the rain call comes from the radar nowcast,
+// which beats the hourly model; beyond that, the model forecast decides.
+const radarRain = computed(() => {
+  if (!props.radarPoints?.length || props.offsetHours === 0) return null
+  const t = target.value.getTime()
+  const windowPts = props.radarPoints.filter((p) => Math.abs(p.time.getTime() - t) <= 30 * 60_000)
+  if (!windowPts.length) return null
+  return windowPts.some((p) => p.mmh >= 0.1)
+})
+
 const wx = computed(() => {
   if (props.offsetHours === 0) return null
   const f = forecastAt(props.weather, target.value)
   if (!f) return null
   const { icon } = describeWmo(f.code)
-  const rain = f.precip >= 0.2 || (f.precipProb ?? 0) >= 60
-  return { icon, temp: Math.round(f.temp), rain }
+  const byRadar = radarRain.value !== null
+  const rain = byRadar ? radarRain.value : f.precip >= 0.2 || (f.precipProb ?? 0) >= 60
+  return { icon, temp: Math.round(f.temp), rain, byRadar }
 })
 
 function onInput(e) {
@@ -53,7 +65,7 @@ function tickLabel(h) {
         <span v-if="offsetHours === 0" class="live-dot"></span>{{ label }}
       </span>
       <span v-if="holiday" class="chip holiday">🎉 {{ holiday }}</span>
-      <span v-if="wx" class="chip">{{ wx.icon }} <b>{{ wx.temp }}°C</b><template v-if="wx.rain">&nbsp;· rain likely</template></span>
+      <span v-if="wx" class="chip" :title="wx.byRadar ? 'Rain call from radar nowcast' : 'Rain call from model forecast'">{{ wx.icon }} <b>{{ wx.temp }}°C</b><template v-if="wx.rain">&nbsp;· rain{{ wx.byRadar ? ' (radar)' : ' likely' }}</template></span>
       <span v-if="offsetHours > 0" class="chip fc">forecast</span>
     </div>
     <input

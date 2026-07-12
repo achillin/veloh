@@ -7,7 +7,20 @@ const props = defineProps({
   weather: { type: Object, default: null },
   profiles: { type: Object, default: null },
   updatedAt: { type: Date, default: null },
+  nowcast: { type: Object, default: null }, // radar rain summary (~2 h)
   error: { type: String, default: '' },
+})
+
+const hhmm = (d) => d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+
+const rain = computed(() => {
+  const n = props.nowcast
+  if (!n) return null
+  if (n.raining) {
+    return { cls: 'wet', text: `☔ raining${n.until ? ` until ~${hhmm(n.until)}` : ''}` }
+  }
+  if (n.startsAt) return { cls: 'soon', text: `☔ rain ~${hhmm(n.startsAt)}` }
+  return { cls: 'dry', text: '☂ dry next 2 h' }
 })
 
 const bikesNow = computed(() => props.stations.reduce((a, s) => a + s.bikes, 0))
@@ -53,6 +66,7 @@ const updatedLabel = computed(() => {
       <span class="chip" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
       <span class="chip" v-if="fullCount"><span class="dot" style="background: var(--warn)"></span><b>{{ fullCount }}</b>&nbsp;full</span>
       <span class="chip" v-if="wx">{{ wx.icon }}&nbsp;<b>{{ wx.temp }}°C</b>&nbsp;{{ wx.label }}</span>
+      <span class="chip rain" v-if="rain" :class="rain.cls" title="Radar nowcast (Buienradar)">{{ rain.text }}</span>
       <span class="chip model" :class="{ trained: !!profiles }">{{ modelLabel }}</span>
       <span class="chip">⟳ {{ updatedLabel }}</span>
     </div>
@@ -127,6 +141,16 @@ h1 span {
 .chip.model.trained {
   border-color: rgba(46, 230, 166, 0.35);
   color: var(--accent);
+}
+
+.chip.rain.wet {
+  color: var(--accent-2);
+  border-color: rgba(77, 163, 255, 0.45);
+}
+
+.chip.rain.soon {
+  color: var(--warn);
+  border-color: rgba(255, 176, 32, 0.35);
 }
 
 .err {

@@ -140,6 +140,26 @@ body,
   }
 }
 
+/* custom route origin */
+.start-pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+  animation: pin-drop 0.35s ease-out;
+}
+
+.start-pin::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: #0b0e14;
+}
+
 /* the user's position */
 .user-dot {
   width: 15px;
