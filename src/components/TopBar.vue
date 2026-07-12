@@ -8,8 +8,11 @@ const props = defineProps({
   profiles: { type: Object, default: null },
   updatedAt: { type: Date, default: null },
   nowcast: { type: Object, default: null }, // radar rain summary (~2 h)
+  radarOn: { type: Boolean, default: false },
   error: { type: String, default: '' },
 })
+
+defineEmits(['toggle-radar'])
 
 const hhmm = (d) => d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
 
@@ -60,7 +63,10 @@ const updatedLabel = computed(() => {
       </div>
     </div>
 
+    <slot />
+
     <div class="chips">
+      <button class="chip radar-btn" :class="{ on: radarOn }" title="Rain radar overlay (RainViewer)" @click="$emit('toggle-radar')">☔ Radar</button>
       <span class="chip"><span class="dot" style="background: var(--accent)"></span><b>{{ bikesNow }}</b>&nbsp;bikes now</span>
       <span class="chip"><b>{{ stations.length }}</b>&nbsp;stations</span>
       <span class="chip" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
@@ -151,6 +157,20 @@ h1 span {
 .chip.rain.soon {
   color: var(--warn);
   border-color: rgba(255, 176, 32, 0.35);
+}
+
+.chip.radar-btn {
+  cursor: pointer;
+  font: 500 12px var(--font);
+}
+
+.chip.radar-btn:hover {
+  color: var(--text);
+}
+
+.chip.radar-btn.on {
+  color: var(--accent-2);
+  border-color: rgba(77, 163, 255, 0.45);
 }
 
 .err {

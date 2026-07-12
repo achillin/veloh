@@ -86,8 +86,7 @@ function tickLabel(h) {
 <style scoped>
 .scrubber {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 16px;
   bottom: 18px;
   z-index: 10;
   width: min(560px, calc(100% - 32px));

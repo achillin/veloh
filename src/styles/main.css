@@ -221,6 +221,12 @@ body,
   border: 1px solid var(--border);
 }
 
+/* keep zoom controls clear of the bottom-right time scrubber
+   (extra specificity: maplibre's stylesheet loads after this one) */
+.maplibregl-map .maplibregl-ctrl-bottom-right {
+  bottom: 136px;
+}
+
 .maplibregl-ctrl-group button span {
   filter: invert(0.9);
 }

@@ -288,18 +288,18 @@ const selectedSeries = computed(() => {
       @select="selectedId = $event"
       @setstart="onSetStart"
     />
-    <SearchBox :stations="stations" @goto="onGoto" />
     <TopBar
       :stations="stations"
       :weather="weather"
       :profiles="profiles"
       :updated-at="updatedAt"
       :nowcast="nowcast"
+      :radar-on="radarOn"
       :error="error"
-    />
-    <button class="radar-toggle glass" :class="{ on: radarOn }" @click="radarOn = !radarOn" title="Rain radar overlay (RainViewer)">
-      ☔ Radar
-    </button>
+      @toggle-radar="radarOn = !radarOn"
+    >
+      <SearchBox :stations="stations" @goto="onGoto" />
+    </TopBar>
     <StationPanel
       v-if="selectedStation && selectedDisplay"
       :station="selectedStation"
@@ -401,19 +401,11 @@ const selectedSeries = computed(() => {
   color: var(--text);
 }
 
-.radar-toggle {
-  position: absolute;
-  top: 150px;
-  left: 16px;
-  z-index: 10;
-  padding: 9px 14px;
-  cursor: pointer;
-  color: var(--text-dim);
-  font: 600 12.5px var(--font);
-}
-
-.radar-toggle.on {
-  color: var(--accent-2);
-  border-color: rgba(77, 163, 255, 0.45);
+/* On narrower windows the right-anchored scrubber would reach the route
+   chip — stack the chip above it instead. */
+@media (max-width: 1120px) {
+  .route-chip {
+    bottom: 142px;
+  }
 }
 </style>

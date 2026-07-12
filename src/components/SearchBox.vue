@@ -138,15 +138,18 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
 </template>
 
 <style scoped>
+/* lives inside the TopBar flex row — no overlay positioning */
 .search {
-  position: absolute;
-  top: 96px;
-  left: 16px;
-  z-index: 11;
-  width: min(340px, calc(100% - 32px));
+  position: relative;
+  flex: 1 1 240px;
+  min-width: 200px;
+  max-width: 360px;
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
 .icon {
@@ -157,12 +160,13 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
 
 input {
   flex: 1;
+  min-width: 0;
   background: transparent;
   border: none;
   outline: none;
   color: var(--text);
-  font: 500 13.5px var(--font);
-  padding: 12px 10px;
+  font: 500 13px var(--font);
+  padding: 9px 8px;
 }
 
 input::placeholder {
@@ -175,9 +179,10 @@ input::-webkit-search-cancel-button {
 
 .results {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 8px);
   left: 0;
-  right: 0;
+  z-index: 30;
+  width: max(100%, 300px);
   list-style: none;
   background: var(--panel-solid);
   border: 1px solid var(--border);
