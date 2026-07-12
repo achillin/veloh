@@ -43,14 +43,38 @@ export function summarizeNowcast(points) {
   return { raining: false, startsAt: start?.time ?? null, maxMmh }
 }
 
-/** Latest composite radar frame as a raster tile URL template, or throws. */
+/** Latest composite radar frame: tile URL template + frame time. */
 export async function fetchRadarTiles() {
   const res = await fetch('https://api.rainviewer.com/public/weather-maps.json')
   if (!res.ok) throw new Error(`rainviewer → HTTP ${res.status}`)
   const j = await res.json()
   const frame = j?.radar?.past?.at(-1)
   if (!frame) throw new Error('no radar frames')
-  // 512px tiles, color scheme 2 (universal blue), smoothed, snow shown.
-  // Real data exists only up to z7 — the map overzooms beyond (see MapView).
-  return `${j.host}${frame.path}/512/{z}/{x}/{y}/2/1_1.png`
+  return {
+    // 512px tiles, color scheme 2 (universal blue), smoothed, snow shown.
+    // Real data exists only up to z7 — the map overzooms beyond (see MapView).
+    template: `${j.host}${frame.path}/512/{z}/{x}/{y}/2/1_1.png`,
+    time: new Date(frame.time * 1000),
+  }
+}
+
+/** Fraction of precipitation pixels in the radar tile around (lat, lon) —
+ *  tells the UI whether a transparent overlay means "dry" or "broken".
+ *  A z6 tile spans roughly 400 km at this latitude. */
+export async function sampleRadarCoverage(template, { z = 6, lat = 49.61, lon = 6.13 } = {}) {
+  const n = 2 ** z
+  const x = Math.floor(((lon + 180) / 360) * n)
+  const rad = (lat * Math.PI) / 180
+  const y = Math.floor(((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * n)
+  const url = template.replace('{z}', String(z)).replace('{x}', String(x)).replace('{y}', String(y))
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`radar tile → HTTP ${res.status}`)
+  const bmp = await createImageBitmap(await res.blob())
+  const canvas = new OffscreenCanvas(bmp.width, bmp.height)
+  const ctx = canvas.getContext('2d', { willReadFrequently: true })
+  ctx.drawImage(bmp, 0, 0)
+  const a = ctx.getImageData(0, 0, bmp.width, bmp.height).data
+  let wet = 0
+  for (let i = 3; i < a.length; i += 4) if (a[i] > 0) wet++
+  return wet / (a.length / 4)
 }

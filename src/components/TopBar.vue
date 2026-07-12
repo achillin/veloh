@@ -9,6 +9,7 @@ const props = defineProps({
   updatedAt: { type: Date, default: null },
   nowcast: { type: Object, default: null }, // radar rain summary (~2 h)
   radarOn: { type: Boolean, default: false },
+  radarNote: { type: String, default: null }, // frame time + coverage hint
   offsetHours: { type: Number, default: 0 }, // scrubbed time offset
   target: { type: Date, default: null }, // scrubbed target time
   error: { type: String, default: '' },
@@ -77,6 +78,7 @@ const updatedLabel = computed(() => {
 
     <div class="chips">
       <button class="chip radar-btn" :class="{ on: radarOn }" title="Rain radar overlay (RainViewer)" @click="$emit('toggle-radar')">☔ Radar</button>
+      <span class="chip radar-note" v-if="radarNote">{{ radarNote }}</span>
       <span class="chip"><span class="dot" style="background: var(--accent)"></span><b>{{ bikesNow }}</b>&nbsp;bikes now</span>
       <span class="chip"><b>{{ stations.length }}</b>&nbsp;stations</span>
       <span class="chip" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
@@ -186,6 +188,11 @@ h1 span {
 .chip.radar-btn.on {
   color: var(--accent-2);
   border-color: rgba(77, 163, 255, 0.45);
+}
+
+.chip.radar-note {
+  color: var(--accent-2);
+  border-color: rgba(77, 163, 255, 0.25);
 }
 
 .err {

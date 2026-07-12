@@ -9,7 +9,7 @@ import { fetchStations } from './lib/gbfs.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
-import { fetchRainNowcast, summarizeNowcast, fetchRadarTiles } from './lib/radar.js'
+import { fetchRainNowcast, summarizeNowcast, fetchRadarTiles, sampleRadarCoverage } from './lib/radar.js'
 
 const stations = shallowRef([])
 const profiles = shallowRef(null)
@@ -27,6 +27,8 @@ const nowcast = shallowRef(null) // radar rain summary for the next ~2 h
 const nowcastPoints = shallowRef(null) // raw 5-min radar precipitation series
 const radarOn = ref(false)
 const radarTiles = ref(null)
+const radarTime = ref(null)
+const radarCoverage = ref(null) // precipitation fraction in the ~400 km tile around the city
 
 function onGoto(t) {
   if (t.stationId) {
@@ -81,11 +83,30 @@ async function refreshNowcast() {
 
 async function refreshRadar() {
   try {
-    radarTiles.value = await fetchRadarTiles()
+    const { template, time } = await fetchRadarTiles()
+    radarTiles.value = template
+    radarTime.value = time
+    sampleRadarCoverage(template)
+      .then((c) => (radarCoverage.value = c))
+      .catch(() => (radarCoverage.value = null))
   } catch {
     radarTiles.value = null
+    radarTime.value = null
   }
 }
+
+// Makes a rain-free (fully transparent) radar overlay legible as "working,
+// just dry" instead of looking broken.
+const radarNote = computed(() => {
+  if (!radarOn.value || !radarTiles.value) return null
+  const t = radarTime.value
+    ? radarTime.value.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+    : '…'
+  if (radarCoverage.value === null) return `frame ${t}`
+  return radarCoverage.value > 0.001
+    ? `frame ${t} · precipitation in range`
+    : `frame ${t} · no rain within ~200 km`
+})
 
 watch(radarOn, (on) => {
   clearInterval(radarTimer)
@@ -295,6 +316,7 @@ const selectedSeries = computed(() => {
       :updated-at="updatedAt"
       :nowcast="nowcast"
       :radar-on="radarOn"
+      :radar-note="radarNote"
       :offset-hours="offsetHours"
       :target="target"
       :error="error"
