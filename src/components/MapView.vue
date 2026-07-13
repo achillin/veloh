@@ -48,57 +48,69 @@ function ensureRouteLayers() {
   })
 }
 
-const RADAR_PREFIX = 'rain-radar-'
-let radarCount = 0 // how many frame layers are currently on the map
+// Radar frames are DWD WMS requests keyed by their TIME parameter. Layers
+// are created lazily on first display and then kept (a revisited frame is
+// instant, no reload), and stepping the animation only flips raster-opacity
+// — no source teardown, so no tile-loading gap between frames.
+// NB: not gated on isStyleLoaded() — that flag flaps during tile loads.
+const radarPool = new Map() // template → { srcId, layerId }
+let radarSeq = 0
 let styleReady = false // set on first (and every) style load
 
-// Animation without flicker: every frame gets its own always-loaded raster
-// layer once, and stepping the animation only flips raster-opacity — no
-// source teardown, so no tile-loading gap between frames.
-// NB: not gated on isStyleLoaded() — that flag flaps during tile loads.
-function applyRadarFrames() {
-  if (!map || !styleReady) return
-  try {
-    for (let i = 0; i < radarCount; i++) {
-      if (map.getLayer(`${RADAR_PREFIX}layer-${i}`)) map.removeLayer(`${RADAR_PREFIX}layer-${i}`)
-      if (map.getSource(`${RADAR_PREFIX}${i}`)) map.removeSource(`${RADAR_PREFIX}${i}`)
-    }
-    radarCount = props.radarFrames.length
-    props.radarFrames.forEach((template, i) => {
-      map.addSource(`${RADAR_PREFIX}${i}`, {
-        type: 'raster',
-        tiles: [template],
-        tileSize: 512,
-        // RainViewer's radar composite serves real data only up to z7 (probed:
-        // z8+ returns "Zoom level not supported" images) — overzoom from there
-        maxzoom: 7,
-        attribution: 'Radar © RainViewer',
-      })
-      map.addLayer(
-        {
-          id: `${RADAR_PREFIX}layer-${i}`,
-          type: 'raster',
-          source: `${RADAR_PREFIX}${i}`,
-          paint: {
-            'raster-opacity': i === props.radarIdx ? 0.6 : 0,
-            'raster-fade-duration': 0,
-          },
-        },
-        map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
-      )
-    })
-  } catch {
-    map.once('idle', applyRadarFrames) // style mid-swap — retry when settled
-  }
+function clearRadarPool() {
+  radarPool.forEach(({ srcId, layerId }) => {
+    if (map.getLayer(layerId)) map.removeLayer(layerId)
+    if (map.getSource(srcId)) map.removeSource(srcId)
+  })
+  radarPool.clear()
+}
+
+function ensureRadarLayer(template) {
+  let entry = radarPool.get(template)
+  if (entry) return entry
+  const srcId = `rain-radar-${radarSeq++}`
+  map.addSource(srcId, {
+    type: 'raster',
+    tiles: [template],
+    tileSize: 512,
+    attribution: 'Radar © DWD',
+  })
+  map.addLayer(
+    {
+      id: `${srcId}-l`,
+      type: 'raster',
+      source: srcId,
+      paint: { 'raster-opacity': 0, 'raster-fade-duration': 0 },
+    },
+    map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
+  )
+  entry = { srcId, layerId: `${srcId}-l` }
+  radarPool.set(template, entry)
+  return entry
 }
 
 function applyRadarIdx() {
   if (!map || !styleReady) return
-  for (let i = 0; i < radarCount; i++) {
-    const id = `${RADAR_PREFIX}layer-${i}`
-    if (map.getLayer(id)) {
-      map.setPaintProperty(id, 'raster-opacity', i === props.radarIdx ? 0.6 : 0)
-    }
+  try {
+    const current = props.radarFrames[props.radarIdx] ?? null
+    if (current) ensureRadarLayer(current)
+    radarPool.forEach(({ layerId }, template) => {
+      if (map.getLayer(layerId)) {
+        map.setPaintProperty(layerId, 'raster-opacity', template === current ? 0.6 : 0)
+      }
+    })
+  } catch {
+    map.once('idle', applyRadarIdx) // style mid-swap — retry when settled
+  }
+}
+
+function applyRadarFrames() {
+  if (!map || !styleReady) return
+  try {
+    clearRadarPool()
+    applyRadarIdx()
+  } catch {
+    map.once('idle', applyRadarFrames)
   }
 }
 
@@ -182,7 +194,8 @@ onMounted(() => {
   const onStyleReady = () => {
     styleReady = true
     ensureRouteLayers()
-    applyRadarFrames()
+    radarPool.clear() // a style swap dropped the layers with it
+    applyRadarIdx()
   }
   map.on('load', onStyleReady)
   map.on('style.load', onStyleReady)

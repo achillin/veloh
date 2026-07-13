@@ -1,0 +1,31 @@
+{
+ "generatedAt": "2026-07-13T17:51:21.266Z",
+ "trainSnapshots": 964,
+ "testSnapshots": 814,
+ "testWindow": {
+  "from": "2026-07-12T17:51:05.933Z",
+  "to": "2026-07-13T17:51:05.933Z"
+ },
+ "horizons": {
+  "1h": {
+   "n": 5110,
+   "modelMae": 1.299,
+   "persistenceMae": 1.043
+  },
+  "3h": {
+   "n": 4818,
+   "modelMae": 2.071,
+   "persistenceMae": 1.779
+  },
+  "6h": {
+   "n": 5110,
+   "modelMae": 2.553,
+   "persistenceMae": 2.569
+  },
+  "24h": {
+   "n": 4964,
+   "modelMae": 2.587,
+   "persistenceMae": 2.903
+  }
+ }
+}

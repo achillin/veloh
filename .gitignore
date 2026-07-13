@@ -2,3 +2,6 @@ node_modules/
 dist/
 *.local
 .DS_Store
+
+# rolling history window, machine-local (written by the collector)
+public/recent.json

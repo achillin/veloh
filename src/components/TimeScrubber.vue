@@ -8,6 +8,7 @@ const props = defineProps({
   now: { type: Date, required: true },
   weather: { type: Object, default: null },
   radarPoints: { type: Array, default: null }, // 5-min radar rain nowcast (~2 h)
+  historyAvailable: { type: Boolean, default: null }, // measured station data at the scrubbed past time?
 })
 const emit = defineEmits(['update:offsetHours'])
 
@@ -55,14 +56,19 @@ function onInput(e) {
   emit('update:offsetHours', Math.round(Number(e.target.value) * 6) / 6)
 }
 
-const ticks = [
-  { h: -2, label: '-2h' },
-  { h: 0, label: 'now' },
-  { h: 12, label: '+12h' },
-  { h: 24, label: '+24h' },
-  { h: 36, label: '+36h' },
-  { h: 48, label: '+48h' },
-]
+// Absolute clock times on the axis (short weekday once it's another day)
+const ticks = computed(() =>
+  [-2, 0, 12, 24, 36, 48].map((h) => {
+    if (h === 0) return { h, label: 'now' }
+    const d = new Date(props.now.getTime() + h * 3.6e6)
+    const hm = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+    const label =
+      d.getDate() === props.now.getDate()
+        ? hm
+        : `${d.toLocaleDateString('en-GB', { weekday: 'short' })} ${hm}`
+    return { h, label }
+  })
+)
 const tickLeft = (h) => `${(((h - MIN) / (MAX - MIN)) * 100).toFixed(2)}%`
 </script>
 
@@ -75,7 +81,7 @@ const tickLeft = (h) => `${(((h - MIN) / (MAX - MIN)) * 100).toFixed(2)}%`
       <span v-if="holiday" class="chip holiday">🎉 {{ holiday }}</span>
       <span v-if="wx" class="chip" :title="wx.byRadar ? 'Rain call from radar nowcast' : 'Rain call from model forecast'">{{ wx.icon }} <b>{{ wx.temp }}°C</b><template v-if="wx.rain">&nbsp;· rain{{ wx.byRadar ? ' (radar)' : ' likely' }}</template></span>
       <span v-if="offsetHours > 0" class="chip fc">forecast</span>
-      <span v-if="offsetHours < 0" class="chip hist">radar history</span>
+      <span v-if="offsetHours < 0" class="chip hist">{{ historyAvailable ? 'history' : 'history · no station data' }}</span>
     </div>
     <input
       type="range"
@@ -91,7 +97,7 @@ const tickLeft = (h) => `${(((h - MIN) / (MAX - MIN)) * 100).toFixed(2)}%`
         v-for="(t, i) in ticks"
         :key="t.h"
         :style="{ left: tickLeft(t.h) }"
-        :class="{ first: i === 0, last: i === ticks.length - 1 }"
+        :class="{ first: i === 0, last: i === ticks.length - 1, now: t.h === 0 }"
       >{{ t.label }}</span>
     </div>
   </div>
@@ -208,5 +214,10 @@ input[type='range']::-moz-range-thumb {
 
 .ticks span.last {
   transform: translateX(-100%);
+}
+
+.ticks span.now {
+  color: var(--accent);
+  font-weight: 600;
 }
 </style>

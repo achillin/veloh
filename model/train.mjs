@@ -10,13 +10,14 @@
 // produce usable estimates that keep improving as snapshots accumulate.
 //
 // Usage: node model/train.mjs
+// Also imported by model/evaluate.mjs (buildProfiles, loadSnapshotLines).
 
 import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
-const DATA_DIR = join(ROOT, 'data')
+export const DATA_DIR = join(ROOT, 'data')
 const OUT = join(ROOT, 'public', 'model', 'profiles.json')
 const TZ = 'Europe/Luxembourg'
 
@@ -58,7 +59,7 @@ const fmt = new Intl.DateTimeFormat('en-GB', {
   weekday: 'short',
 })
 
-function bucketKey(isoTime) {
+export function bucketKey(isoTime) {
   const parts = Object.fromEntries(fmt.formatToParts(new Date(isoTime)).map((p) => [p.type, p.value]))
   const hour = Number(parts.hour) % 24
   let dt
@@ -72,7 +73,14 @@ function bucketKey(isoTime) {
   return `${dt}-${hour}`
 }
 
-// ---- aggregation ----
+// Wet detection across snapshot format versions: v3 lines carry a measured
+// METAR observation (wx = present-weather codes, null when dry); v1/v2 fall
+// back to the Open-Meteo precipitation estimate.
+export function isWetLine(line) {
+  if (line.metar) return /RA|DZ|SN|SG|PL|GR|GS|UP|TS/.test(line.metar.wx ?? '')
+  return (line.wx?.precip ?? line.om?.precip ?? 0) >= 0.2
+}
+
 class MeanAcc {
   constructor() {
     this.sum = 0
@@ -87,34 +95,13 @@ class MeanAcc {
   }
 }
 
-async function main() {
-  const capacities = JSON.parse(await readFile(join(DATA_DIR, 'stations.json'), 'utf8')).stations
-
-  const files = (await readdir(DATA_DIR)).filter((f) => f.endsWith('.ndjson')).sort()
-  if (!files.length) {
-    console.error('No data/*.ndjson snapshot files found. Run `npm run collect` first.')
-    process.exit(1)
-  }
-
-  const stations = new Map() // id → Map(key → MeanAcc)
-  const global = new Map() // key → MeanAcc
-  const wet = new MeanAcc()
-  const dry = new MeanAcc()
-  const seenMinutes = new Set() // local + CI collectors may cover the same minutes
-  let snapshots = 0
-  let firstT = null
-  let lastT = null
-
-  // Wet detection across snapshot format versions: v3 lines carry a measured
-  // METAR observation (wx = present-weather codes, null when dry); v1/v2 fall
-  // back to the Open-Meteo precipitation estimate.
-  const isWetLine = (line) => {
-    if (line.metar) return /RA|DZ|SN|SG|PL|GR|GS|UP|TS/.test(line.metar.wx ?? '')
-    return (line.wx?.precip ?? line.om?.precip ?? 0) >= 0.2
-  }
-
+/** All snapshot lines from data/*.ndjson, de-duplicated per minute
+ *  (local + CI collectors overlap) and sorted by time. */
+export async function loadSnapshotLines(dataDir = DATA_DIR) {
+  const files = (await readdir(dataDir)).filter((f) => f.endsWith('.ndjson')).sort()
+  const byMinute = new Map()
   for (const file of files) {
-    const text = await readFile(join(DATA_DIR, file), 'utf8')
+    const text = await readFile(join(dataDir, file), 'utf8')
     for (const raw of text.split('\n')) {
       if (!raw.trim()) continue
       let line
@@ -124,44 +111,64 @@ async function main() {
         continue // tolerate a torn write from an interrupted collector
       }
       const minute = line.t.slice(0, 16)
-      if (seenMinutes.has(minute)) continue
-      seenMinutes.add(minute)
-      snapshots++
-      if (!firstT || line.t < firstT) firstT = line.t
-      if (!lastT || line.t > lastT) lastT = line.t
-      const key = bucketKey(line.t)
-      const isWet = isWetLine(line)
-
-      let fracSum = 0
-      let fracN = 0
-      for (const [id, [bikes]] of Object.entries(line.s)) {
-        const cap = capacities[id]?.capacity
-        if (!cap) continue
-        const frac = Math.min(bikes / cap, 1)
-        fracSum += frac
-        fracN++
-
-        let byKey = stations.get(id)
-        if (!byKey) stations.set(id, (byKey = new Map()))
-        let acc = byKey.get(key)
-        if (!acc) byKey.set(key, (acc = new MeanAcc()))
-        acc.add(frac)
-
-        let gacc = global.get(key)
-        if (!gacc) global.set(key, (gacc = new MeanAcc()))
-        gacc.add(frac)
-      }
-
-      if (fracN) (isWet ? wet : dry).add(fracSum / fracN)
+      if (!byMinute.has(minute)) byMinute.set(minute, line)
     }
   }
+  return [...byMinute.values()].sort((a, b) => (a.t < b.t ? -1 : 1))
+}
 
-  const out = {
+export async function loadCapacities(dataDir = DATA_DIR) {
+  return JSON.parse(await readFile(join(dataDir, 'stations.json'), 'utf8')).stations
+}
+
+/** Aggregates snapshot lines into the profiles structure the app's
+ *  predictor consumes. */
+export function buildProfiles(lines, capacities) {
+  const stations = new Map() // id → Map(key → MeanAcc)
+  const global = new Map() // key → MeanAcc
+  const wet = new MeanAcc()
+  const dry = new MeanAcc()
+  let firstT = null
+  let lastT = null
+
+  for (const line of lines) {
+    if (!firstT || line.t < firstT) firstT = line.t
+    if (!lastT || line.t > lastT) lastT = line.t
+    const key = bucketKey(line.t)
+    const isWet = isWetLine(line)
+
+    let fracSum = 0
+    let fracN = 0
+    for (const [id, [bikes]] of Object.entries(line.s)) {
+      const cap = capacities[id]?.capacity
+      if (!cap) continue
+      const frac = Math.min(bikes / cap, 1)
+      fracSum += frac
+      fracN++
+
+      let byKey = stations.get(id)
+      if (!byKey) stations.set(id, (byKey = new Map()))
+      let acc = byKey.get(key)
+      if (!acc) byKey.set(key, (acc = new MeanAcc()))
+      acc.add(frac)
+
+      let gacc = global.get(key)
+      if (!gacc) global.set(key, (gacc = new MeanAcc()))
+      gacc.add(frac)
+    }
+
+    if (fracN) (isWet ? wet : dry).add(fracSum / fracN)
+  }
+
+  return {
     generatedAt: new Date().toISOString(),
-    snapshots,
+    snapshots: lines.length,
     range: { from: firstT, to: lastT },
     // wet-weather availability delta vs dry, applied globally by the predictor
-    rain: wet.n >= 50 && dry.n >= 50 ? { delta: +(wet.mean - dry.mean).toFixed(4), wetN: wet.n, dryN: dry.n } : null,
+    rain:
+      wet.n >= 50 && dry.n >= 50
+        ? { delta: +(wet.mean - dry.mean).toFixed(4), wetN: wet.n, dryN: dry.n }
+        : null,
     global: Object.fromEntries([...global].map(([k, a]) => [k, [+a.mean.toFixed(4), a.n]])),
     stations: Object.fromEntries(
       [...stations].map(([id, byKey]) => [
@@ -170,17 +177,28 @@ async function main() {
       ])
     ),
   }
+}
 
+async function main() {
+  const capacities = await loadCapacities()
+  const lines = await loadSnapshotLines()
+  if (!lines.length) {
+    console.error('No data/*.ndjson snapshot files found. Run `npm run collect` first.')
+    process.exit(1)
+  }
+  const out = buildProfiles(lines, capacities)
   await mkdir(dirname(OUT), { recursive: true })
   await writeFile(OUT, JSON.stringify(out))
   console.log(
-    `trained on ${snapshots} snapshots (${firstT} → ${lastT})\n` +
-      `stations: ${stations.size}, buckets: ${global.size}, rain model: ${out.rain ? 'yes' : 'not enough data yet'}\n` +
-      `→ ${OUT}`
+    `trained on ${out.snapshots} snapshots (${out.range.from} → ${out.range.to})\n` +
+      `stations: ${Object.keys(out.stations).length}, buckets: ${Object.keys(out.global).length}, ` +
+      `rain model: ${out.rain ? 'yes' : 'not enough data yet'}\n→ ${OUT}`
   )
 }
 
-main().catch((e) => {
-  console.error(e)
-  process.exit(1)
-})
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e) => {
+    console.error(e)
+    process.exit(1)
+  })
+}

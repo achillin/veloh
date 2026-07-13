@@ -1,7 +1,77 @@
-// Rain-radar ("RegenRadar") integrations — both keyless:
-// - Buienradar: radar-extrapolated 5-min precipitation nowcast, ~2 h ahead.
-//   Covers Benelux incl. Luxembourg (nearest radar: Wideumont, ~40 km).
-// - RainViewer: composite radar imagery as map tiles.
+// Rain-radar ("RegenRadar") integrations — all keyless:
+// - DWD Niederschlagsradar (RV composite): 1 km / 5-min radar measurements
+//   PLUS a +2 h radar nowcast, served as a WMS with a TIME dimension from
+//   maps.dwd.de (CORS *). Covers lat 45.7–56.2, lon 1.5–18.7 — all of
+//   Luxembourg and its surroundings.
+// - Buienradar: radar-extrapolated 5-min point nowcast for the city, ~2 h.
+
+const DWD_WMS =
+  'https://maps.dwd.de/geoserver/dwd/wms?service=WMS&version=1.3.0&request=GetMap' +
+  '&layers=dwd%3ANiederschlagsradar&crs=EPSG%3A3857&format=image%2Fpng&transparent=true' +
+  '&width=512&height=512'
+
+const STEP_MS = 5 * 60_000
+const PUBLISH_LAG_MS = 5 * 60_000 // newest frame is ~one step behind wall clock
+
+/** Radar frames from 2 h back to 2 h ahead, in 5-minute steps. No network
+ *  needed — the DWD WMS serves any timestamp in that window via TIME=. */
+export function dwdRadarFrames(now = new Date()) {
+  const latest = Math.floor((now.getTime() - PUBLISH_LAG_MS) / STEP_MS) * STEP_MS
+  const frames = []
+  for (let t = latest - 2 * 3600_000; t <= latest + 2 * 3600_000; t += STEP_MS) {
+    frames.push({
+      time: new Date(t),
+      nowcast: t > now.getTime(),
+      template: `${DWD_WMS}&bbox={bbox-epsg-3857}&time=${new Date(t).toISOString()}`,
+    })
+  }
+  return frames
+}
+
+const COMPASS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+const R_MERC = 6378137
+
+/** Fetches one 512px DWD radar image of the ~400 km box around (lat, lon)
+ *  and reports precipitation coverage plus the nearest rain's distance and
+ *  compass direction. Tells the UI whether a transparent overlay means
+ *  "dry here" (and where the action is) or "broken". */
+export async function analyzeRadar({ lat = 49.61, lon = 6.13 } = {}) {
+  const x = (lon * Math.PI * R_MERC) / 180
+  const y = Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360)) * R_MERC
+  const half = 200_000 // metres
+  const url = `${DWD_WMS}&bbox=${x - half},${y - half},${x + half},${y + half}`
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`dwd radar → HTTP ${res.status}`)
+  const bmp = await createImageBitmap(await res.blob())
+  const canvas = new OffscreenCanvas(bmp.width, bmp.height)
+  const ctx = canvas.getContext('2d', { willReadFrequently: true })
+  ctx.drawImage(bmp, 0, 0)
+  const a = ctx.getImageData(0, 0, bmp.width, bmp.height).data
+  const kmPerPx = (2 * half) / bmp.width / 1000
+  const c = bmp.width / 2
+  let wet = 0
+  let bestD2 = Infinity
+  let bestDx = 0
+  let bestDy = 0
+  for (let i = 3; i < a.length; i += 4) {
+    if (a[i] === 0) continue
+    wet++
+    const p = (i - 3) / 4
+    const dx = (p % bmp.width) - c
+    const dy = Math.floor(p / bmp.width) - c
+    const d2 = dx * dx + dy * dy
+    if (d2 < bestD2) {
+      bestD2 = d2
+      bestDx = dx
+      bestDy = dy
+    }
+  }
+  if (!wet) return { coverage: 0, nearest: null }
+  const km = Math.sqrt(bestD2) * kmPerPx
+  const deg = (Math.atan2(bestDx, -bestDy) * 180) / Math.PI // north-up bearing
+  const dir = COMPASS[Math.round((((deg % 360) + 360) % 360) / 45) % 8]
+  return { coverage: wet / (a.length / 4), nearest: { km, dir } }
+}
 
 /** Parses Buienradar "raintext" ("value|HH:MM" lines, value 0–255 log scale)
  *  into [{time, mmh}]. Exported separately for testability. */
@@ -41,86 +111,4 @@ export function summarizeNowcast(points) {
   }
   const start = points.find((p) => p.mmh >= RAIN_MMH)
   return { raining: false, startsAt: start?.time ?? null, maxMmh }
-}
-
-/** All available composite radar frames: ~2 h of measurements plus ~30 min
- *  of radar extrapolation ("nowcast"), 10-minute steps — the material every
- *  rain-radar animation loops over. */
-export async function fetchRadarFrames() {
-  const res = await fetch('https://api.rainviewer.com/public/weather-maps.json')
-  if (!res.ok) throw new Error(`rainviewer → HTTP ${res.status}`)
-  const j = await res.json()
-  // 512px tiles, color scheme 2 (universal blue), smoothed, snow shown.
-  // Real data exists only up to z7 — the map overzooms beyond (see MapView).
-  const mk = (f, nowcast) => ({
-    time: new Date(f.time * 1000),
-    nowcast,
-    template: `${j.host}${f.path}/512/{z}/{x}/{y}/2/1_1.png`,
-  })
-  const frames = [
-    ...(j?.radar?.past ?? []).map((f) => mk(f, false)),
-    ...(j?.radar?.nowcast ?? []).map((f) => mk(f, true)),
-  ]
-  if (!frames.length) throw new Error('no radar frames')
-  return frames
-}
-
-const COMPASS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-
-/** Scans the 2×2 block of z6 radar tiles centred on (lat, lon) — roughly
- *  an 800 km box — and reports precipitation coverage plus the distance and
- *  compass direction of the nearest rain. Tells the UI whether a transparent
- *  overlay means "dry here" (and where the action is) or "broken". */
-export async function analyzeRadar(template, { z = 6, lat = 49.61, lon = 6.13 } = {}) {
-  const n = 2 ** z
-  const rad = (lat * Math.PI) / 180
-  const cx = ((lon + 180) / 360) * n * 512 // centre, in world pixels
-  const cy = ((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * n * 512
-  const kmPerPx = (40075 * Math.cos(rad)) / (n * 512) // local Mercator scale
-
-  const tx0 = Math.floor(cx / 512 - 0.5)
-  const ty0 = Math.floor(cy / 512 - 0.5)
-
-  let wet = 0
-  let total = 0
-  let bestD2 = Infinity
-  let bestDx = 0
-  let bestDy = 0
-
-  for (const tx of [tx0, tx0 + 1]) {
-    for (const ty of [ty0, ty0 + 1]) {
-      const url = template
-        .replace('{z}', String(z))
-        .replace('{x}', String(tx))
-        .replace('{y}', String(ty))
-      const res = await fetch(url)
-      if (!res.ok) continue
-      const bmp = await createImageBitmap(await res.blob())
-      const canvas = new OffscreenCanvas(bmp.width, bmp.height)
-      const ctx = canvas.getContext('2d', { willReadFrequently: true })
-      ctx.drawImage(bmp, 0, 0)
-      const a = ctx.getImageData(0, 0, bmp.width, bmp.height).data
-      total += a.length / 4
-      for (let i = 3; i < a.length; i += 4) {
-        if (a[i] === 0) continue
-        wet++
-        const p = (i - 3) / 4
-        const dx = tx * 512 + (p % bmp.width) - cx
-        const dy = ty * 512 + Math.floor(p / bmp.width) - cy
-        const d2 = dx * dx + dy * dy
-        if (d2 < bestD2) {
-          bestD2 = d2
-          bestDx = dx
-          bestDy = dy
-        }
-      }
-    }
-  }
-
-  if (!total) throw new Error('no radar tiles readable')
-  if (!wet) return { coverage: 0, nearest: null }
-  const km = Math.sqrt(bestD2) * kmPerPx
-  const deg = (Math.atan2(bestDx, -bestDy) * 180) / Math.PI // north-up bearing
-  const dir = COMPASS[Math.round((((deg % 360) + 360) % 360) / 45) % 8]
-  return { coverage: wet / total, nearest: { km, dir } }
 }

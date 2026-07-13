@@ -21,11 +21,13 @@ jobs:
         with:
           node-version: 24
       - run: node model/train.mjs
+      - name: Evaluate against the held-out last day
+        run: node model/evaluate.mjs
       - name: Commit model
         run: |
           git config user.name "trainer-bot"
           git config user.email "actions@github.com"
-          git add public/model/profiles.json
+          git add public/model/profiles.json public/model/eval.json
           git diff --cached --quiet && exit 0
           git commit -m "retrain $(date -u +%F)"
           git pull --rebase origin ${GITHUB_REF_NAME}

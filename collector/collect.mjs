@@ -35,12 +35,14 @@
 // Optional: set JCDECAUX_API_KEY (free key from https://developer.jcdecaux.com)
 // to also record connected/overflow-stand details from the official VLS v3 API.
 
-import { mkdir, appendFile, writeFile, access } from 'node:fs/promises'
+import { mkdir, appendFile, writeFile, access, readFile, readdir, stat, open } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA_DIR = join(ROOT, 'data')
+const RECENT_FILE = join(ROOT, 'public', 'recent.json')
+const RECENT_WINDOW_MS = 135 * 60_000 // the app scrubs 2 h back; keep a margin
 const GBFS = 'https://api.cyclocity.fr/contracts/luxembourg/gbfs/v3'
 const METAR = 'https://aviationweather.gov/api/data/metar?ids=ELLX&format=json'
 const OPEN_METEO =
@@ -56,6 +58,64 @@ async function getJson(url) {
   const res = await fetch(url, { headers: { Accept: 'application/json' } })
   if (!res.ok) throw new Error(`${url.split('?')[0]} → HTTP ${res.status}`)
   return res.json()
+}
+
+// ---- public/recent.json: rolling window the app uses for history scrubbing ----
+
+async function readTailLines(file, maxBytes = 4 * 1024 * 1024) {
+  const { size } = await stat(file)
+  const start = Math.max(0, size - maxBytes)
+  const fh = await open(file, 'r')
+  try {
+    const buf = Buffer.alloc(size - start)
+    await fh.read(buf, 0, buf.length, start)
+    const text = buf.toString('utf8')
+    // drop the first (possibly torn) line when we started mid-file
+    return start > 0 ? text.slice(text.indexOf('\n') + 1).split('\n') : text.split('\n')
+  } finally {
+    await fh.close()
+  }
+}
+
+// Rebuilds the window from the tails of the NDJSON files (first run, or
+// after the collector was down) so history scrubbing works immediately.
+async function backfillRecent(nowMs) {
+  const cutoff = nowMs - RECENT_WINDOW_MS
+  const byMinute = new Map()
+  const files = (await readdir(DATA_DIR).catch(() => [])).filter((f) => f.endsWith('.ndjson'))
+  for (const f of files) {
+    for (const raw of await readTailLines(join(DATA_DIR, f)).catch(() => [])) {
+      if (!raw.trim()) continue
+      try {
+        const line = JSON.parse(raw)
+        if (Date.parse(line.t) < cutoff) continue
+        const minute = line.t.slice(0, 16)
+        if (byMinute.has(minute)) continue
+        const s = {}
+        for (const [id, arr] of Object.entries(line.s)) s[id] = [arr[0], arr[1]]
+        byMinute.set(minute, { t: line.t, s })
+      } catch {
+        /* torn line */
+      }
+    }
+  }
+  return [...byMinute.values()].sort((a, b) => (a.t < b.t ? -1 : 1))
+}
+
+async function updateRecent(line, nowMs) {
+  let snapshots
+  try {
+    snapshots = JSON.parse(await readFile(RECENT_FILE, 'utf8')).snapshots ?? []
+  } catch {
+    snapshots = await backfillRecent(nowMs)
+  }
+  const cutoff = nowMs - RECENT_WINDOW_MS
+  snapshots = snapshots.filter((snap) => Date.parse(snap.t) >= cutoff)
+  const s = {}
+  for (const [id, arr] of Object.entries(line.s)) s[id] = [arr[0], arr[1]]
+  snapshots.push({ t: line.t, s })
+  await mkdir(dirname(RECENT_FILE), { recursive: true })
+  await writeFile(RECENT_FILE, JSON.stringify({ updated: line.t, snapshots }))
 }
 
 async function ensureStationInfo() {
@@ -182,6 +242,7 @@ async function snapshot(tag) {
   const month = line.t.slice(0, 7)
   const file = join(DATA_DIR, `snapshots-${month}${tag ? `-${tag}` : ''}.ndjson`)
   await appendFile(file, JSON.stringify(line) + '\n')
+  await updateRecent(line, nowMs).catch((e) => console.error(`recent.json: ${e.message}`))
   console.log(`${line.t}  ${Object.keys(s).length} stations${line.jd ? ' +jcd' : ''} → ${file}`)
 }
 

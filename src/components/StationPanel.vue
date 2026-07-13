@@ -12,6 +12,7 @@ const emit = defineEmits(['close'])
 
 const KIND_LABEL = {
   live: 'live',
+  history: 'measured (history)',
   blend: 'short-term estimate',
   learned: 'learned pattern',
   prior: 'estimate (prior — improves with data)',
@@ -101,6 +102,13 @@ const dot = computed(() => {
     <div class="foot">
       <span v-if="!station.renting" class="chip closed">not renting</span>
       <span v-if="!station.returning" class="chip closed">not accepting returns</span>
+      <a
+        class="chip veloh-link"
+        href="https://myveloh.lu/fr/mapping"
+        target="_blank"
+        rel="noopener"
+        title="Official vel'OH! map — opens the app on phones where it's installed"
+      >vel'OH! app ↗</a>
       <span class="dim">updated {{ lastReported }}</span>
     </div>
   </aside>
@@ -257,5 +265,16 @@ h2 {
 .chip.closed {
   color: var(--danger);
   border-color: rgba(255, 77, 94, 0.4);
+}
+
+.chip.veloh-link {
+  color: var(--accent);
+  border-color: rgba(46, 230, 166, 0.35);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chip.veloh-link:hover {
+  background: rgba(46, 230, 166, 0.1);
 }
 </style>

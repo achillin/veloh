@@ -9,7 +9,8 @@ import { fetchStations } from './lib/gbfs.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
-import { fetchRainNowcast, summarizeNowcast, fetchRadarFrames, analyzeRadar } from './lib/radar.js'
+import { fetchRainNowcast, summarizeNowcast, dwdRadarFrames, analyzeRadar } from './lib/radar.js'
+import { fetchRecentHistory, historyAt } from './lib/history.js'
 
 const stations = shallowRef([])
 const profiles = shallowRef(null)
@@ -29,6 +30,7 @@ const radarOn = ref(false)
 const radarFrames = shallowRef([]) // ~2 h of radar + 30 min nowcast, 10-min steps
 const radarIdx = ref(0) // animation position
 const radarInfo = shallowRef(null) // { coverage, nearest: { km, dir } | null } around the city
+const recentHistory = shallowRef(null) // rolling ~2 h of measured snapshots (collector-fed)
 
 const target = computed(() => new Date(now.value.getTime() + offsetHours.value * 3.6e6))
 
@@ -63,6 +65,7 @@ async function refreshStations() {
   } catch (e) {
     error.value = `Live feed unavailable: ${e.message}`
   }
+  fetchRecentHistory().then((h) => (recentHistory.value = h))
 }
 
 async function refreshWeather() {
@@ -84,19 +87,14 @@ async function refreshNowcast() {
   }
 }
 
-async function refreshRadar() {
-  try {
-    const frames = await fetchRadarFrames()
-    radarFrames.value = frames
-    if (radarIdx.value >= frames.length) radarIdx.value = 0
-    // analyze the newest measured frame (not the extrapolated ones)
-    const latest = [...frames].reverse().find((f) => !f.nowcast) ?? frames.at(-1)
-    analyzeRadar(latest.template)
-      .then((info) => (radarInfo.value = info))
-      .catch(() => (radarInfo.value = null))
-  } catch {
-    radarFrames.value = []
-  }
+function refreshRadar() {
+  // DWD frames are generated locally (WMS TIME dimension) — no fetch needed
+  const frames = dwdRadarFrames()
+  radarFrames.value = frames
+  if (radarIdx.value >= frames.length) radarIdx.value = 0
+  analyzeRadar()
+    .then((info) => (radarInfo.value = info))
+    .catch(() => (radarInfo.value = null))
 }
 
 const radarFrame = computed(() => radarFrames.value[radarIdx.value] ?? null)
@@ -211,11 +209,33 @@ const predictionCtx = computed(() => ({
   globalLiveMean: globalMeanFraction(stations.value),
 }))
 
-// What the map shows: live values at offset 0, model output otherwise.
+// Measured snapshot for the scrubbed past moment, when the collector's
+// rolling window has one.
+const historySnap = computed(() =>
+  offsetHours.value < 0 ? historyAt(recentHistory.value, target.value) : null
+)
+
+// What the map shows: live values at offset 0, measured history in the
+// past (falling back to live when no data), model output in the future.
 const displayStations = computed(() => {
   const ctx = predictionCtx.value
   const fc = offsetHours.value > 0 ? forecastAt(weather.value, target.value) : null
+  const snap = historySnap.value
   return stations.value.map((s) => {
+    if (offsetHours.value < 0) {
+      const rec = snap?.s?.[s.id]
+      const bikes = rec ? rec[0] : s.bikes
+      return {
+        id: s.id,
+        name: s.name,
+        lat: s.lat,
+        lon: s.lon,
+        frac: Math.min(bikes / Math.max(s.capacity, 1), 1),
+        bikes,
+        predicted: false,
+        closed: !s.renting,
+      }
+    }
     const p = predict(s, target.value, { ...ctx, forecast: fc })
     return {
       id: s.id,
@@ -330,9 +350,17 @@ function clearStart() {
 const selectedStation = computed(() => stations.value.find((s) => s.id === selectedId.value) ?? null)
 
 const selectedDisplay = computed(() => {
-  if (!selectedStation.value) return null
+  const st = selectedStation.value
+  if (!st) return null
+  if (offsetHours.value < 0) {
+    const rec = historySnap.value?.s?.[st.id]
+    if (rec) {
+      return { frac: Math.min(rec[0] / Math.max(st.capacity, 1), 1), bikes: rec[0], kind: 'history' }
+    }
+    return { frac: Math.min(st.bikes / Math.max(st.capacity, 1), 1), bikes: st.bikes, kind: 'live' }
+  }
   const fc = offsetHours.value > 0 ? forecastAt(weather.value, target.value) : null
-  return predict(selectedStation.value, target.value, { ...predictionCtx.value, forecast: fc })
+  return predict(st, target.value, { ...predictionCtx.value, forecast: fc })
 })
 
 const selectedSeries = computed(() => {
@@ -398,6 +426,7 @@ const selectedSeries = computed(() => {
       :now="now"
       :weather="weather"
       :radar-points="nowcastPoints"
+      :history-available="offsetHours < 0 ? !!historySnap : null"
     />
   </div>
 </template>

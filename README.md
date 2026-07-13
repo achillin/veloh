@@ -20,11 +20,15 @@ system (operated by JCDecaux). Vue 3 · Vite · MapLibre GL.
   reroutes to it; right-clicking the map (or searching an address) sets a custom start point
   (✕ on the chip reverts to your position). Falls back to a beeline estimate if the router is
   unreachable.
-- **Rain radar ("RegenRadar")** — the ☔ Radar button overlays live composite radar imagery
-  (RainViewer) on the map, and the top bar shows a radar-based nowcast ("dry next 2 h" /
-  "rain ~18:45", Buienradar 5-min extrapolation). Within the ~2 h radar horizon the time
-  scrubber's rain call also comes from the radar; beyond that, the hourly model forecast —
-  radar nowcasts physically don't reach further.
+- **Rain radar ("RegenRadar")** — the ☔ Radar button overlays the DWD precipitation radar
+  (1 km / 5-min composite with a +2 h radar nowcast, WMS TIME dimension) on the map. At "now"
+  it auto-plays the past-2h loop; scrubbing drives the frames directly from −2 h to +2 h. The
+  top bar shows a radar-based rain call for the city ("dry next 2 h" / "rain ~18:45", Buienradar
+  5-min point nowcast) and, with radar on, the displayed frame time plus where the nearest rain
+  is (distance + compass direction, sampled from the actual radar pixels).
+- **History scrubbing** — the slider reaches 2 h into the past: station markers show the
+  *measured* bike counts of that moment (from the collector's rolling `public/recent.json`
+  window) and the radar shows the matching frame.
 
 ## Data sources (all keyless & open)
 
@@ -34,8 +38,8 @@ system (operated by JCDecaux). Vue 3 · Vite · MapLibre GL.
 | [Open-Meteo](https://open-meteo.com/) | current weather + 3-day hourly forecast | CC BY 4.0 |
 | [Nominatim](https://nominatim.org/) | address search (geocoding) | ODbL / fair use |
 | [FOSSGIS OSRM](https://routing.openstreetmap.de/) | walking routes to the nearest station | ODbL / fair use |
-| [Buienradar](https://www.buienradar.nl/) | radar rain nowcast, ~2 h (covers Luxembourg) | free / fair use |
-| [RainViewer](https://www.rainviewer.com/) | radar imagery overlay on the map | free tier |
+| [Buienradar](https://www.buienradar.nl/) | radar rain point-nowcast, ~2 h (covers Luxembourg) | free / fair use |
+| [DWD GeoServer](https://maps.dwd.de/) | radar imagery overlay: 1 km / 5-min composite ±2 h | GeoNutzV (open) |
 | [aviationweather.gov](https://aviationweather.gov/) | measured METAR observations (collector) | public domain |
 | Computed locally | Luxembourg public holidays | — |
 
@@ -64,7 +68,14 @@ Nobody publishes vel'OH *history*, so the model trains on data **you collect you
 2. **Train** — `npm run train` aggregates the snapshots into `public/model/profiles.json`:
    mean availability per **station × day-type × hour** (day-type = weekday / Saturday /
    Sunday-or-holiday, in Luxembourg local time) plus a global profile and a wet-vs-dry rain delta.
-3. **Predict** — the app blends, per station:
+3. **Evaluate** — `node model/evaluate.mjs` backtests the predictor: it trains on everything
+   except the most recent 24 h, "predicts" that held-out day from what the app would have known
+   at the time, and reports mean absolute error (bikes) per horizon against a persistence
+   baseline ("it stays what it was"). Runs nightly in CI after retraining
+   (`public/model/eval.json`). Early result after two days of data: the model beats
+   persistence from ~6 h out (24 h: 2.59 vs 2.90 bikes MAE); persistence still wins short-term
+   until the profiles firm up.
+4. **Predict** — the app blends, per station:
    - the **live level**, decaying over ~6 h (persistence),
    - the **learned profile**, shrunk toward the global profile where data is sparse,
    - the **rain adjustment** when the forecast says wet.
