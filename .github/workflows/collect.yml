@@ -1,9 +1,11 @@
-# 1-minute-resolution collection despite GitHub's 5-minute cron floor:
-# the job starts every 15 minutes and takes 16 snapshots 60 s apart inside
-# one run (~15.5 min — slightly LONGER than the schedule period on purpose:
-# the next scheduled run queues behind the concurrency group and starts the
-# moment the current one finishes, so runs chain back-to-back and the only
-# gap per cycle is the ~30 s job startup). Public repos run this free.
+# 1-minute-resolution collection despite GitHub's scheduling reality: cron
+# here fires every 1–3 hours in practice (GitHub heavily throttles scheduled
+# workflows), so each run that DOES start collects for ~3 hours — one
+# snapshot per minute, committing every 30 minutes. Meanwhile the next
+# scheduled run waits in the concurrency queue and takes over the moment
+# this one ends, so coverage chains with only the ~30 s job startup as gap.
+# The local collector (per-minute, gapless) remains the primary source; the
+# trainer de-duplicates overlapping minutes.
 name: collect
 on:
   schedule:
@@ -24,18 +26,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Collect 16 snapshots, 60 s apart
+      - name: Collect for ~3 h, one snapshot per minute, committing every 30 min
         env:
           # Optional richer fields from the official JCDecaux API:
           # add a repo secret JCDECAUX_API_KEY (free key from developer.jcdecaux.com)
           JCDECAUX_API_KEY: ${{ secrets.JCDECAUX_API_KEY }}
-        run: node collector/collect.mjs --burst 16 --every 60
-      - name: Commit data
         run: |
           git config user.name "collector-bot"
           git config user.email "actions@github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "snapshots $(date -u +%FT%TZ)"
-          git pull --rebase origin ${GITHUB_REF_NAME}
-          git push
+          for i in 1 2 3 4 5 6; do
+            node collector/collect.mjs --burst 30 --every 60
+            git add data
+            if ! git diff --cached --quiet; then
+              git commit -m "snapshots $(date -u +%FT%TZ)"
+              git pull --rebase origin ${GITHUB_REF_NAME}
+              git push
+            fi
+          done

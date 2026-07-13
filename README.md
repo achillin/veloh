@@ -111,12 +111,12 @@ so pulls never conflict, and the trainer de-duplicates overlapping minutes anywa
 Uninstall with `collector/install-autostart.sh --remove`.
 
 **GitHub Actions** (free on public repos, runs even when your PC is off) — already included as
-[`.github/workflows/collect.yml`](.github/workflows/collect.yml). GitHub's cron floor is
-**5 minutes** and scheduled starts are best-effort, so true per-minute cron is impossible. The
-workflow works around it: it starts every 15 minutes and takes **16 snapshots 60 s apart inside
-one run** — deliberately a little longer than the schedule period, so the next scheduled run
-queues behind the concurrency group and starts the moment the current one ends. Runs chain
-back-to-back; the only per-cycle gap is the ~30 s job startup.
+[`.github/workflows/collect.yml`](.github/workflows/collect.yml). Reality check: GitHub throttles
+scheduled workflows heavily — despite a `*/15` cron this repo sees starts only every 1–3 hours.
+The workflow compensates: each run that does start collects **one snapshot per minute for ~3
+hours** (committing every 30 min), while the next scheduled run waits in the concurrency queue
+and takes over seamlessly. Combined with the local collector (per-minute, gapless, primary
+source) and per-minute de-duplication in the trainer, coverage stays continuous.
 [`train.yml`](.github/workflows/train.yml) retrains the model nightly and backtests it
 (`eval.json`).
 
