@@ -112,11 +112,13 @@ Uninstall with `collector/install-autostart.sh --remove`.
 
 **GitHub Actions** (free on public repos, runs even when your PC is off) — already included as
 [`.github/workflows/collect.yml`](.github/workflows/collect.yml). GitHub's cron floor is
-**5 minutes** and scheduled starts are best-effort (often a few minutes late, occasionally
-skipped), so true per-minute cron is impossible. The workflow works around it: it starts every
-15 minutes and takes **14 snapshots 60 s apart inside one run** — effectively 1-minute resolution
-with small gaps between bursts. [`train.yml`](.github/workflows/train.yml) retrains the model
-nightly from the accumulated data.
+**5 minutes** and scheduled starts are best-effort, so true per-minute cron is impossible. The
+workflow works around it: it starts every 15 minutes and takes **16 snapshots 60 s apart inside
+one run** — deliberately a little longer than the schedule period, so the next scheduled run
+queues behind the concurrency group and starts the moment the current one ends. Runs chain
+back-to-back; the only per-cycle gap is the ~30 s job startup.
+[`train.yml`](.github/workflows/train.yml) retrains the model nightly and backtests it
+(`eval.json`).
 
 To activate: push this repo to GitHub (public repo recommended — Actions minutes are free and
 unlimited there) and both workflows start on their own. For gap-free 1-minute data, run
