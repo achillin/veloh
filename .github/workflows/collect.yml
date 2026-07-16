@@ -35,11 +35,19 @@ jobs:
           git config user.name "collector-bot"
           git config user.email "actions@github.com"
           for i in 1 2 3 4 5 6; do
-            node collector/collect.mjs --burst 30 --every 60
+            # transient API errors inside a burst must not kill the run
+            node collector/collect.mjs --burst 30 --every 60 || echo "burst $i ended with errors"
             git add data
             if ! git diff --cached --quiet; then
               git commit -m "snapshots $(date -u +%FT%TZ)"
-              git pull --rebase origin ${GITHUB_REF_NAME}
-              git push
+              # ndjson files union-merge (.gitattributes), so overlapping
+              # collectors rebase cleanly; retry covers plain push races
+              for attempt in 1 2 3; do
+                if git pull --rebase origin ${GITHUB_REF_NAME} && git push; then
+                  break
+                fi
+                git rebase --abort 2>/dev/null || true
+                sleep 15
+              done
             fi
           done

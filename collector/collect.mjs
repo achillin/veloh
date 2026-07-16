@@ -278,15 +278,17 @@ async function main() {
 
   const burst = Math.max(1, argNum('--burst', 1))
   const every = Math.max(10, argNum('--every', 60)) * 1000
+  let ok = 0
   for (let i = 0; i < burst; i++) {
     if (i > 0) await sleep(every)
     try {
       await snapshot(tag)
+      ok++
     } catch (e) {
-      console.error(`snapshot failed: ${e.message}`)
-      process.exitCode = 1
+      console.error(`snapshot failed: ${e.message}`) // transient API errors are expected in long bursts
     }
   }
+  if (!ok) process.exitCode = 1 // fail only when the whole burst produced nothing
 }
 
 main().catch((e) => {

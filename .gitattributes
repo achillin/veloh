@@ -1,6 +1,9 @@
 # Shell scripts must stay LF to run in WSL; never normalize collected data.
+# merge=union: snapshot logs are append-only — concurrent collectors adding
+# different lines must union-merge instead of conflicting (the trainer
+# de-duplicates overlapping minutes anyway).
 * text=auto
 *.sh text eol=lf
 *.vbs text eol=crlf
-*.ndjson -text
+*.ndjson -text merge=union
 *.json text eol=lf
