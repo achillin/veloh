@@ -263,24 +263,32 @@ async function main() {
   const tag = argStr('--tag')
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
+  // Snapshots align to a fixed time grid: the sleep is shortened by however
+  // long the snapshot itself took, so slow APIs don't stretch the cadence
+  // (sleep(60) + 20 s of fetching used to drift to ~80 s steps).
   if (process.argv.includes('--loop')) {
     const interval = Math.max(30, argNum('--loop', 300)) * 1000
     console.log(`looping every ${interval / 1000}s${tag ? ` (tag: ${tag})` : ''} — Ctrl+C to stop`)
-    for (;;) {
+    const start = Date.now()
+    for (let n = 1; ; n++) {
       try {
         await snapshot(tag)
       } catch (e) {
         console.error(`snapshot failed: ${e.message}`)
       }
-      await sleep(interval)
+      await sleep(Math.max(1000, start + n * interval - Date.now()))
     }
   }
 
   const burst = Math.max(1, argNum('--burst', 1))
   const every = Math.max(10, argNum('--every', 60)) * 1000
+  const start = Date.now()
   let ok = 0
   for (let i = 0; i < burst; i++) {
-    if (i > 0) await sleep(every)
+    if (i > 0) {
+      const wait = start + i * every - Date.now()
+      if (wait > 0) await sleep(wait)
+    }
     try {
       await snapshot(tag)
       ok++
