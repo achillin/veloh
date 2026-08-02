@@ -60,6 +60,16 @@ async function getJson(url) {
   return res.json()
 }
 
+/** ISO-8601 week id, e.g. 2026-W32 (week-year differs from the calendar
+ *  year around New Year — intentional, keeps weeks contiguous). */
+function isoWeek(d) {
+  const date = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()))
+  date.setUTCDate(date.getUTCDate() - ((date.getUTCDay() + 6) % 7) + 3) // this week's Thursday
+  const week1 = new Date(Date.UTC(date.getUTCFullYear(), 0, 4))
+  const week = 1 + Math.round(((date - week1) / 86400000 - 3 + ((week1.getUTCDay() + 6) % 7)) / 7)
+  return `${date.getUTCFullYear()}-W${String(week).padStart(2, '0')}`
+}
+
 // ---- public/recent.json: rolling window the app uses for history scrubbing ----
 
 async function readTailLines(file, maxBytes = 4 * 1024 * 1024) {
@@ -239,8 +249,9 @@ async function snapshot(tag) {
     }
   }
 
-  const month = line.t.slice(0, 7)
-  const file = join(DATA_DIR, `snapshots-${month}${tag ? `-${tag}` : ''}.ndjson`)
+  // Weekly files, not monthly: a month of per-minute snapshots is ~100 MB,
+  // which hits GitHub's hard file-size limit (July's local file: 96 MB).
+  const file = join(DATA_DIR, `snapshots-${isoWeek(new Date(nowMs))}${tag ? `-${tag}` : ''}.ndjson`)
   await appendFile(file, JSON.stringify(line) + '\n')
   await updateRecent(line, nowMs).catch((e) => console.error(`recent.json: ${e.message}`))
   console.log(`${line.t}  ${Object.keys(s).length} stations${line.jd ? ' +jcd' : ''} → ${file}`)

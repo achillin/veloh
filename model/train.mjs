@@ -15,6 +15,7 @@
 import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { gunzipSync } from 'node:zlib'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 export const DATA_DIR = join(ROOT, 'data')
@@ -98,10 +99,14 @@ class MeanAcc {
 /** All snapshot lines from data/*.ndjson, de-duplicated per minute
  *  (local + CI collectors overlap) and sorted by time. */
 export async function loadSnapshotLines(dataDir = DATA_DIR) {
-  const files = (await readdir(dataDir)).filter((f) => f.endsWith('.ndjson')).sort()
+  // closed periods are gzipped to stay under GitHub's 100 MB file limit
+  const files = (await readdir(dataDir))
+    .filter((f) => f.endsWith('.ndjson') || f.endsWith('.ndjson.gz'))
+    .sort()
   const byMinute = new Map()
   for (const file of files) {
-    const text = await readFile(join(dataDir, file), 'utf8')
+    const raw = await readFile(join(dataDir, file))
+    const text = file.endsWith('.gz') ? gunzipSync(raw).toString('utf8') : raw.toString('utf8')
     for (const raw of text.split('\n')) {
       if (!raw.trim()) continue
       let line
@@ -207,6 +212,47 @@ export function buildProfiles(lines, capacities) {
       dN++
     }
   }
+  // ---- rebalancing statistics ----
+  // How often does the operator's truck touch a station in a given hour
+  // bucket: a jump of ≥5 bikes within 5 minutes counts as an event; we
+  // report the fraction of observed days with such an event. The app shows
+  // "refills common around this hour" chips from this.
+  const REBAL_JUMP = 5
+  const rebalAcc = new Map() // id → Map(key → {up:Set(days), down:Set(days)})
+  const obsDays = new Map() // key → Set(days observed)
+  for (const line of lines) {
+    const next = lineAt(Date.parse(line.t) + 5 * 60_000)
+    if (!next) continue
+    const key = bucketKey(line.t)
+    const day = line.t.slice(0, 10)
+    let od = obsDays.get(key)
+    if (!od) obsDays.set(key, (od = new Set()))
+    od.add(day)
+    for (const [id, [b0]] of Object.entries(line.s)) {
+      const rec = next.s[id]
+      if (!rec) continue
+      const d = rec[0] - b0
+      if (Math.abs(d) < REBAL_JUMP) continue
+      let byKey = rebalAcc.get(id)
+      if (!byKey) rebalAcc.set(id, (byKey = new Map()))
+      let e = byKey.get(key)
+      if (!e) byKey.set(key, (e = { up: new Set(), down: new Set() }))
+      ;(d > 0 ? e.up : e.down).add(day)
+    }
+  }
+  const rebalance = {}
+  for (const [id, byKey] of rebalAcc) {
+    for (const [key, e] of byKey) {
+      const n = obsDays.get(key)?.size ?? 0
+      if (!n) continue
+      const pUp = e.up.size / n
+      const pDown = e.down.size / n
+      if (Math.max(pUp, pDown) >= 0.15) {
+        ;(rebalance[id] ??= {})[key] = [+pUp.toFixed(2), +pDown.toFixed(2)]
+      }
+    }
+  }
+
   const clampRho = (r) => +Math.min(Math.max(r, 0.01), 0.995).toFixed(4)
   const decay =
     dDen > 0 && dN >= 500
@@ -230,6 +276,7 @@ export function buildProfiles(lines, capacities) {
         ? { delta: +(wet.mean - dry.mean).toFixed(4), wetN: wet.n, dryN: dry.n }
         : null,
     decay,
+    rebalance: Object.keys(rebalance).length ? rebalance : null,
     global: Object.fromEntries([...global].map(([k, a]) => [k, [+a.mean.toFixed(4), a.n]])),
     stations: Object.fromEntries(
       [...stations].map(([id, byKey]) => [

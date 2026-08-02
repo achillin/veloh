@@ -81,10 +81,18 @@ describe('predict', () => {
     expect(p.frac).toBeCloseTo(rho * 0.5 + (1 - rho) * 0.2, 5)
   })
 
-  it('ignores the rain delta beyond the reliable forecast horizon', () => {
+  it('tapers the rain delta between 24 h and 48 h ahead', () => {
     const profiles = { global: { 'wd-16': [0.4, 100] }, stations: {}, rain: { delta: -0.1 } }
-    const p = predict(station, hoursAhead(30), { ...baseCtx, profiles, forecast: { precip: 5 } })
-    expect(p.frac).toBeCloseTo(0.4, 5) // wet forecast, but +30 h → no adjustment
+    // +30 h: trust = (48-30)/24 = 0.75 → delta scaled to -0.075
+    const p30 = predict(station, hoursAhead(30), { ...baseCtx, profiles, forecast: { precip: 5 } })
+    expect(p30.frac).toBeCloseTo(0.4 - 0.075, 5)
+  })
+
+  it('ignores the rain delta entirely from 48 h ahead', () => {
+    const profiles = { global: { 'sat-10': [0.4, 100] }, stations: {}, rain: { delta: -0.1 } }
+    // Wednesday 10:00 + 72 h = Saturday 10:00
+    const p = predict(station, hoursAhead(72), { ...baseCtx, profiles, forecast: { precip: 5 } })
+    expect(p.frac).toBeCloseTo(0.4, 5)
   })
 
   it('applies the rain delta when the forecast is wet', () => {

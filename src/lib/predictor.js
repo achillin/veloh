@@ -16,7 +16,8 @@ const PERSISTENCE_HOURS = 2.5 // legacy e-folding time, used only without learne
 const PERSISTENCE_HORIZON_H = 6 // legacy blend horizon
 const LEARNED_HORIZON_H = 12 // blend horizon when decay was measured from data
 const DECAY_SHRINK_K = 300 // pseudo-pairs pulling a bucket's rho toward the global one
-const RAIN_HORIZON_H = 24 // beyond this, precipitation forecasts aren't trustworthy
+const RAIN_FULL_TRUST_H = 24 // precipitation forecasts carry full weight up to here…
+const RAIN_ZERO_TRUST_H = 48 // …then fade linearly to nothing (day-2 skill is marginal)
 
 export async function loadProfiles() {
   try {
@@ -44,9 +45,14 @@ function learnedFraction(profiles, stationId, key) {
 }
 
 function rainAdjustment(profiles, forecast, dtH) {
-  if (!profiles?.rain || !forecast || dtH > RAIN_HORIZON_H) return 0
+  if (!profiles?.rain || !forecast) return 0
   const wet = (forecast.precip ?? 0) >= 0.2 || (forecast.precipProb ?? 0) >= 60
-  return wet ? profiles.rain.delta : 0
+  if (!wet) return 0
+  const trust =
+    dtH <= RAIN_FULL_TRUST_H
+      ? 1
+      : Math.max(0, (RAIN_ZERO_TRUST_H - dtH) / (RAIN_ZERO_TRUST_H - RAIN_FULL_TRUST_H))
+  return profiles.rain.delta * trust
 }
 
 /** Learned lag-1h anomaly survival rate for the bucket containing `date`,

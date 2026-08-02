@@ -7,6 +7,7 @@ const props = defineProps({
   display: { type: Object, required: true }, // {frac, bikes, kind} at scrub time
   series: { type: Array, required: true }, // [{t, frac, bikes, kind}] hourly, 24h
   offsetHours: { type: Number, required: true },
+  rebalance: { type: Object, default: null }, // {dir: 'up'|'down', pct} for the displayed hour
 })
 const emit = defineEmits(['close'])
 
@@ -100,6 +101,11 @@ const dot = computed(() => {
     </div>
 
     <div class="foot">
+      <span
+        v-if="rebalance"
+        class="chip rebal"
+        :title="`An operator jump of ±5+ bikes within 5 minutes was seen in this hour on ${rebalance.pct}% of observed days`"
+      >⛟ {{ rebalance.dir === 'up' ? 'refills' : 'bike removals' }} common around this hour · {{ rebalance.pct }}%</span>
       <span v-if="!station.renting" class="chip closed">not renting</span>
       <span v-if="!station.returning" class="chip closed">not accepting returns</span>
       <a
@@ -265,6 +271,11 @@ h2 {
 .chip.closed {
   color: var(--danger);
   border-color: rgba(255, 77, 94, 0.4);
+}
+
+.chip.rebal {
+  color: var(--accent-2);
+  border-color: rgba(77, 163, 255, 0.35);
 }
 
 .chip.veloh-link {

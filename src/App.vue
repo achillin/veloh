@@ -6,6 +6,7 @@ import TimeScrubber from './components/TimeScrubber.vue'
 import StationPanel from './components/StationPanel.vue'
 import SearchBox from './components/SearchBox.vue'
 import { fetchStations } from './lib/gbfs.js'
+import { dayType } from './lib/holidays.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
@@ -369,6 +370,19 @@ const selectedSeries = computed(() => {
     forecastAt(weather.value, t)
   )
 })
+
+// Operator-rebalancing hint for the displayed hour: on what fraction of
+// observed days did a truck-sized jump (±5 bikes / 5 min) hit this station?
+const rebalanceHint = computed(() => {
+  const st = selectedStation.value
+  const reb = profiles.value?.rebalance?.[st?.id]
+  if (!st || !reb) return null
+  const t = target.value
+  const e = reb[`${dayType(t)}-${t.getHours()}`]
+  if (!e) return null
+  const [up, down] = e
+  return up >= down ? { dir: 'up', pct: Math.round(up * 100) } : { dir: 'down', pct: Math.round(down * 100) }
+})
 </script>
 
 <template>
@@ -406,6 +420,7 @@ const selectedSeries = computed(() => {
       :display="selectedDisplay"
       :series="selectedSeries"
       :offset-hours="offsetHours"
+      :rebalance="rebalanceHint"
       @close="selectedId = null"
     />
     <div v-if="routeChip" class="route-chip glass">
