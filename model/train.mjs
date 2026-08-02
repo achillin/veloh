@@ -160,6 +160,66 @@ export function buildProfiles(lines, capacities) {
     if (fracN) (isWet ? wet : dry).add(fracSum / fracN)
   }
 
+  // ---- second pass: learned persistence ----
+  // Lag-1h autocorrelation of the availability anomaly per bucket: how much
+  // of "this station is unusually empty/full right now" survives an hour.
+  // The predictor turns this into the live-vs-profile blending weight.
+  const byMinute = new Map(lines.map((l) => [l.t.slice(0, 16), l]))
+  const lineAt = (ms) => {
+    for (const off of [0, 1, -1, 2, -2]) {
+      const c = byMinute.get(new Date(ms + off * 60_000).toISOString().slice(0, 16))
+      if (c) return c
+    }
+    return null
+  }
+  const meanFor = (id, key) => {
+    const s = stations.get(id)?.get(key)
+    if (s?.n) return s.mean
+    const g = global.get(key)
+    return g?.n ? g.mean : null
+  }
+  const decayAcc = new Map() // key → {num, den, n}
+  let dNum = 0
+  let dDen = 0
+  let dN = 0
+  for (const line of lines) {
+    const next = lineAt(Date.parse(line.t) + 3600_000)
+    if (!next) continue
+    const key0 = bucketKey(line.t)
+    const key1 = bucketKey(next.t)
+    for (const [id, [b0]] of Object.entries(line.s)) {
+      const cap = capacities[id]?.capacity
+      const rec = next.s[id]
+      if (!cap || !rec) continue
+      if (Math.abs(rec[0] - b0) >= 8) continue // operator rebalancing, not organic flow
+      const m0 = meanFor(id, key0)
+      const m1 = meanFor(id, key1)
+      if (m0 == null || m1 == null) continue
+      const a0 = Math.min(b0 / cap, 1) - m0
+      const a1 = Math.min(rec[0] / cap, 1) - m1
+      let acc = decayAcc.get(key0)
+      if (!acc) decayAcc.set(key0, (acc = { num: 0, den: 0, n: 0 }))
+      acc.num += a0 * a1
+      acc.den += a0 * a0
+      acc.n++
+      dNum += a0 * a1
+      dDen += a0 * a0
+      dN++
+    }
+  }
+  const clampRho = (r) => +Math.min(Math.max(r, 0.01), 0.995).toFixed(4)
+  const decay =
+    dDen > 0 && dN >= 500
+      ? {
+          global: [clampRho(dNum / dDen), dN],
+          byKey: Object.fromEntries(
+            [...decayAcc]
+              .filter(([, a]) => a.den > 0 && a.n >= 50)
+              .map(([k, a]) => [k, [clampRho(a.num / a.den), a.n]])
+          ),
+        }
+      : null
+
   return {
     generatedAt: new Date().toISOString(),
     snapshots: lines.length,
@@ -169,6 +229,7 @@ export function buildProfiles(lines, capacities) {
       wet.n >= 50 && dry.n >= 50
         ? { delta: +(wet.mean - dry.mean).toFixed(4), wetN: wet.n, dryN: dry.n }
         : null,
+    decay,
     global: Object.fromEntries([...global].map(([k, a]) => [k, [+a.mean.toFixed(4), a.n]])),
     stations: Object.fromEntries(
       [...stations].map(([id, byKey]) => [

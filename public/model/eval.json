@@ -1,31 +1,31 @@
 {
- "generatedAt": "2026-08-01T06:18:23.656Z",
- "trainSnapshots": 26276,
- "testSnapshots": 1432,
+ "generatedAt": "2026-08-02T08:12:57.701Z",
+ "trainSnapshots": 28086,
+ "testSnapshots": 1434,
  "testWindow": {
-  "from": "2026-07-31T05:48:59.888Z",
-  "to": "2026-08-01T05:48:59.888Z"
+  "from": "2026-08-01T08:12:40.453Z",
+  "to": "2026-08-02T08:12:40.453Z"
  },
  "horizons": {
   "1h": {
-   "n": 7105,
-   "modelMae": 1.393,
-   "persistenceMae": 1.134
+   "n": 6960,
+   "modelMae": 1.06,
+   "persistenceMae": 0.967
   },
   "3h": {
-   "n": 7105,
-   "modelMae": 2.253,
-   "persistenceMae": 2.15
+   "n": 6815,
+   "modelMae": 1.726,
+   "persistenceMae": 1.615
   },
   "6h": {
-   "n": 7105,
-   "modelMae": 2.563,
-   "persistenceMae": 3.077
+   "n": 6815,
+   "modelMae": 2.204,
+   "persistenceMae": 2.195
   },
   "24h": {
-   "n": 7105,
-   "modelMae": 2.589,
-   "persistenceMae": 2.749
+   "n": 6815,
+   "modelMae": 2.668,
+   "persistenceMae": 2.965
   }
  }
 }

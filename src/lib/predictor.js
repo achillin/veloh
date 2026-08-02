@@ -12,8 +12,11 @@
 import { dayType } from './holidays.js'
 
 const SHRINK_K = 8 // pseudo-observations pulling a station toward the global profile
-const PERSISTENCE_HOURS = 2.5 // e-folding time of the live-snapshot weight
-const PERSISTENCE_HORIZON_H = 6
+const PERSISTENCE_HOURS = 2.5 // legacy e-folding time, used only without learned decay
+const PERSISTENCE_HORIZON_H = 6 // legacy blend horizon
+const LEARNED_HORIZON_H = 12 // blend horizon when decay was measured from data
+const DECAY_SHRINK_K = 300 // pseudo-pairs pulling a bucket's rho toward the global one
+const RAIN_HORIZON_H = 24 // beyond this, precipitation forecasts aren't trustworthy
 
 export async function loadProfiles() {
   try {
@@ -40,10 +43,21 @@ function learnedFraction(profiles, stationId, key) {
   return { frac: (n * sMean + SHRINK_K * gMean) / (n + SHRINK_K), n }
 }
 
-function rainAdjustment(profiles, forecast) {
-  if (!profiles?.rain || !forecast) return 0
+function rainAdjustment(profiles, forecast, dtH) {
+  if (!profiles?.rain || !forecast || dtH > RAIN_HORIZON_H) return 0
   const wet = (forecast.precip ?? 0) >= 0.2 || (forecast.precipProb ?? 0) >= 60
   return wet ? profiles.rain.delta : 0
+}
+
+/** Learned lag-1h anomaly survival rate for the bucket containing `date`,
+ *  shrunk toward the global rate; null when the model has no decay data. */
+function bucketRho(profiles, date) {
+  const d = profiles?.decay
+  if (!d?.global) return null
+  const g = d.global[0]
+  const s = d.byKey?.[profileKey(date)]
+  const rho = s ? (s[1] * s[0] + DECAY_SHRINK_K * g) / (s[1] + DECAY_SHRINK_K) : g
+  return Math.min(Math.max(rho, 0.01), 0.995)
 }
 
 /**
@@ -68,11 +82,27 @@ export function predict(station, target, { now, profiles, globalLiveMean, foreca
     base = globalLiveMean
     kind = 'prior'
   }
-  base = Math.min(Math.max(base + rainAdjustment(profiles, forecast), 0), 1)
+  base = Math.min(Math.max(base + rainAdjustment(profiles, forecast, dtH), 0), 1)
 
   let frac = base
-  if (dtH < PERSISTENCE_HORIZON_H) {
-    const w = Math.exp(-dtH / PERSISTENCE_HOURS)
+  const horizon = profiles?.decay ? LEARNED_HORIZON_H : PERSISTENCE_HORIZON_H
+  if (dtH < horizon) {
+    let w
+    const rho0 = bucketRho(profiles, now)
+    if (rho0 != null) {
+      // the anomaly decays through every hour it traverses — multiply the
+      // per-bucket survival rates along the path (night hours barely decay,
+      // rush hours decay fast; measured, not assumed)
+      w = 1
+      let remaining = dtH
+      for (let i = 0; remaining > 0 && i < 24; i++) {
+        const r = bucketRho(profiles, new Date(now.getTime() + i * 3.6e6)) ?? rho0
+        w *= Math.pow(r, Math.min(1, remaining))
+        remaining -= 1
+      }
+    } else {
+      w = Math.exp(-dtH / PERSISTENCE_HOURS)
+    }
     frac = w * liveFrac + (1 - w) * base
     if (w > 0.35) kind = 'blend'
   }

@@ -57,6 +57,36 @@ describe('predict', () => {
     expect(p.kind).toBe('prior')
   })
 
+  it('uses the learned per-bucket decay when the model provides one', () => {
+    const profiles = {
+      global: { 'wd-11': [0.2, 100] },
+      stations: {},
+      decay: { global: [0.8, 100000], byKey: {} },
+    }
+    const p = predict(station, hoursAhead(1), { ...baseCtx, profiles })
+    // survival w = 0.8 over one hour → 0.8·live + 0.2·base
+    expect(p.frac).toBeCloseTo(0.8 * 0.5 + 0.2 * 0.2, 5)
+    expect(p.kind).toBe('blend')
+  })
+
+  it('shrinks a sparse bucket rho toward the global one', () => {
+    const profiles = {
+      global: { 'wd-11': [0.2, 100] },
+      stations: {},
+      // bucket says 0.99 but only from 100 pairs; global 0.5 from many
+      decay: { global: [0.5, 100000], byKey: { 'wd-10': [0.99, 100] } },
+    }
+    const p = predict(station, hoursAhead(1), { ...baseCtx, profiles })
+    const rho = (100 * 0.99 + 300 * 0.5) / 400
+    expect(p.frac).toBeCloseTo(rho * 0.5 + (1 - rho) * 0.2, 5)
+  })
+
+  it('ignores the rain delta beyond the reliable forecast horizon', () => {
+    const profiles = { global: { 'wd-16': [0.4, 100] }, stations: {}, rain: { delta: -0.1 } }
+    const p = predict(station, hoursAhead(30), { ...baseCtx, profiles, forecast: { precip: 5 } })
+    expect(p.frac).toBeCloseTo(0.4, 5) // wet forecast, but +30 h → no adjustment
+  })
+
   it('applies the rain delta when the forecast is wet', () => {
     const profiles = { global: { 'wd-10': [0.4, 100] }, stations: {}, rain: { delta: -0.1 } }
     const dry = predict(station, hoursAhead(24), { ...baseCtx, profiles, forecast: { precip: 0 } })
