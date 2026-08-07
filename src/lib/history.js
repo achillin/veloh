@@ -6,7 +6,7 @@
 
 export async function fetchRecentHistory() {
   try {
-    const res = await fetch('/recent.json', { headers: { Accept: 'application/json' } })
+    const res = await fetch(`${import.meta.env.BASE_URL}recent.json`, { headers: { Accept: 'application/json' } })
     if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) return null
     const j = await res.json()
     if (!Array.isArray(j?.snapshots)) return null

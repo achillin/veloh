@@ -21,7 +21,8 @@ const RAIN_ZERO_TRUST_H = 48 // …then fade linearly to nothing (day-2 skill is
 
 export async function loadProfiles() {
   try {
-    const res = await fetch('/model/profiles.json', { headers: { Accept: 'application/json' } })
+    // relative to the deploy base so GitHub Pages subpaths work too
+    const res = await fetch(`${import.meta.env.BASE_URL}model/profiles.json`, { headers: { Accept: 'application/json' } })
     if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) return null
     const j = await res.json()
     return j && j.stations ? j : null
@@ -125,6 +126,75 @@ export function predictSeries(station, hours, ctx, forecastAtFn) {
     out.push({ t, ...predict(station, t, { ...ctx, forecast }) })
   }
   return out
+}
+
+// ---- birth–death distribution ----
+// Evolves the full probability distribution over bike counts from the live
+// state to `target`, using learned per-bucket return (λ) and rental (μ)
+// rates. Transitions are ±1 with reflecting walls at 0 and capacity, so
+// impossible jumps and saturation are handled by construction. Rates are
+// per-hour; the evolution steps in 5-minute slices (sub-divided further if
+// a slice's total event probability gets close to 1).
+
+const FLOW_SHRINK_N = 120 // pseudo minute-pairs pulling a station toward the global rate
+
+function bucketFlows(profiles, station, date) {
+  const f = profiles?.flows
+  if (!f?.global) return null
+  const key = profileKey(date)
+  const g = f.global[key]
+  const s = f.stations?.[station.id]?.[key]
+  if (!g && !s) return null
+  const gl = g ?? [0, 0, 0]
+  if (!s) return { lam: gl[0], mu: gl[1] }
+  const [sl, sm, n] = s
+  return {
+    lam: (n * sl + FLOW_SHRINK_N * gl[0]) / (n + FLOW_SHRINK_N),
+    mu: (n * sm + FLOW_SHRINK_N * gl[1]) / (n + FLOW_SHRINK_N),
+  }
+}
+
+/** Probability vector p[i] = P(i bikes at `target`), or null without flow
+ *  data. Only meaningful for future targets. */
+export function predictDistribution(station, target, { now, profiles }) {
+  if (!profiles?.flows) return null
+  const cap = Math.max(station.capacity, 1)
+  const totalH = (target.getTime() - now.getTime()) / 3.6e6
+  if (totalH <= 0 || totalH > 49) return null
+  let p = new Array(cap + 1).fill(0)
+  p[Math.min(station.bikes, cap)] = 1
+
+  const SLICE_H = 1 / 12 // 5 minutes
+  for (let elapsed = 0; elapsed < totalH; elapsed += SLICE_H) {
+    const dt = Math.min(SLICE_H, totalH - elapsed)
+    const flows = bucketFlows(profiles, station, new Date(now.getTime() + elapsed * 3.6e6))
+    if (!flows) continue
+    // sub-divide so per-substep event probabilities stay well below 1
+    const sub = Math.max(1, Math.ceil((flows.lam + flows.mu) * dt / 0.25))
+    const a = (flows.lam * dt) / sub
+    const d = (flows.mu * dt) / sub
+    for (let s = 0; s < sub; s++) {
+      const next = new Array(cap + 1).fill(0)
+      for (let i = 0; i <= cap; i++) {
+        const pi = p[i]
+        if (!pi) continue
+        const up = i < cap ? a : 0 // full station: returns bounce away
+        const down = i > 0 ? d : 0 // empty station: nothing to rent
+        next[i] += pi * (1 - up - down)
+        if (up) next[i + 1] += pi * up
+        if (down) next[i - 1] += pi * down
+      }
+      p = next
+    }
+  }
+  return p
+}
+
+/** P(at least k bikes) from a distribution vector. */
+export function probAtLeast(p, k) {
+  let s = 0
+  for (let i = k; i < p.length; i++) s += p[i]
+  return Math.min(1, Math.max(0, s))
 }
 
 export function globalMeanFraction(stations) {

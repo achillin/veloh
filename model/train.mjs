@@ -212,6 +212,64 @@ export function buildProfiles(lines, capacities) {
       dN++
     }
   }
+  // ---- flow rates for the birth–death model ----
+  // Per station × bucket: bikes returned (λ, "births") and taken (μ,
+  // "deaths") per hour, estimated from minute-to-minute deltas. At 1-minute
+  // resolution net change ≈ gross flow (simultaneous opposite events within
+  // one minute are rare); jumps of ≥4/min are operator rebalancing, skipped.
+  const flowAcc = new Map() // id → Map(key → {up, down, n})
+  const flowGlobal = new Map() // key → {up, down, n}
+  for (const line of lines) {
+    const t0 = Date.parse(line.t)
+    const next = lineAt(t0 + 60_000)
+    if (!next) continue
+    const gapMin = (Date.parse(next.t) - t0) / 60_000
+    if (gapMin < 0.75 || gapMin > 1.5) continue // only clean 1-minute pairs
+    const key = bucketKey(line.t)
+    for (const [id, [b0]] of Object.entries(line.s)) {
+      const rec = next.s[id]
+      if (!rec) continue
+      const d = rec[0] - b0
+      if (Math.abs(d) >= 4) continue // rebalancing, not customer flow
+      let byKey = flowAcc.get(id)
+      if (!byKey) flowAcc.set(id, (byKey = new Map()))
+      let f = byKey.get(key)
+      if (!f) byKey.set(key, (f = { up: 0, down: 0, n: 0 }))
+      let g = flowGlobal.get(key)
+      if (!g) flowGlobal.set(key, (g = { up: 0, down: 0, n: 0 }))
+      if (d > 0) {
+        f.up += d
+        g.up += d
+      } else if (d < 0) {
+        f.down -= d
+        g.down -= d
+      }
+      f.n++
+      g.n++
+    }
+  }
+  const perHour = (sum, n) => +((sum / n) * 60).toFixed(3)
+  const flows =
+    [...flowGlobal.values()].reduce((s, g) => s + g.n, 0) >= 10000
+      ? {
+          global: Object.fromEntries(
+            [...flowGlobal]
+              .filter(([, g]) => g.n >= 60)
+              .map(([k, g]) => [k, [perHour(g.up, g.n), perHour(g.down, g.n), g.n]])
+          ),
+          stations: Object.fromEntries(
+            [...flowAcc].map(([id, byKey]) => [
+              id,
+              Object.fromEntries(
+                [...byKey]
+                  .filter(([, f]) => f.n >= 60)
+                  .map(([k, f]) => [k, [perHour(f.up, f.n), perHour(f.down, f.n), f.n]])
+              ),
+            ])
+          ),
+        }
+      : null
+
   // ---- rebalancing statistics ----
   // How often does the operator's truck touch a station in a given hour
   // bucket: a jump of ≥5 bikes within 5 minutes counts as an event; we
@@ -276,6 +334,7 @@ export function buildProfiles(lines, capacities) {
         ? { delta: +(wet.mean - dry.mean).toFixed(4), wetN: wet.n, dryN: dry.n }
         : null,
     decay,
+    flows,
     rebalance: Object.keys(rebalance).length ? rebalance : null,
     global: Object.fromEntries([...global].map(([k, a]) => [k, [+a.mean.toFixed(4), a.n]])),
     stations: Object.fromEntries(

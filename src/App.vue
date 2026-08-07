@@ -8,7 +8,14 @@ import SearchBox from './components/SearchBox.vue'
 import { fetchStations } from './lib/gbfs.js'
 import { dayType } from './lib/holidays.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
-import { loadProfiles, predict, predictSeries, globalMeanFraction } from './lib/predictor.js'
+import {
+  loadProfiles,
+  predict,
+  predictSeries,
+  globalMeanFraction,
+  predictDistribution,
+  probAtLeast,
+} from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
 import { fetchRainNowcast, summarizeNowcast, dwdRadarFrames, analyzeRadar } from './lib/radar.js'
 import { fetchRecentHistory, historyAt } from './lib/history.js'
@@ -371,6 +378,20 @@ const selectedSeries = computed(() => {
   )
 })
 
+// Birth–death odds for the scrubbed future moment: full probability
+// distribution evolved from the live count via learned flow rates.
+// ≥3 as a buffer against broken-but-listed bikes (dead motor, brakes).
+const availabilityOdds = computed(() => {
+  const st = selectedStation.value
+  if (!st || offsetHours.value <= 0) return null
+  const dist = predictDistribution(st, target.value, { now: now.value, profiles: profiles.value })
+  if (!dist) return null
+  return {
+    p1: Math.round(probAtLeast(dist, 1) * 100),
+    p3: Math.round(probAtLeast(dist, 3) * 100),
+  }
+})
+
 // Operator-rebalancing hint for the displayed hour: on what fraction of
 // observed days did a truck-sized jump (±5 bikes / 5 min) hit this station?
 const rebalanceHint = computed(() => {
@@ -421,6 +442,7 @@ const rebalanceHint = computed(() => {
       :series="selectedSeries"
       :offset-hours="offsetHours"
       :rebalance="rebalanceHint"
+      :odds="availabilityOdds"
       @close="selectedId = null"
     />
     <div v-if="routeChip" class="route-chip glass">

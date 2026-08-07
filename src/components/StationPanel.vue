@@ -8,6 +8,7 @@ const props = defineProps({
   series: { type: Array, required: true }, // [{t, frac, bikes, kind}] hourly, 24h
   offsetHours: { type: Number, required: true },
   rebalance: { type: Object, default: null }, // {dir: 'up'|'down', pct} for the displayed hour
+  odds: { type: Object, default: null }, // {p1, p3} birth–death probabilities for the scrubbed time
 })
 const emit = defineEmits(['close'])
 
@@ -73,6 +74,11 @@ const dot = computed(() => {
         <span class="ebike">⚡ e-bikes</span>
         <span class="kind" :class="display.kind">{{ kindLabel }}</span>
       </div>
+    </div>
+
+    <div v-if="odds" class="odds" title="Birth–death model: probability distribution evolved from the live count via learned rental/return rates. ≥3 is a buffer against listed-but-broken bikes.">
+      <span class="odds-item"><b>{{ odds.p1 }}%</b> ≥1 bike</span>
+      <span class="odds-item"><b>{{ odds.p3 }}%</b> ≥3 bikes</span>
     </div>
 
     <div class="facts">
@@ -202,6 +208,30 @@ h2 {
 
 .kind.prior {
   color: var(--warn);
+}
+
+.odds {
+  display: flex;
+  gap: 8px;
+  margin: -6px 0 12px;
+}
+
+.odds-item {
+  flex: 1;
+  text-align: center;
+  padding: 7px 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(77, 163, 255, 0.3);
+  background: rgba(77, 163, 255, 0.08);
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+
+.odds-item b {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--accent-2);
+  margin-right: 4px;
 }
 
 .facts {

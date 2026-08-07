@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
+  base: './', // relative assets — works at / (dev) and /veloh/ (GitHub Pages)
   plugins: [vue()],
   server: {
     port: Number(process.env.PORT) || 5173,

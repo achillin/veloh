@@ -17,7 +17,7 @@ import { mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadSnapshotLines, loadCapacities, buildProfiles } from './train.mjs'
-import { predict } from '../src/lib/predictor.js'
+import { predict, predictDistribution, probAtLeast } from '../src/lib/predictor.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'public', 'model', 'eval.json')
@@ -128,6 +128,48 @@ async function main() {
       : { n: 0 }
   }
 
+  // ---- probability calibration (birth–death P(≥1 bike)) ----
+  // Brier score of the predicted probability vs what happened; reference is
+  // the best constant forecast (base rate), whose Brier is ȳ(1−ȳ).
+  report.probability = {}
+  for (const h of [1, 6]) {
+    const hMs = h * 3600_000
+    let brierSum = 0
+    let outcomeSum = 0
+    let n = 0
+    for (let t = cutoffMs; t <= lastMs; t += SAMPLE_STEP_MS) {
+      const actualLine = nearestLine(testLines, t)
+      const baseLine = nearestLine(lines, t - hMs)
+      if (!actualLine || !baseLine) continue
+      const targetDate = new Date(Date.parse(actualLine.t))
+      const baseDate = new Date(Date.parse(baseLine.t))
+      for (const [id, [actual]] of Object.entries(actualLine.s)) {
+        const cap = capacities[id]?.capacity
+        const base = baseLine.s[id]
+        if (!cap || !base) continue
+        const dist = predictDistribution({ id, capacity: cap, bikes: base[0] }, targetDate, {
+          now: baseDate,
+          profiles,
+        })
+        if (!dist) continue
+        const p1 = probAtLeast(dist, 1)
+        const y = actual >= 1 ? 1 : 0
+        brierSum += (p1 - y) ** 2
+        outcomeSum += y
+        n++
+      }
+    }
+    if (n) {
+      const yBar = outcomeSum / n
+      report.probability[`${h}h`] = {
+        n,
+        brier: +(brierSum / n).toFixed(4),
+        brierBaseRate: +(yBar * (1 - yBar)).toFixed(4),
+        baseRate: +yBar.toFixed(3),
+      }
+    }
+  }
+
   await mkdir(dirname(OUT), { recursive: true })
   await writeFile(OUT, JSON.stringify(report, null, 1))
 
@@ -139,6 +181,11 @@ async function main() {
   for (const [h, r] of Object.entries(report.horizons)) {
     console.log(
       `${h.padEnd(8)} ${String(r.n).padEnd(8)} ${String(r.modelMae ?? '—').padEnd(10)} ${r.persistenceMae ?? '—'}`
+    )
+  }
+  for (const [h, r] of Object.entries(report.probability ?? {})) {
+    console.log(
+      `P(≥1 bike) @${h}: Brier ${r.brier} vs base-rate ${r.brierBaseRate} (base rate ${r.baseRate}, n=${r.n})`
     )
   }
   console.log(`→ ${OUT}`)
