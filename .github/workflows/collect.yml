@@ -31,6 +31,9 @@ jobs:
           # Optional richer fields from the official JCDecaux API:
           # add a repo secret JCDECAUX_API_KEY (free key from developer.jcdecaux.com)
           JCDECAUX_API_KEY: ${{ secrets.JCDECAUX_API_KEY }}
+          # commit the rolling history window so the deployed app can scrub
+          # into the past (read via raw.githubusercontent.com, no redeploy)
+          RECENT_FILE: data/recent.json
         run: |
           git config user.name "collector-bot"
           git config user.email "actions@github.com"
@@ -43,7 +46,10 @@ jobs:
               # ndjson files union-merge (.gitattributes), so overlapping
               # collectors rebase cleanly; retry covers plain push races
               for attempt in 1 2 3; do
-                if git pull --rebase origin ${GITHUB_REF_NAME} && git push; then
+                # -X theirs: overlapping runs both rewrite data/recent.json —
+                # keep our (newer) version; ndjson still union-merges via
+                # .gitattributes, which outranks the strategy option
+                if git pull --rebase -X theirs origin ${GITHUB_REF_NAME} && git push; then
                   break
                 fi
                 git rebase --abort 2>/dev/null || true

@@ -4,13 +4,30 @@
 // Deployments without a collector simply lack the file; the app then falls
 // back to live values.
 
+// Deployed builds have no local collector — fall back to the CI-committed
+// window straight from the repo (raw CDN, CORS *, ~5 min cache, refreshed
+// by the collect workflow every 30 min).
+const REMOTE_RECENT = 'https://raw.githubusercontent.com/achillin/veloh/main/data/recent.json'
+
+function parseRecent(j) {
+  if (!Array.isArray(j?.snapshots)) return null
+  return j.snapshots.map((snap) => ({ t: new Date(snap.t), s: snap.s }))
+}
+
 export async function fetchRecentHistory() {
   try {
     const res = await fetch(`${import.meta.env.BASE_URL}recent.json`, { headers: { Accept: 'application/json' } })
-    if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) return null
-    const j = await res.json()
-    if (!Array.isArray(j?.snapshots)) return null
-    return j.snapshots.map((snap) => ({ t: new Date(snap.t), s: snap.s }))
+    if (res.ok && (res.headers.get('content-type') ?? '').includes('json')) {
+      const parsed = parseRecent(await res.json())
+      if (parsed?.length) return parsed
+    }
+  } catch {
+    /* fall through to the remote copy */
+  }
+  try {
+    const res = await fetch(REMOTE_RECENT)
+    if (!res.ok) return null
+    return parseRecent(await res.json())
   } catch {
     return null
   }

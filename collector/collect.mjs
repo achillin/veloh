@@ -41,7 +41,12 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA_DIR = join(ROOT, 'data')
-const RECENT_FILE = join(ROOT, 'public', 'recent.json')
+// Local collectors write public/recent.json (gitignored, served by the dev
+// server); CI sets RECENT_FILE=data/recent.json so the rolling window gets
+// committed and the deployed app can read it via raw.githubusercontent.com.
+const RECENT_FILE = process.env.RECENT_FILE
+  ? join(ROOT, process.env.RECENT_FILE)
+  : join(ROOT, 'public', 'recent.json')
 const RECENT_WINDOW_MS = 135 * 60_000 // the app scrubs 2 h back; keep a margin
 const GBFS = 'https://api.cyclocity.fr/contracts/luxembourg/gbfs/v3'
 const METAR = 'https://aviationweather.gov/api/data/metar?ids=ELLX&format=json'
