@@ -7,8 +7,9 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: collect # serialize with the collector to avoid push races
-  cancel-in-progress: false
+  group: train # own group: sharing the collector's queue got this run
+  cancel-in-progress: false # superseded (= cancelled) every night; ndjson
+  # union-merge + rebase retries make parallel pushes safe anyway
 
 jobs:
   train:
