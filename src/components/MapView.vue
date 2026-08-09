@@ -10,7 +10,7 @@ const props = defineProps({
   userPos: { type: Object, default: null }, // {lat, lon}
   route: { type: Object, default: null }, // { geometry: GeoJSON LineString }
   startPos: { type: Object, default: null }, // custom route origin {lat, lon, label?}
-  radarFrames: { type: Array, default: () => [] }, // radar tile URL templates, one per frame
+  radarFrames: { type: Array, default: () => [] }, // [{dwd, global}] tile URL templates per frame
   radarIdx: { type: Number, default: 0 }, // which frame is visible
 })
 const emit = defineEmits(['select', 'setstart'])
@@ -57,35 +57,53 @@ const radarPool = new Map() // template → { srcId, layerId }
 let radarSeq = 0
 let styleReady = false // set on first (and every) style load
 
+// The zoom threshold where the detailed DWD composite hands over to the
+// worldwide RainViewer layer (DWD's coverage edge shows when zoomed out).
+const RADAR_ZOOM_SPLIT = 5.5
+
 function clearRadarPool() {
-  radarPool.forEach(({ srcId, layerId }) => {
-    if (map.getLayer(layerId)) map.removeLayer(layerId)
-    if (map.getSource(srcId)) map.removeSource(srcId)
+  radarPool.forEach(({ layers }) => {
+    for (const { srcId, layerId } of layers) {
+      if (map.getLayer(layerId)) map.removeLayer(layerId)
+      if (map.getSource(srcId)) map.removeSource(srcId)
+    }
   })
   radarPool.clear()
 }
 
-function ensureRadarLayer(template) {
-  let entry = radarPool.get(template)
+function ensureRadarLayer(frame) {
+  let entry = radarPool.get(frame.dwd)
   if (entry) return entry
-  const srcId = `rain-radar-${radarSeq++}`
-  map.addSource(srcId, {
-    type: 'raster',
-    tiles: [template],
-    tileSize: 512,
-    attribution: 'Radar © DWD',
-  })
-  map.addLayer(
-    {
-      id: `${srcId}-l`,
+  const beforeId = map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
+  const layers = []
+  const add = (template, suffix, attribution, extraSource, extraLayer) => {
+    const srcId = `rain-radar-${radarSeq++}-${suffix}`
+    map.addSource(srcId, {
       type: 'raster',
-      source: srcId,
-      paint: { 'raster-opacity': 0, 'raster-fade-duration': 0 },
-    },
-    map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
-  )
-  entry = { srcId, layerId: `${srcId}-l` }
-  radarPool.set(template, entry)
+      tiles: [template],
+      tileSize: 512,
+      attribution,
+      ...extraSource,
+    })
+    map.addLayer(
+      {
+        id: `${srcId}-l`,
+        type: 'raster',
+        source: srcId,
+        paint: { 'raster-opacity': 0, 'raster-fade-duration': 0 },
+        ...extraLayer,
+      },
+      beforeId
+    )
+    layers.push({ srcId, layerId: `${srcId}-l` })
+  }
+  add(frame.dwd, 'd', 'Radar © DWD', {}, { minzoom: RADAR_ZOOM_SPLIT })
+  if (frame.global) {
+    // RainViewer serves real data only up to z7 — overzoom above that
+    add(frame.global, 'g', 'Radar © RainViewer', { maxzoom: 7 }, { maxzoom: RADAR_ZOOM_SPLIT })
+  }
+  entry = { layers }
+  radarPool.set(frame.dwd, entry)
   return entry
 }
 
@@ -94,9 +112,10 @@ function applyRadarIdx() {
   try {
     const current = props.radarFrames[props.radarIdx] ?? null
     if (current) ensureRadarLayer(current)
-    radarPool.forEach(({ layerId }, template) => {
-      if (map.getLayer(layerId)) {
-        map.setPaintProperty(layerId, 'raster-opacity', template === current ? 0.6 : 0)
+    radarPool.forEach(({ layers }, key) => {
+      const on = current?.dwd === key
+      for (const { layerId } of layers) {
+        if (map.getLayer(layerId)) map.setPaintProperty(layerId, 'raster-opacity', on ? 0.6 : 0)
       }
     })
   } catch {

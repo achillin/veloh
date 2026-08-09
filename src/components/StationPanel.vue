@@ -89,7 +89,7 @@ const dot = computed(() => {
 
     <div class="spark">
       <div class="spark-head">
-        <span>Next 24 h</span>
+        <span>Next 48 h</span>
         <span class="dim">availability</span>
       </div>
       <svg :viewBox="`0 0 ${W} ${H}`" preserveAspectRatio="none">
@@ -103,7 +103,7 @@ const dot = computed(() => {
         <path :d="path.line" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" />
         <circle v-if="dot" :cx="dot.x" :cy="dot.y" r="4" fill="#fff" stroke="var(--accent)" stroke-width="2.5" />
       </svg>
-      <div class="spark-ticks"><span>now</span><span>+12h</span><span>+24h</span></div>
+      <div class="spark-ticks"><span>now</span><span>+24h</span><span>+48h</span></div>
     </div>
 
     <div class="foot">
@@ -136,6 +136,16 @@ const dot = computed(() => {
   padding: 20px;
   max-height: calc(100% - 220px);
   overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .panel {
+    top: 84px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-height: 55vh;
+  }
 }
 
 .close {

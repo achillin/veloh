@@ -21,7 +21,9 @@ const target = computed(() => new Date(props.now.getTime() + props.offsetHours *
 const holiday = computed(() => holidayName(target.value))
 
 const label = computed(() => {
-  if (props.offsetHours === 0) return 'Live · now'
+  if (props.offsetHours === 0) {
+    return `Live · ${props.now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`
+  }
   return target.value.toLocaleString('en-GB', {
     weekday: 'short',
     day: 'numeric',

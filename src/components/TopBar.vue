@@ -82,13 +82,13 @@ const updatedLabel = computed(() => {
       <button class="chip radar-btn" :class="{ on: radarOn }" title="Rain radar overlay (RainViewer)" @click="$emit('toggle-radar')">☔ Radar</button>
       <span class="chip radar-note" v-if="radarNote">{{ radarNote }}</span>
       <span class="chip"><span class="dot" style="background: var(--accent)"></span><b>{{ bikesNow }}</b>&nbsp;bikes now</span>
-      <span class="chip"><b>{{ stations.length }}</b>&nbsp;stations</span>
-      <span class="chip" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
-      <span class="chip" v-if="fullCount"><span class="dot" style="background: var(--warn)"></span><b>{{ fullCount }}</b>&nbsp;full</span>
-      <span class="chip" v-if="wx" :class="{ fc: wx.forecast }">{{ wx.icon }}&nbsp;<b>{{ wx.temp }}°C</b>&nbsp;{{ wx.label }}<template v-if="wx.forecast">&nbsp;· forecast</template></span>
+      <span class="chip aux"><b>{{ stations.length }}</b>&nbsp;stations</span>
+      <span class="chip aux" v-if="emptyCount"><span class="dot" style="background: var(--danger)"></span><b>{{ emptyCount }}</b>&nbsp;empty</span>
+      <span class="chip aux" v-if="fullCount"><span class="dot" style="background: var(--warn)"></span><b>{{ fullCount }}</b>&nbsp;full</span>
+      <span class="chip aux" v-if="wx" :class="{ fc: wx.forecast }">{{ wx.icon }}&nbsp;<b>{{ wx.temp }}°C</b>&nbsp;{{ wx.label }}<template v-if="wx.forecast">&nbsp;· forecast</template></span>
       <span class="chip rain" v-if="rain" :class="rain.cls" title="Radar nowcast (Buienradar)">{{ rain.text }}</span>
-      <span class="chip model" :class="{ trained: !!profiles }">{{ modelLabel }}</span>
-      <span class="chip">⟳ {{ updatedLabel }}</span>
+      <span class="chip model aux" :class="{ trained: !!profiles }">{{ modelLabel }}</span>
+      <span class="chip aux">⟳ {{ updatedLabel }}</span>
     </div>
 
     <p v-if="error" class="err">{{ error }}</p>
@@ -201,5 +201,32 @@ h1 span {
   flex-basis: 100%;
   color: var(--danger);
   font-size: 12.5px;
+}
+
+/* Mobile: the wrapped chip rows would eat a third of the screen — keep
+   only the essentials (search, radar, bikes-now, rain call). The on-map
+   weather badge covers temperature. */
+@media (max-width: 640px) {
+  .topbar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .chip.aux,
+  .brand p {
+    display: none;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
 }
 </style>

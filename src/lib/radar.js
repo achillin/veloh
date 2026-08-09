@@ -28,6 +28,19 @@ export function dwdRadarFrames(now = new Date()) {
   return frames
 }
 
+/** Worldwide radar frames from RainViewer — coarser than DWD (native data
+ *  up to z7, 10-min steps, mostly past) but with no regional boundary.
+ *  Used for zoomed-out views where the DWD composite's coverage edge shows. */
+export async function fetchGlobalRadarFrames() {
+  const res = await fetch('https://api.rainviewer.com/public/weather-maps.json')
+  if (!res.ok) throw new Error(`rainviewer → HTTP ${res.status}`)
+  const j = await res.json()
+  return [...(j?.radar?.past ?? []), ...(j?.radar?.nowcast ?? [])].map((f) => ({
+    time: new Date(f.time * 1000),
+    template: `${j.host}${f.path}/512/{z}/{x}/{y}/2/1_1.png`,
+  }))
+}
+
 const COMPASS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
 const R_MERC = 6378137
 

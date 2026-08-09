@@ -17,7 +17,14 @@ import {
   probAtLeast,
 } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
-import { fetchRainNowcast, summarizeNowcast, dwdRadarFrames, analyzeRadar } from './lib/radar.js'
+import {
+  fetchRainNowcast,
+  summarizeNowcast,
+  dwdRadarFrames,
+  fetchGlobalRadarFrames,
+  analyzeRadar,
+} from './lib/radar.js'
+import { describeWmo } from './lib/weather.js'
 import { fetchRecentHistory, historyAt } from './lib/history.js'
 
 const stations = shallowRef([])
@@ -95,9 +102,28 @@ async function refreshNowcast() {
   }
 }
 
-function refreshRadar() {
-  // DWD frames are generated locally (WMS TIME dimension) — no fetch needed
+async function refreshRadar() {
+  // DWD frames are generated locally (WMS TIME dimension); each gets paired
+  // with the nearest RainViewer frame for the zoomed-out worldwide layer.
   const frames = dwdRadarFrames()
+  let globalFrames = []
+  try {
+    globalFrames = await fetchGlobalRadarFrames()
+  } catch {
+    /* zoomed-out layer simply stays off */
+  }
+  for (const f of frames) {
+    let best = null
+    let bestD = Infinity
+    for (const g of globalFrames) {
+      const d = Math.abs(g.time.getTime() - f.time.getTime())
+      if (d < bestD) {
+        bestD = d
+        best = g
+      }
+    }
+    f.global = bestD <= 6 * 60_000 ? best.template : null
+  }
   radarFrames.value = frames
   if (radarIdx.value >= frames.length) radarIdx.value = 0
   analyzeRadar()
@@ -106,7 +132,9 @@ function refreshRadar() {
 }
 
 const radarFrame = computed(() => radarFrames.value[radarIdx.value] ?? null)
-const radarTemplates = computed(() => radarFrames.value.map((f) => f.template))
+const radarTemplates = computed(() =>
+  radarFrames.value.map((f) => ({ dwd: f.template, global: f.global ?? null }))
+)
 
 // Makes a rain-free (fully transparent) radar overlay legible as "working,
 // just dry" — and points at the nearest rain so you know where to look.
@@ -353,6 +381,42 @@ function clearStart() {
   customStart.value = null
 }
 
+function locateMe() {
+  const p = userPos.value
+  if (p) {
+    flyTarget.value = { lon: p.lon, lat: p.lat, zoom: 15.5, ts: Date.now() }
+    return
+  }
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        userPos.value = { lat: pos.coords.latitude, lon: pos.coords.longitude }
+        flyTarget.value = { lon: pos.coords.longitude, lat: pos.coords.latitude, zoom: 15.5, ts: Date.now() }
+      },
+      () => {}
+    )
+  }
+}
+
+// Big on-map weather readout that follows the time scrubber.
+const mapWeather = computed(() => {
+  if (!weather.value) return null
+  if (offsetHours.value === 0) {
+    const { icon, label } = describeWmo(weather.value.current.code)
+    return { icon, label, temp: Math.round(weather.value.current.temp), when: 'now', forecast: false }
+  }
+  const f = forecastAt(weather.value, target.value)
+  if (!f) return null
+  const { icon, label } = describeWmo(f.code)
+  return {
+    icon,
+    label,
+    temp: Math.round(f.temp),
+    when: target.value.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
+    forecast: offsetHours.value > 0,
+  }
+})
+
 // ---- selected station panel ----
 
 const selectedStation = computed(() => stations.value.find((s) => s.id === selectedId.value) ?? null)
@@ -373,7 +437,8 @@ const selectedDisplay = computed(() => {
 
 const selectedSeries = computed(() => {
   if (!selectedStation.value) return []
-  return predictSeries(selectedStation.value, 24, predictionCtx.value, (t) =>
+  // full 48 h so the sparkline dot tracks the whole scrubber range
+  return predictSeries(selectedStation.value, 48, predictionCtx.value, (t) =>
     forecastAt(weather.value, t)
   )
 })
@@ -445,6 +510,12 @@ const rebalanceHint = computed(() => {
       :odds="availabilityOdds"
       @close="selectedId = null"
     />
+    <button class="locate glass" title="Jump to my location" @click="locateMe">⌖</button>
+    <div v-if="mapWeather" class="wx-badge glass" :class="{ fc: mapWeather.forecast }">
+      <span class="ico">{{ mapWeather.icon }}</span>
+      <span class="deg">{{ mapWeather.temp }}°</span>
+      <span class="sub">{{ mapWeather.label }}<br />{{ mapWeather.forecast ? mapWeather.when + ' · forecast' : mapWeather.when }}</span>
+    </div>
     <div v-if="routeChip" class="route-chip glass">
       <button class="route-main" @click="focusRouteStation">
         <span class="walk">🚶</span>
@@ -539,11 +610,65 @@ const rebalanceHint = computed(() => {
   color: var(--text);
 }
 
+.locate {
+  position: absolute;
+  right: 10px;
+  bottom: 252px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 21px;
+  line-height: 1;
+}
+
+.locate:hover {
+  color: var(--accent);
+  border-color: rgba(46, 230, 166, 0.4);
+}
+
+.wx-badge {
+  position: absolute;
+  left: 16px;
+  bottom: 76px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+}
+
+.wx-badge .ico {
+  font-size: 25px;
+}
+
+.wx-badge .deg {
+  font-family: var(--font-display);
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.wx-badge.fc .deg {
+  color: var(--warn);
+}
+
+.wx-badge .sub {
+  font-size: 10.5px;
+  color: var(--text-dim);
+  line-height: 1.35;
+}
+
 /* On narrower windows the right-anchored scrubber would reach the route
    chip — stack the chip above it instead. */
 @media (max-width: 1120px) {
   .route-chip {
     bottom: 142px;
+  }
+
+  .wx-badge {
+    bottom: 200px;
   }
 }
 </style>
