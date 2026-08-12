@@ -57,7 +57,23 @@ const dot = computed(() => {
   if (!pts.length) return null
   const step = (W - 2 * PAD) / (pts.length - 1)
   const p = pts[idx]
-  return { x: PAD + idx * step, y: H - PAD - p.frac * (H - 2 * PAD) }
+  return { x: PAD + idx * step, y: H - PAD - p.frac * (H - 2 * PAD), p }
+})
+
+const fmtTick = (d, withDay) =>
+  withDay
+    ? `${d.toLocaleDateString('en-GB', { weekday: 'short' })} ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`
+    : d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+
+// exact clock times on the chart: the marked moment + the axis ends
+const sparkInfo = computed(() => {
+  const pts = props.series
+  if (pts.length < 3) return null
+  const d = dot.value
+  return {
+    at: d ? `${fmtTick(d.p.t, true)} · ${d.p.bikes} 🚲` : '',
+    ticks: [fmtTick(pts[0].t, false), fmtTick(pts[Math.floor(pts.length / 2)].t, true), fmtTick(pts.at(-1).t, true)],
+  }
 })
 </script>
 
@@ -90,7 +106,7 @@ const dot = computed(() => {
     <div class="spark">
       <div class="spark-head">
         <span>Next 48 h</span>
-        <span class="dim">availability</span>
+        <span class="at">{{ sparkInfo?.at }}</span>
       </div>
       <svg :viewBox="`0 0 ${W} ${H}`" preserveAspectRatio="none">
         <defs>
@@ -103,7 +119,9 @@ const dot = computed(() => {
         <path :d="path.line" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" />
         <circle v-if="dot" :cx="dot.x" :cy="dot.y" r="4" fill="#fff" stroke="var(--accent)" stroke-width="2.5" />
       </svg>
-      <div class="spark-ticks"><span>now</span><span>+24h</span><span>+48h</span></div>
+      <div class="spark-ticks">
+        <span v-for="(t, i) in sparkInfo?.ticks ?? []" :key="i">{{ t }}</span>
+      </div>
     </div>
 
     <div class="foot">
@@ -284,6 +302,11 @@ h2 {
   font-size: 11.5px;
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.spark-head .at {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .spark-ticks {

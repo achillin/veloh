@@ -17,6 +17,8 @@ import {
   probAtLeast,
 } from './lib/predictor.js'
 import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
+
+let autoFocused = false // one-shot: zoom to the user & open the closest station on startup
 import {
   fetchRainNowcast,
   summarizeNowcast,
@@ -142,10 +144,13 @@ const radarNote = computed(() => {
   if (!radarOn.value || !radarFrames.value.length) return null
   const f = radarFrame.value
   if (!f) {
-    // RainViewer's nowcast list fluctuates — report the real horizon
+    const first = radarFrames.value[0]
     const last = radarFrames.value.at(-1)
-    const lt = last.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
-    return `🕒 radar ends ${lt} — model forecast beyond`
+    const fmt = (d) => d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+    if (target.value.getTime() < first.time.getTime()) {
+      return `🕒 radar history starts ${fmt(first.time)} — none this far back`
+    }
+    return `🕒 radar ends ${fmt(last.time)} — model forecast beyond`
   }
   const t = f.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
   const when = f.nowcast ? `${t} +forecast` : t
@@ -302,6 +307,25 @@ const routeTarget = computed(() => {
     if (s) return s
   }
   return nearest.value?.station ?? null
+})
+
+// When both the position and the stations are first known, jump there and
+// open the closest station.
+watch([userPos, stations], () => {
+  if (autoFocused || !userPos.value || !stations.value.length) return
+  autoFocused = true
+  const p = userPos.value
+  let best = null
+  let bestD = Infinity
+  for (const s of stations.value) {
+    const d = haversineM(p, s)
+    if (d < bestD) {
+      bestD = d
+      best = s
+    }
+  }
+  flyTarget.value = { lon: p.lon, lat: p.lat, zoom: 15.2, instant: true, ts: Date.now() }
+  if (best) selectedId.value = best.id
 })
 
 let routeTimer = null

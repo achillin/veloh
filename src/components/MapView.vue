@@ -306,6 +306,7 @@ watch(
   () => props.flyTo,
   (t) => {
     if (!t || !map) return
+    didFit = true // an explicit fly supersedes the initial fit-to-stations
     placeMarker?.remove()
     placeMarker = null
     if (t.pin) {
@@ -316,7 +317,14 @@ watch(
         .setLngLat([t.lon, t.lat])
         .addTo(map)
     }
-    map.flyTo({ center: [t.lon, t.lat], zoom: t.zoom ?? 15, essential: true })
+    map.flyTo({
+      center: [t.lon, t.lat],
+      zoom: t.zoom ?? 15,
+      essential: true,
+      // instant jumps (startup auto-focus) also work in background tabs,
+      // where rAF-driven animations don't tick
+      ...(t.instant ? { duration: 0 } : {}),
+    })
   }
 )
 

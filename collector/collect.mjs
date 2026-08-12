@@ -47,7 +47,8 @@ const DATA_DIR = join(ROOT, 'data')
 const RECENT_FILE = process.env.RECENT_FILE
   ? join(ROOT, process.env.RECENT_FILE)
   : join(ROOT, 'public', 'recent.json')
-const RECENT_WINDOW_MS = 135 * 60_000 // the app scrubs 2 h back; keep a margin
+const RECENT_WINDOW_MS = (24 * 60 + 15) * 60_000 // the app scrubs 24 h back
+const RECENT_GRID_MS = 10 * 60_000 // thinned to the scrubber's 10-min steps — keeps the file small
 const GBFS = 'https://api.cyclocity.fr/contracts/luxembourg/gbfs/v3'
 const METAR = 'https://aviationweather.gov/api/data/metar?ids=ELLX&format=json'
 const OPEN_METEO =
@@ -77,7 +78,7 @@ function isoWeek(d) {
 
 // ---- public/recent.json: rolling window the app uses for history scrubbing ----
 
-async function readTailLines(file, maxBytes = 4 * 1024 * 1024) {
+async function readTailLines(file, maxBytes = 12 * 1024 * 1024) {
   const { size } = await stat(file)
   const start = Math.max(0, size - maxBytes)
   const fh = await open(file, 'r')
@@ -117,18 +118,33 @@ async function backfillRecent(nowMs) {
   return [...byMinute.values()].sort((a, b) => (a.t < b.t ? -1 : 1))
 }
 
+// Keep at most one snapshot per 10-min slot (the newest wins), so a 24 h
+// window stays ~300 KB.
+function thinToGrid(snapshots) {
+  const bySlot = new Map()
+  for (const snap of snapshots.sort((a, b) => (a.t < b.t ? -1 : 1))) {
+    bySlot.set(Math.floor(Date.parse(snap.t) / RECENT_GRID_MS), snap)
+  }
+  return [...bySlot.values()]
+}
+
 async function updateRecent(line, nowMs) {
+  const cutoff = nowMs - RECENT_WINDOW_MS
   let snapshots
   try {
     snapshots = JSON.parse(await readFile(RECENT_FILE, 'utf8')).snapshots ?? []
+    // window recently widened / collector was down → re-mine the ndjson tails
+    const oldest = snapshots.length ? Date.parse(snapshots[0].t) : Infinity
+    if (oldest > cutoff + 2 * 3600_000) {
+      snapshots = snapshots.concat(await backfillRecent(nowMs))
+    }
   } catch {
     snapshots = await backfillRecent(nowMs)
   }
-  const cutoff = nowMs - RECENT_WINDOW_MS
-  snapshots = snapshots.filter((snap) => Date.parse(snap.t) >= cutoff)
   const s = {}
   for (const [id, arr] of Object.entries(line.s)) s[id] = [arr[0], arr[1]]
   snapshots.push({ t: line.t, s })
+  snapshots = thinToGrid(snapshots.filter((snap) => Date.parse(snap.t) >= cutoff))
   await mkdir(dirname(RECENT_FILE), { recursive: true })
   await writeFile(RECENT_FILE, JSON.stringify({ updated: line.t, snapshots }))
 }

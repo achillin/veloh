@@ -12,8 +12,8 @@ const props = defineProps({
 })
 const emit = defineEmits(['update:offsetHours'])
 
-// -2 h of radar history … +48 h of forecast, in 10-minute steps
-const MIN = -2
+// 24 h of measured history … +48 h of forecast, in 10-minute steps
+const MIN = -24
 const MAX = 48
 const STEP = 1 / 6
 
@@ -60,7 +60,7 @@ function onInput(e) {
 
 // Absolute clock times on the axis (short weekday once it's another day)
 const ticks = computed(() =>
-  [-2, 0, 12, 24, 36, 48].map((h) => {
+  [-24, -12, 0, 12, 24, 36, 48].map((h) => {
     if (h === 0) return { h, label: 'now' }
     const d = new Date(props.now.getTime() + h * 3.6e6)
     const hm = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
@@ -172,7 +172,8 @@ input[type='range'] {
   -webkit-appearance: none;
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(90deg, rgba(77, 163, 255, 0.7) 0%, var(--accent) 4%, var(--accent-2) 100%);
+  /* past third in muted blue, "now" at 33.3%, future toward bright blue */
+  background: linear-gradient(90deg, rgba(77, 163, 255, 0.45) 0%, rgba(77, 163, 255, 0.45) 31%, var(--accent) 33.3%, var(--accent-2) 100%);
   outline: none;
   cursor: pointer;
 }
