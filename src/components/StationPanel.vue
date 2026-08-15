@@ -9,6 +9,7 @@ const props = defineProps({
   offsetHours: { type: Number, required: true },
   rebalance: { type: Object, default: null }, // {dir: 'up'|'down', pct} for the displayed hour
   odds: { type: Object, default: null }, // {p1, p3} birth–death probabilities for the scrubbed time
+  events: { type: Array, default: () => [] }, // names of events near this station at the displayed time
 })
 const emit = defineEmits(['close'])
 
@@ -125,6 +126,7 @@ const sparkInfo = computed(() => {
     </div>
 
     <div class="foot">
+      <span v-for="ev in events" :key="ev" class="chip event" title="Event within reach of this station at the displayed time — demand is usually unusual">🎪 {{ ev }}</span>
       <span
         v-if="rebalance"
         class="chip rebal"
@@ -334,6 +336,11 @@ h2 {
 .chip.closed {
   color: var(--danger);
   border-color: rgba(255, 77, 94, 0.4);
+}
+
+.chip.event {
+  color: #ffb0e6;
+  border-color: rgba(255, 176, 230, 0.4);
 }
 
 .chip.rebal {

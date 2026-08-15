@@ -16,6 +16,7 @@ import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { gunzipSync } from 'node:zlib'
+import { activeEventsAt, eventsNear } from '../src/lib/events.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 export const DATA_DIR = join(ROOT, 'data')
@@ -126,9 +127,18 @@ export async function loadCapacities(dataDir = DATA_DIR) {
   return JSON.parse(await readFile(join(dataDir, 'stations.json'), 'utf8')).stations
 }
 
+export async function loadEventCalendar() {
+  try {
+    const j = JSON.parse(await readFile(join(ROOT, 'public', 'events.json'), 'utf8'))
+    return Array.isArray(j?.events) ? j.events : []
+  } catch {
+    return []
+  }
+}
+
 /** Aggregates snapshot lines into the profiles structure the app's
  *  predictor consumes. */
-export function buildProfiles(lines, capacities) {
+export function buildProfiles(lines, capacities, events = []) {
   const stations = new Map() // id → Map(key → MeanAcc)
   const global = new Map() // key → MeanAcc
   const wet = new MeanAcc()
@@ -270,6 +280,40 @@ export function buildProfiles(lines, capacities) {
         }
       : null
 
+  // ---- event effects ----
+  // For snapshots taken while a calendar event was active: how far did the
+  // nearby stations sit from their normal bucket mean? Pooled per venue so
+  // recurring editions (Schueberfouer 2026, 2027, …) share one estimate.
+  const eventAcc = new Map() // venue → {sum, n}
+  if (events.length) {
+    for (const line of lines) {
+      const active = activeEventsAt(events, new Date(line.t))
+      if (!active.length) continue
+      const key = bucketKey(line.t)
+      for (const [id, [bikes]] of Object.entries(line.s)) {
+        const cap = capacities[id]?.capacity
+        const st = capacities[id]
+        if (!cap || st?.lat == null) continue
+        const near = eventsNear(active, st)
+        if (!near.length) continue
+        const m = meanFor(id, key)
+        if (m == null) continue
+        const dev = Math.min(bikes / cap, 1) - m
+        for (const ev of near) {
+          let acc = eventAcc.get(ev.venue)
+          if (!acc) eventAcc.set(ev.venue, (acc = { sum: 0, n: 0 }))
+          acc.sum += dev
+          acc.n++
+        }
+      }
+    }
+  }
+  const eventEffects = Object.fromEntries(
+    [...eventAcc]
+      .filter(([, a]) => a.n >= 300)
+      .map(([venue, a]) => [venue, [+(a.sum / a.n).toFixed(4), a.n]])
+  )
+
   // ---- rebalancing statistics ----
   // How often does the operator's truck touch a station in a given hour
   // bucket: a jump of ≥5 bikes within 5 minutes counts as an event; we
@@ -335,6 +379,7 @@ export function buildProfiles(lines, capacities) {
         : null,
     decay,
     flows,
+    eventEffects: Object.keys(eventEffects).length ? eventEffects : null,
     rebalance: Object.keys(rebalance).length ? rebalance : null,
     global: Object.fromEntries([...global].map(([k, a]) => [k, [+a.mean.toFixed(4), a.n]])),
     stations: Object.fromEntries(
@@ -353,13 +398,15 @@ async function main() {
     console.error('No data/*.ndjson snapshot files found. Run `npm run collect` first.')
     process.exit(1)
   }
-  const out = buildProfiles(lines, capacities)
+  const events = await loadEventCalendar()
+  const out = buildProfiles(lines, capacities, events)
   await mkdir(dirname(OUT), { recursive: true })
   await writeFile(OUT, JSON.stringify(out))
   console.log(
     `trained on ${out.snapshots} snapshots (${out.range.from} → ${out.range.to})\n` +
       `stations: ${Object.keys(out.stations).length}, buckets: ${Object.keys(out.global).length}, ` +
-      `rain model: ${out.rain ? 'yes' : 'not enough data yet'}\n→ ${OUT}`
+      `rain model: ${out.rain ? 'yes' : 'not enough data yet'}, ` +
+      `event venues learned: ${Object.keys(out.eventEffects ?? {}).length}\n→ ${OUT}`
   )
 }
 

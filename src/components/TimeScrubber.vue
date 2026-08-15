@@ -9,6 +9,7 @@ const props = defineProps({
   weather: { type: Object, default: null },
   radarPoints: { type: Array, default: null }, // 5-min radar rain nowcast (~2 h)
   historyAvailable: { type: Boolean, default: null }, // measured station data at the scrubbed past time?
+  eventNames: { type: Array, default: () => [] }, // events active at the displayed time
 })
 const emit = defineEmits(['update:offsetHours'])
 
@@ -81,6 +82,7 @@ const tickLeft = (h) => `${(((h - MIN) / (MAX - MIN)) * 100).toFixed(2)}%`
         <span v-if="offsetHours === 0" class="live-dot"></span>{{ label }}
       </span>
       <span v-if="holiday" class="chip holiday">🎉 {{ holiday }}</span>
+      <span v-for="ev in eventNames" :key="ev" class="chip event">🎪 {{ ev }}</span>
       <span v-if="wx" class="chip" :title="wx.byRadar ? 'Rain call from radar nowcast' : 'Rain call from model forecast'">{{ wx.icon }} <b>{{ wx.temp }}°C</b><template v-if="wx.rain">&nbsp;· rain{{ wx.byRadar ? ' (radar)' : ' likely' }}</template></span>
       <span v-if="offsetHours > 0" class="chip fc">forecast</span>
       <span v-if="offsetHours < 0" class="chip hist">{{ historyAvailable ? 'history' : 'history · no station data' }}</span>
@@ -154,6 +156,11 @@ const tickLeft = (h) => `${(((h - MIN) / (MAX - MIN)) * 100).toFixed(2)}%`
 .chip.holiday {
   border-color: rgba(77, 163, 255, 0.4);
   color: var(--accent-2);
+}
+
+.chip.event {
+  color: #ffb0e6;
+  border-color: rgba(255, 176, 230, 0.4);
 }
 
 .chip.fc {

@@ -21,6 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - name: Refresh the event calendar from echo.lu
+        run: node model/update-events.mjs
       - run: node model/train.mjs
       - name: Evaluate against the held-out last day
         run: node model/evaluate.mjs
@@ -28,7 +30,7 @@ jobs:
         run: |
           git config user.name "trainer-bot"
           git config user.email "actions@github.com"
-          git add public/model/profiles.json public/model/eval.json
+          git add public/model/profiles.json public/model/eval.json public/events.json
           git diff --cached --quiet && exit 0
           git commit -m "retrain $(date -u +%F)"
           git pull --rebase origin ${GITHUB_REF_NAME}

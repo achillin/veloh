@@ -1,0 +1,1206 @@
+{
+ "updated": "2026-08-15T08:21:34.665Z",
+ "events": [
+  {
+   "id": "luxembourg-city-film-festival-2026-03-05",
+   "name": "Luxembourg City Film Festival",
+   "venue": "Cercle Cite (Place d'Armes) + city cinemas (Cinematheque",
+   "lat": 49.6109,
+   "lon": 6.1297,
+   "from": "2026-03-05",
+   "to": "2026-03-15",
+   "hours": [
+    13,
+    23
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.luxembourg-city.com/en/what-s-on/event/luxembourg-city-film-festival-fyqgu4"
+  },
+  {
+   "id": "eimaischen-2026-04-06",
+   "name": "Eimaischen",
+   "venue": "Marche-aux-Poissons and surrounding old-town streets",
+   "lat": 49.6114,
+   "lon": 6.133,
+   "from": "2026-04-06",
+   "to": "2026-04-06",
+   "hours": [
+    8,
+    17
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.chronicle.lu/category/things-to-see-do/60510-luxembourgs-197th-emaischen-festival-draws-crowds-features-workshops-in-city-centre"
+  },
+  {
+   "id": "duck-race-2026-04-18",
+   "name": "Duck Race",
+   "venue": "Neimenster courtyard / Rue Munster",
+   "lat": 49.6103,
+   "lon": 6.1365,
+   "from": "2026-04-18",
+   "to": "2026-04-18",
+   "hours": [
+    12,
+    18
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.neimenster.lu/en/events/duck-race-2026/"
+  },
+  {
+   "id": "octave-pilgrimage-2026-04-25",
+   "name": "Octave pilgrimage",
+   "venue": "Cathedrale Notre-Dame",
+   "lat": 49.6098,
+   "lon": 6.1316,
+   "from": "2026-04-25",
+   "to": "2026-05-10",
+   "hours": [
+    7,
+    19
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.justarrived.lu/en/evenements/oktav-maertchen-pelerinage-octave"
+  },
+  {
+   "id": "oktav-maertchen-2026-04-25",
+   "name": "Oktav-Maertchen",
+   "venue": "Place Guillaume II (Knuedler) and Place de la Constitution",
+   "lat": 49.6106,
+   "lon": 6.1309,
+   "from": "2026-04-25",
+   "to": "2026-05-10",
+   "hours": [
+    10,
+    20
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.vdl.lu/en/visiting/leisure-and-recreation/luxembourg-city-markets/maertchen"
+  },
+  {
+   "id": "ing-night-marathon-luxembourg-2026-05-16",
+   "name": "ING Night Marathon Luxembourg",
+   "venue": "Start/finish Luxexpo The Box",
+   "lat": 49.6353,
+   "lon": 6.1717,
+   "from": "2026-05-16",
+   "to": "2026-05-16",
+   "hours": [
+    18,
+    25
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.ing-night-marathon.lu/en.html"
+  },
+  {
+   "id": "national-day-eve-festivities-2026-06-22",
+   "name": "National Day Eve festivities",
+   "venue": "City centre (Ville-Haute; Fakelzuch Place du Theatre to Knuedler; fireworks from Pont Adolphe)",
+   "lat": 49.6106,
+   "lon": 6.1309,
+   "from": "2026-06-22",
+   "to": "2026-06-22",
+   "hours": [
+    16,
+    26
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://gouvernement.lu/en/actualites/toutes_actualites/communiques/2026/06-juin/22-fete-nationale-2026-veille.html"
+  },
+  {
+   "id": "city-sounds-2026-06-22",
+   "name": "City Sounds",
+   "venue": "Champ du Glacis",
+   "lat": 49.6169,
+   "lon": 6.1241,
+   "from": "2026-06-22",
+   "to": "2026-06-23",
+   "hours": [
+    16,
+    25
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.vdl.lu/en/news/city-sounds-2026-line-announced"
+  },
+  {
+   "id": "national-day-2026-06-23",
+   "name": "National Day",
+   "venue": "City centre (Philharmonie ceremony",
+   "lat": 49.6106,
+   "lon": 6.1309,
+   "from": "2026-06-23",
+   "to": "2026-06-23",
+   "hours": [
+    10,
+    24
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.vdl.lu/en/news/national-day-2026"
+  },
+  {
+   "id": "kinnekswiss-loves-2026-07-03",
+   "name": "Kinnekswiss loves...",
+   "venue": "Kinnekswiss meadow",
+   "lat": 49.6152,
+   "lon": 6.1256,
+   "from": "2026-07-03",
+   "to": "2026-07-05",
+   "hours": [
+    17,
+    23
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.chronicle.lu/event/kinnekswiss-loves-2026"
+  },
+  {
+   "id": "luxembourg-pride-street-fest-2026-07-10",
+   "name": "Luxembourg Pride Street Fest",
+   "venue": "Place Guillaume II (City Hall stage) + Place Clairefontaine (DJ stage)",
+   "lat": 49.6106,
+   "lon": 6.1309,
+   "from": "2026-07-10",
+   "to": "2026-07-11",
+   "hours": [
+    16,
+    25
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.luxembourgpride.lu/pride-week-2026"
+  },
+  {
+   "id": "blues-n-jazz-rallye-2026-07-18",
+   "name": "Blues'n'Jazz Rallye",
+   "venue": "Grund",
+   "lat": 49.6113,
+   "lon": 6.1395,
+   "from": "2026-07-18",
+   "to": "2026-07-18",
+   "hours": [
+    16,
+    25
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.vdl.lu/en/news/bluesnjazz-rallye-2026"
+  },
+  {
+   "id": "city-open-air-cinema-knuedler-2026-07-23",
+   "name": "City Open Air Cinema @ Knuedler",
+   "venue": "Place Guillaume II (Knuedler)",
+   "lat": 49.6106,
+   "lon": 6.1309,
+   "from": "2026-07-23",
+   "to": "2026-07-28",
+   "hours": [
+    21,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "small",
+   "source": "https://cinematheque.lu/en/programme/city-open-air-cinema-2026"
+  },
+  {
+   "id": "e-lake-festival-2026-08-07",
+   "name": "e-Lake Festival",
+   "venue": "Lac d'Echternach (Centre recreatif)",
+   "lat": 49.7991,
+   "lon": 6.4129,
+   "from": "2026-08-07",
+   "to": "2026-08-09",
+   "hours": [
+    18,
+    27
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://e-lake.lu/"
+  },
+  {
+   "id": "streeta-nimation-2026-08-08",
+   "name": "Streeta nimation",
+   "venue": "Pedestrian zone Ville-Haute (Place d'Armes",
+   "lat": 49.6112,
+   "lon": 6.1295,
+   "from": "2026-08-08",
+   "to": "2026-08-09",
+   "hours": [
+    12,
+    22
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "estimated": true,
+   "source": "https://www.luxembourg-city.com/en/street-artnimation"
+  },
+  {
+   "id": "echo-rhwXknZybMTlL4f8V5Kr",
+   "name": "Moves & Attitudes: 80s Dance Practices",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-08-15",
+   "to": "2026-08-15",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-iwgV2Z86PcmyuZU8rdsZ",
+   "name": "Summer in the fortress",
+   "venue": "Visite guidée dans les casemates du Fort Lambert et de l'Aqu",
+   "lat": 49.61053,
+   "lon": 6.124758,
+   "from": "2026-08-15",
+   "to": "2026-08-15",
+   "hours": [
+    15,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ubhVLs7lujuUuMN8wmUx",
+   "name": "Cirque Nouveau - lonely people will be sold to the circus",
+   "venue": "Near Luxexpo The Box",
+   "lat": 49.6305252,
+   "lon": 6.1721879,
+   "from": "2026-08-15",
+   "to": "2026-08-15",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-nMqJBNnnR1EfcHYmZdCF",
+   "name": "DJ WANTED // OPEN DECKS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-08-15",
+   "to": "2026-08-15",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-xh9izUZdVy5F3NRUAmZo",
+   "name": "Sunset Cinema: Lux-City 2026",
+   "venue": "Parc Central du Kirchberg",
+   "lat": 49.625661,
+   "lon": 6.160547,
+   "from": "2026-08-15",
+   "to": "2026-08-15",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Fc1fwauHjE8ptFBQi1si",
+   "name": "Cirque Nouveau - lonely people will be sold to the circus",
+   "venue": "Near Luxexpo The Box",
+   "lat": 49.6305252,
+   "lon": 6.1721879,
+   "from": "2026-08-15",
+   "to": "2026-08-15",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-J8J4pjIrd11yQrXgyiG0",
+   "name": "APÉRO JAZZ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-08-16",
+   "to": "2026-08-16",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-uJ8nrf5iPLQds1tDgYvb",
+   "name": "Guided tour of the permanent exhibition",
+   "venue": "Musée national d'histoire naturelle - 'natur musée'",
+   "lat": 49.609584,
+   "lon": 6.135641,
+   "from": "2026-08-16",
+   "to": "2026-08-16",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-nv1pk7w3qccVSTztK42N",
+   "name": "Cirque Nouveau - lonely people will be sold to the circus",
+   "venue": "Near Luxexpo The Box",
+   "lat": 49.6305252,
+   "lon": 6.1721879,
+   "from": "2026-08-16",
+   "to": "2026-08-16",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-u3EMCIZZFqzd8wDYUvOh",
+   "name": "Sunset Cinema: Lux-City 2026",
+   "venue": "Parc Central du Kirchberg",
+   "lat": 49.625661,
+   "lon": 6.160547,
+   "from": "2026-08-16",
+   "to": "2026-08-16",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-RBYXAo9KUa4FaceqNE1H",
+   "name": "Fotos, Cloud und Co.",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-17",
+   "to": "2026-08-17",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-L1XdmE0DIWX4jwSfO09e",
+   "name": "Internetführerschein (Sommer-Edition)",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-17",
+   "to": "2026-08-17",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-vcjGa6ZV1eMWxZlUmhdd",
+   "name": " Mit dem Smartphone unterwegs",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-18",
+   "to": "2026-08-18",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TSqXim2MEpvpUBt1z471",
+   "name": "Internetführerschein (Sommer-Edition)",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-18",
+   "to": "2026-08-18",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Ml0SS52t1VqzxMpjRU1l",
+   "name": "Poésie sous le cerisier, avec Ulrike Bail et Tom Nisse",
+   "venue": "Musée national d'histoire naturelle – Naturmusée",
+   "lat": 49.6097155,
+   "lon": 6.135622,
+   "from": "2026-08-18",
+   "to": "2026-08-18",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-zfZAqX2bH2NEBkcZDCzB",
+   "name": "Internetführerschein (Sommer-Edition)",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-hglVLxMAUY77jB17Cmrv",
+   "name": " Mit dem Smartphone unterwegs",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KCamRJ2ZUprnMuXjTFGE",
+   "name": "Arboretum Kirchberg",
+   "venue": "LUXEXPO - Centre d'Expositions et de Congrès",
+   "lat": 49.636043,
+   "lon": 6.172955,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ZYvoFULoZBK7GiDshjmJ",
+   "name": "Curator’s Tour ",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    18,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-jgDf5y73q4kGYcHFOqL6",
+   "name": "Kirchberg Arboretum - Beeches, oaks and native woody plants",
+   "venue": "Entrée du Parc Réimerwee",
+   "lat": 49.629306,
+   "lon": 6.157928,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-evGPyuP4zqXGcT2VP3Ed",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DuxkOD1preUEHVq8AFFA",
+   "name": "Internetführerschein (Sommer-Edition)",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-20",
+   "to": "2026-08-20",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-A5hVAS2M5ejjjEtqCWgy",
+   "name": "Sicher bezahlen im Internet",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-20",
+   "to": "2026-08-20",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-O09rKW0AOpTfZgu4Ui3l",
+   "name": "PEDDLIN’ PETE live @ Liquid",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-08-20",
+   "to": "2026-08-20",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YywWkmJberKekl7PmGrv",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-08-20",
+   "to": "2026-08-20",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "schueberfouer-2026-08-21",
+   "name": "Schueberfouer",
+   "venue": "Champ du Glacis (Fouerplaatz)",
+   "lat": 49.6169,
+   "lon": 6.1241,
+   "from": "2026-08-21",
+   "to": "2026-09-09",
+   "hours": [
+    12,
+    25
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
+  },
+  {
+   "id": "echo-wpsMAl3t7sUonIk9fmSr",
+   "name": "Internetführerschein (Sommer-Edition)",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-21",
+   "to": "2026-08-21",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9h48FA4bp4zulxkGhl0f",
+   "name": "Sicher bezahlen im Internet",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-08-21",
+   "to": "2026-08-21",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qYsztEEJm6wKCOwk0ZQF",
+   "name": "Bradley's Karaoke Night",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-08-21",
+   "to": "2026-08-21",
+   "hours": [
+    19,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ybWMXMCwJCyN0n3B1wGS",
+   "name": "Luxembourg Comedy Showcase in English - Joel Bryant (USA)",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-08-21",
+   "to": "2026-08-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Mpvi9i2NK1r79Du4fZTg",
+   "name": "Guided tour by night",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-08-21",
+   "to": "2026-08-21",
+   "hours": [
+    21,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qKQ026UDydX91L3Gr0qa",
+   "name": "Tuffi - Pro Atelier (6-10) ",
+   "venue": "Lëtzebuerg City Museum",
+   "lat": 49.610061,
+   "lon": 6.133655,
+   "from": "2026-08-22",
+   "to": "2026-08-22",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-vy5plRtu3lVBTsEBDlQv",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-08-22",
+   "to": "2026-08-22",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1q6DVTHt8RU3kEqVYdWa",
+   "name": "Theatrical tour - “Nothing is what it seems!”",
+   "venue": "Musée national d'histoire naturelle – Naturmusée",
+   "lat": 49.6097155,
+   "lon": 6.135622,
+   "from": "2026-08-22",
+   "to": "2026-08-22",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-x2CaoILu98lDglyL3hts",
+   "name": "DJ WANTED // OPEN DECKS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-08-22",
+   "to": "2026-08-22",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JFeVZwv3GAe3Dzn8HBxn",
+   "name": "One More Song",
+   "venue": "Atmos Bar and Restaurant",
+   "lat": 49.6114156,
+   "lon": 6.1270737,
+   "from": "2026-08-22",
+   "to": "2026-08-22",
+   "hours": [
+    23,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-kPtp2Tgzdzvk3607uNE4",
+   "name": "Guided tours of the exposition \"animalECH\"",
+   "venue": "Musée national d'histoire naturelle - 'natur musée'",
+   "lat": 49.609584,
+   "lon": 6.135641,
+   "from": "2026-08-23",
+   "to": "2026-08-23",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ahj0wBCxfPKrABziSn95",
+   "name": "Sangertid",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-08-23",
+   "to": "2026-08-23",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YUZiN1EPS6byYT46KRxq",
+   "name": " Interstellar (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-24",
+   "to": "2026-08-24",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-uH8VZUT3VFpMl1EGrQwf",
+   "name": "Reprise (Oslo Trilogies by Joachim Trier)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-25",
+   "to": "2026-08-25",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-bIjlVUtcr8SssSukykTf",
+   "name": "Dog Day Afternoon (John Cazale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-25",
+   "to": "2026-08-25",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YCeALzCmh5j8OYqqnluv",
+   "name": "Promenades à la découverte des plantes médicinales",
+   "venue": "Parc Central du Kirchberg",
+   "lat": 49.625661,
+   "lon": 6.160547,
+   "from": "2026-08-26",
+   "to": "2026-08-26",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AGhWqgiQp4ekGR4uXoJr",
+   "name": "Amores perros (Great Restorations)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-26",
+   "to": "2026-08-26",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-0kORbZWriRWC8qY6Bfpw",
+   "name": "The Deer Hunter (John Cazale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-26",
+   "to": "2026-08-26",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-jA671dUS448IY6wO3UwB",
+   "name": "Tash Sultana",
+   "venue": "den Atelier",
+   "lat": 49.598747,
+   "lon": 6.126118,
+   "from": "2026-08-26",
+   "to": "2026-08-26",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-b7gNcH8VlbTnLUFlen2d",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-08-26",
+   "to": "2026-08-26",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-aPoy2sJkVLpf0LiQemNX",
+   "name": "Happy Together (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-27",
+   "to": "2026-08-27",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-3AWZbPOilYmXyfgoIsMr",
+   "name": "Silent Running (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-27",
+   "to": "2026-08-27",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-giujTPw6elCKuZjETZtx",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-08-27",
+   "to": "2026-08-27",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-uOQUAkEMxkX1dw0NxbaC",
+   "name": "Rencontres Citoyenne QuattroPole",
+   "venue": "Rencontres Citoyenne QuattroPole / Bürgerbegegnungen Quattro",
+   "lat": 49.599681,
+   "lon": 6.134983699999999,
+   "from": "2026-08-28",
+   "to": "2026-08-28",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-NDPBKRtsIcyf92sdb2s6",
+   "name": "The Conversation (John Cazale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-28",
+   "to": "2026-08-28",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AAQrBmEjjA62bbf0KUo2",
+   "name": "Comedy Show - Bookmarks and Baklava",
+   "venue": "Mirador",
+   "lat": 49.612297,
+   "lon": 6.1391179,
+   "from": "2026-08-28",
+   "to": "2026-08-28",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-n5o3EgL70nS1CFyxrhbe",
+   "name": "Sunshine (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-28",
+   "to": "2026-08-28",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-o1wWcBGZBbKngEWNrKx9",
+   "name": "Guided tour by night",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-08-28",
+   "to": "2026-08-28",
+   "hours": [
+    21,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-zrHwu3uuqWhhROk162mk",
+   "name": "Visite guidée du Plateau de Kirchberg ",
+   "venue": "Fonds Kirchberg",
+   "lat": 49.622287,
+   "lon": 6.151651,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "grande-braderie-2026-09-07",
+   "name": "Grande Braderie",
+   "venue": "Pedestrian zone Ville-Haute (Grand-Rue) + Gare district (Avenue de la Gare)",
+   "lat": 49.6117,
+   "lon": 6.1287,
+   "from": "2026-09-07",
+   "to": "2026-09-07",
+   "hours": [
+    8,
+    19
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
+  },
+  {
+   "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
+   "name": "Winterlights - Christmas market Place d'Armes",
+   "venue": "Place d'Armes (Chrestmaart)",
+   "lat": 49.6112,
+   "lon": 6.1295,
+   "from": "2026-11-20",
+   "to": "2027-01-03",
+   "hours": [
+    11,
+    21
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.vdl.lu/en/visiting/leisure-and-recreation/festivals-fairs-and-events/winterlights-0"
+  },
+  {
+   "id": "winterlights-christmas-market-place-de-l-2026-11-20",
+   "name": "Winterlights - Christmas market Place de la Constitution",
+   "venue": "Place de la Constitution (Gelle Fra)",
+   "lat": 49.6095,
+   "lon": 6.129,
+   "from": "2026-11-20",
+   "to": "2027-01-03",
+   "hours": [
+    11,
+    21
+   ],
+   "radiusM": 800,
+   "scale": "major",
+   "source": "https://www.vdl.lu/en/visiting/leisure-and-recreation/festivals-fairs-and-events/winterlights-0"
+  },
+  {
+   "id": "winterlights-christmas-market-gare-2026-11-20",
+   "name": "Winterlights - Christmas market Gare",
+   "venue": "Place de Paris",
+   "lat": 49.6034,
+   "lon": 6.1307,
+   "from": "2026-11-20",
+   "to": "2027-01-03",
+   "hours": [
+    11,
+    21
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.vdl.lu/en/visiting/leisure-and-recreation/festivals-fairs-and-events/winterlights-0"
+  },
+  {
+   "id": "octave-pilgrimage-maertchen-2027-04-17",
+   "name": "Octave pilgrimage + Maertchen",
+   "venue": "Cathedrale Notre-Dame + Place Guillaume II",
+   "lat": 49.6098,
+   "lon": 6.1316,
+   "from": "2027-04-17",
+   "to": "2027-05-02",
+   "hours": [
+    7,
+    19
+   ],
+   "radiusM": 600,
+   "scale": "medium",
+   "source": "https://www.luxembourg-city.com/en/what-s-on/event/octave"
+  }
+ ]
+}

@@ -16,7 +16,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { loadSnapshotLines, loadCapacities, buildProfiles } from './train.mjs'
+import { loadSnapshotLines, loadCapacities, buildProfiles, loadEventCalendar } from './train.mjs'
 import { predict, predictDistribution, probAtLeast } from '../src/lib/predictor.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -90,7 +90,8 @@ async function main() {
     return
   }
 
-  const profiles = buildProfiles(trainLines, capacities)
+  const events = await loadEventCalendar()
+  const profiles = buildProfiles(trainLines, capacities, events)
 
   for (const h of HORIZONS_H) {
     const hMs = h * 3600_000
@@ -109,11 +110,11 @@ async function main() {
         const base = baseLine.s[id]
         if (!cap || !base) continue
         const live = base[0]
-        const p = predict({ id, capacity: cap, bikes: live }, targetDate, {
-          now: baseDate,
-          profiles,
-          globalLiveMean,
-        })
+        const p = predict(
+          { id, capacity: cap, bikes: live, lat: capacities[id].lat, lon: capacities[id].lon },
+          targetDate,
+          { now: baseDate, profiles, globalLiveMean, events }
+        )
         absModel += Math.abs(p.bikes - actual)
         absPersist += Math.abs(live - actual)
         n++

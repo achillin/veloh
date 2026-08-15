@@ -12,6 +12,7 @@ const props = defineProps({
   startPos: { type: Object, default: null }, // custom route origin {lat, lon, label?}
   radarFrames: { type: Array, default: () => [] }, // [{dwd, global}] tile URL templates per frame
   radarIdx: { type: Number, default: 0 }, // which frame is visible
+  events: { type: Array, default: () => [] }, // events active at the displayed time
 })
 const emit = defineEmits(['select', 'setstart'])
 
@@ -239,6 +240,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
   markers.forEach((m) => m.marker.remove())
   markers.clear()
+  eventMarkers.forEach((m) => m.remove())
+  eventMarkers.clear()
   placeMarker?.remove()
   userMarker?.remove()
   startMarker?.remove()
@@ -247,6 +250,38 @@ onBeforeUnmount(() => {
 
 watch(() => props.radarFrames, applyRadarFrames)
 watch(() => props.radarIdx, applyRadarIdx)
+
+// 🎪 pins for events active at the displayed time
+const eventMarkers = new Map() // event id → Marker
+watch(
+  () => props.events,
+  (evs) => {
+    if (!map) return
+    const seen = new Set()
+    for (const ev of evs) {
+      seen.add(ev.id)
+      if (!eventMarkers.has(ev.id)) {
+        const el = document.createElement('div')
+        el.className = 'event-pin'
+        el.textContent = '🎪'
+        el.title = ev.name
+        eventMarkers.set(
+          ev.id,
+          new maplibregl.Marker({ element: el, anchor: 'bottom' })
+            .setLngLat([ev.lon, ev.lat])
+            .addTo(map)
+        )
+      }
+    }
+    for (const [id, m] of eventMarkers) {
+      if (!seen.has(id)) {
+        m.remove()
+        eventMarkers.delete(id)
+      }
+    }
+  },
+  { immediate: true }
+)
 
 watch(
   () => props.startPos,

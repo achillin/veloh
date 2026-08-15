@@ -10,6 +10,7 @@
 // Fractions are bikes / capacity, clamped to [0, 1].
 
 import { dayType } from './holidays.js'
+import { activeEventsAt, eventsNear } from './events.js'
 
 const SHRINK_K = 8 // pseudo-observations pulling a station toward the global profile
 const PERSISTENCE_HOURS = 2.5 // legacy e-folding time, used only without learned decay
@@ -56,6 +57,24 @@ function rainAdjustment(profiles, forecast, dtH) {
   return profiles.rain.delta * trust
 }
 
+const EVENT_DELTA_CAP = 0.35 // events can't swing a forecast past ±35% of capacity
+const EVENT_MIN_N = 300 // learned venue deltas need this many station-minutes
+
+/** Availability shift from learned per-venue event effects, for events
+ *  active at the target time within radius of the station. */
+function eventAdjustment(profiles, station, target, ctx) {
+  const active =
+    ctx.activeEvents ?? (ctx.events?.length ? activeEventsAt(ctx.events, target) : null)
+  if (!active?.length) return 0
+  const near = eventsNear(active, station)
+  let delta = 0
+  for (const ev of near) {
+    const eff = profiles?.eventEffects?.[ev.venue]
+    if (eff && eff[1] >= EVENT_MIN_N) delta += eff[0]
+  }
+  return Math.max(-EVENT_DELTA_CAP, Math.min(EVENT_DELTA_CAP, delta))
+}
+
 /** Learned lag-1h anomaly survival rate for the bucket containing `date`,
  *  shrunk toward the global rate; null when the model has no decay data. */
 function bucketRho(profiles, date) {
@@ -71,7 +90,8 @@ function bucketRho(profiles, date) {
  * Predict one station's availability at `target`.
  * @returns {{ frac: number, bikes: number, kind: 'live'|'blend'|'learned'|'prior' }}
  */
-export function predict(station, target, { now, profiles, globalLiveMean, forecast }) {
+export function predict(station, target, ctx) {
+  const { now, profiles, globalLiveMean, forecast } = ctx
   const cap = Math.max(station.capacity, 1)
   const liveFrac = Math.min(station.bikes / cap, 1)
   const dtH = (target.getTime() - now.getTime()) / 3.6e6
@@ -89,7 +109,15 @@ export function predict(station, target, { now, profiles, globalLiveMean, foreca
     base = globalLiveMean
     kind = 'prior'
   }
-  base = Math.min(Math.max(base + rainAdjustment(profiles, forecast, dtH), 0), 1)
+  base = Math.min(
+    Math.max(
+      base +
+        rainAdjustment(profiles, forecast, dtH) +
+        eventAdjustment(profiles, station, target, ctx),
+      0
+    ),
+    1
+  )
 
   let frac = base
   const horizon = profiles?.decay ? LEARNED_HORIZON_H : PERSISTENCE_HORIZON_H

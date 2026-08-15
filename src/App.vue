@@ -28,6 +28,7 @@ import {
 } from './lib/radar.js'
 import { describeWmo } from './lib/weather.js'
 import { fetchRecentHistory, historyAt } from './lib/history.js'
+import { loadEvents, activeEventsAt, eventsNear } from './lib/events.js'
 
 const stations = shallowRef([])
 const profiles = shallowRef(null)
@@ -47,7 +48,8 @@ const radarOn = ref(false)
 const radarFrames = shallowRef([]) // ~2 h of radar + 30 min nowcast, 10-min steps
 const radarIdx = ref(0) // animation position
 const radarInfo = shallowRef(null) // { coverage, nearest: { km, dir } | null } around the city
-const recentHistory = shallowRef(null) // rolling ~2 h of measured snapshots (collector-fed)
+const recentHistory = shallowRef(null) // rolling 24 h of measured snapshots (collector-fed)
+const eventsCal = shallowRef([]) // curated Luxembourg event calendar
 
 const target = computed(() => new Date(now.value.getTime() + offsetHours.value * 3.6e6))
 
@@ -228,6 +230,7 @@ onMounted(async () => {
   refreshWeather()
   refreshNowcast()
   loadProfiles().then((p) => (profiles.value = p))
+  loadEvents().then((e) => (eventsCal.value = e))
   initGeolocation()
   await refreshStations()
   statusTimer = setInterval(refreshStations, 60_000)
@@ -244,10 +247,15 @@ onBeforeUnmount(() => {
   if (geoWatchId != null) navigator.geolocation.clearWatch(geoWatchId)
 })
 
+// Events active at the displayed moment — drives the model adjustment,
+// the map pins and the chips.
+const activeEvents = computed(() => activeEventsAt(eventsCal.value, target.value))
+
 const predictionCtx = computed(() => ({
   now: now.value,
   profiles: profiles.value,
   globalLiveMean: globalMeanFraction(stations.value),
+  events: eventsCal.value,
 }))
 
 // Measured snapshot for the scrubbed past moment, when the collector's
@@ -277,7 +285,7 @@ const displayStations = computed(() => {
         closed: !s.renting,
       }
     }
-    const p = predict(s, target.value, { ...ctx, forecast: fc })
+    const p = predict(s, target.value, { ...ctx, forecast: fc, activeEvents: activeEvents.value })
     return {
       id: s.id,
       name: s.name,
@@ -456,7 +464,11 @@ const selectedDisplay = computed(() => {
     return { frac: Math.min(st.bikes / Math.max(st.capacity, 1), 1), bikes: st.bikes, kind: 'live' }
   }
   const fc = offsetHours.value > 0 ? forecastAt(weather.value, target.value) : null
-  return predict(st, target.value, { ...predictionCtx.value, forecast: fc })
+  return predict(st, target.value, {
+    ...predictionCtx.value,
+    forecast: fc,
+    activeEvents: activeEvents.value,
+  })
 })
 
 const selectedSeries = computed(() => {
@@ -479,6 +491,13 @@ const availabilityOdds = computed(() => {
     p1: Math.round(probAtLeast(dist, 1) * 100),
     p3: Math.round(probAtLeast(dist, 3) * 100),
   }
+})
+
+// Events near the selected station at the displayed time — panel chip.
+const stationEvents = computed(() => {
+  const st = selectedStation.value
+  if (!st) return []
+  return eventsNear(activeEvents.value, st).map((ev) => ev.name)
 })
 
 // Operator-rebalancing hint for the displayed hour: on what fraction of
@@ -506,6 +525,7 @@ const rebalanceHint = computed(() => {
       :route="walkRoute"
       :radar-frames="radarTemplates"
       :radar-idx="radarIdx"
+      :events="activeEvents"
       @select="selectedId = $event"
       @setstart="onSetStart"
     />
@@ -532,6 +552,7 @@ const rebalanceHint = computed(() => {
       :offset-hours="offsetHours"
       :rebalance="rebalanceHint"
       :odds="availabilityOdds"
+      :events="stationEvents"
       @close="selectedId = null"
     />
     <button class="locate glass" title="Jump to my location" @click="locateMe">⌖</button>
@@ -559,6 +580,7 @@ const rebalanceHint = computed(() => {
       :weather="weather"
       :radar-points="nowcastPoints"
       :history-available="offsetHours < 0 ? !!historySnap : null"
+      :event-names="activeEvents.map((e) => e.name)"
     />
   </div>
 </template>
