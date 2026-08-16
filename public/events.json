@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-15T08:21:34.665Z",
+ "updated": "2026-08-16T04:01:03.803Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -241,102 +241,6 @@
    "scale": "medium",
    "estimated": true,
    "source": "https://www.luxembourg-city.com/en/street-artnimation"
-  },
-  {
-   "id": "echo-rhwXknZybMTlL4f8V5Kr",
-   "name": "Moves & Attitudes: 80s Dance Practices",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-08-15",
-   "to": "2026-08-15",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-iwgV2Z86PcmyuZU8rdsZ",
-   "name": "Summer in the fortress",
-   "venue": "Visite guidée dans les casemates du Fort Lambert et de l'Aqu",
-   "lat": 49.61053,
-   "lon": 6.124758,
-   "from": "2026-08-15",
-   "to": "2026-08-15",
-   "hours": [
-    15,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ubhVLs7lujuUuMN8wmUx",
-   "name": "Cirque Nouveau - lonely people will be sold to the circus",
-   "venue": "Near Luxexpo The Box",
-   "lat": 49.6305252,
-   "lon": 6.1721879,
-   "from": "2026-08-15",
-   "to": "2026-08-15",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-nMqJBNnnR1EfcHYmZdCF",
-   "name": "DJ WANTED // OPEN DECKS",
-   "venue": "Brauerei - Big Beer Company",
-   "lat": 49.612662,
-   "lon": 6.142091,
-   "from": "2026-08-15",
-   "to": "2026-08-15",
-   "hours": [
-    17,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-xh9izUZdVy5F3NRUAmZo",
-   "name": "Sunset Cinema: Lux-City 2026",
-   "venue": "Parc Central du Kirchberg",
-   "lat": 49.625661,
-   "lon": 6.160547,
-   "from": "2026-08-15",
-   "to": "2026-08-15",
-   "hours": [
-    17,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Fc1fwauHjE8ptFBQi1si",
-   "name": "Cirque Nouveau - lonely people will be sold to the circus",
-   "venue": "Near Luxexpo The Box",
-   "lat": 49.6305252,
-   "lon": 6.1721879,
-   "from": "2026-08-15",
-   "to": "2026-08-15",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-J8J4pjIrd11yQrXgyiG0",
@@ -1117,6 +1021,118 @@
    "hours": [
     10,
     12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gw9hlWSbtPtOZh4lVVpl",
+   "name": "Tuffi - Junior Atelier (4-6) ",
+   "venue": "Villa Vauban - Musée d'Art de la Ville de Luxembourg",
+   "lat": 49.61302,
+   "lon": 6.122473,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    10,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ip6pc9IjD6Fc4alfKJkq",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-jW4E8d0qgrfJHn9nE9YW",
+   "name": "More than a Postcard",
+   "venue": "Cercle Cité - Ratskeller (espace d'exposition)",
+   "lat": 49.61130319999999,
+   "lon": 6.1306446,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-x8KoiSSwJgSzXXm24eC7",
+   "name": "DJ WANTED // OPEN DECKS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AjlnDVqChS9yYgvJ8m9M",
+   "name": "Sex (Dreams Love) (Oslo Trilogy by Dag Johan Haugerud)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-zJPbBjLTYO86kQz5eOJg",
+   "name": "Kurt Vile & The Violators",
+   "venue": "den Atelier",
+   "lat": 49.598747,
+   "lon": 6.126118,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-a6jDnKVHAilxE4gRLzRV",
+   "name": "Tootsie (Comedy Classics)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-29",
+   "to": "2026-08-29",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
