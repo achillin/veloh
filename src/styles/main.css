@@ -93,6 +93,15 @@ body,
   opacity: 0.35;
 }
 
+/* trip stop (start / swap / dock) */
+.stn.is-stop .stn-inner::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2.5px dashed var(--accent);
+}
+
 .stn.is-selected .stn-inner::after {
   content: '';
   position: absolute;

@@ -3,8 +3,9 @@ import { computed, ref, watch, onBeforeUnmount } from 'vue'
 
 const props = defineProps({
   stations: { type: Array, required: true },
+  planner: { type: Boolean, default: false }, // next pick becomes a trip destination
 })
-const emit = defineEmits(['goto'])
+const emit = defineEmits(['goto', 'toggle-planner'])
 
 const q = ref('')
 const open = ref(false)
@@ -104,12 +105,19 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
 </script>
 
 <template>
-  <div ref="root" class="search glass">
+  <div ref="root" class="search glass" :class="{ planning: planner }">
+    <button
+      class="plan-btn"
+      :class="{ on: planner }"
+      title="Plan a trip with bike swaps — pick your destination next"
+      @mousedown.prevent
+      @click="$emit('toggle-planner')"
+    >🚴</button>
     <span class="icon">⌕</span>
     <input
       v-model="q"
       type="search"
-      placeholder="Search station or address…"
+      :placeholder="planner ? 'Destination…' : 'Search station or address…'"
       spellcheck="false"
       @focus="open = true"
       @input="open = true"
@@ -150,6 +158,23 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: 12px;
+}
+
+.search.planning {
+  border-color: rgba(46, 230, 166, 0.5);
+}
+
+.plan-btn {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 5px 4px 0;
+  filter: grayscale(1) opacity(0.6);
+}
+
+.plan-btn.on {
+  filter: none;
 }
 
 .icon {

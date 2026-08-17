@@ -1,5 +1,33 @@
 import { describe, it, expect } from 'vitest'
-import { haversineM, nearestWithBikes } from '../src/lib/routing.js'
+import { haversineM, nearestWithBikes, routePointAtTime } from '../src/lib/routing.js'
+
+describe('routePointAtTime', () => {
+  // straight north line, ~2 km, "ridden" in 600 s
+  const geometry = {
+    type: 'LineString',
+    coordinates: [
+      [6.13, 49.6],
+      [6.13, 49.609],
+      [6.13, 49.618],
+    ],
+  }
+
+  it('interpolates linearly along the line by time fraction', () => {
+    const mid = routePointAtTime(geometry, 600, 300)
+    expect(mid.lat).toBeCloseTo(49.609, 3)
+    expect(mid.lon).toBeCloseTo(6.13, 6)
+  })
+
+  it('clamps to the endpoints', () => {
+    expect(routePointAtTime(geometry, 600, 0).lat).toBeCloseTo(49.6, 6)
+    expect(routePointAtTime(geometry, 600, 9999).lat).toBeCloseTo(49.618, 6)
+  })
+
+  it('handles degenerate input', () => {
+    expect(routePointAtTime(null, 600, 100)).toBeNull()
+    expect(routePointAtTime(geometry, 0, 100)).toBeNull()
+  })
+})
 
 describe('haversineM', () => {
   it('measures ~1 km for 0.009° of latitude', () => {

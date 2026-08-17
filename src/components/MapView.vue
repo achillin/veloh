@@ -13,6 +13,7 @@ const props = defineProps({
   radarFrames: { type: Array, default: () => [] }, // [{dwd, global}] tile URL templates per frame
   radarIdx: { type: Number, default: 0 }, // which frame is visible
   events: { type: Array, default: () => [] }, // events active at the displayed time
+  trip: { type: Object, default: null }, // planned multi-stop trip {geometry, stops, dest}
 })
 const emit = defineEmits(['select', 'setstart'])
 
@@ -28,25 +29,47 @@ const ROUTE_SRC = 'walk-route'
 const EMPTY_FC = { type: 'FeatureCollection', features: [] }
 let lastRouteGeo = EMPTY_FC
 
-// (Re-)adds the route source + layers; called on load and after any
+const TRIP_SRC = 'trip-route'
+let lastTripGeo = EMPTY_FC
+
+// (Re-)adds the route sources + layers; called on load and after any
 // setStyle (a style swap drops all custom sources).
 function ensureRouteLayers() {
-  if (!map || map.getSource(ROUTE_SRC)) return
-  map.addSource(ROUTE_SRC, { type: 'geojson', data: lastRouteGeo })
-  map.addLayer({
-    id: 'walk-route-casing',
-    type: 'line',
-    source: ROUTE_SRC,
-    layout: { 'line-cap': 'round', 'line-join': 'round' },
-    paint: { 'line-color': '#0b0e14', 'line-width': 8, 'line-opacity': 0.55 },
-  })
-  map.addLayer({
-    id: 'walk-route-line',
-    type: 'line',
-    source: ROUTE_SRC,
-    layout: { 'line-cap': 'round', 'line-join': 'round' },
-    paint: { 'line-color': '#4da3ff', 'line-width': 4, 'line-opacity': 0.9 },
-  })
+  if (!map) return
+  if (!map.getSource(ROUTE_SRC)) {
+    map.addSource(ROUTE_SRC, { type: 'geojson', data: lastRouteGeo })
+    map.addLayer({
+      id: 'walk-route-casing',
+      type: 'line',
+      source: ROUTE_SRC,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#0b0e14', 'line-width': 8, 'line-opacity': 0.55 },
+    })
+    map.addLayer({
+      id: 'walk-route-line',
+      type: 'line',
+      source: ROUTE_SRC,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#4da3ff', 'line-width': 4, 'line-opacity': 0.9 },
+    })
+  }
+  if (!map.getSource(TRIP_SRC)) {
+    map.addSource(TRIP_SRC, { type: 'geojson', data: lastTripGeo })
+    map.addLayer({
+      id: 'trip-route-casing',
+      type: 'line',
+      source: TRIP_SRC,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#0b0e14', 'line-width': 9, 'line-opacity': 0.55 },
+    })
+    map.addLayer({
+      id: 'trip-route-line',
+      type: 'line',
+      source: TRIP_SRC,
+      layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#2ee6a6', 'line-width': 4.5, 'line-opacity': 0.92 },
+    })
+  }
 }
 
 // Radar frames are DWD WMS requests keyed by their TIME parameter. Layers
@@ -157,6 +180,11 @@ function updateMarkerEl(el, stn, selected) {
   el.classList.toggle('is-pred', !!stn.predicted)
   el.classList.toggle('is-closed', !!stn.closed)
   el.classList.toggle('is-selected', selected)
+  el.classList.toggle('is-stop', !!tripStopIds().has(stn.id))
+}
+
+function tripStopIds() {
+  return new Set((props.trip?.stops ?? []).map((s) => s.id))
 }
 
 function syncMarkers() {
@@ -242,6 +270,7 @@ onBeforeUnmount(() => {
   markers.clear()
   eventMarkers.forEach((m) => m.remove())
   eventMarkers.clear()
+  tripDestMarker?.remove()
   placeMarker?.remove()
   userMarker?.remove()
   startMarker?.remove()
@@ -334,6 +363,28 @@ watch(
       ? { type: 'Feature', properties: {}, geometry: r.geometry }
       : EMPTY_FC
     map?.getSource(ROUTE_SRC)?.setData(lastRouteGeo)
+  }
+)
+
+let tripDestMarker = null
+watch(
+  () => props.trip,
+  (t) => {
+    lastTripGeo = t?.geometry
+      ? { type: 'Feature', properties: {}, geometry: t.geometry }
+      : EMPTY_FC
+    map?.getSource(TRIP_SRC)?.setData(lastTripGeo)
+    tripDestMarker?.remove()
+    tripDestMarker = null
+    if (t?.dest && map) {
+      const el = document.createElement('div')
+      el.className = 'place-pin'
+      el.title = t.dest.label ?? 'Destination'
+      tripDestMarker = new maplibregl.Marker({ element: el, anchor: 'bottom' })
+        .setLngLat([t.dest.lon, t.dest.lat])
+        .addTo(map)
+    }
+    syncMarkers() // refresh swap-stop highlights
   }
 )
 

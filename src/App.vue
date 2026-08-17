@@ -16,7 +16,13 @@ import {
   predictDistribution,
   probAtLeast,
 } from './lib/predictor.js'
-import { walkingRoute, nearestWithBikes, haversineM } from './lib/routing.js'
+import {
+  walkingRoute,
+  nearestWithBikes,
+  haversineM,
+  bikeRoute,
+  routePointAtTime,
+} from './lib/routing.js'
 
 let autoFocused = false // one-shot: zoom to the user & open the closest station on startup
 import {
@@ -54,6 +60,11 @@ const eventsCal = shallowRef([]) // curated Luxembourg event calendar
 const target = computed(() => new Date(now.value.getTime() + offsetHours.value * 3.6e6))
 
 function onGoto(t) {
+  if (plannerArmed.value) {
+    plannerArmed.value = false
+    planTrip({ lat: t.lat, lon: t.lon, label: t.label?.split(',')[0] ?? t.name ?? 'Destination' })
+    return
+  }
   if (t.stationId) {
     selectedId.value = t.stationId
     flyTarget.value = { lon: t.lon, lat: t.lat, zoom: 15.5, ts: Date.now() }
@@ -413,6 +424,114 @@ function clearStart() {
   customStart.value = null
 }
 
+// ---- multi-stop trip planner ----
+// Rides are split so no leg exceeds LEG_MAX riding time (vel'OH's free
+// half-hour, with margin): along the direct cycling route, a swap station
+// (bikes AND free docks) is inserted near each LEG_MAX boundary.
+const LEG_MAX_MIN = 25
+const plannerArmed = ref(false)
+const trip = shallowRef(null) // {geometry, stops, legs, totalMin, dest}
+const tripBusy = ref(false)
+const tripError = ref('')
+
+function nearestStationWhere(pos, pred, exclude = new Set()) {
+  let best = null
+  let bestD = Infinity
+  for (const s of stations.value) {
+    if (exclude.has(s.id) || !pred(s)) continue
+    const d = haversineM(pos, s)
+    if (d < bestD) {
+      bestD = d
+      best = s
+    }
+  }
+  return best ? { station: best, distanceM: bestD } : null
+}
+
+async function planTrip(dest) {
+  const from = origin.value
+  tripError.value = ''
+  if (!from) {
+    tripError.value = 'No start position — allow location or right-click the map.'
+    return
+  }
+  tripBusy.value = true
+  try {
+    const used = new Set()
+    const start = nearestStationWhere(from, (s) => s.renting && s.bikes >= 1)
+    if (!start) throw new Error('no station with bikes near the start')
+    used.add(start.station.id)
+    const end = nearestStationWhere(dest, (s) => s.returning && s.docks >= 1, used)
+    if (!end) throw new Error('no station with free docks near the destination')
+    used.add(end.station.id)
+
+    const direct = await bikeRoute([start.station, end.station])
+    const swaps = []
+    const legMaxSec = LEG_MAX_MIN * 60
+    for (let k = 1; k * legMaxSec < direct.durationSec; k++) {
+      const p = routePointAtTime(direct.geometry, direct.durationSec, k * legMaxSec)
+      if (!p) continue
+      const sw = nearestStationWhere(
+        p,
+        (s) => s.renting && s.returning && s.bikes >= 1 && s.docks >= 1,
+        used
+      )
+      if (sw && sw.distanceM <= 600) {
+        swaps.push(sw.station)
+        used.add(sw.station.id)
+      }
+    }
+
+    const points = [start.station, ...swaps, end.station]
+    const full = points.length > 2 ? await bikeRoute(points) : direct
+
+    const walkInMin = haversineM(from, start.station) / 1.35 / 60
+    const walkOutMin = haversineM(dest, end.station) / 1.35 / 60
+    const legs = [
+      { type: 'walk', to: start.station.name, min: Math.max(1, Math.round(walkInMin)) },
+    ]
+    let cumMin = walkInMin
+    const stopInfo = []
+    points.forEach((st, i) => {
+      if (i > 0) {
+        const ride = full.legs[i - 1]?.durationSec / 60 ?? 0
+        cumMin += ride
+        legs.push({ type: 'ride', to: st.name, min: Math.max(1, Math.round(ride)) })
+      }
+      const eta = new Date(now.value.getTime() + cumMin * 60_000)
+      const p = predict(st, eta, { ...predictionCtx.value })
+      stopInfo.push({
+        id: st.id,
+        name: st.name,
+        role: i === 0 ? 'start' : i === points.length - 1 ? 'end' : 'swap',
+        etaMin: Math.round(cumMin),
+        expBikes: p.bikes,
+      })
+    })
+    cumMin += walkOutMin
+    legs.push({ type: 'walk', to: dest.label, min: Math.max(1, Math.round(walkOutMin)) })
+
+    trip.value = {
+      geometry: full.geometry,
+      stops: stopInfo,
+      legs,
+      totalMin: Math.round(cumMin),
+      dest,
+    }
+    flyTarget.value = { lon: dest.lon, lat: dest.lat, zoom: 13.2, ts: Date.now() }
+  } catch (e) {
+    tripError.value = `Trip planning failed: ${e.message}`
+    trip.value = null
+  } finally {
+    tripBusy.value = false
+  }
+}
+
+function clearTrip() {
+  trip.value = null
+  tripError.value = ''
+}
+
 function locateMe() {
   const p = userPos.value
   if (p) {
@@ -473,8 +592,9 @@ const selectedDisplay = computed(() => {
 
 const selectedSeries = computed(() => {
   if (!selectedStation.value) return []
-  // full 48 h so the sparkline dot tracks the whole scrubber range
-  return predictSeries(selectedStation.value, 48, predictionCtx.value, (t) =>
+  // at least 48 h; grows with the scrub so the dot always stays on the chart
+  const hours = Math.min(14 * 24, Math.max(48, Math.ceil(offsetHours.value) + 24))
+  return predictSeries(selectedStation.value, hours, predictionCtx.value, (t) =>
     forecastAt(weather.value, t)
   )
 })
@@ -526,6 +646,7 @@ const rebalanceHint = computed(() => {
       :radar-frames="radarTemplates"
       :radar-idx="radarIdx"
       :events="activeEvents"
+      :trip="trip"
       @select="selectedId = $event"
       @setstart="onSetStart"
     />
@@ -542,8 +663,35 @@ const rebalanceHint = computed(() => {
       :error="error"
       @toggle-radar="radarOn = !radarOn"
     >
-      <SearchBox :stations="stations" @goto="onGoto" />
+      <SearchBox
+        :stations="stations"
+        :planner="plannerArmed"
+        @goto="onGoto"
+        @toggle-planner="plannerArmed = !plannerArmed"
+      />
     </TopBar>
+    <div v-if="trip || tripBusy || tripError" class="trip-card glass">
+      <div class="trip-head">
+        <b>🚴 Trip</b>
+        <span v-if="trip" class="total">{{ trip.totalMin }} min</span>
+        <button class="tclose" @click="clearTrip">✕</button>
+      </div>
+      <p v-if="tripBusy" class="tdim">planning…</p>
+      <p v-else-if="tripError" class="terr">{{ tripError }}</p>
+      <template v-else-if="trip">
+        <ol class="trip-legs">
+          <li v-for="(l, i) in trip.legs" :key="i">
+            <span class="ico">{{ l.type === 'walk' ? '🚶' : '🚴' }}</span>
+            <span class="dest">{{ l.to }}</span>
+            <span class="min">{{ l.min }}′</span>
+          </li>
+        </ol>
+        <p class="tdim" title="Each riding leg stays under the free half hour; expected bikes are the model's forecast for your arrival time">
+          swaps keep rides ≤ {{ 25 }}′ · expected on arrival:
+          <template v-for="s in trip.stops" :key="s.id"> {{ s.role === 'swap' ? '🔁' : s.role === 'end' ? '🅿' : '🚲' }}~{{ s.expBikes }}</template>
+        </p>
+      </template>
+    </div>
     <StationPanel
       v-if="selectedStation && selectedDisplay"
       :station="selectedStation"
@@ -654,6 +802,90 @@ const rebalanceHint = computed(() => {
 
 .clear-start:hover {
   color: var(--text);
+}
+
+.trip-card {
+  position: absolute;
+  top: 96px;
+  left: 16px;
+  z-index: 11;
+  width: 292px;
+  padding: 14px 16px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.trip-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+}
+
+.trip-head .total {
+  color: var(--accent);
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.tclose {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.trip-legs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.trip-legs li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.trip-legs .dest {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trip-legs .min {
+  color: var(--accent-2);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.tdim {
+  color: var(--text-dim);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.terr {
+  color: var(--danger);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .trip-card {
+    top: 150px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
 }
 
 .locate {
