@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-16T04:01:03.803Z",
+ "updated": "2026-08-17T04:04:10.780Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -243,70 +243,6 @@
    "source": "https://www.luxembourg-city.com/en/street-artnimation"
   },
   {
-   "id": "echo-J8J4pjIrd11yQrXgyiG0",
-   "name": "APÉRO JAZZ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-08-16",
-   "to": "2026-08-16",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-uJ8nrf5iPLQds1tDgYvb",
-   "name": "Guided tour of the permanent exhibition",
-   "venue": "Musée national d'histoire naturelle - 'natur musée'",
-   "lat": 49.609584,
-   "lon": 6.135641,
-   "from": "2026-08-16",
-   "to": "2026-08-16",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-nv1pk7w3qccVSTztK42N",
-   "name": "Cirque Nouveau - lonely people will be sold to the circus",
-   "venue": "Near Luxexpo The Box",
-   "lat": 49.6305252,
-   "lon": 6.1721879,
-   "from": "2026-08-16",
-   "to": "2026-08-16",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-u3EMCIZZFqzd8wDYUvOh",
-   "name": "Sunset Cinema: Lux-City 2026",
-   "venue": "Parc Central du Kirchberg",
-   "lat": 49.625661,
-   "lon": 6.160547,
-   "from": "2026-08-16",
-   "to": "2026-08-16",
-   "hours": [
-    17,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-RBYXAo9KUa4FaceqNE1H",
    "name": "Fotos, Cloud und Co.",
    "venue": "ErwuesseBildung",
@@ -467,6 +403,22 @@
    "auto": true
   },
   {
+   "id": "echo-3ZlY7ySYfM9Z9sRIGkAQ",
+   "name": "💘 Speed Dating | What if this was the right moment",
+   "venue": "Main",
+   "lat": 49.61242439999999,
+   "lon": 6.131346,
+   "from": "2026-08-19",
+   "to": "2026-08-19",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-evGPyuP4zqXGcT2VP3Ed",
    "name": "Standup Comedy Openmic",
    "venue": "Bar Grand’Place",
@@ -509,6 +461,22 @@
    "hours": [
     14,
     16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TxjNFthutJYh9xJy2N84",
+   "name": "🧩 Quiz Night [Version Lux] | New format, new encounters",
+   "venue": "Main",
+   "lat": 49.61242439999999,
+   "lon": 6.131346,
+   "from": "2026-08-20",
+   "to": "2026-08-20",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1133,6 +1101,70 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AyS0C54rqwJTBFKBHWYD",
+   "name": "Thé Dansant op der Schueberfouer",
+   "venue": "Champs du Glacis",
+   "lat": 49.6167997,
+   "lon": 6.1218102,
+   "from": "2026-08-30",
+   "to": "2026-08-30",
+   "hours": [
+    14,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-8XW3uJ3TzSbwq49W5p7m",
+   "name": "Guided tour of the permanent exhibition",
+   "venue": "Musée national d'histoire naturelle - 'natur musée'",
+   "lat": 49.609584,
+   "lon": 6.135641,
+   "from": "2026-08-30",
+   "to": "2026-08-30",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-3AacDBSKeTdzyw6aOX4F",
+   "name": "The Red Shoes (Ciné-Théâtre)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-30",
+   "to": "2026-08-30",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-sJD4jrax1u2eHdx1lvXa",
+   "name": "La Légende de l'aigle chasseur de héros (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-30",
+   "to": "2026-08-30",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
