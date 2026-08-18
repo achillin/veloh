@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-17T04:04:10.780Z",
+ "updated": "2026-08-18T03:59:36.015Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -243,38 +243,6 @@
    "source": "https://www.luxembourg-city.com/en/street-artnimation"
   },
   {
-   "id": "echo-RBYXAo9KUa4FaceqNE1H",
-   "name": "Fotos, Cloud und Co.",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-17",
-   "to": "2026-08-17",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-L1XdmE0DIWX4jwSfO09e",
-   "name": "Internetführerschein (Sommer-Edition)",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-17",
-   "to": "2026-08-17",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-vcjGa6ZV1eMWxZlUmhdd",
    "name": " Mit dem Smartphone unterwegs",
    "venue": "ErwuesseBildung",
@@ -472,6 +440,22 @@
    "venue": "Main",
    "lat": 49.61242439999999,
    "lon": 6.131346,
+   "from": "2026-08-20",
+   "to": "2026-08-20",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-olYROP912UB2m6y9e0NV",
+   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
    "from": "2026-08-20",
    "to": "2026-08-20",
    "hours": [
@@ -1139,6 +1123,22 @@
    "auto": true
   },
   {
+   "id": "echo-ejxreSsciEl1aoAwxsOR",
+   "name": "Soirée Tango avec Guillermo Böttcher et Gladys Fernandez",
+   "venue": "Centre Culturel Altrimenti",
+   "lat": 49.6077568,
+   "lon": 6.1231002,
+   "from": "2026-08-30",
+   "to": "2026-08-30",
+   "hours": [
+    16,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-3AacDBSKeTdzyw6aOX4F",
    "name": "The Red Shoes (Ciné-Théâtre)",
    "venue": "Théâtre des Capucins",
@@ -1165,6 +1165,38 @@
    "hours": [
     19,
     22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9wlFe8eV5f5kGtZEzKXN",
+   "name": "Oslo, August 31st (Oslo Trilogies by Joachim Trier)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-31",
+   "to": "2026-08-31",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Q8PnmlECu9Ec5ci88IHN",
+   "name": "Moon (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-08-31",
+   "to": "2026-08-31",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
