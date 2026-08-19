@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-18T03:59:36.015Z",
+ "updated": "2026-08-19T04:00:30.565Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -241,54 +241,6 @@
    "scale": "medium",
    "estimated": true,
    "source": "https://www.luxembourg-city.com/en/street-artnimation"
-  },
-  {
-   "id": "echo-vcjGa6ZV1eMWxZlUmhdd",
-   "name": " Mit dem Smartphone unterwegs",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-18",
-   "to": "2026-08-18",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-TSqXim2MEpvpUBt1z471",
-   "name": "Internetführerschein (Sommer-Edition)",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-18",
-   "to": "2026-08-18",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Ml0SS52t1VqzxMpjRU1l",
-   "name": "Poésie sous le cerisier, avec Ulrike Bail et Tom Nisse",
-   "venue": "Musée national d'histoire naturelle – Naturmusée",
-   "lat": 49.6097155,
-   "lon": 6.135622,
-   "from": "2026-08-18",
-   "to": "2026-08-18",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-zfZAqX2bH2NEBkcZDCzB",
@@ -1171,6 +1123,22 @@
    "auto": true
   },
   {
+   "id": "echo-0r5ENuWB3NT7RQQ6fHFf",
+   "name": "Rosa Lëtzebuerg is going to the Schueberfouer!",
+   "venue": "Glacis",
+   "lat": 49.615568,
+   "lon": 6.1229,
+   "from": "2026-08-31",
+   "to": "2026-08-31",
+   "hours": [
+    17,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-9wlFe8eV5f5kGtZEzKXN",
    "name": "Oslo, August 31st (Oslo Trilogies by Joachim Trier)",
    "venue": "Théâtre des Capucins",
@@ -1197,6 +1165,54 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-EuSHsgO7EB0LvXCDmevv",
+   "name": "Concert gratuit: Daniel Balthasar",
+   "venue": "Musée national d'histoire naturelle – Naturmusée",
+   "lat": 49.6097155,
+   "lon": 6.135622,
+   "from": "2026-09-01",
+   "to": "2026-09-01",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ga8z5bji7ScsgaidvGSl",
+   "name": "Free Improv Taster Workshop",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
+   "from": "2026-09-01",
+   "to": "2026-09-01",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DACTjw0V8wiDK744eBAS",
+   "name": "Adieu ma concubine (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-01",
+   "to": "2026-09-01",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
