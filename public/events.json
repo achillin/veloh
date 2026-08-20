@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T04:00:30.565Z",
+ "updated": "2026-08-20T03:59:55.374Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -243,118 +243,6 @@
    "source": "https://www.luxembourg-city.com/en/street-artnimation"
   },
   {
-   "id": "echo-zfZAqX2bH2NEBkcZDCzB",
-   "name": "Internetführerschein (Sommer-Edition)",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-hglVLxMAUY77jB17Cmrv",
-   "name": " Mit dem Smartphone unterwegs",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-KCamRJ2ZUprnMuXjTFGE",
-   "name": "Arboretum Kirchberg",
-   "venue": "LUXEXPO - Centre d'Expositions et de Congrès",
-   "lat": 49.636043,
-   "lon": 6.172955,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ZYvoFULoZBK7GiDshjmJ",
-   "name": "Curator’s Tour ",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    18,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-jgDf5y73q4kGYcHFOqL6",
-   "name": "Kirchberg Arboretum - Beeches, oaks and native woody plants",
-   "venue": "Entrée du Parc Réimerwee",
-   "lat": 49.629306,
-   "lon": 6.157928,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-3ZlY7ySYfM9Z9sRIGkAQ",
-   "name": "💘 Speed Dating | What if this was the right moment",
-   "venue": "Main",
-   "lat": 49.61242439999999,
-   "lon": 6.131346,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-evGPyuP4zqXGcT2VP3Ed",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-08-19",
-   "to": "2026-08-19",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-DuxkOD1preUEHVq8AFFA",
    "name": "Internetführerschein (Sommer-Edition)",
    "venue": "ErwuesseBildung",
@@ -387,8 +275,8 @@
    "auto": true
   },
   {
-   "id": "echo-TxjNFthutJYh9xJy2N84",
-   "name": "🧩 Quiz Night [Version Lux] | New format, new encounters",
+   "id": "echo-aMztAYOVRMJt0GM5CwPt",
+   "name": "Event",
    "venue": "Main",
    "lat": 49.61242439999999,
    "lon": 6.131346,
@@ -717,6 +605,22 @@
    "hours": [
     17,
     20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JsAOrMCLvdEQtXoMqHFb",
+   "name": "Wednesday’s Hangout",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-08-26",
+   "to": "2026-08-26",
+   "hours": [
+    18,
+    21
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1123,7 +1027,7 @@
    "auto": true
   },
   {
-   "id": "echo-0r5ENuWB3NT7RQQ6fHFf",
+   "id": "echo-HNQFDBnspL3IN8AHaiow",
    "name": "Rosa Lëtzebuerg is going to the Schueberfouer!",
    "venue": "Glacis",
    "lat": 49.615568,
@@ -1212,6 +1116,102 @@
    "to": "2026-09-01",
    "hours": [
     19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lZUrdIjGFeq42UWqzHTd",
+   "name": "Comprendre et utiliser la plateforme MyGuichet",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HWiDjCNoI2H9PZ3QCSZ2",
+   "name": "Open Stage: 80s Night Fever",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-GRRdRaQfV0pLRsF9pmda",
+   "name": "Irma Vep (Cult Fiction)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-SQvLgawbQg6qbXomyVgM",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-q6yY3Fvl56oVgRTumiMc",
+   "name": "Lindy Hop",
+   "venue": "Moving Vibes - The Studio",
+   "lat": 49.6035149,
+   "lon": 6.1343369,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-D9Kif8NikWyivzgxwnEW",
+   "name": "Apollo 11 (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    20,
     22
    ],
    "radiusM": 400,
