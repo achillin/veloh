@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-20T03:59:55.374Z",
+ "updated": "2026-08-21T04:03:27.678Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -243,102 +243,6 @@
    "source": "https://www.luxembourg-city.com/en/street-artnimation"
   },
   {
-   "id": "echo-DuxkOD1preUEHVq8AFFA",
-   "name": "Internetführerschein (Sommer-Edition)",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-20",
-   "to": "2026-08-20",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-A5hVAS2M5ejjjEtqCWgy",
-   "name": "Sicher bezahlen im Internet",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-20",
-   "to": "2026-08-20",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-aMztAYOVRMJt0GM5CwPt",
-   "name": "Event",
-   "venue": "Main",
-   "lat": 49.61242439999999,
-   "lon": 6.131346,
-   "from": "2026-08-20",
-   "to": "2026-08-20",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-olYROP912UB2m6y9e0NV",
-   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
-   "venue": "Caribou Karaoke",
-   "lat": 49.6129308,
-   "lon": 6.1292805,
-   "from": "2026-08-20",
-   "to": "2026-08-20",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-O09rKW0AOpTfZgu4Ui3l",
-   "name": "PEDDLIN’ PETE live @ Liquid",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-08-20",
-   "to": "2026-08-20",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-YywWkmJberKekl7PmGrv",
-   "name": "Comedy Open Mic",
-   "venue": "Updown Bar ",
-   "lat": 49.608285,
-   "lon": 6.1349,
-   "from": "2026-08-20",
-   "to": "2026-08-20",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "schueberfouer-2026-08-21",
    "name": "Schueberfouer",
    "venue": "Champ du Glacis (Fouerplaatz)",
@@ -355,7 +259,7 @@
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
   },
   {
-   "id": "echo-wpsMAl3t7sUonIk9fmSr",
+   "id": "echo-kMaazJki4sBBUjM32Aws",
    "name": "Internetführerschein (Sommer-Edition)",
    "venue": "ErwuesseBildung",
    "lat": 49.607776,
@@ -1213,6 +1117,102 @@
    "hours": [
     20,
     22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-R5KW6CuAQNzEDNZBvIbM",
+   "name": "Comprendre et utiliser la plateforme MyGuichet",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Ez4h8nXdkFOvko2rSM5W",
+   "name": "Bourgmeisterin: Fireside Chat – Feeding the Nation: Cooking ",
+   "venue": "Silversquare Luxembourg",
+   "lat": 49.60197,
+   "lon": 6.130586,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-RoNPd4eLzTXCtqaBX1zF",
+   "name": "3 du TROIS | WORK IN PROGRESS – SEPTEMBRE 26",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-LAgbG9IPVfH0AQB1An7K",
+   "name": "Singles Dating Night Luxembourg: Meet 100 Singles",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9xoNCOq1EKEVIhUE1x01",
+   "name": "The Godfather (John Cazale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qWce5efr0IFI2fcDkRnV",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    21,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
