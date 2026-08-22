@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-21T04:03:27.678Z",
+ "updated": "2026-08-22T03:57:54.660Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,86 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-kMaazJki4sBBUjM32Aws",
-   "name": "Internetführerschein (Sommer-Edition)",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-21",
-   "to": "2026-08-21",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-9h48FA4bp4zulxkGhl0f",
-   "name": "Sicher bezahlen im Internet",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-08-21",
-   "to": "2026-08-21",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-qYsztEEJm6wKCOwk0ZQF",
-   "name": "Bradley's Karaoke Night",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-08-21",
-   "to": "2026-08-21",
-   "hours": [
-    19,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ybWMXMCwJCyN0n3B1wGS",
-   "name": "Luxembourg Comedy Showcase in English - Joel Bryant (USA)",
-   "venue": "Caribou Karaoke",
-   "lat": 49.6129308,
-   "lon": 6.1292805,
-   "from": "2026-08-21",
-   "to": "2026-08-21",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Mpvi9i2NK1r79Du4fZTg",
-   "name": "Guided tour by night",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-08-21",
-   "to": "2026-08-21",
-   "hours": [
-    21,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-qKQ026UDydX91L3Gr0qa",
@@ -1075,6 +995,22 @@
    "auto": true
   },
   {
+   "id": "echo-yTEAuSUJKbkIVfoYoOfA",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-09-02",
+   "to": "2026-09-02",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-SQvLgawbQg6qbXomyVgM",
    "name": "Standup Comedy Openmic",
    "venue": "Bar Grand’Place",
@@ -1213,6 +1149,86 @@
    "hours": [
     21,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-7Cogmj0QPvdeCQ3ucXV4",
+   "name": "Histoires de fantômes chinois (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-wKZWk9RLnQi85P5LBn2K",
+   "name": "Hot Flashes Sessions",
+   "venue": "Dipso",
+   "lat": 49.6111256,
+   "lon": 6.1339822,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1Wsz0p3mnZfSkkioMVRp",
+   "name": "UNFILTERED",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lZV6Df4f1SbumVLnHGr9",
+   "name": " There's Something About Mary (Comedy Classics)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-XRqeNCbXXyZlX8GKVwf6",
+   "name": "Guided tour by night",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    21,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
