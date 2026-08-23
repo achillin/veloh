@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-22T03:57:54.660Z",
+ "updated": "2026-08-23T04:03:03.615Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,86 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-qKQ026UDydX91L3Gr0qa",
-   "name": "Tuffi - Pro Atelier (6-10) ",
-   "venue": "Lëtzebuerg City Museum",
-   "lat": 49.610061,
-   "lon": 6.133655,
-   "from": "2026-08-22",
-   "to": "2026-08-22",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-vy5plRtu3lVBTsEBDlQv",
-   "name": "Organ recital",
-   "venue": "Cathédrale Notre-Dame",
-   "lat": 49.6099739,
-   "lon": 6.1288328,
-   "from": "2026-08-22",
-   "to": "2026-08-22",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-1q6DVTHt8RU3kEqVYdWa",
-   "name": "Theatrical tour - “Nothing is what it seems!”",
-   "venue": "Musée national d'histoire naturelle – Naturmusée",
-   "lat": 49.6097155,
-   "lon": 6.135622,
-   "from": "2026-08-22",
-   "to": "2026-08-22",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-x2CaoILu98lDglyL3hts",
-   "name": "DJ WANTED // OPEN DECKS",
-   "venue": "Brauerei - Big Beer Company",
-   "lat": 49.612662,
-   "lon": 6.142091,
-   "from": "2026-08-22",
-   "to": "2026-08-22",
-   "hours": [
-    17,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-JFeVZwv3GAe3Dzn8HBxn",
-   "name": "One More Song",
-   "venue": "Atmos Bar and Restaurant",
-   "lat": 49.6114156,
-   "lon": 6.1270737,
-   "from": "2026-08-22",
-   "to": "2026-08-22",
-   "hours": [
-    23,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-kPtp2Tgzdzvk3607uNE4",
@@ -1229,6 +1149,150 @@
    "hours": [
     21,
     22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-rhwdiUNAvjRQ5pfNqcQV",
+   "name": "Tuffi - Pro Atelier (6-10) ",
+   "venue": "Lëtzebuerg City Museum",
+   "lat": 49.610061,
+   "lon": 6.133655,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-GCApTYEb9EC1Y89aQrrS",
+   "name": "Jazz Dance Workshop",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AR4S98Vv0oDtrYDoWlZa",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Wfb66ykSWjukD9jk0RUb",
+   "name": "Visite guidée : Den DemokratieLabo",
+   "venue": "Europa Experience",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qgYs14ZHYFsDUoASx8ot",
+   "name": "La Revanche des humanoïdes (Afternoon Adventures)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-V7qY3apdpXtEKFAJ0QEr",
+   "name": "Persepolis (Hommage à Marjane Satrapi)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-8MEPT2FP1Rq95XrUhk5R",
+   "name": "Hot Flashes Sessions",
+   "venue": "Dipso",
+   "lat": 49.6111256,
+   "lon": 6.1339822,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-LgkpfzjNH6TUre8xDWXn",
+   "name": "Jazz x House Party",
+   "venue": "Vantage - House of Music",
+   "lat": 49.641901,
+   "lon": 6.129943,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    19,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TLvMA8rRYR3u6YXZmfuk",
+   "name": "2001: A Space Odyssey (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
