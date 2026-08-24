@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-23T04:03:03.615Z",
+ "updated": "2026-08-24T04:07:19.175Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,38 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-kPtp2Tgzdzvk3607uNE4",
-   "name": "Guided tours of the exposition \"animalECH\"",
-   "venue": "Musée national d'histoire naturelle - 'natur musée'",
-   "lat": 49.609584,
-   "lon": 6.135641,
-   "from": "2026-08-23",
-   "to": "2026-08-23",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ahj0wBCxfPKrABziSn95",
-   "name": "Sangertid",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-08-23",
-   "to": "2026-08-23",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-YUZiN1EPS6byYT46KRxq",
@@ -1293,6 +1261,134 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-khXC8cjghEGbUjzVZtdt",
+   "name": "Jazz Break - Knowedge Meetup",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    10,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-FEeQ71wJxojU3qxWGS4Y",
+   "name": "Konscht Am Gronn",
+   "venue": "Pont du Grund",
+   "lat": 49.609224,
+   "lon": 6.135862,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    10,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-I7QyPc7eTiQlLIdl5tMv",
+   "name": "Jazz Dance Workshop",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-cXTdTCuySeGuS70hL0tH",
+   "name": "Hot Flashes Sessions",
+   "venue": "Dipso",
+   "lat": 49.6111256,
+   "lon": 6.1339822,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    12,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-kV8pauIhglsD8FKfaich",
+   "name": "Le Voyage dans la Lune (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-BiIx2kKJLXe6kY28FoIY",
+   "name": "Guided tour of the permanent exhibition",
+   "venue": "Musée national d'histoire naturelle - 'natur musée'",
+   "lat": 49.609584,
+   "lon": 6.135641,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-IpA2PH26yICs4OpuEtBm",
+   "name": "La Bataille d’Alger (Cinematic Siblings)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-WACfdetdhYMsOGztRV1o",
+   "name": "The Worst Person in the World (Oslo Trilogies)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
