@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-24T04:07:19.175Z",
+ "updated": "2026-08-25T04:01:38.855Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,22 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-YUZiN1EPS6byYT46KRxq",
-   "name": " Interstellar (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-24",
-   "to": "2026-08-24",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-uH8VZUT3VFpMl1EGrQwf",
@@ -1409,6 +1393,38 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
+  },
+  {
+   "id": "echo-1JBQUovpO79HhJCtKeKH",
+   "name": "WALL-E (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-07",
+   "to": "2026-09-07",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-uvsbqQrpuwGIvToeIfkk",
+   "name": "Happy Together (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-07",
+   "to": "2026-09-07",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
   },
   {
    "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
