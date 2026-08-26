@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-25T04:01:38.855Z",
+ "updated": "2026-08-26T04:04:32.529Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,38 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-uH8VZUT3VFpMl1EGrQwf",
-   "name": "Reprise (Oslo Trilogies by Joachim Trier)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-25",
-   "to": "2026-08-25",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-bIjlVUtcr8SssSukykTf",
-   "name": "Dog Day Afternoon (John Cazale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-25",
-   "to": "2026-08-25",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-YCeALzCmh5j8OYqqnluv",
@@ -1171,6 +1139,22 @@
    "auto": true
   },
   {
+   "id": "echo-01kW7ICICz6Z0iGriXy5",
+   "name": "Ultraschall Festival 2026",
+   "venue": "Kirchberg Amphitheater",
+   "lat": 49.6251544,
+   "lon": 6.1527337,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    15,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-qgYs14ZHYFsDUoASx8ot",
    "name": "La Revanche des humanoïdes (Afternoon Adventures)",
    "venue": "Théâtre des Capucins",
@@ -1421,6 +1405,70 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-aYgWLv54F7FAG5OEp6Zk",
+   "name": "Zeechenworkshop: „Muffin und Tört“",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-08",
+   "to": "2026-09-08",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6MaY1bSpJ5sHGp69vgrX",
+   "name": "Kamishibai im Park",
+   "venue": "Piratenschiff im Stadtpark",
+   "lat": 49.610314,
+   "lon": 6.124104,
+   "from": "2026-09-08",
+   "to": "2026-09-08",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-VdLGuJ3Lnv5lpiDbZGju",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-09-08",
+   "to": "2026-09-08",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-tRyGJtHUXuI2YOgpol00",
+   "name": "Solaris (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-08",
+   "to": "2026-09-08",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
