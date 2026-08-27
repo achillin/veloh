@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-26T04:04:32.529Z",
+ "updated": "2026-08-27T14:15:28.684Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,102 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-YCeALzCmh5j8OYqqnluv",
-   "name": "Promenades à la découverte des plantes médicinales",
-   "venue": "Parc Central du Kirchberg",
-   "lat": 49.625661,
-   "lon": 6.160547,
-   "from": "2026-08-26",
-   "to": "2026-08-26",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-JsAOrMCLvdEQtXoMqHFb",
-   "name": "Wednesday’s Hangout",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-08-26",
-   "to": "2026-08-26",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-AGhWqgiQp4ekGR4uXoJr",
-   "name": "Amores perros (Great Restorations)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-26",
-   "to": "2026-08-26",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-0kORbZWriRWC8qY6Bfpw",
-   "name": "The Deer Hunter (John Cazale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-26",
-   "to": "2026-08-26",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-jA671dUS448IY6wO3UwB",
-   "name": "Tash Sultana",
-   "venue": "den Atelier",
-   "lat": 49.598747,
-   "lon": 6.126118,
-   "from": "2026-08-26",
-   "to": "2026-08-26",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-b7gNcH8VlbTnLUFlen2d",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-08-26",
-   "to": "2026-08-26",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-aPoy2sJkVLpf0LiQemNX",
@@ -835,7 +739,7 @@
    "auto": true
   },
   {
-   "id": "echo-yTEAuSUJKbkIVfoYoOfA",
+   "id": "echo-aXTrwaZf0QgPSEj4ZX03",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
    "lat": 49.598646995,
@@ -1075,7 +979,7 @@
    "auto": true
   },
   {
-   "id": "echo-rhwdiUNAvjRQ5pfNqcQV",
+   "id": "echo-YSUyJi83Djdl7DL11aTH",
    "name": "Tuffi - Pro Atelier (6-10) ",
    "venue": "Lëtzebuerg City Museum",
    "lat": 49.610061,
@@ -1267,6 +1171,22 @@
    "auto": true
   },
   {
+   "id": "echo-MX5GoSHmfP4Gk4fSDLPx",
+   "name": "Workshop | Little Plaster birds",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-09-06",
+   "to": "2026-09-06",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-I7QyPc7eTiQlLIdl5tMv",
    "name": "Jazz Dance Workshop",
    "venue": "Schluechthaus / Skatepark Hollerich",
@@ -1443,7 +1363,7 @@
    "auto": true
   },
   {
-   "id": "echo-VdLGuJ3Lnv5lpiDbZGju",
+   "id": "echo-k3vDlBja8Vgqk2q3V3zc",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
    "lat": 49.598646995,
@@ -1469,6 +1389,150 @@
    "hours": [
     19,
     22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-eukjiDkTnwcRcfuqjIFk",
+   "name": "Two façades – a thousand forums",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    9,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Oig2GN1FmOSyNt7aiXi8",
+   "name": "Dirty Harry (Great Restorations)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-nSUybPMZvaO68sVm23lW",
+   "name": "Event",
+   "venue": "Main",
+   "lat": 49.61242439999999,
+   "lon": 6.131346,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KB6G9VjStmWWthCCoBzD",
+   "name": "Nous étions dans la forêt",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-7BiF4dzRAbhajc0hdZiO",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-4YkrEI4gyww2bXPceTNX",
+   "name": "Dreams (Sex Love) (Oslo Trilogy by Dag Johan Haugerud)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TQrV5W1EJIVXPdpVLT01",
+   "name": "ZenArt-Family",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ogmLWJcxUd6lhGjHgb5b",
+   "name": "Kamishibai im Park",
+   "venue": "Piratenschiff im Stadtpark",
+   "lat": 49.610314,
+   "lon": 6.124104,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gnl6pravFFdoqyj8K137",
+   "name": "Achtsamkeit: Umgang mit Schmerzen",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    15,
+    17
    ],
    "radiusM": 400,
    "scale": "minor",
