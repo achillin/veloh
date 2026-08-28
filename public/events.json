@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T14:15:28.684Z",
+ "updated": "2026-08-28T15:26:16.218Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,54 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-aPoy2sJkVLpf0LiQemNX",
-   "name": "Happy Together (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-27",
-   "to": "2026-08-27",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-3AWZbPOilYmXyfgoIsMr",
-   "name": "Silent Running (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-27",
-   "to": "2026-08-27",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-giujTPw6elCKuZjETZtx",
-   "name": "Comedy Open Mic",
-   "venue": "Updown Bar ",
-   "lat": 49.608285,
-   "lon": 6.1349,
-   "from": "2026-08-27",
-   "to": "2026-08-27",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-uOQUAkEMxkX1dw0NxbaC",
@@ -579,6 +531,22 @@
    "auto": true
   },
   {
+   "id": "echo-vlIC74I3ogm3CxP8jPhg",
+   "name": "🇬🇧 TIFFANY STEVENSON  ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-08-30",
+   "to": "2026-08-30",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-sJD4jrax1u2eHdx1lvXa",
    "name": "La Légende de l'aigle chasseur de héros (Leslie Cheung)",
    "venue": "Théâtre des Capucins",
@@ -835,6 +803,22 @@
    "auto": true
   },
   {
+   "id": "echo-14gOvTaUY3jc9UFG7EY8",
+   "name": "Bradley's BIG BRAIN PUB QUIZ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-03",
+   "to": "2026-09-03",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-RoNPd4eLzTXCtqaBX1zF",
    "name": "3 du TROIS | WORK IN PROGRESS – SEPTEMBRE 26",
    "venue": "TROIS C-L | Maison pour la danse",
@@ -925,6 +909,22 @@
    "hours": [
     19,
     21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Q6jI5YpwFCk9bbcQgw0L",
+   "name": "UNFILTERED",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    20,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1132,6 +1132,22 @@
    "to": "2026-09-05",
    "hours": [
     20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-wa4UlPkLxZlWWbvyjmOY",
+   "name": "🇬🇷 NIKOS PANTELIS ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-05",
+   "to": "2026-09-05",
+   "hours": [
+    21,
     23
    ],
    "radiusM": 400,
@@ -1533,6 +1549,86 @@
    "hours": [
     15,
     17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Y8vYbtUsDVqBv99xmsWx",
+   "name": "\"Marcel et Monsieur Pagnol\" - Premiere screening",
+   "venue": "Ciné Utopia",
+   "lat": 49.617019,
+   "lon": 6.120959,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KF1aOHJyNoMFd8zb1TMr",
+   "name": "The Godfather : Part II (John Cazle)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-O0qrEDfo8vIzIV38ojSK",
+   "name": "Arianne, un pas avant la chute",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qf2CFPRIVfnvsm6VkuIA",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-3mLaMswGe79eT3T4G3CB",
+   "name": "Gianni Schicchi",
+   "venue": "Intesa Sanpaolo Bank",
+   "lat": 49.5831562,
+   "lon": 6.122077000000001,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    16,
+    18
    ],
    "radiusM": 400,
    "scale": "minor",
