@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-28T15:26:16.218Z",
+ "updated": "2026-08-29T10:08:29.361Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,150 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-uOQUAkEMxkX1dw0NxbaC",
-   "name": "Rencontres Citoyenne QuattroPole",
-   "venue": "Rencontres Citoyenne QuattroPole / Bürgerbegegnungen Quattro",
-   "lat": 49.599681,
-   "lon": 6.134983699999999,
-   "from": "2026-08-28",
-   "to": "2026-08-28",
-   "hours": [
-    17,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-NDPBKRtsIcyf92sdb2s6",
-   "name": "The Conversation (John Cazale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-28",
-   "to": "2026-08-28",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-AAQrBmEjjA62bbf0KUo2",
-   "name": "Comedy Show - Bookmarks and Baklava",
-   "venue": "Mirador",
-   "lat": 49.612297,
-   "lon": 6.1391179,
-   "from": "2026-08-28",
-   "to": "2026-08-28",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-n5o3EgL70nS1CFyxrhbe",
-   "name": "Sunshine (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-28",
-   "to": "2026-08-28",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-o1wWcBGZBbKngEWNrKx9",
-   "name": "Guided tour by night",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-08-28",
-   "to": "2026-08-28",
-   "hours": [
-    21,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-zrHwu3uuqWhhROk162mk",
-   "name": "Visite guidée du Plateau de Kirchberg ",
-   "venue": "Fonds Kirchberg",
-   "lat": 49.622287,
-   "lon": 6.151651,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-gw9hlWSbtPtOZh4lVVpl",
-   "name": "Tuffi - Junior Atelier (4-6) ",
-   "venue": "Villa Vauban - Musée d'Art de la Ville de Luxembourg",
-   "lat": 49.61302,
-   "lon": 6.122473,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    10,
-    11
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ip6pc9IjD6Fc4alfKJkq",
-   "name": "Organ recital",
-   "venue": "Cathédrale Notre-Dame",
-   "lat": 49.6099739,
-   "lon": 6.1288328,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-jW4E8d0qgrfJHn9nE9YW",
-   "name": "More than a Postcard",
-   "venue": "Cercle Cité - Ratskeller (espace d'exposition)",
-   "lat": 49.61130319999999,
-   "lon": 6.1306446,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-x8KoiSSwJgSzXXm24eC7",
@@ -883,6 +739,22 @@
    "auto": true
   },
   {
+   "id": "echo-nn970k3yF0wahr6QxxJU",
+   "name": "Lunchtime at Mudam",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-09-04",
+   "to": "2026-09-04",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-7Cogmj0QPvdeCQ3ucXV4",
    "name": "Histoires de fantômes chinois (Leslie Cheung)",
    "venue": "Théâtre des Capucins",
@@ -1315,6 +1187,22 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
+   "id": "echo-CMFY8Ry5Pb9uwvR66C0B",
+   "name": "La Grande Braderie",
+   "venue": "Luxembourg-Ville",
+   "lat": 49.611621,
+   "lon": 6.131935,
+   "from": "2026-09-07",
+   "to": "2026-09-07",
+   "hours": [
+    9,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-1JBQUovpO79HhJCtKeKH",
    "name": "WALL-E (Spacewalks)",
    "venue": "Théâtre des Capucins",
@@ -1411,8 +1299,8 @@
    "auto": true
   },
   {
-   "id": "echo-eukjiDkTnwcRcfuqjIFk",
-   "name": "Two façades – a thousand forums",
+   "id": "echo-oW2PYkKTjvckkVEZe0yo",
+   "name": "Two façades – a thousand forums | SOLD OUT",
    "venue": "Casino Luxembourg - Forum d'art contemporain",
    "lat": 49.609787,
    "lon": 6.12714,
@@ -1629,6 +1517,214 @@
    "hours": [
     16,
     18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-OMULUMwUYH9Q0fsOIsdV",
+   "name": "Holiday (Comedy Classics)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-jMnt0fcqs0NDomox4yRf",
+   "name": " Paint & Sip",
+   "venue": "Crocus Quest Game",
+   "lat": 49.5818078,
+   "lon": 6.117577000000001,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DlXuB8EOC5EI27YoW68E",
+   "name": "Gianni Schicchi",
+   "venue": "Intesa Sanpaolo Bank",
+   "lat": 49.5831562,
+   "lon": 6.122077000000001,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-23hgZZe2E8GaMqb5iQYG",
+   "name": "The Living Tombstone",
+   "venue": "den Atelier",
+   "lat": 49.598747,
+   "lon": 6.126118,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-4rjGHz4DHiVqzC6DnqUO",
+   "name": "Tango concert \"NOCHES LARGAS\"",
+   "venue": "Foyer européen",
+   "lat": 49.6051709,
+   "lon": 6.1308226,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-pvl8MGFNJRjTZaTEA3dj",
+   "name": "Le Bon, la Brute et le Cinglé (Cult Fiction)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KUU7kuelUFUK9MEjLIS5",
+   "name": "Guided tour by night",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    21,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9V3GoGT2g3ILmSlcmGdX",
+   "name": "Faarweg Steng, faarweg Geschichten",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-bxHnucbriT5XhHzIyeKm",
+   "name": "Guided tours of Kirchberg",
+   "venue": "Fonds Kirchberg",
+   "lat": 49.622287,
+   "lon": 6.151651,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-c0tDYxoPvNLmEHOUMB5w",
+   "name": "Tuffi - Junior Atelier (4-6) ",
+   "venue": "Villa Vauban - Musée d'Art de la Ville de Luxembourg",
+   "lat": 49.61302,
+   "lon": 6.122473,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-amFGLrWw8uZcz8jGFiRs",
+   "name": "Sharing a Mile 2026",
+   "venue": "Parc ban de Gasperich ",
+   "lat": 49.5878824,
+   "lon": 6.1254,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    11,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9lHg00B2o4UVL8EKfwrN",
+   "name": "Rendez-vous am Gaart vu Canopée ",
+   "venue": "Jardin de Canopée",
+   "lat": 49.61506019999999,
+   "lon": 6.1334529,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    11,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-FM9sNETQ9z7xrsMguSmP",
+   "name": "Sushi Class",
+   "venue": "Aka Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    11,
+    13
    ],
    "radiusM": 400,
    "scale": "minor",
