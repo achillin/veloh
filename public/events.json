@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-29T10:08:29.361Z",
+ "updated": "2026-08-30T09:17:10.095Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,70 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-x8KoiSSwJgSzXXm24eC7",
-   "name": "DJ WANTED // OPEN DECKS",
-   "venue": "Brauerei - Big Beer Company",
-   "lat": 49.612662,
-   "lon": 6.142091,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    17,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-AjlnDVqChS9yYgvJ8m9M",
-   "name": "Sex (Dreams Love) (Oslo Trilogy by Dag Johan Haugerud)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-zJPbBjLTYO86kQz5eOJg",
-   "name": "Kurt Vile & The Violators",
-   "venue": "den Atelier",
-   "lat": 49.598747,
-   "lon": 6.126118,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-a6jDnKVHAilxE4gRLzRV",
-   "name": "Tootsie (Comedy Classics)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-29",
-   "to": "2026-08-29",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-AyS0C54rqwJTBFKBHWYD",
@@ -1725,6 +1661,198 @@
    "hours": [
     11,
     13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-78refLJksNiTbdsWC5J8",
+   "name": "Rugby Club Luxembourg vs Berliner RC",
+   "venue": "Stade Josy Barthel",
+   "lat": 49.615159,
+   "lon": 6.109517,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    13,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-4d4OKRbU83aQr36vhhF8",
+   "name": "Plaster birds",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1lIEB005MNeFb7SBqzo4",
+   "name": "Queers in Pink",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    15,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YmdGQAQOLOuHSIbsPWFP",
+   "name": "Damoclès et moi",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-yDiOi3mVaWX3lmH3aZzK",
+   "name": "Steamboat Bill, Jr. (Afternoon Adventures)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-xPujukDJgLNlXInUlyZp",
+   "name": "Dog Day Afternoon (John Cazale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-5Wt9dLllxMSqL88fl5nH",
+   "name": "   HORS CIRCUITS | AEROWAVES",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1NeajG7w5UhTK20qrw0I",
+   "name": "The Loop",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-IgGxBVS5AFbl69EwYJgt",
+   "name": "Days of Being Wild (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ejYY1d9vGYxc09ZICdC3",
+   "name": "BELINDA FILLPELLI",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ETn4HMAZ5H9rWmiEJLmJ",
+   "name": "Bëschbueden mat Konschtimpulser am Hierscht",
+   "venue": "Am Clubhaus Op der spora",
+   "lat": 49.631806,
+   "lon": 6.113869,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-XNRo6wiPWE1jwtqYVwyz",
+   "name": "Creative Sunday ",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    10,
+    14
    ],
    "radiusM": 400,
    "scale": "minor",
