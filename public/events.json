@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-30T09:17:10.095Z",
+ "updated": "2026-08-31T09:49:09.667Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,102 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-AyS0C54rqwJTBFKBHWYD",
-   "name": "Thé Dansant op der Schueberfouer",
-   "venue": "Champs du Glacis",
-   "lat": 49.6167997,
-   "lon": 6.1218102,
-   "from": "2026-08-30",
-   "to": "2026-08-30",
-   "hours": [
-    14,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-8XW3uJ3TzSbwq49W5p7m",
-   "name": "Guided tour of the permanent exhibition",
-   "venue": "Musée national d'histoire naturelle - 'natur musée'",
-   "lat": 49.609584,
-   "lon": 6.135641,
-   "from": "2026-08-30",
-   "to": "2026-08-30",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ejxreSsciEl1aoAwxsOR",
-   "name": "Soirée Tango avec Guillermo Böttcher et Gladys Fernandez",
-   "venue": "Centre Culturel Altrimenti",
-   "lat": 49.6077568,
-   "lon": 6.1231002,
-   "from": "2026-08-30",
-   "to": "2026-08-30",
-   "hours": [
-    16,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-3AacDBSKeTdzyw6aOX4F",
-   "name": "The Red Shoes (Ciné-Théâtre)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-30",
-   "to": "2026-08-30",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-vlIC74I3ogm3CxP8jPhg",
-   "name": "🇬🇧 TIFFANY STEVENSON  ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-08-30",
-   "to": "2026-08-30",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-sJD4jrax1u2eHdx1lvXa",
-   "name": "La Légende de l'aigle chasseur de héros (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-30",
-   "to": "2026-08-30",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-HNQFDBnspL3IN8AHaiow",
@@ -947,7 +851,7 @@
    "auto": true
   },
   {
-   "id": "echo-wa4UlPkLxZlWWbvyjmOY",
+   "id": "echo-5OoOCuMnDsKDwhLz0ytw",
    "name": "🇬🇷 NIKOS PANTELIS ",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -1203,6 +1107,22 @@
    "auto": true
   },
   {
+   "id": "echo-IfwTn438ImS3sJTtxhLp",
+   "name": "Picnic Season: Dodeka with Grace Gloria Denis",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-09-08",
+   "to": "2026-09-08",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-k3vDlBja8Vgqk2q3V3zc",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
@@ -1244,6 +1164,22 @@
    "to": "2026-09-09",
    "hours": [
     9,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9z0Lteten7BfnTEg8ewd",
+   "name": "Picnic Season: Dodeka with Grace Gloria Denis",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-09-09",
+   "to": "2026-09-09",
+   "hours": [
+    15,
     17
    ],
    "radiusM": 400,
@@ -1368,6 +1304,22 @@
    "venue": "Gero - Kompetenzzenter fir den Alter",
    "lat": 49.5972234,
    "lon": 6.1343843,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-52BNYDXEqwzaRnWYholH",
+   "name": "Picnic Season: Dodeka with Grace Gloria Denis",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
    "from": "2026-09-10",
    "to": "2026-09-10",
    "hours": [
@@ -1853,6 +1805,134 @@
    "hours": [
     10,
     14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6Z8kMmy6S80LCgkBFwgf",
+   "name": "Open de Rentrée Rapid chess ",
+   "venue": "Open Rapidchess Philidor",
+   "lat": 49.6127621,
+   "lon": 6.104788,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    13,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ElBHPmEsw1V319RIfThi",
+   "name": "Boulevard Royal et avenues : un patrimoine révolu",
+   "venue": "Kiosk - Place de Bruxelles",
+   "lat": 49.607923,
+   "lon": 6.122858,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-8Q9MkukQLO7xGFvdTEQe",
+   "name": "Space Cadet (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JLJ1k1FJN0QjmdlFZu3J",
+   "name": "Summer in the fortress",
+   "venue": "Visites F.F.G.L. dans les casemates en-dessous du boulevard ",
+   "lat": 49.6124297,
+   "lon": 6.1261934,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6EgwKefXAHZOvlaN3cYS",
+   "name": "Meet the Winners! Explorer le Kirchberg à vélo",
+   "venue": "Fonds Kirchberg",
+   "lat": 49.622287,
+   "lon": 6.151651,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6ys6ZLJflHJmbujpnrxe",
+   "name": "Iguazú Duo",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ddmlDVutBKEWQnPojhco",
+   "name": "Les enfants du Paradis (Ciné-Théâtre)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    17,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-19g9vBNZeccscxBEVYmT",
+   "name": "🇫🇷 Soirée Stand-up",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    18,
+    20
    ],
    "radiusM": 400,
    "scale": "minor",
