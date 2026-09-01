@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-31T09:49:09.667Z",
+ "updated": "2026-09-01T08:42:18.926Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,54 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-HNQFDBnspL3IN8AHaiow",
-   "name": "Rosa Lëtzebuerg is going to the Schueberfouer!",
-   "venue": "Glacis",
-   "lat": 49.615568,
-   "lon": 6.1229,
-   "from": "2026-08-31",
-   "to": "2026-08-31",
-   "hours": [
-    17,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-9wlFe8eV5f5kGtZEzKXN",
-   "name": "Oslo, August 31st (Oslo Trilogies by Joachim Trier)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-31",
-   "to": "2026-08-31",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Q8PnmlECu9Ec5ci88IHN",
-   "name": "Moon (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-08-31",
-   "to": "2026-08-31",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-EuSHsgO7EB0LvXCDmevv",
@@ -1555,6 +1507,22 @@
    "auto": true
   },
   {
+   "id": "echo-0n8ASXxWpMzpmXzEOmal",
+   "name": "Creative Dance Workshop 08",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-09-12",
+   "to": "2026-09-12",
+   "hours": [
+    10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-c0tDYxoPvNLmEHOUMB5w",
    "name": "Tuffi - Junior Atelier (4-6) ",
    "venue": "Villa Vauban - Musée d'Art de la Ville de Luxembourg",
@@ -1933,6 +1901,70 @@
    "hours": [
     18,
     20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ITksSKNcerSJf0dg1Z8W",
+   "name": "Fencing: open-day",
+   "venue": "Ecole Primaire de Merl",
+   "lat": 49.6031524,
+   "lon": 6.094466799999999,
+   "from": "2026-09-14",
+   "to": "2026-09-14",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-GScSKTHaHFDhcHUO5x8Q",
+   "name": "Persepolis (Hommage à Marjane Satrapi)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-14",
+   "to": "2026-09-14",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-rYH1KcjoG34Mv69xmDjd",
+   "name": " Intro to Stand-Up course",
+   "venue": "Le Croque Bedaine",
+   "lat": 49.62451,
+   "lon": 6.12206,
+   "from": "2026-09-14",
+   "to": "2026-09-14",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KfacVDQj3bx1oAK5qLsH",
+   "name": "Love (Dreams Sex) (Oslo Trilogy by Dag Johan Haugerud)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-14",
+   "to": "2026-09-14",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
