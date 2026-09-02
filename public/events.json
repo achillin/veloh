@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-01T08:42:18.926Z",
+ "updated": "2026-09-02T07:57:27.899Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,54 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-EuSHsgO7EB0LvXCDmevv",
-   "name": "Concert gratuit: Daniel Balthasar",
-   "venue": "Musée national d'histoire naturelle – Naturmusée",
-   "lat": 49.6097155,
-   "lon": 6.135622,
-   "from": "2026-09-01",
-   "to": "2026-09-01",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ga8z5bji7ScsgaidvGSl",
-   "name": "Free Improv Taster Workshop",
-   "venue": "Café-Théâtre \"Rocas\"",
-   "lat": 49.613273,
-   "lon": 6.129617,
-   "from": "2026-09-01",
-   "to": "2026-09-01",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-DACTjw0V8wiDK744eBAS",
-   "name": "Adieu ma concubine (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-01",
-   "to": "2026-09-01",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-lZUrdIjGFeq42UWqzHTd",
@@ -579,23 +531,7 @@
    "auto": true
   },
   {
-   "id": "echo-Q6jI5YpwFCk9bbcQgw0L",
-   "name": "UNFILTERED",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-1Wsz0p3mnZfSkkioMVRp",
+   "id": "echo-B7DEbj3lMIi4QWPexGKD",
    "name": "UNFILTERED",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -803,7 +739,7 @@
    "auto": true
   },
   {
-   "id": "echo-5OoOCuMnDsKDwhLz0ytw",
+   "id": "echo-EMsSg4awLor4OLyThnPR",
    "name": "🇬🇷 NIKOS PANTELIS ",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -1005,6 +941,22 @@
    "hours": [
     18,
     21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-NyFDQ4YruyfYpwewzeL0",
+   "name": "Outdoor Social Dance at LGL",
+   "venue": "Place Auguste Laurent, L-1921 Limpertsberg, Luxembourg",
+   "lat": 49.6203479,
+   "lon": 6.122105899999999,
+   "from": "2026-09-07",
+   "to": "2026-09-07",
+   "hours": [
+    19,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1891,7 +1843,7 @@
    "auto": true
   },
   {
-   "id": "echo-19g9vBNZeccscxBEVYmT",
+   "id": "echo-gxGzrknD1EJoDiNcTx3M",
    "name": "🇫🇷 Soirée Stand-up",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -1955,6 +1907,22 @@
    "auto": true
   },
   {
+   "id": "echo-qtsJHbD7LaUEvnIxfI1p",
+   "name": "Outdoor Social Dance at MNAHA",
+   "venue": "Nationalmusée um Fëschmaart",
+   "lat": 49.611629,
+   "lon": 6.133858,
+   "from": "2026-09-14",
+   "to": "2026-09-14",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-KfacVDQj3bx1oAK5qLsH",
    "name": "Love (Dreams Sex) (Oslo Trilogy by Dag Johan Haugerud)",
    "venue": "Théâtre des Capucins",
@@ -1962,6 +1930,86 @@
    "lon": 6.130586,
    "from": "2026-09-14",
    "to": "2026-09-14",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-tjG2mI3BE0LpeINpMdcG",
+   "name": "Home Organising – Simplifier votre vie !",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-09-15",
+   "to": "2026-09-15",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-XxoBDXlJPe6o3YLGDVto",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-09-15",
+   "to": "2026-09-15",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-2dot5LgwRnoh38iZ0jLa",
+   "name": "Improv Theatre: 6-week course for beginners",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
+   "from": "2026-09-15",
+   "to": "2026-09-15",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-IpyGiVfQgsDNBloZYI9n",
+   "name": "Chronicle of the Years of Fire (Cinematic Siblings)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-15",
+   "to": "2026-09-15",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-aVIj2auM0R1BOYSqeuN0",
+   "name": "Laurent Pierre 5tet",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-15",
+   "to": "2026-09-15",
    "hours": [
     20,
     23
