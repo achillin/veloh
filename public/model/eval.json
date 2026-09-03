@@ -1,45 +1,45 @@
 {
- "generatedAt": "2026-09-02T07:58:04.445Z",
- "trainSnapshots": 68654,
- "testSnapshots": 1192,
+ "generatedAt": "2026-09-03T08:06:42.148Z",
+ "trainSnapshots": 69835,
+ "testSnapshots": 1212,
  "testWindow": {
-  "from": "2026-09-01T07:49:42.804Z",
-  "to": "2026-09-02T07:49:42.804Z"
+  "from": "2026-09-02T07:39:03.247Z",
+  "to": "2026-09-03T07:39:03.247Z"
  },
  "horizons": {
   "1h": {
-   "n": 5220,
-   "modelMae": 1.21,
-   "persistenceMae": 1.154
+   "n": 5655,
+   "modelMae": 1.224,
+   "persistenceMae": 1.153
   },
   "3h": {
-   "n": 4495,
-   "modelMae": 2.031,
-   "persistenceMae": 2.056
+   "n": 5365,
+   "modelMae": 2.276,
+   "persistenceMae": 2.294
   },
   "6h": {
-   "n": 4640,
-   "modelMae": 2.517,
-   "persistenceMae": 3.01
+   "n": 5365,
+   "modelMae": 2.702,
+   "persistenceMae": 3.177
   },
   "24h": {
-   "n": 3480,
-   "modelMae": 2.798,
-   "persistenceMae": 2.909
+   "n": 5655,
+   "modelMae": 2.887,
+   "persistenceMae": 2.833
   }
  },
  "probability": {
   "1h": {
-   "n": 5220,
-   "brier": 0.0426,
-   "brierBaseRate": 0.0778,
-   "baseRate": 0.915
+   "n": 5655,
+   "brier": 0.0507,
+   "brierBaseRate": 0.1098,
+   "baseRate": 0.874
   },
   "6h": {
-   "n": 4640,
-   "brier": 0.0585,
-   "brierBaseRate": 0.0768,
-   "baseRate": 0.916
+   "n": 5365,
+   "brier": 0.0818,
+   "brierBaseRate": 0.1068,
+   "baseRate": 0.878
   }
  }
 }

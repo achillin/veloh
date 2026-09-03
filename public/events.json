@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-02T07:57:27.899Z",
+ "updated": "2026-09-03T08:06:01.218Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,118 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-lZUrdIjGFeq42UWqzHTd",
-   "name": "Comprendre et utiliser la plateforme MyGuichet",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-HWiDjCNoI2H9PZ3QCSZ2",
-   "name": "Open Stage: 80s Night Fever",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-GRRdRaQfV0pLRsF9pmda",
-   "name": "Irma Vep (Cult Fiction)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-aXTrwaZf0QgPSEj4ZX03",
-   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
-   "venue": "Tiers-Lieu Bonnevoie",
-   "lat": 49.598646995,
-   "lon": 6.138618116,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-SQvLgawbQg6qbXomyVgM",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-q6yY3Fvl56oVgRTumiMc",
-   "name": "Lindy Hop",
-   "venue": "Moving Vibes - The Studio",
-   "lat": 49.6035149,
-   "lon": 6.1343369,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-D9Kif8NikWyivzgxwnEW",
-   "name": "Apollo 11 (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-02",
-   "to": "2026-09-02",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-R5KW6CuAQNzEDNZBvIbM",
@@ -787,8 +675,8 @@
    "auto": true
   },
   {
-   "id": "echo-MX5GoSHmfP4Gk4fSDLPx",
-   "name": "Workshop | Little Plaster birds",
+   "id": "echo-BMfKLQpeZEMsYUgfTqs8",
+   "name": "Workshop | Little Plaster birds | SOLD OUT",
    "venue": "Casino Luxembourg - Forum d'art contemporain",
    "lat": 49.609787,
    "lon": 6.12714,
@@ -1059,7 +947,7 @@
    "auto": true
   },
   {
-   "id": "echo-oW2PYkKTjvckkVEZe0yo",
+   "id": "echo-3942jMPrTH6WFfy8fKiY",
    "name": "Two façades – a thousand forums | SOLD OUT",
    "venue": "Casino Luxembourg - Forum d'art contemporain",
    "lat": 49.609787,
@@ -1603,8 +1491,8 @@
    "auto": true
   },
   {
-   "id": "echo-yDiOi3mVaWX3lmH3aZzK",
-   "name": "Steamboat Bill, Jr. (Afternoon Adventures)",
+   "id": "echo-LGMfPhGBE1p9pllqWuyP",
+   "name": "Cinémathèque LIVE : Steamboat Bill, Jr. (Afternoon Adventure",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
    "lon": 6.130586,
@@ -1779,11 +1667,11 @@
    "auto": true
   },
   {
-   "id": "echo-JLJ1k1FJN0QjmdlFZu3J",
-   "name": "Summer in the fortress",
-   "venue": "Visites F.F.G.L. dans les casemates en-dessous du boulevard ",
-   "lat": 49.6124297,
-   "lon": 6.1261934,
+   "id": "echo-sV12zi2C97nZQl7xec6a",
+   "name": "Meet the Winners! Explorer le Kirchberg à vélo",
+   "venue": "Fonds Kirchberg",
+   "lat": 49.622287,
+   "lon": 6.151651,
    "from": "2026-09-13",
    "to": "2026-09-13",
    "hours": [
@@ -1795,11 +1683,11 @@
    "auto": true
   },
   {
-   "id": "echo-6EgwKefXAHZOvlaN3cYS",
-   "name": "Meet the Winners! Explorer le Kirchberg à vélo",
-   "venue": "Fonds Kirchberg",
-   "lat": 49.622287,
-   "lon": 6.151651,
+   "id": "echo-JLJ1k1FJN0QjmdlFZu3J",
+   "name": "Summer in the fortress",
+   "venue": "Visites F.F.G.L. dans les casemates en-dessous du boulevard ",
+   "lat": 49.6124297,
+   "lon": 6.1261934,
    "from": "2026-09-13",
    "to": "2026-09-13",
    "hours": [
@@ -2010,6 +1898,134 @@
    "lon": 6.1357594,
    "from": "2026-09-15",
    "to": "2026-09-15",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-eZQRx1ALrVb0zPRzwbzE",
+   "name": "Luxembourg Accueil Opens a New Season… and Kicks Off a Speci",
+   "venue": "Luxembourg Accueil Information",
+   "lat": 49.608354,
+   "lon": 6.13677,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    10,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ftxFcAiJD0UaQ73fEGCG",
+   "name": "Smartphone-Café",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-LZKWChjAaOa8Ad5jSLXR",
+   "name": "Meet the Artist: Tiffany Matos – “From the Outside Looking I",
+   "venue": "Espace Artime - Hôpitaux Robert Schuman Kirchberg",
+   "lat": 49.632638,
+   "lon": 6.176176,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-CXPwkKK5bof6FeyYwjVO",
+   "name": "Nomad (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-kg4XZ4kDlsgil4hNdk9p",
+   "name": "COURS D'ESSAI THEATRE & IMPROVISATION",
+   "venue": "Ecole de Théâtre Luxembourg asbl",
+   "lat": 49.622857,
+   "lon": 6.184302,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AyIFGPOg7Er8zWwwdR5m",
+   "name": "Event",
+   "venue": "Main",
+   "lat": 49.61242439999999,
+   "lon": 6.131346,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TH8bIyAJ591r0wOuEkMY",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-u88yxMePEGmxYvfGJ4gI",
+   "name": "Forbidden Planet (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
    "hours": [
     20,
     23
