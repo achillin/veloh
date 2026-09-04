@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-03T08:06:01.218Z",
+ "updated": "2026-09-04T08:01:21.699Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,118 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-R5KW6CuAQNzEDNZBvIbM",
-   "name": "Comprendre et utiliser la plateforme MyGuichet",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Ez4h8nXdkFOvko2rSM5W",
-   "name": "Bourgmeisterin: Fireside Chat – Feeding the Nation: Cooking ",
-   "venue": "Silversquare Luxembourg",
-   "lat": 49.60197,
-   "lon": 6.130586,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-14gOvTaUY3jc9UFG7EY8",
-   "name": "Bradley's BIG BRAIN PUB QUIZ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-RoNPd4eLzTXCtqaBX1zF",
-   "name": "3 du TROIS | WORK IN PROGRESS – SEPTEMBRE 26",
-   "venue": "TROIS C-L | Maison pour la danse",
-   "lat": 49.598244,
-   "lon": 6.135757,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-LAgbG9IPVfH0AQB1An7K",
-   "name": "Singles Dating Night Luxembourg: Meet 100 Singles",
-   "venue": "Caribou Karaoke",
-   "lat": 49.6129308,
-   "lon": 6.1292805,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-9xoNCOq1EKEVIhUE1x01",
-   "name": "The Godfather (John Cazale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-qWce5efr0IFI2fcDkRnV",
-   "name": "Comedy Open Mic",
-   "venue": "Updown Bar ",
-   "lat": 49.608285,
-   "lon": 6.1349,
-   "from": "2026-09-03",
-   "to": "2026-09-03",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-nn970k3yF0wahr6QxxJU",
@@ -1132,6 +1020,22 @@
    "to": "2026-09-10",
    "hours": [
     18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1RxJuKLGFSqqqP9LXS7I",
+   "name": "Improv Jam",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    19,
     21
    ],
    "radiusM": 400,
@@ -2029,6 +1933,118 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-fb838ROLFQ0rdZYH5uDq",
+   "name": "Rhythmik-Workshop",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-NC6FEZSTLjCSxL12nLJy",
+   "name": " Les Yeux sans visage (Great Restorations)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-MXWMn7HcoQbZxdrKOyLr",
+   "name": "Reprise (Oslo Trilogies by Joachim Trier)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-cosqYFSmKQ1oQ2QvjAD8",
+   "name": "Serial Killers ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-fVfPtxaOL64InIIeYfcL",
+   "name": "Kerry Kenny Band",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-P16GBbcU2bhp6Zv2B7Ot",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-onYay0LuyGH3yHRcdP3c",
+   "name": "Knitting coffee at the Museum ",
+   "venue": "Nationalmusée um Fëschmaart",
+   "lat": 49.611629,
+   "lon": 6.133858,
+   "from": "2026-09-18",
+   "to": "2026-09-18",
+   "hours": [
+    10,
+    13
    ],
    "radiusM": 400,
    "scale": "minor",
