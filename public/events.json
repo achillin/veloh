@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-04T08:01:21.699Z",
+ "updated": "2026-09-05T07:43:01.475Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -259,102 +259,6 @@
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
   },
   {
-   "id": "echo-nn970k3yF0wahr6QxxJU",
-   "name": "Lunchtime at Mudam",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    12,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-7Cogmj0QPvdeCQ3ucXV4",
-   "name": "Histoires de fantômes chinois (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-wKZWk9RLnQi85P5LBn2K",
-   "name": "Hot Flashes Sessions",
-   "venue": "Dipso",
-   "lat": 49.6111256,
-   "lon": 6.1339822,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-B7DEbj3lMIi4QWPexGKD",
-   "name": "UNFILTERED",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-lZV6Df4f1SbumVLnHGr9",
-   "name": " There's Something About Mary (Comedy Classics)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-XRqeNCbXXyZlX8GKVwf6",
-   "name": "Guided tour by night",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-09-04",
-   "to": "2026-09-04",
-   "hours": [
-    21,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-YSUyJi83Djdl7DL11aTH",
    "name": "Tuffi - Pro Atelier (6-10) ",
    "venue": "Lëtzebuerg City Museum",
@@ -515,7 +419,7 @@
    "auto": true
   },
   {
-   "id": "echo-EMsSg4awLor4OLyThnPR",
+   "id": "echo-Acs6G0L99SvS4X0MUDsH",
    "name": "🇬🇷 NIKOS PANTELIS ",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -2045,6 +1949,70 @@
    "hours": [
     10,
     13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-kry63X8ajkeJCBjOOule",
+   "name": "Theaterfest",
+   "venue": "Place d'Armes, Luxembourg",
+   "lat": 49.611042,
+   "lon": 6.129292,
+   "from": "2026-09-18",
+   "to": "2026-09-18",
+   "hours": [
+    12,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-CVDTBRaoTXlorhaVPPjJ",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-09-18",
+   "to": "2026-09-18",
+   "hours": [
+    18,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-sL0aVKMUXpLQHub8xOr5",
+   "name": "Pastèque Discotèque",
+   "venue": "Kyosk ",
+   "lat": 49.625192,
+   "lon": 6.152692,
+   "from": "2026-09-18",
+   "to": "2026-09-18",
+   "hours": [
+    18,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-PiTCV89evzId3FDwbc1c",
+   "name": "The Godfather : Part II (John Cazle)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-18",
+   "to": "2026-09-18",
+   "hours": [
+    19,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
