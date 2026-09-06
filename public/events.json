@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-05T07:43:01.475Z",
+ "updated": "2026-09-06T07:57:14.277Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,182 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-YSUyJi83Djdl7DL11aTH",
-   "name": "Tuffi - Pro Atelier (6-10) ",
-   "venue": "Lëtzebuerg City Museum",
-   "lat": 49.610061,
-   "lon": 6.133655,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-GCApTYEb9EC1Y89aQrrS",
-   "name": "Jazz Dance Workshop",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-AR4S98Vv0oDtrYDoWlZa",
-   "name": "Organ recital",
-   "venue": "Cathédrale Notre-Dame",
-   "lat": 49.6099739,
-   "lon": 6.1288328,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Wfb66ykSWjukD9jk0RUb",
-   "name": "Visite guidée : Den DemokratieLabo",
-   "venue": "Europa Experience",
-   "lat": 49.6210707,
-   "lon": 6.1483338,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-01kW7ICICz6Z0iGriXy5",
-   "name": "Ultraschall Festival 2026",
-   "venue": "Kirchberg Amphitheater",
-   "lat": 49.6251544,
-   "lon": 6.1527337,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    15,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-qgYs14ZHYFsDUoASx8ot",
-   "name": "La Revanche des humanoïdes (Afternoon Adventures)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-V7qY3apdpXtEKFAJ0QEr",
-   "name": "Persepolis (Hommage à Marjane Satrapi)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-8MEPT2FP1Rq95XrUhk5R",
-   "name": "Hot Flashes Sessions",
-   "venue": "Dipso",
-   "lat": 49.6111256,
-   "lon": 6.1339822,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-LgkpfzjNH6TUre8xDWXn",
-   "name": "Jazz x House Party",
-   "venue": "Vantage - House of Music",
-   "lat": 49.641901,
-   "lon": 6.129943,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    19,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-TLvMA8rRYR3u6YXZmfuk",
-   "name": "2001: A Space Odyssey (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Acs6G0L99SvS4X0MUDsH",
-   "name": "🇬🇷 NIKOS PANTELIS ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-05",
-   "to": "2026-09-05",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-khXC8cjghEGbUjzVZtdt",
@@ -2012,6 +1836,150 @@
    "to": "2026-09-18",
    "hours": [
     19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-EMics9zv6Z2ceceN7fx4",
+   "name": "Filmfriend - Tuffi Atelier",
+   "venue": "Cercle Cité – Auditoire Henri Beck",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-65OdKdhjDzSjgQhATnG3",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AEw4EjBeM2QNbzzGVEhx",
+   "name": "Open Days at Cercle Cité ",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    12,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-7wpInIvliGzyzjjXEYo1",
+   "name": "Portes Ouvertes Ecole d'Art Contemporain",
+   "venue": "Nouvelle Adresse de l'Ecole d'Art Contemporain ",
+   "lat": 49.6246763,
+   "lon": 6.138626299999999,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    13,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Y7nXkpN0obeaRqHImdDT",
+   "name": "Bric(k)ollage | Workshop for all ages (FR + LU + DE + EN)",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9vAa9YBu32UNw51xz6kw",
+   "name": "More than a Postcard",
+   "venue": "Cercle Cité - Ratskeller (espace d'exposition)",
+   "lat": 49.61130319999999,
+   "lon": 6.1306446,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-VYu9gusncL9UyGydmYCr",
+   "name": "King Kong (Afternoon Adventures)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Ru1x7S8TohhJrGyjPQPA",
+   "name": "Sense and Sensibility (Sense & Sensibility)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-21chCXTIIrYeCDfr9LNN",
+   "name": "Le Syndicat du crime (A Better Tomorrow) (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    20,
     23
    ],
    "radiusM": 400,
