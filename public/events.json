@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-06T07:57:14.277Z",
+ "updated": "2026-09-07T08:22:30.269Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -257,150 +257,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.vdl.lu/fr/visiter/loisirs-et-divertissement/fetes-foires-et-evenements/schueberfouer-2026"
-  },
-  {
-   "id": "echo-khXC8cjghEGbUjzVZtdt",
-   "name": "Jazz Break - Knowedge Meetup",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    10,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-FEeQ71wJxojU3qxWGS4Y",
-   "name": "Konscht Am Gronn",
-   "venue": "Pont du Grund",
-   "lat": 49.609224,
-   "lon": 6.135862,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    10,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-BMfKLQpeZEMsYUgfTqs8",
-   "name": "Workshop | Little Plaster birds | SOLD OUT",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-I7QyPc7eTiQlLIdl5tMv",
-   "name": "Jazz Dance Workshop",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    12,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-cXTdTCuySeGuS70hL0tH",
-   "name": "Hot Flashes Sessions",
-   "venue": "Dipso",
-   "lat": 49.6111256,
-   "lon": 6.1339822,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    12,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-kV8pauIhglsD8FKfaich",
-   "name": "Le Voyage dans la Lune (Cinema Paradiso)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-BiIx2kKJLXe6kY28FoIY",
-   "name": "Guided tour of the permanent exhibition",
-   "venue": "Musée national d'histoire naturelle - 'natur musée'",
-   "lat": 49.609584,
-   "lon": 6.135641,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-IpA2PH26yICs4OpuEtBm",
-   "name": "La Bataille d’Alger (Cinematic Siblings)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-WACfdetdhYMsOGztRV1o",
-   "name": "The Worst Person in the World (Oslo Trilogies)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-06",
-   "to": "2026-09-06",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "grande-braderie-2026-09-07",
@@ -1981,6 +1837,166 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-u2vepgEFQBPBYjakL3v2",
+   "name": "WALL-E (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-escinz4Z5jkX3ApGJyaY",
+   "name": "Herb hike",
+   "venue": "Waldhof Grünewald",
+   "lat": 49.6569,
+   "lon": 6.19148,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-cb0c968kJDNPfjWjdBvQ",
+   "name": "Franges",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-P9MBUebVdYL5tZIBz2eP",
+   "name": "Open Days at Cercle Cité ",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    12,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-v9YPRI3JPG4TeNwWBBig",
+   "name": "Objectif Lune! Avec Méliès, Fleischer & Aardman (Cinema Para",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HXOs5DKayjSfGvv9XLJh",
+   "name": "More than a Postcard",
+   "venue": "Cercle Cité - Ratskeller (espace d'exposition)",
+   "lat": 49.61130319999999,
+   "lon": 6.1306446,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gUwLqHcGv34i69krCx3T",
+   "name": "First Man (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-eNRoqj729zjqX1K0GF2f",
+   "name": "🇮🇹 NICOLAS ROSSETTI -",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ppJCuBcNUfS6NDywEk1I",
+   "name": "The Maine",
+   "venue": "den Atelier",
+   "lat": 49.598747,
+   "lon": 6.126118,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qDF8OF6guLSr8EkALQto",
+   "name": "The Conversation (John Cazale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
