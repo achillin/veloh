@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-07T08:22:30.269Z",
+ "updated": "2026-09-08T08:08:11.297Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,70 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-CMFY8Ry5Pb9uwvR66C0B",
-   "name": "La Grande Braderie",
-   "venue": "Luxembourg-Ville",
-   "lat": 49.611621,
-   "lon": 6.131935,
-   "from": "2026-09-07",
-   "to": "2026-09-07",
-   "hours": [
-    9,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-1JBQUovpO79HhJCtKeKH",
-   "name": "WALL-E (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-07",
-   "to": "2026-09-07",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-NyFDQ4YruyfYpwewzeL0",
-   "name": "Outdoor Social Dance at LGL",
-   "venue": "Place Auguste Laurent, L-1921 Limpertsberg, Luxembourg",
-   "lat": 49.6203479,
-   "lon": 6.122105899999999,
-   "from": "2026-09-07",
-   "to": "2026-09-07",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-uvsbqQrpuwGIvToeIfkk",
-   "name": "Happy Together (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-07",
-   "to": "2026-09-07",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-aYgWLv54F7FAG5OEp6Zk",
@@ -733,6 +669,22 @@
    "hours": [
     19,
     21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KUiplWZMx42WfcA4PS5q",
+   "name": "QUIZ NIGHT",
+   "venue": "New Jazzland / Le Quai Steffen",
+   "lat": 49.600217,
+   "lon": 6.1340753,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1891,6 +1843,22 @@
    "auto": true
   },
   {
+   "id": "echo-XzPBY4boGwiNnPHThXcT",
+   "name": "Oekofest 2026 in Pfaffenthal – Sunday, 20 September",
+   "venue": "Oekozenter Pafendall",
+   "lat": 49.614792,
+   "lon": 6.133913,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    11,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-P9MBUebVdYL5tZIBz2eP",
    "name": "Open Days at Cercle Cité ",
    "venue": "Cercle  Cité",
@@ -1996,6 +1964,54 @@
    "to": "2026-09-20",
    "hours": [
     19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-s1FHFCu8YmhSSigUXxjJ",
+   "name": "Urchin (#CinémathèqueUnreleased)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-21",
+   "to": "2026-09-21",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-QRu8hriwzCuuqwf7TzGw",
+   "name": "Le double coup de bouchon – Une soirée de fête ininterrompue",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-09-21",
+   "to": "2026-09-21",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-vpXWjjSIJV0XT4quTZPI",
+   "name": "Days of Being Wild (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-21",
+   "to": "2026-09-21",
+   "hours": [
+    20,
     22
    ],
    "radiusM": 400,
