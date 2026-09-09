@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-08T08:08:11.297Z",
+ "updated": "2026-09-09T08:11:55.132Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,86 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-aYgWLv54F7FAG5OEp6Zk",
-   "name": "Zeechenworkshop: „Muffin und Tört“",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-09-08",
-   "to": "2026-09-08",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-6MaY1bSpJ5sHGp69vgrX",
-   "name": "Kamishibai im Park",
-   "venue": "Piratenschiff im Stadtpark",
-   "lat": 49.610314,
-   "lon": 6.124104,
-   "from": "2026-09-08",
-   "to": "2026-09-08",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-IfwTn438ImS3sJTtxhLp",
-   "name": "Picnic Season: Dodeka with Grace Gloria Denis",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-09-08",
-   "to": "2026-09-08",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-k3vDlBja8Vgqk2q3V3zc",
-   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
-   "venue": "Tiers-Lieu Bonnevoie",
-   "lat": 49.598646995,
-   "lon": 6.138618116,
-   "from": "2026-09-08",
-   "to": "2026-09-08",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-tRyGJtHUXuI2YOgpol00",
-   "name": "Solaris (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-08",
-   "to": "2026-09-08",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-3942jMPrTH6WFfy8fKiY",
    "name": "Two façades – a thousand forums | SOLD OUT",
    "venue": "Casino Luxembourg - Forum d'art contemporain",
@@ -547,6 +467,38 @@
    "auto": true
   },
   {
+   "id": "echo-zl5TDRrSNFkvTnyYfjKv",
+   "name": "Queer Choir Luxembourg",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-XYwDxgn45x3ySqRuJ6pp",
+   "name": "Bradley's BIG BRAIN PUB QUIZ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-1RxJuKLGFSqqqP9LXS7I",
    "name": "Improv Jam",
    "venue": "Café-Théâtre \"Rocas\"",
@@ -573,6 +525,22 @@
    "hours": [
     19,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-8ryRUOmADlwUYpwaPdI9",
+   "name": "Pub quiz at Caribou",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-09-10",
+   "to": "2026-09-10",
+   "hours": [
+    19,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1075,6 +1043,22 @@
    "auto": true
   },
   {
+   "id": "echo-tL7lajCJDc0g33gAEL6S",
+   "name": "Kaffi a Kuch",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-13",
+   "to": "2026-09-13",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-ElBHPmEsw1V319RIfThi",
    "name": "Boulevard Royal et avenues : un patrimoine révolu",
    "venue": "Kiosk - Place de Bruxelles",
@@ -1411,6 +1395,22 @@
    "auto": true
   },
   {
+   "id": "echo-q6W5tKZ59FbLpBJ36zpA",
+   "name": "Board Game Evening",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-kg4XZ4kDlsgil4hNdk9p",
    "name": "COURS D'ESSAI THEATRE & IMPROVISATION",
    "venue": "Ecole de Théâtre Luxembourg asbl",
@@ -1501,6 +1501,22 @@
    "hours": [
     18,
     20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-dBtalLOkZvqznO7Jejby",
+   "name": "Queer Choir Luxembourg",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    19,
+    21
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1709,6 +1725,22 @@
    "hours": [
     13,
     18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-x9REH2bfxtnVnjs7EZbm",
+   "name": "Queer Yoga",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    15,
+    16
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2013,6 +2045,150 @@
    "hours": [
     20,
     22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-oCa9jn5UiZYKjKChBxDm",
+   "name": "Youth Theatre Classes in English",
+   "venue": "Ecole de Théâtre Luxembourg asbl",
+   "lat": 49.622857,
+   "lon": 6.184302,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-po7G34tCQWfFbPcfuyDK",
+   "name": "Home Organising – Simplifier votre vie !",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-UOQKCCweFN99dUXK5vg4",
+   "name": "Mardis Littéraires - Nicolas Bouvier",
+   "venue": "Cercle Cité – Auditoire Henri Beck",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-WycqMGxGGzmObUmwR1X7",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-7yAMKg2Yvux1e7VFpnBR",
+   "name": "Eraserhead (Cinémathèque Film Club)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-y8h3mNlSqziP1haGM3Nl",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-BGr2SM1uXLfc23r1PIkj",
+   "name": "Opening +",
+   "venue": "LUCA – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-all5GIXZ1oS333veSWCo",
+   "name": "FILIPPO SPREAFICO ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-zAkcMMcflZK6M2cSbAG7",
+   "name": "Artur Rutkevich Quartet",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
