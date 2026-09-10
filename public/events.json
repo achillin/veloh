@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-09T08:11:55.132Z",
+ "updated": "2026-09-10T08:11:40.953Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,118 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-3942jMPrTH6WFfy8fKiY",
-   "name": "Two façades – a thousand forums | SOLD OUT",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    9,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-9z0Lteten7BfnTEg8ewd",
-   "name": "Picnic Season: Dodeka with Grace Gloria Denis",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Oig2GN1FmOSyNt7aiXi8",
-   "name": "Dirty Harry (Great Restorations)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-nSUybPMZvaO68sVm23lW",
-   "name": "Event",
-   "venue": "Main",
-   "lat": 49.61242439999999,
-   "lon": 6.131346,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-KB6G9VjStmWWthCCoBzD",
-   "name": "Nous étions dans la forêt",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-7BiF4dzRAbhajc0hdZiO",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-4YkrEI4gyww2bXPceTNX",
-   "name": "Dreams (Sex Love) (Oslo Trilogy by Dag Johan Haugerud)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-09",
-   "to": "2026-09-09",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-TQrV5W1EJIVXPdpVLT01",
    "name": "ZenArt-Family",
    "venue": "ErwuesseBildung",
@@ -483,7 +371,7 @@
    "auto": true
   },
   {
-   "id": "echo-XYwDxgn45x3ySqRuJ6pp",
+   "id": "echo-MMMKAXl1AEZFCS4Je090",
    "name": "Bradley's BIG BRAIN PUB QUIZ",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -605,6 +493,22 @@
    "hours": [
     18,
     20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ks62MjhvqLsMktoVUhJb",
+   "name": "ATELIER DE DANSE | OPEN MOVERS avec Land Before Time",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-09-11",
+   "to": "2026-09-11",
+   "hours": [
+    18,
+    21
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1507,6 +1411,22 @@
    "auto": true
   },
   {
+   "id": "echo-zBOFFPsv56Nh9N1bM5G9",
+   "name": "ATELIER DE DANSE | 55+ MOVERS avec Vita Stasolla",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-dBtalLOkZvqznO7Jejby",
    "name": "Queer Choir Luxembourg",
    "venue": "Rainbow Center - Zentrum fir queer Kultur",
@@ -1731,6 +1651,22 @@
    "auto": true
   },
   {
+   "id": "echo-WKcFPILaymopy1xUcZaP",
+   "name": "European Mobility Week",
+   "venue": "Luxembourg City Tourist Office",
+   "lat": 49.6106231,
+   "lon": 6.1299055,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-x9REH2bfxtnVnjs7EZbm",
    "name": "Queer Yoga",
    "venue": "Rainbow Center - Zentrum fir queer Kultur",
@@ -1901,6 +1837,22 @@
    "hours": [
     12,
     18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-uvxzV77cARuxtT7Ledin",
+   "name": "European Mobility Week",
+   "venue": "Luxembourg City Tourist Office",
+   "lat": 49.6106231,
+   "lon": 6.1299055,
+   "from": "2026-09-20",
+   "to": "2026-09-20",
+   "hours": [
+    14,
+    17
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2099,6 +2051,22 @@
    "auto": true
   },
   {
+   "id": "echo-Y0eM4bmQCy48bBTGqvLQ",
+   "name": "Event",
+   "venue": "Luxembourg Ville - Cercle Cité- Auditoire Henri Beck",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-WycqMGxGGzmObUmwR1X7",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
@@ -2186,6 +2154,118 @@
    "lon": 6.1357594,
    "from": "2026-09-22",
    "to": "2026-09-22",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-SagEbBWmYCGvUvVwr9Wc",
+   "name": "Meet the Winners! Ideas, Approaches and Project Stories",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-xErhxS6QR9r52t9hcdgs",
+   "name": "La Famille Bélier (Séance spéciale)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Jl53a3Xm3DWbCxPE14gp",
+   "name": "Wednesday’s Book Club",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-h1xhFfq8GzLHv6RB93WB",
+   "name": "A DECADE ",
+   "venue": "Galerie Artskoco",
+   "lat": 49.608715,
+   "lon": 6.098721,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Fu8YNhPFZ0qFupamEnky",
+   "name": "1986zig",
+   "venue": "den Atelier",
+   "lat": 49.598747,
+   "lon": 6.126118,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-4nPpOMBxlM9rWnec87D4",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-J6WU2TgjsDy6QAi5XBIZ",
+   "name": "High Life (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-23",
+   "to": "2026-09-23",
    "hours": [
     20,
     23
