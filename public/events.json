@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-11T08:06:48.174Z",
+ "updated": "2026-09-12T07:58:04.494Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,166 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-3mLaMswGe79eT3T4G3CB",
-   "name": "Gianni Schicchi",
-   "venue": "Intesa Sanpaolo Bank",
-   "lat": 49.5831562,
-   "lon": 6.122077000000001,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-OMULUMwUYH9Q0fsOIsdV",
-   "name": "Holiday (Comedy Classics)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ks62MjhvqLsMktoVUhJb",
-   "name": "ATELIER DE DANSE | OPEN MOVERS avec Land Before Time",
-   "venue": "TROIS C-L | Maison pour la danse",
-   "lat": 49.598244,
-   "lon": 6.135757,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-jMnt0fcqs0NDomox4yRf",
-   "name": " Paint & Sip",
-   "venue": "Crocus Quest Game",
-   "lat": 49.5818078,
-   "lon": 6.117577000000001,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-DlXuB8EOC5EI27YoW68E",
-   "name": "Gianni Schicchi",
-   "venue": "Intesa Sanpaolo Bank",
-   "lat": 49.5831562,
-   "lon": 6.122077000000001,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-KUiplWZMx42WfcA4PS5q",
-   "name": "QUIZ NIGHT",
-   "venue": "New Jazzland / Le Quai Steffen",
-   "lat": 49.600217,
-   "lon": 6.1340753,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-23hgZZe2E8GaMqb5iQYG",
-   "name": "The Living Tombstone",
-   "venue": "den Atelier",
-   "lat": 49.598747,
-   "lon": 6.126118,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-4rjGHz4DHiVqzC6DnqUO",
-   "name": "Tango concert \"NOCHES LARGAS\"",
-   "venue": "Foyer européen",
-   "lat": 49.6051709,
-   "lon": 6.1308226,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-pvl8MGFNJRjTZaTEA3dj",
-   "name": "Le Bon, la Brute et le Cinglé (Cult Fiction)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-KUU7kuelUFUK9MEjLIS5",
-   "name": "Guided tour by night",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-09-11",
-   "to": "2026-09-11",
-   "hours": [
-    21,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-9V3GoGT2g3ILmSlcmGdX",
    "name": "Faarweg Steng, faarweg Geschichten",
    "venue": "ErwuesseBildung",
@@ -557,22 +397,6 @@
    "hours": [
     13,
     15
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-4d4OKRbU83aQr36vhhF8",
-   "name": "Plaster birds",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    15,
-    17
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1235,6 +1059,22 @@
    "auto": true
   },
   {
+   "id": "echo-wMgyfXvcFxVdx7TYvy4Q",
+   "name": "AfterWORKshop : Lost and found and cast ",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-dBtalLOkZvqznO7Jejby",
    "name": "Queer Choir Luxembourg",
    "venue": "Rainbow Center - Zentrum fir queer Kultur",
@@ -1395,11 +1235,11 @@
    "auto": true
   },
   {
-   "id": "echo-EMics9zv6Z2ceceN7fx4",
+   "id": "echo-cZs8OqCOA0PQobM2oEzZ",
    "name": "Filmfriend - Tuffi Atelier",
-   "venue": "Cercle Cité – Auditoire Henri Beck",
-   "lat": 49.6114687,
-   "lon": 6.1301651,
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
    "from": "2026-09-19",
    "to": "2026-09-19",
    "hours": [
@@ -1923,7 +1763,7 @@
    "auto": true
   },
   {
-   "id": "echo-BGr2SM1uXLfc23r1PIkj",
+   "id": "echo-mMVneOgUWlVIELVQtxSn",
    "name": "Opening +",
    "venue": "LUCA – Luxembourg Center for Architecture ",
    "lat": 49.61348568998791,
@@ -2332,6 +2172,150 @@
    "to": "2026-09-25",
    "hours": [
     10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-etBBF8wypq6iV1tcO6US",
+   "name": "Les Nuits en Or 2026 Partie - I (Festival des meilleurs cour",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gpgcflWe6Nv3vV3Q1s66",
+   "name": "Célébrons la diversité des langues en Europe",
+   "venue": "Parlement européen au Luxembourg",
+   "lat": 49.6205819,
+   "lon": 6.1461397,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-BfUMPA3pCZJZwgUAY2bg",
+   "name": "Event",
+   "venue": "Luxembourg-Kirchberg « Europa Expérience »  Bâtiment Konrad ",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-dPr0MKOhKLdlm2iRzjLE",
+   "name": "A DECADE ",
+   "venue": "Galerie Artskoco",
+   "lat": 49.608715,
+   "lon": 6.098721,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DLtzzLovPGxL5XXkaCxx",
+   "name": "Yoga under the Stars",
+   "venue": "Parc de Merl ",
+   "lat": 49.603431,
+   "lon": 6.112478,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-shG93NOgo2lZOqWgyizP",
+   "name": "Jocul de-a vacanța",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6TJMG2Cj3ToxsfuFbeLX",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-seMCHJnwn93mcllpkvnQ",
+   "name": "Les Nuits en Or 2026 Partie - II (Festival des meilleurs cou",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    21,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-QYzehNC5XILl9OjKVCkt",
+   "name": "Event",
+   "venue": "Luxembourg-Glacis - Institut national des langues Luxembourg",
+   "lat": 49.6034,
+   "lon": 6.10169,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    9,
     13
    ],
    "radiusM": 400,
