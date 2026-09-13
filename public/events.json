@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-12T07:58:04.494Z",
+ "updated": "2026-09-13T08:21:58.333Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,262 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-9V3GoGT2g3ILmSlcmGdX",
-   "name": "Faarweg Steng, faarweg Geschichten",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-bxHnucbriT5XhHzIyeKm",
-   "name": "Guided tours of Kirchberg",
-   "venue": "Fonds Kirchberg",
-   "lat": 49.622287,
-   "lon": 6.151651,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-0n8ASXxWpMzpmXzEOmal",
-   "name": "Creative Dance Workshop 08",
-   "venue": "TROIS C-L | Maison pour la danse",
-   "lat": 49.598244,
-   "lon": 6.135757,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    10,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-c0tDYxoPvNLmEHOUMB5w",
-   "name": "Tuffi - Junior Atelier (4-6) ",
-   "venue": "Villa Vauban - Musée d'Art de la Ville de Luxembourg",
-   "lat": 49.61302,
-   "lon": 6.122473,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-amFGLrWw8uZcz8jGFiRs",
-   "name": "Sharing a Mile 2026",
-   "venue": "Parc ban de Gasperich ",
-   "lat": 49.5878824,
-   "lon": 6.1254,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    11,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-9lHg00B2o4UVL8EKfwrN",
-   "name": "Rendez-vous am Gaart vu Canopée ",
-   "venue": "Jardin de Canopée",
-   "lat": 49.61506019999999,
-   "lon": 6.1334529,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    11,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-FM9sNETQ9z7xrsMguSmP",
-   "name": "Sushi Class",
-   "venue": "Aka Cité",
-   "lat": 49.61166189999999,
-   "lon": 6.130113700000001,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-78refLJksNiTbdsWC5J8",
-   "name": "Rugby Club Luxembourg vs Berliner RC",
-   "venue": "Stade Josy Barthel",
-   "lat": 49.615159,
-   "lon": 6.109517,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    13,
-    15
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-1lIEB005MNeFb7SBqzo4",
-   "name": "Queers in Pink",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    15,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-YmdGQAQOLOuHSIbsPWFP",
-   "name": "Damoclès et moi",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-LGMfPhGBE1p9pllqWuyP",
-   "name": "Cinémathèque LIVE : Steamboat Bill, Jr. (Afternoon Adventure",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-xPujukDJgLNlXInUlyZp",
-   "name": "Dog Day Afternoon (John Cazale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-5Wt9dLllxMSqL88fl5nH",
-   "name": "   HORS CIRCUITS | AEROWAVES",
-   "venue": "TROIS C-L | Maison pour la danse",
-   "lat": 49.598244,
-   "lon": 6.135757,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-1NeajG7w5UhTK20qrw0I",
-   "name": "The Loop",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-IgGxBVS5AFbl69EwYJgt",
-   "name": "Days of Being Wild (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ejYY1d9vGYxc09ZICdC3",
-   "name": "BELINDA FILLPELLI",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-12",
-   "to": "2026-09-12",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-ETn4HMAZ5H9rWmiEJLmJ",
@@ -2316,6 +2060,438 @@
    "to": "2026-09-26",
    "hours": [
     9,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Rlt4j18wjKwqOpDD0WqJ",
+   "name": "Le luxembourgeois taillé dans la pierre",
+   "venue": "Square Jan Palach",
+   "lat": 49.611042,
+   "lon": 6.129292,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-3dXBzgE4uct3iYYaH4aC",
+   "name": "Write Jokes That Resonate",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-mWRLtfYurbYe4TSWteWX",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - Place Guillaume II - Knuedler- Stater Maa",
+   "lat": 49.6084505,
+   "lon": 6.1335793,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-CFQSpVpQDULxUkNUbRva",
+   "name": "Event",
+   "venue": "Luxembourg - Place Guillaume II - Knuedler- Stater Maart bei",
+   "lat": 49.6084505,
+   "lon": 6.1335793,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-vPr8opEaS7t1ld0Q1nys",
+   "name": "Social Volunteering Fair 2026",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9IdtDCc907bzRFczytwi",
+   "name": "Pride Family Day ",
+   "venue": "Place de la Constitution",
+   "lat": 49.6092652,
+   "lon": 6.129358799999999,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-wtgiUk0KaHYB8rKtCLYb",
+   "name": "The Italian Art of Living ",
+   "venue": "L'Art de Vivre à L'Italienne",
+   "lat": 49.5869872,
+   "lon": 6.1181445,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-rlCTs3GAQlcwaP6EiNAu",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - City Bibliothèque",
+   "lat": 49.611623,
+   "lon": 6.130095,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KQuwuaW5tLieccPVPGQK",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-n6AfVgkkjN3e67aoBlF1",
+   "name": "Sushi Class",
+   "venue": "Aka Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Z4oQUXPGaUgnaGK32HIo",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - City Bibliothèque",
+   "lat": 49.611623,
+   "lon": 6.130095,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-85yP3zpEWiGkuxhy8I5q",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - City Bibliothèque",
+   "lat": 49.611623,
+   "lon": 6.130095,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6owjD7Djk0elfleTrXHV",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - City Bibliothèque",
+   "lat": 49.611623,
+   "lon": 6.130095,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-u39JHo25sly41W84SHj1",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - City Bibliothèque",
+   "lat": 49.611623,
+   "lon": 6.130095,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-B6JmE5AGEtpm8kOY4OlL",
+   "name": "Fête 2gether",
+   "venue": "parc laval",
+   "lat": 49.627672,
+   "lon": 6.132918,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    12,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6XUQ8wkVhiT0XAUCKaw3",
+   "name": "Luxembourg City off the beaten track",
+   "venue": "Auberge de Jeunesse Luxembourg",
+   "lat": 49.612542,
+   "lon": 6.137865,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    13,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-xsFqyKmjs6H0YWJXeDPo",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-IBCxqR9ucD0goU9l6O9Y",
+   "name": " Dyeing silk  ",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YtOrrfdATZpLYNk3IPN9",
+   "name": "Queers in Pink",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    15,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-hLTY61Ld9HzU5X9hrjxY",
+   "name": "Destination Moon! With Méliès, Fleischer & Aardman (Spacewal",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HkwNpCdgHOgp94UAPSSS",
+   "name": "Les Nuits en Or 2026 Partie - III (Festival des meilleurs co",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gLSQHOmcJsu8gwF0KJSw",
+   "name": "Jocul de-a vacanța",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-PiwqGwW2KTjitqbzCVy5",
+   "name": "Alison Moyet",
+   "venue": "den Atelier",
+   "lat": 49.598747,
+   "lon": 6.126118,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ZaaPZ4dfQmIL3IorKGgs",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-iXGWgLIatilX7P1XIZJG",
+   "name": "BEMY Live concert  ",
+   "venue": "Sang a Klang",
+   "lat": 49.6150616,
+   "lon": 6.1340425,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lvl8UhMCUHGopZRXN3Cy",
+   "name": "Les Nuits en Or 2026 Partie - IV (Festival des meilleurs cou",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-c5s6sUOcw2EbddrA0q1z",
+   "name": "Les Nuits en Or 2026 Partie - V (Festival des meilleurs cour",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    10,
     13
    ],
    "radiusM": 400,
