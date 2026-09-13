@@ -2,6 +2,9 @@
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import maplibregl from 'maplibre-gl'
 import { fracColor } from '../lib/colors.js'
+import { installRadarProtocol } from '../lib/radarTiles.js'
+
+installRadarProtocol(maplibregl) // "radar://" composite tiles (idempotent)
 
 const props = defineProps({
   stations: { type: Array, required: true }, // display objects: {id, lat, lon, name, frac, bikes, closed, predicted}
@@ -10,12 +13,12 @@ const props = defineProps({
   userPos: { type: Object, default: null }, // {lat, lon}
   route: { type: Object, default: null }, // { geometry: GeoJSON LineString }
   startPos: { type: Object, default: null }, // custom route origin {lat, lon, label?}
-  radarFrames: { type: Array, default: () => [] }, // [{dwd, global}] tile URL templates per frame
-  radarIdx: { type: Number, default: 0 }, // which frame is visible
+  radarFrames: { type: Array, default: () => [] }, // [{tpl}] composite radar:// tile templates per frame
+  radarIdx: { type: Number, default: 0 }, // which frame is visible (−1 = none)
   events: { type: Array, default: () => [] }, // events active at the displayed time
   trip: { type: Object, default: null }, // planned multi-stop trip {geometry, stops, dest}
 })
-const emit = defineEmits(['select', 'setstart'])
+const emit = defineEmits(['select', 'setstart', 'radar-shown']) // radar-shown: tpl now drawn (null = none)
 
 const container = ref(null)
 let map = null
@@ -72,88 +75,128 @@ function ensureRouteLayers() {
   }
 }
 
-// Radar frames are DWD WMS requests keyed by their TIME parameter. Layers
-// are created lazily on first display and then kept (a revisited frame is
-// instant, no reload), and stepping the animation only flips raster-opacity
-// — no source teardown, so no tile-loading gap between frames.
+// Radar frames are composite "radar://" tiles (lib/radarTiles.js): one raster
+// source + layer per frame, keyed by its tile template. Stepping the
+// animation only flips raster-opacity (no source teardown), and a frame is
+// switched to only once its tiles are in, so the picture never blanks out
+// between frames. The frames just ahead of the playhead stay visible-but-
+// transparent so their tiles preload; the rest are hidden (no tile traffic)
+// and the pool is capped, evicting the least recently shown frames.
 // NB: not gated on isStyleLoaded() — that flag flaps during tile loads.
-const radarPool = new Map() // template → { srcId, layerId }
+const radarPool = new Map() // tpl → { srcId, layerId, lastShown, hidden, visibleSince }
 let radarSeq = 0
+let radarClock = 0
+let radarRenders = 0 // completed map renders
+let radarShown = null // tpl currently drawn
+let radarPending = null // tpl we want drawn as soon as its tiles are loaded
 let styleReady = false // set on first (and every) style load
 
-// The zoom threshold where the detailed DWD composite hands over to the
-// worldwide RainViewer layer (DWD's coverage edge shows when zoomed out).
-const RADAR_ZOOM_SPLIT = 5.5
+const RADAR_OPACITY = 0.65
+const RADAR_LOOKAHEAD = 6 // frames kept loading ahead of the playhead
+const RADAR_POOL_MAX = 40 // ≥ one full loop (33 frames), so a second pass reloads nothing
+// DWD is a 1 km product: tiles deeper than this are just magnified (z8 ≈
+// 200 m/px), which keeps a city view to one or two slow WMS requests per frame.
+const RADAR_SOURCE_MAXZOOM = 8
 
-function clearRadarPool() {
-  radarPool.forEach(({ layers }) => {
-    for (const { srcId, layerId } of layers) {
-      if (map.getLayer(layerId)) map.removeLayer(layerId)
-      if (map.getSource(srcId)) map.removeSource(srcId)
-    }
-  })
-  radarPool.clear()
+function resetRadarPool() {
+  for (const tpl of [...radarPool.keys()]) dropRadarLayer(tpl) // no-ops after a style swap
+  radarShown = null
+  radarPending = null
+  emit('radar-shown', null)
+}
+if (import.meta.env.DEV) {
+  window.__radar = { pool: radarPool, state: () => ({ shown: radarShown, pending: radarPending }) }
 }
 
-function ensureRadarLayer(frame) {
-  let entry = radarPool.get(frame.dwd)
+function dropRadarLayer(tpl) {
+  const e = radarPool.get(tpl)
+  if (!e) return
+  if (map.getLayer(e.layerId)) map.removeLayer(e.layerId)
+  if (map.getSource(e.srcId)) map.removeSource(e.srcId)
+  radarPool.delete(tpl)
+  if (radarShown === tpl) radarShown = null
+  if (radarPending === tpl) radarPending = null
+}
+
+// MapLibre's isSourceLoaded() is vacuously true for a source no visible layer
+// uses, and only meaningful once a render has run with the layer visible —
+// that is when its tiles for the current view get requested.
+function radarReady(e) {
+  return !e.hidden && radarRenders > e.visibleSince && map.isSourceLoaded(e.srcId)
+}
+
+function ensureRadarLayer(tpl) {
+  let entry = radarPool.get(tpl)
   if (entry) return entry
-  const beforeId = map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
-  const layers = []
-  const add = (template, suffix, attribution, extraSource, extraLayer) => {
-    const srcId = `rain-radar-${radarSeq++}-${suffix}`
-    map.addSource(srcId, {
+  const srcId = `rain-radar-${radarSeq++}`
+  map.addSource(srcId, {
+    type: 'raster',
+    tiles: [tpl],
+    tileSize: 512,
+    maxzoom: RADAR_SOURCE_MAXZOOM,
+    attribution:
+      'Radar © <a href="https://www.dwd.de/" target="_blank">DWD</a> · <a href="https://www.rainviewer.com/" target="_blank">RainViewer</a>',
+  })
+  map.addLayer(
+    {
+      id: `${srcId}-l`,
       type: 'raster',
-      tiles: [template],
-      tileSize: 512,
-      attribution,
-      ...extraSource,
-    })
-    map.addLayer(
-      {
-        id: `${srcId}-l`,
-        type: 'raster',
-        source: srcId,
-        paint: { 'raster-opacity': 0, 'raster-fade-duration': 0 },
-        ...extraLayer,
+      source: srcId,
+      layout: { visibility: 'visible' },
+      paint: {
+        'raster-opacity': 0,
+        'raster-opacity-transition': { duration: 0, delay: 0 }, // flip, don't cross-fade
+        'raster-fade-duration': 0,
       },
-      beforeId
-    )
-    layers.push({ srcId, layerId: `${srcId}-l` })
-  }
-  add(frame.dwd, 'd', 'Radar © DWD', {}, { minzoom: RADAR_ZOOM_SPLIT })
-  if (frame.global) {
-    // RainViewer serves real data only up to z7 — overzoom above that
-    add(frame.global, 'g', 'Radar © RainViewer', { maxzoom: 7 }, { maxzoom: RADAR_ZOOM_SPLIT })
-  }
-  entry = { layers }
-  radarPool.set(frame.dwd, entry)
+    },
+    map.getLayer('walk-route-casing') ? 'walk-route-casing' : undefined
+  )
+  entry = { srcId, layerId: `${srcId}-l`, lastShown: 0, hidden: false, visibleSince: radarRenders }
+  radarPool.set(tpl, entry)
   return entry
 }
 
 function applyRadarIdx() {
   if (!map || !styleReady) return
   try {
-    const current = props.radarFrames[props.radarIdx] ?? null
-    if (current) ensureRadarLayer(current)
-    radarPool.forEach(({ layers }, key) => {
-      const on = current?.dwd === key
-      for (const { layerId } of layers) {
-        if (map.getLayer(layerId)) map.setPaintProperty(layerId, 'raster-opacity', on ? 0.6 : 0)
-      }
+    const frames = props.radarFrames
+    const n = frames.length
+    const idx = props.radarIdx
+    const want = idx >= 0 && idx < n ? frames[idx].tpl : null
+    // the wanted frame plus the next few (wrapping, like the loop) stay warm
+    const warm = new Set()
+    if (want) for (let k = 0; k <= RADAR_LOOKAHEAD && k < n; k++) warm.add(frames[(idx + k) % n].tpl)
+    warm.forEach(ensureRadarLayer)
+    if (radarPool.size > RADAR_POOL_MAX) {
+      const cold = [...radarPool.entries()]
+        .filter(([tpl]) => !warm.has(tpl) && tpl !== radarShown)
+        .sort((a, b) => a[1].lastShown - b[1].lastShown)
+      for (const [tpl] of cold.slice(0, radarPool.size - RADAR_POOL_MAX)) dropRadarLayer(tpl)
+    }
+    let show = radarShown
+    if (!want) show = null
+    else if (want !== radarShown) {
+      // hold the current picture until the next one has its tiles
+      if (radarReady(radarPool.get(want)) || !radarShown || !radarPool.has(radarShown)) show = want
+    }
+    radarPending = want && want !== show ? want : null
+    radarPool.forEach((e, tpl) => {
+      const on = tpl === show
+      const visible = on || warm.has(tpl)
+      if (visible && e.hidden) e.visibleSince = radarRenders // tiles get (re)requested on the next render
+      e.hidden = !visible
+      map.setLayoutProperty(e.layerId, 'visibility', visible ? 'visible' : 'none')
+      map.setPaintProperty(e.layerId, 'raster-opacity', on ? RADAR_OPACITY : 0)
+      if (on) e.lastShown = ++radarClock
     })
+    if (show !== radarShown) emit('radar-shown', show)
+    radarShown = show
+    // frames that left the list go — except the one on screen, which is held
+    // until its replacement has tiles (a refresh renames every nowcast frame)
+    const listed = new Set(frames.map((f) => f.tpl))
+    for (const tpl of [...radarPool.keys()]) if (!listed.has(tpl) && tpl !== show) dropRadarLayer(tpl)
   } catch {
     map.once('idle', applyRadarIdx) // style mid-swap — retry when settled
-  }
-}
-
-function applyRadarFrames() {
-  if (!map || !styleReady) return
-  try {
-    clearRadarPool()
-    applyRadarIdx()
-  } catch {
-    map.once('idle', applyRadarFrames)
   }
 }
 
@@ -226,6 +269,9 @@ onMounted(() => {
     zoom: 12.2,
     pitch: 35,
     attributionControl: { compact: true },
+    // dozens of pooled radar sources each keep an out-of-view tile cache —
+    // two viewports' worth is plenty (default 5)
+    maxTileCacheZoomLevels: 2,
   })
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right')
   if (import.meta.env.DEV) window.__map = map // debugging aid, dev builds only
@@ -239,14 +285,33 @@ onMounted(() => {
   })
 
   map.on('click', () => emit('select', null))
-  const onStyleReady = () => {
+  // 'style.load' fires for the first style too, ahead of 'load' — binding
+  // 'load' as well would reset the radar pool a second time and orphan any
+  // layers added in between (e.g. radar switched on during a slow first paint).
+  map.on('style.load', () => {
     styleReady = true
     ensureRouteLayers()
-    radarPool.clear() // a style swap dropped the layers with it
+    resetRadarPool() // a style swap dropped the layers with it
     applyRadarIdx()
-  }
-  map.on('load', onStyleReady)
-  map.on('style.load', onStyleReady)
+  })
+  // Every tile arrival repaints; once the frame we are waiting for has its
+  // tiles (after at least one render with its layer visible), switch to it.
+  map.on('render', () => {
+    radarRenders++
+    const e = radarPending && radarPool.get(radarPending)
+    if (e && radarReady(e)) applyRadarIdx()
+  })
+  // Hidden frames hold the tiles of the view they were last drawn for; when
+  // the radar tile zoom changes those would all reload anyway — free them.
+  let radarZoomKey = -1
+  map.on('moveend', () => {
+    const key = Math.min(RADAR_SOURCE_MAXZOOM, Math.floor(map.getZoom()))
+    if (key === radarZoomKey) return
+    radarZoomKey = key
+    for (const [tpl, e] of [...radarPool.entries()]) {
+      if (e.hidden && tpl !== radarShown && tpl !== radarPending) dropRadarLayer(tpl)
+    }
+  })
 
   // right-click (long-press on touch) sets a custom route origin
   map.on('contextmenu', (e) => {
@@ -277,7 +342,7 @@ onBeforeUnmount(() => {
   map?.remove()
 })
 
-watch(() => props.radarFrames, applyRadarFrames)
+watch(() => props.radarFrames, applyRadarIdx)
 watch(() => props.radarIdx, applyRadarIdx)
 
 // 🎪 pins for events active at the displayed time

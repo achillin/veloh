@@ -3,42 +3,47 @@
 //   PLUS a +2 h radar nowcast, served as a WMS with a TIME dimension from
 //   maps.dwd.de (CORS *). Covers lat 45.7–56.2, lon 1.5–18.7 — all of
 //   Luxembourg and its surroundings.
+// - RainViewer: worldwide past-2 h radar (10-min steps, z ≤ 7) that fills in
+//   wherever DWD has no data. Both are recoloured client-side into one
+//   composite layer — see radarColors.js / radarTiles.js.
 // - Buienradar: radar-extrapolated 5-min point nowcast for the city, ~2 h.
+import { RAIN0, classifyDwd } from './radarColors.js'
 
-const DWD_WMS =
+export const DWD_WMS =
   'https://maps.dwd.de/geoserver/dwd/wms?service=WMS&version=1.3.0&request=GetMap' +
   '&layers=dwd%3ANiederschlagsradar&crs=EPSG%3A3857&format=image%2Fpng&transparent=true' +
   '&width=512&height=512'
 
 const STEP_MS = 5 * 60_000
+const NOWCAST_STEP_MS = 15 * 60_000 // coarser ahead: every nowcast frame costs slow WMS renders
 const PUBLISH_LAG_MS = 5 * 60_000 // newest frame is ~one step behind wall clock
 
-/** Radar frames from 2 h back to 2 h ahead, in 5-minute steps. No network
- *  needed — the DWD WMS serves any timestamp in that window via TIME=. */
+/** Radar frames from 2 h back (5-min steps, as measured) to 2 h ahead
+ *  (15-min steps of DWD's nowcast). No network needed — the DWD WMS serves
+ *  any timestamp in that window via TIME=. */
 export function dwdRadarFrames(now = new Date()) {
   const latest = Math.floor((now.getTime() - PUBLISH_LAG_MS) / STEP_MS) * STEP_MS
-  const frames = []
-  for (let t = latest - 2 * 3600_000; t <= latest + 2 * 3600_000; t += STEP_MS) {
-    frames.push({
-      time: new Date(t),
-      nowcast: t > now.getTime(),
-      template: `${DWD_WMS}&bbox={bbox-epsg-3857}&time=${new Date(t).toISOString()}`,
-    })
-  }
-  return frames
+  const times = []
+  for (let t = latest - 2 * 3600_000; t <= latest; t += STEP_MS) times.push(t)
+  for (let t = latest + NOWCAST_STEP_MS; t <= latest + 2 * 3600_000; t += NOWCAST_STEP_MS) times.push(t)
+  return times.map((t) => ({
+    time: new Date(t),
+    nowcast: t > now.getTime(),
+    template: `${DWD_WMS}&bbox={bbox-epsg-3857}&time=${new Date(t).toISOString()}`,
+  }))
 }
 
 /** Worldwide radar frames from RainViewer — coarser than DWD (native data
- *  up to z7, 10-min steps, mostly past) but with no regional boundary.
- *  Used for zoomed-out views where the DWD composite's coverage edge shows. */
+ *  up to z7, 10-min steps, past 2 h only since 2026) but with no regional
+ *  boundary. `url` is the frame's tile-set root; radarTiles.js appends
+ *  /{size}/{z}/{x}/{y}/{scheme}/{options}.png. Sorted oldest → newest. */
 export async function fetchGlobalRadarFrames() {
   const res = await fetch('https://api.rainviewer.com/public/weather-maps.json')
   if (!res.ok) throw new Error(`rainviewer → HTTP ${res.status}`)
   const j = await res.json()
-  return [...(j?.radar?.past ?? []), ...(j?.radar?.nowcast ?? [])].map((f) => ({
-    time: new Date(f.time * 1000),
-    template: `${j.host}${f.path}/512/{z}/{x}/{y}/2/1_1.png`,
-  }))
+  return [...(j?.radar?.past ?? []), ...(j?.radar?.nowcast ?? [])]
+    .map((f) => ({ time: new Date(f.time * 1000), url: `${j.host}${f.path}` }))
+    .sort((a, b) => a.time - b.time)
 }
 
 const COMPASS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
@@ -67,7 +72,9 @@ export async function analyzeRadar({ lat = 49.61, lon = 6.13 } = {}) {
   let bestDx = 0
   let bestDy = 0
   for (let i = 3; i < a.length; i += 4) {
-    if (a[i] === 0) continue
+    // only legend rain colours count — the grey "no data" zone west of the
+    // radar range and the grid-edge rim are not rain
+    if (classifyDwd(a[i - 3], a[i - 2], a[i - 1], a[i]) < RAIN0) continue
     wet++
     const p = (i - 3) / 4
     const dx = (p % bmp.width) - c

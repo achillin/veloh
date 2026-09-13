@@ -32,6 +32,7 @@ import {
   fetchGlobalRadarFrames,
   analyzeRadar,
 } from './lib/radar.js'
+import { RAIN_PALETTE, compositeTemplate } from './lib/radarColors.js'
 import { describeWmo } from './lib/weather.js'
 import { fetchRecentHistory, historyAt } from './lib/history.js'
 import { loadEvents, activeEventsAt, eventsNear } from './lib/events.js'
@@ -117,27 +118,40 @@ async function refreshNowcast() {
   }
 }
 
+let radarGen = 0 // bumped on every toggle: a refresh that lands after switching off must not publish
 async function refreshRadar() {
-  // DWD frames are generated locally (WMS TIME dimension); each gets paired
-  // with the nearest RainViewer frame for the zoomed-out worldwide layer.
+  // DWD frames are generated locally (WMS TIME dimension); each is paired
+  // with the RainViewer frame nearest in time, which fills in beyond DWD's
+  // grid. RainViewer has no nowcast, so frames past its newest one reuse it,
+  // flagged stale (drawn dimmed).
+  const gen = ++radarGen
   const frames = dwdRadarFrames()
-  let globalFrames = []
+  let rvFrames = []
   try {
-    globalFrames = await fetchGlobalRadarFrames()
+    rvFrames = await fetchGlobalRadarFrames()
   } catch {
-    /* zoomed-out layer simply stays off */
+    /* DWD-only overlay */
   }
+  if (gen !== radarGen || !radarOn.value) return // switched off / restarted meanwhile
+  const lastRv = rvFrames.at(-1)
   for (const f of frames) {
-    let best = null
-    let bestD = Infinity
-    for (const g of globalFrames) {
-      const d = Math.abs(g.time.getTime() - f.time.getTime())
-      if (d < bestD) {
-        bestD = d
-        best = g
+    let rv = null
+    let stale = false
+    if (lastRv && f.time.getTime() > lastRv.time.getTime() + 5 * 60_000) {
+      rv = lastRv
+      stale = true
+    } else if (lastRv) {
+      let bestD = Infinity
+      for (const g of rvFrames) {
+        const d = Math.abs(g.time.getTime() - f.time.getTime())
+        if (d < bestD) {
+          bestD = d
+          rv = g
+        }
       }
+      if (bestD > 10 * 60_000) rv = null // gappy RainViewer list: DWD alone beats a mis-timed fill
     }
-    f.global = bestD <= 6 * 60_000 ? best.template : null
+    f.tpl = compositeTemplate({ dwdTime: f.time.toISOString(), rvUrl: rv?.url ?? '', stale })
   }
   radarFrames.value = frames
   if (radarIdx.value >= frames.length) radarIdx.value = 0
@@ -147,9 +161,7 @@ async function refreshRadar() {
 }
 
 const radarFrame = computed(() => radarFrames.value[radarIdx.value] ?? null)
-const radarTemplates = computed(() =>
-  radarFrames.value.map((f) => ({ dwd: f.template, global: f.global ?? null }))
-)
+const radarTemplates = computed(() => radarFrames.value.map((f) => ({ tpl: f.tpl })))
 
 // Makes a rain-free (fully transparent) radar overlay legible as "working,
 // just dry" — and points at the nearest rain so you know where to look.
@@ -166,7 +178,8 @@ const radarNote = computed(() => {
     return `🕒 radar ends ${fmt(last.time)} — model forecast beyond`
   }
   const t = f.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
-  const when = f.nowcast ? `${t} +forecast` : t
+  // frame tiles still on their way (the map keeps the previous one up meanwhile)
+  const when = (radarShownTpl.value === f.tpl ? '' : '⏳ ') + (f.nowcast ? `${t} +forecast` : t)
   const info = radarInfo.value
   if (!info) return `🕒 ${when}`
   if (!info.nearest) return `🕒 ${when} · no rain within ~400 km`
@@ -174,9 +187,18 @@ const radarNote = computed(() => {
   return `🕒 ${when} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
 })
 
+const radarShownTpl = ref(null) // frame the map actually has on screen
+let radarStall = 0
 function stepRadar() {
   const n = radarFrames.value.length
-  if (n) radarIdx.value = ((radarIdx.value < 0 ? -1 : radarIdx.value) + 1) % n
+  if (!n) return
+  // Wait for the current frame to really be on screen (its tiles loaded), so
+  // a slow source slows the loop down instead of making it skip frames —
+  // but never wait forever.
+  const cur = radarFrames.value[radarIdx.value]?.tpl
+  if (cur && radarShownTpl.value !== cur && ++radarStall < 6) return
+  radarStall = 0
+  radarIdx.value = ((radarIdx.value < 0 ? -1 : radarIdx.value) + 1) % n
 }
 
 // Live view (offset 0): auto-play the past-2h → +30min loop.
@@ -210,6 +232,7 @@ watch(radarOn, (on) => {
     refreshRadar()
     radarTimer = setInterval(refreshRadar, 5 * 60_000)
   } else {
+    radarGen++
     radarFrames.value = []
     radarIdx.value = 0
   }
@@ -645,6 +668,7 @@ const rebalanceHint = computed(() => {
       :route="walkRoute"
       :radar-frames="radarTemplates"
       :radar-idx="radarIdx"
+      @radar-shown="radarShownTpl = $event"
       :events="activeEvents"
       :trip="trip"
       @select="selectedId = $event"
@@ -708,6 +732,15 @@ const rebalanceHint = computed(() => {
       <span class="ico">{{ mapWeather.icon }}</span>
       <span class="deg">{{ mapWeather.temp }}°</span>
       <span class="sub">{{ mapWeather.label }}<br />{{ mapWeather.forecast ? mapWeather.when + ' · forecast' : mapWeather.when }}</span>
+    </div>
+    <div
+      v-if="radarOn"
+      class="radar-legend glass"
+      title="Rain intensity on the RegenRadar scale · DWD 5-min composite, RainViewer beyond its edge (dimmed = last observation, no forecast)"
+    >
+      <span class="lbl">light</span>
+      <span class="bar"><i v-for="c in RAIN_PALETTE" :key="c" :style="{ background: c }"></i></span>
+      <span class="lbl">heavy · hail</span>
     </div>
     <div v-if="routeChip" class="route-chip glass">
       <button class="route-main" @click="focusRouteStation">
@@ -938,6 +971,32 @@ const rebalanceHint = computed(() => {
   line-height: 1.35;
 }
 
+/* radar colour scale, above the weather badge */
+.radar-legend {
+  position: absolute;
+  left: 16px;
+  bottom: 140px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 11px;
+  font-size: 10.5px;
+  color: var(--text-dim);
+  cursor: help;
+}
+
+.radar-legend .bar {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.radar-legend .bar i {
+  width: 13px;
+  height: 9px;
+}
+
 /* On narrower windows the right-anchored scrubber would reach the route
    chip — stack the chip above it instead. */
 @media (max-width: 1120px) {
@@ -947,6 +1006,10 @@ const rebalanceHint = computed(() => {
 
   .wx-badge {
     bottom: 200px;
+  }
+
+  .radar-legend {
+    bottom: 264px;
   }
 }
 </style>

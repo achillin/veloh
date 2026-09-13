@@ -79,7 +79,7 @@ const updatedLabel = computed(() => {
     <slot />
 
     <div class="chips">
-      <button class="chip radar-btn" :class="{ on: radarOn }" title="Rain radar overlay (RainViewer)" @click="$emit('toggle-radar')">☔ Radar</button>
+      <button class="chip radar-btn" :class="{ on: radarOn }" title="Rain radar overlay (DWD 5-min composite + RainViewer worldwide)" @click="$emit('toggle-radar')">☔ Radar</button>
       <span class="chip radar-note" v-if="radarNote">{{ radarNote }}</span>
       <span class="chip"><span class="dot" style="background: var(--accent)"></span><b>{{ bikesNow }}</b>&nbsp;bikes now</span>
       <span class="chip aux"><b>{{ stations.length }}</b>&nbsp;stations</span>
