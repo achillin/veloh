@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-13T08:21:58.333Z",
+ "updated": "2026-09-14T08:59:48.677Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,182 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-ETn4HMAZ5H9rWmiEJLmJ",
-   "name": "Bëschbueden mat Konschtimpulser am Hierscht",
-   "venue": "Am Clubhaus Op der spora",
-   "lat": 49.631806,
-   "lon": 6.113869,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-XNRo6wiPWE1jwtqYVwyz",
-   "name": "Creative Sunday ",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    10,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-6Z8kMmy6S80LCgkBFwgf",
-   "name": "Open de Rentrée Rapid chess ",
-   "venue": "Open Rapidchess Philidor",
-   "lat": 49.6127621,
-   "lon": 6.104788,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    13,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-tL7lajCJDc0g33gAEL6S",
-   "name": "Kaffi a Kuch",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ElBHPmEsw1V319RIfThi",
-   "name": "Boulevard Royal et avenues : un patrimoine révolu",
-   "venue": "Kiosk - Place de Bruxelles",
-   "lat": 49.607923,
-   "lon": 6.122858,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-8Q9MkukQLO7xGFvdTEQe",
-   "name": "Space Cadet (Cinema Paradiso)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-sV12zi2C97nZQl7xec6a",
-   "name": "Meet the Winners! Explorer le Kirchberg à vélo",
-   "venue": "Fonds Kirchberg",
-   "lat": 49.622287,
-   "lon": 6.151651,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-JLJ1k1FJN0QjmdlFZu3J",
-   "name": "Summer in the fortress",
-   "venue": "Visites F.F.G.L. dans les casemates en-dessous du boulevard ",
-   "lat": 49.6124297,
-   "lon": 6.1261934,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-6ys6ZLJflHJmbujpnrxe",
-   "name": "Iguazú Duo",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ddmlDVutBKEWQnPojhco",
-   "name": "Les enfants du Paradis (Ciné-Théâtre)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    17,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-gxGzrknD1EJoDiNcTx3M",
-   "name": "🇫🇷 Soirée Stand-up",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-13",
-   "to": "2026-09-13",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-ITksSKNcerSJf0dg1Z8W",
@@ -835,6 +659,22 @@
    "auto": true
   },
   {
+   "id": "echo-r8EcR6EO3L9DMKpycGcY",
+   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-MXWMn7HcoQbZxdrKOyLr",
    "name": "Reprise (Oslo Trilogies by Joachim Trier)",
    "venue": "Théâtre des Capucins",
@@ -1101,6 +941,22 @@
    "hours": [
     15,
     16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-VBpE97MacWVv4OIJmHqK",
+   "name": "Building a Flower Press ",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-09-19",
+   "to": "2026-09-19",
+   "hours": [
+    15,
+    17
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1699,11 +1555,11 @@
    "auto": true
   },
   {
-   "id": "echo-ymmGoSVkGk7AYuG189Xi",
-   "name": "Sip Dating",
-   "venue": "Crocus Quest Game",
-   "lat": 49.5818078,
-   "lon": 6.117577000000001,
+   "id": "echo-GCGpG5F1Rs3fMvhZAshQ",
+   "name": "First Mote ",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
    "from": "2026-09-24",
    "to": "2026-09-24",
    "hours": [
@@ -1715,11 +1571,11 @@
    "auto": true
   },
   {
-   "id": "echo-GCGpG5F1Rs3fMvhZAshQ",
-   "name": "First Mote ",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
+   "id": "echo-DzHeCK3fVmYRaxAVXWtV",
+   "name": "Sip Dating",
+   "venue": "Crocus Quest Game",
+   "lat": 49.5818078,
+   "lon": 6.117577000000001,
    "from": "2026-09-24",
    "to": "2026-09-24",
    "hours": [
@@ -2339,22 +2195,6 @@
    "auto": true
   },
   {
-   "id": "echo-IBCxqR9ucD0goU9l6O9Y",
-   "name": " Dyeing silk  ",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-YtOrrfdATZpLYNk3IPN9",
    "name": "Queers in Pink",
    "venue": "Rainbow Center - Zentrum fir queer Kultur",
@@ -2493,6 +2333,166 @@
    "hours": [
     10,
     13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-CHAYYwwAMitrsaBQRHyh",
+   "name": "CONCERT ACTART : LES BERGERIES",
+   "venue": "Conservatoire de la Ville de Luxembourg",
+   "lat": 49.602292,
+   "lon": 6.10683,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-mrz0z9ExDa3AfwgpzZDC",
+   "name": "Bodem",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HTlhQybPASIH7SveSOXt",
+   "name": "WALL-E (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Lsuo3wH30kfUqoUQMseP",
+   "name": "Summer in the fortress",
+   "venue": "Plateau du Saint Esprit Luxembourg",
+   "lat": 49.608215,
+   "lon": 6.133268,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    15,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DWELJBqwVg6AsVg0ZfhN",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    17,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-fVdtf1NSvhhQYTfMLyn3",
+   "name": "Julian the Drifter",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Bwwn83KE5ez9r7noDwMd",
+   "name": "Only Angels Have Wings (Sense & Sensibility)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-M1PThABWXrrw6mQM8VXk",
+   "name": "🇸🇮 MARINA ORSAG ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-rFjy6O6iScyHhaqZC50H",
+   "name": "Rouge (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-PLRuQr5teHI4QpIqRk46",
+   "name": "Coach de retraite bénévole ",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-09-28",
+   "to": "2026-09-28",
+   "hours": [
+    9,
+    16
    ],
    "radiusM": 400,
    "scale": "minor",
