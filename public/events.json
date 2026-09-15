@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-14T08:59:48.677Z",
+ "updated": "2026-09-15T08:44:48.814Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,86 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-ITksSKNcerSJf0dg1Z8W",
-   "name": "Fencing: open-day",
-   "venue": "Ecole Primaire de Merl",
-   "lat": 49.6031524,
-   "lon": 6.094466799999999,
-   "from": "2026-09-14",
-   "to": "2026-09-14",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-GScSKTHaHFDhcHUO5x8Q",
-   "name": "Persepolis (Hommage à Marjane Satrapi)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-14",
-   "to": "2026-09-14",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-rYH1KcjoG34Mv69xmDjd",
-   "name": " Intro to Stand-Up course",
-   "venue": "Le Croque Bedaine",
-   "lat": 49.62451,
-   "lon": 6.12206,
-   "from": "2026-09-14",
-   "to": "2026-09-14",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-qtsJHbD7LaUEvnIxfI1p",
-   "name": "Outdoor Social Dance at MNAHA",
-   "venue": "Nationalmusée um Fëschmaart",
-   "lat": 49.611629,
-   "lon": 6.133858,
-   "from": "2026-09-14",
-   "to": "2026-09-14",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-KfacVDQj3bx1oAK5qLsH",
-   "name": "Love (Dreams Sex) (Oslo Trilogy by Dag Johan Haugerud)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-14",
-   "to": "2026-09-14",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-tjG2mI3BE0LpeINpMdcG",
    "name": "Home Organising – Simplifier votre vie !",
    "venue": "Gero - Kompetenzzenter fir den Alter",
@@ -429,6 +349,22 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-bm66eIi71d0mmg42VVxS",
+   "name": "Screening of State of the European Union 2026",
+   "venue": "EUROPE DIRECT Luxembourg-Ville",
+   "lat": 49.602976217,
+   "lon": 6.133746921,
+   "from": "2026-09-16",
+   "to": "2026-09-16",
+   "hours": [
+    8,
+    12
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -851,7 +787,7 @@
    "auto": true
   },
   {
-   "id": "echo-AEw4EjBeM2QNbzzGVEhx",
+   "id": "echo-MODOMNyuEyIMltFqSxEB",
    "name": "Open Days at Cercle Cité ",
    "venue": "Cercle  Cité",
    "lat": 49.6113131,
@@ -915,9 +851,9 @@
    "auto": true
   },
   {
-   "id": "echo-Y7nXkpN0obeaRqHImdDT",
+   "id": "echo-TpU3nnMYgDVfoIhyPIsG",
    "name": "Bric(k)ollage | Workshop for all ages (FR + LU + DE + EN)",
-   "venue": "luca – Luxembourg Center for Architecture ",
+   "venue": "LUCA – Luxembourg Center for Architecture ",
    "lat": 49.61348568998791,
    "lon": 6.144871252600094,
    "from": "2026-09-19",
@@ -1075,7 +1011,7 @@
    "auto": true
   },
   {
-   "id": "echo-P9MBUebVdYL5tZIBz2eP",
+   "id": "echo-tfGJpKBCkQsw79CtqlGo",
    "name": "Open Days at Cercle Cité ",
    "venue": "Cercle  Cité",
    "lat": 49.6113131,
@@ -1772,6 +1708,22 @@
    "to": "2026-09-25",
    "hours": [
     10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6xrNPqyH6y7oKuYN3DAp",
+   "name": "Lunchtime at Mudam",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    12,
     13
    ],
    "radiusM": 400,
@@ -2493,6 +2445,54 @@
    "hours": [
     9,
     16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-utzbuPYa1Uy3ntzh778m",
+   "name": "Le Syndicat du crime (A Better Tomorrow) (Leslie Cheung)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-28",
+   "to": "2026-09-28",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-LEW2oQ0L30boHLpsPNB0",
+   "name": "Social Dance with taster class at Atmos",
+   "venue": "Atmos Bar & Restaurant",
+   "lat": 49.6114156,
+   "lon": 6.1270737,
+   "from": "2026-09-28",
+   "to": "2026-09-28",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-aQrFpvl4GgNN9KGPrZc7",
+   "name": "The Worst Person in the World (Oslo Trilogies)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-28",
+   "to": "2026-09-28",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
