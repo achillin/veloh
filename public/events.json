@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-15T08:44:48.814Z",
+ "updated": "2026-09-16T08:39:21.013Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,86 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-tjG2mI3BE0LpeINpMdcG",
-   "name": "Home Organising – Simplifier votre vie !",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-09-15",
-   "to": "2026-09-15",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-XxoBDXlJPe6o3YLGDVto",
-   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
-   "venue": "Tiers-Lieu Bonnevoie",
-   "lat": 49.598646995,
-   "lon": 6.138618116,
-   "from": "2026-09-15",
-   "to": "2026-09-15",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-2dot5LgwRnoh38iZ0jLa",
-   "name": "Improv Theatre: 6-week course for beginners",
-   "venue": "Café-Théâtre \"Rocas\"",
-   "lat": 49.613273,
-   "lon": 6.129617,
-   "from": "2026-09-15",
-   "to": "2026-09-15",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-IpyGiVfQgsDNBloZYI9n",
-   "name": "Chronicle of the Years of Fire (Cinematic Siblings)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-15",
-   "to": "2026-09-15",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-aVIj2auM0R1BOYSqeuN0",
-   "name": "Laurent Pierre 5tet",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-09-15",
-   "to": "2026-09-15",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-bm66eIi71d0mmg42VVxS",
@@ -883,8 +803,8 @@
    "auto": true
   },
   {
-   "id": "echo-VBpE97MacWVv4OIJmHqK",
-   "name": "Building a Flower Press ",
+   "id": "echo-HY1OJJaAYsFmxIFXKWrC",
+   "name": "Building a Flower Press  | SOLD OUT",
    "venue": "Casino Luxembourg - Forum d'art contemporain",
    "lat": 49.609787,
    "lon": 6.12714,
@@ -1331,22 +1251,6 @@
    "auto": true
   },
   {
-   "id": "echo-zAkcMMcflZK6M2cSbAG7",
-   "name": "Artur Rutkevich Quartet",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-SagEbBWmYCGvUvVwr9Wc",
    "name": "Meet the Winners! Ideas, Approaches and Project Stories",
    "venue": "luca – Luxembourg Center for Architecture ",
@@ -1587,16 +1491,16 @@
    "auto": true
   },
   {
-   "id": "echo-62agUD88ZV6eWLVVtomD",
-   "name": "Bradley's BIG BRAIN PUB QUIZ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
+   "id": "echo-PJwqBLnZwjRSxJkAnroh",
+   "name": "Opening Kaihō & Christine Sun Kim",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
    "from": "2026-09-24",
    "to": "2026-09-24",
    "hours": [
     19,
-    21
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2490,6 +2394,134 @@
    "lon": 6.130586,
    "from": "2026-09-28",
    "to": "2026-09-28",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-S9Svqf38f4wGcMSLRgP4",
+   "name": "„KI“ – Was steckt dahinter?",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1QhQ7ogYhVBloyNzgxYs",
+   "name": "Jules Prussen: Ein luxemburger Philosoph (1914-1976)",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-0ADwd1ZASx8RkIXVYFVj",
+   "name": "Aniki-Bóbó (Great Restorations)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-32BS2dmXpVAN1RAw2UAZ",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-eSq2xAa5P02ocjAaKRCe",
+   "name": "Kyuka: Before Summer's End",
+   "venue": "Ciné Utopia",
+   "lat": 49.617019,
+   "lon": 6.120959,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JQYT2BGJVzCVse9NKTyf",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-frcGaZWIfee6IHtBuHCA",
+   "name": "2001: A Space Odyssey (Spacewalks)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-RV7b4DznBlhUc2eprr6P",
+   "name": "Liquid Jazz Jam Session",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-29",
+   "to": "2026-09-29",
    "hours": [
     20,
     23
