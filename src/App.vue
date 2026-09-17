@@ -51,7 +51,16 @@ const customStart = ref(null) // {lat, lon, label} — user-chosen route origin
 const walkRoute = shallowRef(null) // {geometry, durationSec, distanceM, station, approx}
 const nowcast = shallowRef(null) // radar rain summary for the next ~2 h
 const nowcastPoints = shallowRef(null) // raw 5-min radar precipitation series
-const radarOn = ref(false)
+const RADAR_PREF = 'veloh.radar' // remembered on/off choice; on by default
+const radarOn = ref(
+  (() => {
+    try {
+      return localStorage.getItem(RADAR_PREF) !== 'off'
+    } catch {
+      return true
+    }
+  })()
+)
 const radarFrames = shallowRef([]) // ~2 h of radar + 30 min nowcast, 10-min steps
 const radarIdx = ref(0) // animation position
 const radarInfo = shallowRef(null) // { coverage, nearest: { km, dir } | null } around the city
@@ -153,8 +162,11 @@ async function refreshRadar() {
     }
     f.tpl = compositeTemplate({ dwdTime: f.time.toISOString(), rvUrl: rv?.url ?? '', stale })
   }
+  // a fresh start opens on the newest measured frame (loads first, and it is
+  // what you want to see right away); the loop wraps round from there
+  if (!radarFrames.value.length) radarIdx.value = Math.max(0, frames.findLastIndex((f) => !f.nowcast))
+  else if (radarIdx.value >= frames.length) radarIdx.value = 0
   radarFrames.value = frames
-  if (radarIdx.value >= frames.length) radarIdx.value = 0
   analyzeRadar()
     .then((info) => (radarInfo.value = info))
     .catch(() => (radarInfo.value = null))
@@ -178,23 +190,37 @@ const radarNote = computed(() => {
     return `🕒 radar ends ${fmt(last.time)} — model forecast beyond`
   }
   const t = f.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
-  // frame tiles still on their way (the map keeps the previous one up meanwhile)
-  const when = (radarShownTpl.value === f.tpl ? '' : '⏳ ') + (f.nowcast ? `${t} +forecast` : t)
+  const when = f.nowcast ? `${t} +forecast` : t
+  // frames still preloading for this view — the loop waits for them
+  const p = radarProgress.value
+  const loading = p.total && p.loaded < p.total ? ` · ⏳ ${p.loaded}/${p.total}` : ''
   const info = radarInfo.value
-  if (!info) return `🕒 ${when}`
-  if (!info.nearest) return `🕒 ${when} · no rain within ~400 km`
-  if (info.nearest.km < 15) return `🕒 ${when} · rain overhead`
-  return `🕒 ${when} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
+  if (!info) return `🕒 ${when}${loading}`
+  if (!info.nearest) return `🕒 ${when}${loading} · no rain within ~400 km`
+  if (info.nearest.km < 15) return `🕒 ${when}${loading} · rain overhead`
+  return `🕒 ${when}${loading} · nearest rain ~${Math.round(info.nearest.km)} km ${info.nearest.dir} — zoom out`
 })
 
 const radarShownTpl = ref(null) // frame the map actually has on screen
+const radarProgress = ref({ loaded: 0, total: 0 }) // frames with tiles for the current view
 let radarStall = 0
+let radarForced = false
 function stepRadar() {
   const n = radarFrames.value.length
   if (!n) return
-  // Wait for the current frame to really be on screen (its tiles loaded), so
-  // a slow source slows the loop down instead of making it skip frames —
-  // but never wait forever.
+  // Every frame is preloaded and the loop only runs once all of them have
+  // their tiles for the current view, so playback is seamless instead of
+  // stuttering through loads (after a zoom or pan it pauses on the current
+  // frame while the pool refills). Should a source stay stuck for a minute,
+  // play what we have, holding each frame until it is really on screen.
+  const p = radarProgress.value
+  const all = p.total > 0 && p.loaded >= p.total
+  if (all) radarForced = false
+  else if (!radarForced) {
+    if (++radarStall < 75) return
+    radarForced = true
+    radarStall = 0
+  }
   const cur = radarFrames.value[radarIdx.value]?.tpl
   if (cur && radarShownTpl.value !== cur && ++radarStall < 6) return
   radarStall = 0
@@ -226,18 +252,27 @@ function syncRadarPlayback() {
   radarIdx.value = bestD <= 20 * 60_000 ? best : -1
 }
 
-watch(radarOn, (on) => {
-  clearInterval(radarTimer)
-  if (on) {
-    refreshRadar()
-    radarTimer = setInterval(refreshRadar, 5 * 60_000)
-  } else {
-    radarGen++
-    radarFrames.value = []
-    radarIdx.value = 0
-  }
-  syncRadarPlayback()
-})
+watch(
+  radarOn,
+  (on) => {
+    clearInterval(radarTimer)
+    try {
+      localStorage.setItem(RADAR_PREF, on ? 'on' : 'off')
+    } catch {
+      /* private mode etc. — just not remembered */
+    }
+    if (on) {
+      refreshRadar()
+      radarTimer = setInterval(refreshRadar, 5 * 60_000)
+    } else {
+      radarGen++
+      radarFrames.value = []
+      radarIdx.value = 0
+    }
+    syncRadarPlayback()
+  },
+  { immediate: true }
+)
 
 watch([() => target.value.getTime(), radarFrames], syncRadarPlayback)
 
@@ -669,6 +704,7 @@ const rebalanceHint = computed(() => {
       :radar-frames="radarTemplates"
       :radar-idx="radarIdx"
       @radar-shown="radarShownTpl = $event"
+      @radar-progress="radarProgress = $event"
       :events="activeEvents"
       :trip="trip"
       @select="selectedId = $event"
