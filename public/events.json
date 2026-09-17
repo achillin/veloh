@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-16T08:39:21.013Z",
+ "updated": "2026-09-17T08:42:48.290Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,160 +275,16 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-bm66eIi71d0mmg42VVxS",
-   "name": "Screening of State of the European Union 2026",
-   "venue": "EUROPE DIRECT Luxembourg-Ville",
-   "lat": 49.602976217,
-   "lon": 6.133746921,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    8,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-eZQRx1ALrVb0zPRzwbzE",
-   "name": "Luxembourg Accueil Opens a New Season… and Kicks Off a Speci",
-   "venue": "Luxembourg Accueil Information",
-   "lat": 49.608354,
-   "lon": 6.13677,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
+   "id": "echo-CHYlu4nEDDfoEFjGfCEg",
+   "name": "Open Day at the Central Bank of Luxembourg (BCL)",
+   "venue": "Banque Centrale du Luxembourg",
+   "lat": 49.6147455,
+   "lon": 6.1295765,
+   "from": "2026-09-17",
+   "to": "2026-09-17",
    "hours": [
     10,
-    15
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ftxFcAiJD0UaQ73fEGCG",
-   "name": "Smartphone-Café",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    14,
     17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-LZKWChjAaOa8Ad5jSLXR",
-   "name": "Meet the Artist: Tiffany Matos – “From the Outside Looking I",
-   "venue": "Espace Artime - Hôpitaux Robert Schuman Kirchberg",
-   "lat": 49.632638,
-   "lon": 6.176176,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-CXPwkKK5bof6FeyYwjVO",
-   "name": "Nomad (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-q6W5tKZ59FbLpBJ36zpA",
-   "name": "Board Game Evening",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-kg4XZ4kDlsgil4hNdk9p",
-   "name": "COURS D'ESSAI THEATRE & IMPROVISATION",
-   "venue": "Ecole de Théâtre Luxembourg asbl",
-   "lat": 49.622857,
-   "lon": 6.184302,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-AyIFGPOg7Er8zWwwdR5m",
-   "name": "Event",
-   "venue": "Main",
-   "lat": 49.61242439999999,
-   "lon": 6.131346,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-TH8bIyAJ591r0wOuEkMY",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-u88yxMePEGmxYvfGJ4gI",
-   "name": "Forbidden Planet (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-16",
-   "to": "2026-09-16",
-   "hours": [
-    20,
-    23
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1251,6 +1107,22 @@
    "auto": true
   },
   {
+   "id": "echo-nTbNBKZQ7OHmahQyOrAu",
+   "name": "Trioon",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-SagEbBWmYCGvUvVwr9Wc",
    "name": "Meet the Winners! Ideas, Approaches and Project Stories",
    "venue": "luca – Luxembourg Center for Architecture ",
@@ -1373,6 +1245,22 @@
    "hours": [
     18,
     21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-7fwUow9lTnnmD7yfVSFI",
+   "name": "Bradley's BIG BRAIN PUB QUIZ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-24",
+   "to": "2026-09-24",
+   "hours": [
+    18,
+    20
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2195,6 +2083,22 @@
    "auto": true
   },
   {
+   "id": "echo-IetvhVyqSHIJVX3aNplN",
+   "name": "Open Day at SERVIOR “Op der Rhum”",
+   "venue": "CIPA Op der Rhum",
+   "lat": 49.610028,
+   "lon": 6.139013,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-CHAYYwwAMitrsaBQRHyh",
    "name": "CONCERT ACTART : LES BERGERIES",
    "venue": "Conservatoire de la Ville de Luxembourg",
@@ -2524,6 +2428,198 @@
    "to": "2026-09-29",
    "hours": [
     20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Hig4M2zDtS3bK0le6VpO",
+   "name": "Meet the Winners! Erschafen, ausstellen, iwwermëttelen",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    12,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-vMAPsFzIgWIfHTU5d5FA",
+   "name": "Smartphone-Café",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-yL5DD6Unj4dP4PTdkWtW",
+   "name": "Gemeinsam entdecken | Partizipativer Ausstellungsrundgang fü",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    18,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-4R9OEXfYE6jKwo1v90kS",
+   "name": "Krise & Kritik: Über die Macht und Ohnmacht eines Begriffs",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-2cZqHbyiOxUBHe6Qfgf0",
+   "name": "Poulet aux prunes (Hommage à Marjane Satrapi)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DUHUkTSiafeRcAEzdPRN",
+   "name": "United to Grow",
+   "venue": "Europa Experience",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-y4yfed9dMGOSBghCGVkX",
+   "name": "Bradley's BIG BRAIN PUB QUIZ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YhTZg1wmTnm2VQlUkkUs",
+   "name": "Event",
+   "venue": "Main",
+   "lat": 49.61242439999999,
+   "lon": 6.131346,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-bRKwiuHwbd66SjmE2uWd",
+   "name": "Turkish Delight - Standup Comedy Show",
+   "venue": "Mirador",
+   "lat": 49.612297,
+   "lon": 6.1391179,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KIwUcQ50nTtJ0KcrNUIn",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-VKCGIBjmAgSqaaUnfujc",
+   "name": "Twinless (#CinémathèqueUnreleased)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gxXGaiW0DYMgG6RbiCNt",
+   "name": "Kyuka: Before Summer's End",
+   "venue": "Ciné Utopia",
+   "lat": 49.617019,
+   "lon": 6.120959,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    21,
     23
    ],
    "radiusM": 400,
