@@ -6,7 +6,6 @@ import TimeScrubber from './components/TimeScrubber.vue'
 import StationPanel from './components/StationPanel.vue'
 import SearchBox from './components/SearchBox.vue'
 import { fetchStations } from './lib/gbfs.js'
-import { dayType } from './lib/holidays.js'
 import { fetchWeather, forecastAt } from './lib/weather.js'
 import {
   loadProfiles,
@@ -15,6 +14,7 @@ import {
   globalMeanFraction,
   predictDistribution,
   probAtLeast,
+  profileKey,
 } from './lib/predictor.js'
 import {
   walkingRoute,
@@ -685,7 +685,7 @@ const rebalanceHint = computed(() => {
   const reb = profiles.value?.rebalance?.[st?.id]
   if (!st || !reb) return null
   const t = target.value
-  const e = reb[`${dayType(t)}-${t.getHours()}`]
+  const e = reb[profileKey(t)]
   if (!e) return null
   const [up, down] = e
   return up >= down ? { dir: 'up', pct: Math.round(up * 100) } : { dir: 'down', pct: Math.round(down * 100) }

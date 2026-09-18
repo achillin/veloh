@@ -9,7 +9,7 @@
 //
 // Fractions are bikes / capacity, clamped to [0, 1].
 
-import { dayType } from './holidays.js'
+import { dayType, luxParts } from './holidays.js'
 import { activeEventsAt, eventsNear } from './events.js'
 
 const SHRINK_K = 8 // pseudo-observations pulling a station toward the global profile
@@ -32,8 +32,10 @@ export async function loadProfiles() {
   }
 }
 
-function profileKey(date) {
-  return `${dayType(date)}-${date.getHours()}`
+/** Profile bucket of an instant: dayType-hour in Luxembourg time (the
+ *  zone the profiles were learned in, whatever zone the runtime is in). */
+export function profileKey(date) {
+  return `${dayType(date)}-${luxParts(date).hour}`
 }
 
 function learnedFraction(profiles, stationId, key) {

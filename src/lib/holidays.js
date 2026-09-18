@@ -49,16 +49,41 @@ function holidaysForYear(year) {
   return map
 }
 
+// Calendar fields of an instant in Luxembourg time — never the runtime's
+// local zone: the profiles are learned in Luxembourg time, and both CI (UTC)
+// and a travelling user would otherwise look up shifted hours.
+const luxFmt = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Luxembourg',
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  weekday: 'short',
+  hour: 'numeric',
+  hour12: false,
+})
+const luxCache = new Map() // minute → parts (predict() asks thousands of times per render)
+export function luxParts(date) {
+  const k = Math.floor(date.getTime() / 60_000)
+  let p = luxCache.get(k)
+  if (p) return p
+  const raw = Object.fromEntries(luxFmt.formatToParts(date).map((x) => [x.type, x.value]))
+  p = { year: +raw.year, month: +raw.month, day: +raw.day, weekday: raw.weekday, hour: +raw.hour % 24 }
+  if (luxCache.size > 20_000) luxCache.clear()
+  luxCache.set(k, p)
+  return p
+}
+
 /** Returns the holiday name for a date, or null. */
 export function holidayName(date) {
-  return holidaysForYear(date.getFullYear()).get(mdKey(date)) ?? null
+  const p = luxParts(date)
+  return holidaysForYear(p.year).get(`${p.month}-${p.day}`) ?? null
 }
 
 /** 'wd' | 'sat' | 'sun' — public holidays count as Sundays for traffic patterns. */
 export function dayType(date) {
   if (holidayName(date)) return 'sun'
-  const dow = date.getDay()
-  if (dow === 0) return 'sun'
-  if (dow === 6) return 'sat'
+  const w = luxParts(date).weekday
+  if (w === 'Sun') return 'sun'
+  if (w === 'Sat') return 'sat'
   return 'wd'
 }
