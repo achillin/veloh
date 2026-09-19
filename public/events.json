@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-18T08:18:41.401Z",
+ "updated": "2026-09-19T08:06:48.921Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,86 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-onYay0LuyGH3yHRcdP3c",
-   "name": "Knitting coffee at the Museum ",
-   "venue": "Nationalmusée um Fëschmaart",
-   "lat": 49.611629,
-   "lon": 6.133858,
-   "from": "2026-09-18",
-   "to": "2026-09-18",
-   "hours": [
-    10,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-kry63X8ajkeJCBjOOule",
-   "name": "Theaterfest",
-   "venue": "Place d'Armes, Luxembourg",
-   "lat": 49.611042,
-   "lon": 6.129292,
-   "from": "2026-09-18",
-   "to": "2026-09-18",
-   "hours": [
-    12,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-CVDTBRaoTXlorhaVPPjJ",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-09-18",
-   "to": "2026-09-18",
-   "hours": [
-    18,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-sL0aVKMUXpLQHub8xOr5",
-   "name": "Pastèque Discotèque",
-   "venue": "Kyosk ",
-   "lat": 49.625192,
-   "lon": 6.152692,
-   "from": "2026-09-18",
-   "to": "2026-09-18",
-   "hours": [
-    18,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-PiTCV89evzId3FDwbc1c",
-   "name": "The Godfather : Part II (John Cazle)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-18",
-   "to": "2026-09-18",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-cZs8OqCOA0PQobM2oEzZ",
@@ -691,7 +611,7 @@
    "auto": true
   },
   {
-   "id": "echo-eNRoqj729zjqX1K0GF2f",
+   "id": "echo-GkAC5xSmJZT48vUiuWEf",
    "name": "🇮🇹 NICOLAS ROSSETTI -",
    "venue": "Carlitos Comedy Club",
    "lat": 49.6014606,
@@ -851,7 +771,7 @@
    "auto": true
   },
   {
-   "id": "echo-WycqMGxGGzmObUmwR1X7",
+   "id": "echo-4MPqOoVwp1gXIR5Z0WpT",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
    "lat": 49.598646995,
@@ -888,6 +808,22 @@
    "venue": "55, avenue de la Liberté",
    "lat": 49.6022598,
    "lon": 6.132361400000001,
+   "from": "2026-09-22",
+   "to": "2026-09-22",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HZW2kkEjWWGsdZd9otCI",
+   "name": "Improv Theatre: 6-week course for beginners",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
    "from": "2026-09-22",
    "to": "2026-09-22",
    "hours": [
@@ -1192,6 +1128,22 @@
    "venue": "55, avenue de la Liberté",
    "lat": 49.6022598,
    "lon": 6.132361400000001,
+   "from": "2026-09-24",
+   "to": "2026-09-24",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-O38vlNt3jH2d17hLewx0",
+   "name": "Improv Jam",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
    "from": "2026-09-24",
    "to": "2026-09-24",
    "hours": [
@@ -2195,7 +2147,7 @@
    "auto": true
   },
   {
-   "id": "echo-32BS2dmXpVAN1RAw2UAZ",
+   "id": "echo-N180Q5RNddtpOuOgW6tX",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
    "lat": 49.598646995,
@@ -2653,6 +2605,118 @@
    "hours": [
     21,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-0UypflnvOPZOloSD9DDd",
+   "name": "Tease & Tell: A Theatrical Lecture on Burlesque",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-10-02",
+   "to": "2026-10-02",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-xRgrPr0klY7dGmvzmrfo",
+   "name": "Quiz Night",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-02",
+   "to": "2026-10-02",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-S5VeUxB7BjZLhgb0KAb0",
+   "name": "LES ANNÉES FOLLES",
+   "venue": "Sang a Klang",
+   "lat": 49.6150616,
+   "lon": 6.1340425,
+   "from": "2026-10-02",
+   "to": "2026-10-02",
+   "hours": [
+    19,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-CgthuGHSISVQNPgJy1AP",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-02",
+   "to": "2026-10-02",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TeaqtJcxRe2P2rBA0Atq",
+   "name": "L'Étage",
+   "venue": "Théâtre ouvert Luxembourg (TOL)",
+   "lat": 49.580802,
+   "lon": 6.149375,
+   "from": "2026-10-02",
+   "to": "2026-10-02",
+   "hours": [
+    20,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-71ZbK0OX0vTYHlaUOFA3",
+   "name": "Luxembourg for Beginners",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
+   "from": "2026-10-02",
+   "to": "2026-10-02",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-RfZJyAfrRYT2sjLiHoG4",
+   "name": "ONa- Vague",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    9,
+    11
    ],
    "radiusM": 400,
    "scale": "minor",
