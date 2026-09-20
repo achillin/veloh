@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-19T08:06:48.921Z",
+ "updated": "2026-09-20T08:39:03.516Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,182 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-cZs8OqCOA0PQobM2oEzZ",
-   "name": "Filmfriend - Tuffi Atelier",
-   "venue": "Cercle Cité - Auditorium Cité",
-   "lat": 49.6116227,
-   "lon": 6.130095,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-65OdKdhjDzSjgQhATnG3",
-   "name": "Organ recital",
-   "venue": "Cathédrale Notre-Dame",
-   "lat": 49.6099739,
-   "lon": 6.1288328,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-MODOMNyuEyIMltFqSxEB",
-   "name": "Open Days at Cercle Cité ",
-   "venue": "Cercle  Cité",
-   "lat": 49.6113131,
-   "lon": 6.1302011,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    12,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-7wpInIvliGzyzjjXEYo1",
-   "name": "Portes Ouvertes Ecole d'Art Contemporain",
-   "venue": "Nouvelle Adresse de l'Ecole d'Art Contemporain ",
-   "lat": 49.6246763,
-   "lon": 6.138626299999999,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    13,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-WKcFPILaymopy1xUcZaP",
-   "name": "European Mobility Week",
-   "venue": "Luxembourg City Tourist Office",
-   "lat": 49.6106231,
-   "lon": 6.1299055,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-x9REH2bfxtnVnjs7EZbm",
-   "name": "Queer Yoga",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-TpU3nnMYgDVfoIhyPIsG",
-   "name": "Bric(k)ollage | Workshop for all ages (FR + LU + DE + EN)",
-   "venue": "LUCA – Luxembourg Center for Architecture ",
-   "lat": 49.61348568998791,
-   "lon": 6.144871252600094,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-9vAa9YBu32UNw51xz6kw",
-   "name": "More than a Postcard",
-   "venue": "Cercle Cité - Ratskeller (espace d'exposition)",
-   "lat": 49.61130319999999,
-   "lon": 6.1306446,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-VYu9gusncL9UyGydmYCr",
-   "name": "King Kong (Afternoon Adventures)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    16,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Ru1x7S8TohhJrGyjPQPA",
-   "name": "Sense and Sensibility (Sense & Sensibility)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-21chCXTIIrYeCDfr9LNN",
-   "name": "Le Syndicat du crime (A Better Tomorrow) (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-19",
-   "to": "2026-09-19",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-u2vepgEFQBPBYjakL3v2",
@@ -1715,22 +1539,6 @@
    "auto": true
   },
   {
-   "id": "echo-bMcygSO2Y1gIaSAlebbQ",
-   "name": " Dyeing silk | SOLD OUT",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-YtOrrfdATZpLYNk3IPN9",
    "name": "Queers in Pink",
    "venue": "Rainbow Center - Zentrum fir queer Kultur",
@@ -2717,6 +2525,390 @@
    "hours": [
     9,
     11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-T7IesvjjBUNVt6TdSJng",
+   "name": "Sum – poésie sonore et gestuelle pour petits corps",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    10,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-5IQ4VaayBAJ7JMU90pZa",
+   "name": "Tuffi - Junior Atelier (4-7) ",
+   "venue": "Cercle Cité - Salle 503",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-OVsMW2pgSZh785HAEHEe",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-SPrgcOrgBDiTFUaqvtVh",
+   "name": "teNir",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KxuhYNbSwpSpLWTjpUil",
+   "name": "Sushi Class",
+   "venue": "Aka Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-e4tJ4DRFMeJrCCCBezhY",
+   "name": "Sum – poésie sonore et gestuelle pour petits corps",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    13,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-nsgDTjoenFSktcy83suQ",
+   "name": "Choux pastry workshop",
+   "venue": "Cooking Studio MIELE - Gasperich",
+   "lat": 49.587431377,
+   "lon": 6.121446067,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    13,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-5vl4x9qkaZP0dYU0kUC9",
+   "name": "ONa- Vague",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    14,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-2mujQo5IDK9AaZmSZhGA",
+   "name": "Sum – poésie sonore et gestuelle pour petits corps",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-2qeWnuzDtDVO9TQrEnZC",
+   "name": "Bernar Venet — Conférence",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Yzegz2W4W4ajhHmmftEu",
+   "name": "teNir",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6bhFcx0tV8oD6udCal5q",
+   "name": "Schluechthaus Session",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    16,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-x13xeI3JetRVOfDANe8H",
+   "name": "Event",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-c2cT9flw2wHp0C11WS4y",
+   "name": " Ouverture Black History Month 2026",
+   "venue": " Forum Geesseknäppchen",
+   "lat": 49.6005117,
+   "lon": 6.1136285,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    17,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-V3hXgF3ZCHciYNipGUcA",
+   "name": "3 du TROIS | WORK IN PROGRESS – OCTOBRE 26",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-qHprZOXbcrB1Pz2eO6pM",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-00HSddrFuTWIrka5Tgmt",
+   "name": "Match d'Improvisation Luxembourg VS France",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ynHatoMhHPb5fheBfdyc",
+   "name": "MAMAGOESDANCING",
+   "venue": "Apoteca",
+   "lat": 49.611369,
+   "lon": 6.132919,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9VVZI6jNTcMy5AvkgPhr",
+   "name": "Concert – Echo Des Balafons",
+   "venue": " Forum Geesseknäppchen",
+   "lat": 49.6005117,
+   "lon": 6.1136285,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-8EpyBsTRWVQqkBFB93sH",
+   "name": "ONa- Vague",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    9,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JDmJJsg0I0f8MrgPyRTI",
+   "name": "Pilates & Brunch",
+   "venue": "Luxembourg Marriott Hotel Alfa ",
+   "lat": 49.6006703,
+   "lon": 6.133112,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    10,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-hMiYRB11TuTHeGoTH7yk",
+   "name": "Konscht Am Gronn",
+   "venue": "Pont du Grund",
+   "lat": 49.609224,
+   "lon": 6.135862,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    10,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-oA3AQLlYT9iInTWnWOTM",
+   "name": "Sum – poésie sonore et gestuelle pour petits corps",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    10,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lR7G7K3OkIcfDcGxfrj6",
+   "name": "CONCERT ACTART : PERSPECTIVES TRIADIQUES",
+   "venue": "Conservatoire de la Ville de Luxembourg",
+   "lat": 49.602292,
+   "lon": 6.10683,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    10,
+    12
    ],
    "radiusM": 400,
    "scale": "minor",
