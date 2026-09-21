@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-20T08:39:03.516Z",
+ "updated": "2026-09-21T09:01:14.402Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,214 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-u2vepgEFQBPBYjakL3v2",
-   "name": "WALL-E (Cinema Paradiso)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-escinz4Z5jkX3ApGJyaY",
-   "name": "Herb hike",
-   "venue": "Waldhof Grünewald",
-   "lat": 49.6569,
-   "lon": 6.19148,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-cb0c968kJDNPfjWjdBvQ",
-   "name": "Franges",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-XzPBY4boGwiNnPHThXcT",
-   "name": "Oekofest 2026 in Pfaffenthal – Sunday, 20 September",
-   "venue": "Oekozenter Pafendall",
-   "lat": 49.614792,
-   "lon": 6.133913,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    11,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-tfGJpKBCkQsw79CtqlGo",
-   "name": "Open Days at Cercle Cité ",
-   "venue": "Cercle  Cité",
-   "lat": 49.6113131,
-   "lon": 6.1302011,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    12,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-uvxzV77cARuxtT7Ledin",
-   "name": "European Mobility Week",
-   "venue": "Luxembourg City Tourist Office",
-   "lat": 49.6106231,
-   "lon": 6.1299055,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-v9YPRI3JPG4TeNwWBBig",
-   "name": "Objectif Lune! Avec Méliès, Fleischer & Aardman (Cinema Para",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-HXOs5DKayjSfGvv9XLJh",
-   "name": "More than a Postcard",
-   "venue": "Cercle Cité - Ratskeller (espace d'exposition)",
-   "lat": 49.61130319999999,
-   "lon": 6.1306446,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-jgHjJ1dOWqL6AGtE7bsx",
-   "name": "Greek Community Feast",
-   "venue": "Il Tocco Ristorante",
-   "lat": 49.631783182,
-   "lon": 6.17155777,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    16,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-gUwLqHcGv34i69krCx3T",
-   "name": "First Man (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-GkAC5xSmJZT48vUiuWEf",
-   "name": "🇮🇹 NICOLAS ROSSETTI -",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-ppJCuBcNUfS6NDywEk1I",
-   "name": "The Maine",
-   "venue": "den Atelier",
-   "lat": 49.598747,
-   "lon": 6.126118,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-qDF8OF6guLSr8EkALQto",
-   "name": "The Conversation (John Cazale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-20",
-   "to": "2026-09-20",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-s1FHFCu8YmhSSigUXxjJ",
@@ -1107,22 +899,6 @@
    "auto": true
   },
   {
-   "id": "echo-6xrNPqyH6y7oKuYN3DAp",
-   "name": "Lunchtime at Mudam",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    12,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
    "id": "echo-etBBF8wypq6iV1tcO6US",
    "name": "Les Nuits en Or 2026 Partie - I (Festival des meilleurs cour",
    "venue": "Théâtre des Capucins",
@@ -1581,6 +1357,22 @@
    "hours": [
     17,
     20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-pDlJugi96RfqHVa68GyX",
+   "name": "Private House Exhibition ",
+   "venue": "Private House in Hamm",
+   "lat": 49.6064385,
+   "lon": 6.1563305,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    18,
+    21
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2906,6 +2698,134 @@
    "lon": 6.10683,
    "from": "2026-10-04",
    "to": "2026-10-04",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-5veSkct9iGOmxDPTzh6c",
+   "name": "teNir",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HqdD3l2u3ewkDkNEsIPB",
+   "name": "Sum – poésie sonore et gestuelle pour petits corps",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    13,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-AqYl3zUXFXBGnavjJvuI",
+   "name": "Together we groove",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    13,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JOpU967bIGzY6bGjV1l9",
+   "name": "ONa- Vague",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    14,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9isut1dtWuH2j9cj180F",
+   "name": "Sum – poésie sonore et gestuelle pour petits corps",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-LhhC0nAvLH8TBZmhTT20",
+   "name": "teNir",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9MMCdPE4mdJr1lozLkgL",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-mgs427YVgh7r9z2Ibt9D",
+   "name": "E-Banking",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-05",
+   "to": "2026-10-05",
    "hours": [
     10,
     12
