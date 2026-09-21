@@ -5,7 +5,10 @@ import { fracColor } from '../lib/colors.js'
 const props = defineProps({
   station: { type: Object, required: true }, // live station
   display: { type: Object, required: true }, // {frac, bikes, kind} at scrub time
-  series: { type: Array, required: true }, // [{t, frac, bikes, kind}] hourly, 24h
+  series: { type: Array, required: true }, // [{t, frac, bikes, kind}] hourly, a 48 h window
+  seriesStartH: { type: Number, default: 0 }, // hours from now at which the window starts (0 = starts at the live value)
+  target: { type: Date, default: null }, // the scrubbed moment, marked on the chart
+  updatedAt: { type: Date, default: null }, // when the app last pulled the live feed
   offsetHours: { type: Number, required: true },
   rebalance: { type: Object, default: null }, // {dir: 'up'|'down', pct} for the displayed hour
   odds: { type: Object, default: null }, // {p1, p3} birth–death probabilities for the scrubbed time
@@ -33,6 +36,20 @@ const lastReported = computed(() => {
   return `${Math.round(mins / 60)} h ago`
 })
 
+// What matters to the reader is how fresh the counts are: the app re-pulls
+// the feed every minute. The feed's own per-station "last_reported" stamp is
+// refreshed by JCDecaux in batches (hours apart even while counts change),
+// so it only goes in the tooltip.
+const feedChecked = computed(() =>
+  props.updatedAt
+    ? props.updatedAt.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+    : null
+)
+const feedTitle = computed(
+  () =>
+    `Live counts are re-read from the vel'OH! feed every minute. The station's own "last reported" stamp in that feed is ${lastReported.value} — JCDecaux refreshes it in batches, so it says little about how fresh the counts are.`
+)
+
 // Sparkline geometry (SVG 260×64)
 const W = 260
 const H = 64
@@ -53,27 +70,44 @@ const path = computed(() => {
 
 const dot = computed(() => {
   const pts = props.series
-  // series is hourly — snap the (possibly fractional/negative) offset
-  const idx = Math.min(Math.max(Math.round(props.offsetHours), 0), pts.length - 1)
-  if (!pts.length) return null
+  if (pts.length < 2) return null
+  // position within the hourly window; the scrub moves in 10-min steps, so
+  // glide between the hourly points instead of jumping once an hour
+  const at = props.target ?? pts[0].t
+  // scrubbed into the past: the chart is a forecast, there is nothing to mark
+  if (at.getTime() < pts[0].t.getTime() - 60_000) return null
+  const pos = Math.min(Math.max((at.getTime() - pts[0].t.getTime()) / 3.6e6, 0), pts.length - 1)
+  const i = Math.min(Math.floor(pos), pts.length - 2)
+  const f = pos - i
+  const frac = pts[i].frac * (1 - f) + pts[i + 1].frac * f
   const step = (W - 2 * PAD) / (pts.length - 1)
-  const p = pts[idx]
-  return { x: PAD + idx * step, y: H - PAD - p.frac * (H - 2 * PAD), p }
+  // inside the window the label is the scrubbed moment itself (same number as
+  // the big count); off its edges (history) it falls back to the nearest point
+  const inside = at.getTime() >= pts[0].t.getTime() && at.getTime() <= pts.at(-1).t.getTime()
+  const p = inside ? { t: at, bikes: props.display.bikes } : pts[Math.round(pos)]
+  return { x: PAD + pos * step, y: H - PAD - frac * (H - 2 * PAD), p }
 })
 
+const clock = (d) => d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+// once the window has slid off today the weekday alone is ambiguous — add the date
 const fmtTick = (d, withDay) =>
-  withDay
-    ? `${d.toLocaleDateString('en-GB', { weekday: 'short' })} ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`
-    : d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+  !withDay
+    ? clock(d)
+    : props.seriesStartH > 0
+      ? `${d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric' })} ${clock(d)}`
+      : `${d.toLocaleDateString('en-GB', { weekday: 'short' })} ${clock(d)}`
 
 // exact clock times on the chart: the marked moment + the axis ends
 const sparkInfo = computed(() => {
   const pts = props.series
   if (pts.length < 3) return null
   const d = dot.value
+  const day = (t, month) =>
+    t.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', ...(month ? { month: 'short' } : {}) })
   return {
+    title: props.seriesStartH > 0 ? `${day(pts[0].t)} → ${day(pts.at(-1).t, true)}` : 'Next 48 h',
     at: d ? `${fmtTick(d.p.t, true)} · ${d.p.bikes} 🚲` : '',
-    ticks: [fmtTick(pts[0].t, false), fmtTick(pts[Math.floor(pts.length / 2)].t, true), fmtTick(pts.at(-1).t, true)],
+    ticks: [fmtTick(pts[0].t, props.seriesStartH > 0), fmtTick(pts[Math.floor(pts.length / 2)].t, true), fmtTick(pts.at(-1).t, true)],
   }
 })
 </script>
@@ -106,7 +140,7 @@ const sparkInfo = computed(() => {
 
     <div class="spark">
       <div class="spark-head">
-        <span>Next 48 h</span>
+        <span>{{ sparkInfo?.title ?? 'Next 48 h' }}</span>
         <span class="at">{{ sparkInfo?.at }}</span>
       </div>
       <svg :viewBox="`0 0 ${W} ${H}`" preserveAspectRatio="none">
@@ -141,7 +175,7 @@ const sparkInfo = computed(() => {
         rel="noopener"
         title="Official vel'OH! map — opens the app on phones where it's installed"
       >vel'OH! app ↗</a>
-      <span class="dim">updated {{ lastReported }}</span>
+      <span v-if="feedChecked" class="dim" :title="feedTitle">live feed read {{ feedChecked }}</span>
     </div>
   </aside>
 </template>
@@ -154,7 +188,9 @@ const sparkInfo = computed(() => {
   z-index: 11;
   width: 312px;
   padding: 20px;
-  max-height: calc(100% - 220px);
+  /* top 96 + the scrubber zone below (18 px offset + ~179 px scrubber + gap):
+     never cover its Now / calendar buttons — the panel scrolls instead */
+  max-height: calc(100% - 301px);
   overflow-y: auto;
 }
 
@@ -164,7 +200,7 @@ const sparkInfo = computed(() => {
     left: 10px;
     right: 10px;
     width: auto;
-    max-height: 55vh;
+    max-height: min(55vh, calc(100% - 84px - 240px));
   }
 }
 

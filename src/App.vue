@@ -10,7 +10,6 @@ import { fetchWeather, forecastAt } from './lib/weather.js'
 import {
   loadProfiles,
   predict,
-  predictSeries,
   globalMeanFraction,
   predictDistribution,
   probAtLeast,
@@ -99,8 +98,16 @@ let geoWatchId = null
 async function refreshStations() {
   try {
     stations.value = await fetchStations()
-    updatedAt.value = new Date()
-    now.value = new Date()
+    const fresh = new Date()
+    updatedAt.value = fresh
+    // a scrubbed moment stays put on the clock while "now" moves on
+    if (offsetHours.value !== 0) {
+      const next = offsetHours.value - (fresh.getTime() - now.value.getTime()) / 3.6e6
+      // a future pick the clock has caught up with becomes live (not "history",
+      // e.g. after the laptop slept); a past pick stops at the −24 h history edge
+      offsetHours.value = offsetHours.value > 0 && next <= 0 ? 0 : Math.max(-24, next)
+    }
+    now.value = fresh
     error.value = ''
   } catch (e) {
     error.value = `Live feed unavailable: ${e.message}`
@@ -648,13 +655,25 @@ const selectedDisplay = computed(() => {
   })
 })
 
+// Hourly forecasts for the panel chart: a fixed 48 h window that slides with
+// the scrub (selected moment centred once it passes the middle) instead of
+// growing — the curve keeps its resolution however far ahead you look.
+const SERIES_H = 48
+const seriesStartH = computed(() => Math.max(0, Math.floor(offsetHours.value) - SERIES_H / 2))
 const selectedSeries = computed(() => {
-  if (!selectedStation.value) return []
-  // at least 48 h; grows with the scrub so the dot always stays on the chart
-  const hours = Math.min(14 * 24, Math.max(48, Math.ceil(offsetHours.value) + 24))
-  return predictSeries(selectedStation.value, hours, predictionCtx.value, (t) =>
-    forecastAt(weather.value, t)
-  )
+  const st = selectedStation.value
+  if (!st) return []
+  const ctx = predictionCtx.value
+  // from "now" (the live value) while the window still starts today; once it
+  // has slid ahead, on whole clock hours so the axis reads 17:00, not 17:22
+  const slidMs = ctx.now.getTime() + seriesStartH.value * 3.6e6
+  const startMs = seriesStartH.value > 0 ? Math.floor(slidMs / 3.6e6) * 3.6e6 : slidMs
+  const out = []
+  for (let h = 0; h <= SERIES_H; h++) {
+    const t = new Date(startMs + h * 3.6e6)
+    out.push({ t, ...predict(st, t, { ...ctx, forecast: forecastAt(weather.value, t) }) })
+  }
+  return out
 })
 
 // Birth–death odds for the scrubbed future moment: full probability
@@ -757,6 +776,9 @@ const rebalanceHint = computed(() => {
       :station="selectedStation"
       :display="selectedDisplay"
       :series="selectedSeries"
+      :series-start-h="seriesStartH"
+      :target="target"
+      :updated-at="updatedAt"
       :offset-hours="offsetHours"
       :rebalance="rebalanceHint"
       :odds="availabilityOdds"
@@ -960,7 +982,7 @@ const rebalanceHint = computed(() => {
 .locate {
   position: absolute;
   right: 10px;
-  bottom: 252px;
+  bottom: 298px;
   z-index: 10;
   width: 40px;
   height: 40px;
@@ -1037,15 +1059,15 @@ const rebalanceHint = computed(() => {
    chip — stack the chip above it instead. */
 @media (max-width: 1120px) {
   .route-chip {
-    bottom: 142px;
+    bottom: 188px;
   }
 
   .wx-badge {
-    bottom: 200px;
+    bottom: 246px;
   }
 
   .radar-legend {
-    bottom: 264px;
+    bottom: 310px;
   }
 }
 </style>

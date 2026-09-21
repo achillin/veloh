@@ -263,7 +263,7 @@ function fitToStations() {
   if (!map || !props.stations.length) return
   const bounds = new maplibregl.LngLatBounds()
   for (const s of props.stations) bounds.extend([s.lon, s.lat])
-  map.fitBounds(bounds, { padding: { top: 90, bottom: 130, left: 60, right: 60 }, maxZoom: 13.5 })
+  map.fitBounds(bounds, { padding: { top: 90, bottom: 176, left: 60, right: 60 }, maxZoom: 13.5 })
 }
 
 let didFit = false

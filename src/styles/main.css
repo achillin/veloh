@@ -241,7 +241,7 @@ body,
 /* keep zoom controls clear of the bottom-right time scrubber
    (extra specificity: maplibre's stylesheet loads after this one) */
 .maplibregl-map .maplibregl-ctrl-bottom-right {
-  bottom: 136px;
+  bottom: 182px;
 }
 
 .maplibregl-ctrl-group button span {
