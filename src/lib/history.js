@@ -14,15 +14,20 @@ function parseRecent(j) {
   return j.snapshots.map((snap) => ({ t: new Date(snap.t), s: snap.s }))
 }
 
+let localMissing = false // a deployed build has no local file — ask once, not every minute
+
 export async function fetchRecentHistory() {
-  try {
-    const res = await fetch(`${import.meta.env.BASE_URL}recent.json`, { headers: { Accept: 'application/json' } })
-    if (res.ok && (res.headers.get('content-type') ?? '').includes('json')) {
-      const parsed = parseRecent(await res.json())
-      if (parsed?.length) return parsed
+  if (!localMissing) {
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}recent.json`, { headers: { Accept: 'application/json' } })
+      if (res.ok && (res.headers.get('content-type') ?? '').includes('json')) {
+        const parsed = parseRecent(await res.json())
+        if (parsed?.length) return parsed
+      }
+      if (res.status === 404) localMissing = true
+    } catch {
+      /* fall through to the remote copy */
     }
-  } catch {
-    /* fall through to the remote copy */
   }
   try {
     const res = await fetch(REMOTE_RECENT)
