@@ -5,3 +5,6 @@ dist/
 
 # rolling history window, machine-local (written by the collector)
 public/recent.json
+
+# raw backtest dumps of model/experiments/*.mjs
+model/experiments/out/

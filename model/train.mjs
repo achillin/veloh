@@ -355,6 +355,145 @@ export function buildProfiles(lines, capacities, events = []) {
     }
   }
 
+  // ---- the predictor's profile base, mirrored ----
+  // Shrunk station fraction plus the learned event shift, computed from the
+  // emitted (rounded) numbers exactly like src/lib/predictor.js does, so the
+  // two fits below are calibrated against what the app will really use.
+  const SHRINK_K = 8 // as predictor.js
+  const EVENT_DELTA_CAP = 0.35 // as predictor.js
+  const round4 = (v) => +v.toFixed(4)
+  const shrunk = new Map() // id → Map(key → shrunk fraction)
+  for (const [id, byKey] of stations) {
+    const m = new Map()
+    for (const [key, s] of byKey) {
+      m.set(key, (s.n * round4(s.mean) + SHRINK_K * round4(global.get(key).mean)) / (s.n + SHRINK_K))
+    }
+    shrunk.set(id, m)
+  }
+  const baseFrac = (id, key, active) => {
+    const f = shrunk.get(id)?.get(key)
+    if (f == null) return null
+    let delta = 0
+    for (const ev of eventsNear(active, capacities[id])) delta += eventEffects[ev.venue]?.[0] ?? 0
+    delta = Math.max(-EVENT_DELTA_CAP, Math.min(EVENT_DELTA_CAP, delta))
+    return Math.min(Math.max(f + delta, 0), 1)
+  }
+
+  // ---- calibrated live/profile blend weights ----
+  // MAE-optimal weight of the live count per forecast horizon and per ORIGIN
+  // bucket, fitted on these very snapshots: one origin per hour, all
+  // stations, w on a 0.05 grid. Each bucket's loss curve is shrunk toward the
+  // global one with BLEND_K pseudo-samples before taking the argmin. The
+  // learned curve is not geometric (which is what the rho path-product
+  // assumes): ~1 at 1 h, a floor around 12–18 h and a rise again at 24 h,
+  // where station-level offsets recur with the daily cycle.
+  const BLEND_H = [1, 2, 3, 4, 6, 9, 12, 18, 24, 30, 36, 42, 48]
+  const BLEND_K = 1000
+  const BLEND_MIN_N = 500 // per horizon, else the predictor keeps the rho path
+  const BLEND_TOL_MS = 7.5 * 60_000
+  const W_STEPS = 21
+  const timeline = lines.map((l) => ({ ms: Date.parse(l.t), line: l })).sort((a, b) => a.ms - b.ms)
+  const nearest = (ms) => {
+    let lo = 0
+    let hi = timeline.length - 1
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1
+      if (timeline[mid].ms < ms) lo = mid + 1
+      else hi = mid
+    }
+    let best = null
+    for (const c of [timeline[lo - 1], timeline[lo]]) {
+      if (c && (!best || Math.abs(c.ms - ms) < Math.abs(best.ms - ms))) best = c
+    }
+    return best && Math.abs(best.ms - ms) <= BLEND_TOL_MS ? best : null
+  }
+  const lossG = new Map(BLEND_H.map((h) => [h, { abs: new Float64Array(W_STEPS), n: 0 }]))
+  const lossB = new Map() // `${h}|${originKey}` → {abs, n}
+  const firstMs = timeline[0]?.ms ?? 0
+  const lastMs = timeline.at(-1)?.ms ?? 0
+  for (let t = Math.ceil(firstMs / 3600_000) * 3600_000; t <= lastMs; t += 3600_000) {
+    const origin = nearest(t)
+    if (!origin) continue
+    const key0 = bucketKey(origin.line.t)
+    for (const h of BLEND_H) {
+      const target = nearest(origin.ms + h * 3600_000)
+      if (!target) continue
+      const key1 = bucketKey(target.line.t)
+      const active = events.length ? activeEventsAt(events, new Date(target.ms)) : []
+      const g = lossG.get(h)
+      let b = lossB.get(`${h}|${key0}`)
+      if (!b) lossB.set(`${h}|${key0}`, (b = { abs: new Float64Array(W_STEPS), n: 0 }))
+      for (const [id, [actual]] of Object.entries(target.line.s)) {
+        const cap = capacities[id]?.capacity
+        const rec = origin.line.s[id]
+        if (!cap || !rec) continue
+        const base = baseFrac(id, key1, active)
+        if (base == null) continue
+        const live = Math.min(rec[0] / cap, 1)
+        for (let i = 0; i < W_STEPS; i++) {
+          const w = i / (W_STEPS - 1)
+          const e = Math.abs(Math.round((w * live + (1 - w) * base) * cap) - actual)
+          g.abs[i] += e
+          b.abs[i] += e
+        }
+        g.n++
+        b.n++
+      }
+    }
+  }
+  const bestW = (abs) => +(abs.indexOf(Math.min(...abs)) / (W_STEPS - 1)).toFixed(2)
+  let blend = null
+  if (BLEND_H.every((h) => lossG.get(h).n >= BLEND_MIN_N)) {
+    blend = { horizons: BLEND_H, global: {}, byKey: {} }
+    for (const h of BLEND_H) blend.global[h] = bestW(lossG.get(h).abs)
+    for (const [k, b] of lossB) {
+      const [hs, key] = k.split('|')
+      const g = lossG.get(Number(hs))
+      ;(blend.byKey[key] ??= {})[hs] = bestW(b.abs.map((v, i) => v + (BLEND_K * g.abs[i]) / g.n))
+    }
+    for (const row of Object.values(blend.byKey)) {
+      for (const h of BLEND_H) row[h] ??= blend.global[h]
+    }
+  }
+
+  // ---- recent per-station bias ----
+  // Mean residual (actual − profile base) of the last BIAS_DAYS per
+  // station × bucket, shrunk on the number of distinct days d/(d + BIAS_K) —
+  // the minute snapshots within an hour are ~one observation, not 60. A cheap
+  // adapter for regime changes (holidays ending, la rentrée) that the
+  // full-history means lag behind. Near-zero cells are dropped to keep the
+  // file small.
+  const BIAS_DAYS = 7
+  const BIAS_K = 3
+  const BIAS_MIN = 0.005
+  const biasAcc = new Map() // id → Map(key → {sum, n, days:Set})
+  for (const { ms, line } of timeline) {
+    if (ms < lastMs - BIAS_DAYS * 86400_000) continue
+    const key = bucketKey(line.t)
+    const day = line.t.slice(0, 10)
+    const active = events.length ? activeEventsAt(events, new Date(ms)) : []
+    for (const [id, [bikes]] of Object.entries(line.s)) {
+      const cap = capacities[id]?.capacity
+      if (!cap) continue
+      const base = baseFrac(id, key, active)
+      if (base == null) continue
+      let byKey = biasAcc.get(id)
+      if (!byKey) biasAcc.set(id, (byKey = new Map()))
+      let a = byKey.get(key)
+      if (!a) byKey.set(key, (a = { sum: 0, n: 0, days: new Set() }))
+      a.sum += Math.min(bikes / cap, 1) - base
+      a.n++
+      a.days.add(day)
+    }
+  }
+  const bias = {}
+  for (const [id, byKey] of biasAcc) {
+    for (const [key, a] of byKey) {
+      const v = (a.sum / a.n) * (a.days.size / (a.days.size + BIAS_K))
+      if (Math.abs(v) >= BIAS_MIN) (bias[id] ??= {})[key] = round4(v)
+    }
+  }
+
   const clampRho = (r) => +Math.min(Math.max(r, 0.01), 0.995).toFixed(4)
   const decay =
     dDen > 0 && dN >= 500
@@ -378,6 +517,8 @@ export function buildProfiles(lines, capacities, events = []) {
         ? { delta: +(wet.mean - dry.mean).toFixed(4), wetN: wet.n, dryN: dry.n }
         : null,
     decay,
+    blend,
+    bias: Object.keys(bias).length ? bias : null,
     flows,
     eventEffects: Object.keys(eventEffects).length ? eventEffects : null,
     rebalance: Object.keys(rebalance).length ? rebalance : null,
@@ -406,7 +547,9 @@ async function main() {
     `trained on ${out.snapshots} snapshots (${out.range.from} → ${out.range.to})\n` +
       `stations: ${Object.keys(out.stations).length}, buckets: ${Object.keys(out.global).length}, ` +
       `rain model: ${out.rain ? 'yes' : 'not enough data yet'}, ` +
-      `event venues learned: ${Object.keys(out.eventEffects ?? {}).length}\n→ ${OUT}`
+      `event venues learned: ${Object.keys(out.eventEffects ?? {}).length}\n` +
+      `blend w(h): ${out.blend ? Object.entries(out.blend.global).map(([h, w]) => `${h}h ${w}`).join(' ') : 'not enough data yet'}, ` +
+      `bias cells: ${Object.values(out.bias ?? {}).reduce((n, byKey) => n + Object.keys(byKey).length, 0)}\n→ ${OUT}`
   )
 }
 

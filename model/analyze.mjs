@@ -8,14 +8,13 @@
 // live-vs-profile blend weight for the MAE-optimal value, and checks the
 // calibration of P(≥1 bike).
 //
-// Usage: node model/analyze.mjs --from 2026-09-17 [--to 2026-09-17] [--step 15] [--out file.json]
+// Usage: node model/analyze.mjs --from 2026-09-17 [--to 2026-09-17] [--step 15] [--horizons 1,3,6,24] [--out file.json]
 //   dates are Europe/Luxembourg calendar days; the window is [from 00:00, to 24:00)
 
 import { writeFile } from 'node:fs/promises'
 import { loadSnapshotLines, loadCapacities, buildProfiles, loadEventCalendar } from './train.mjs'
 import { predict, predictDistribution, probAtLeast } from '../src/lib/predictor.js'
 
-const HORIZONS_H = [1, 3, 6, 24]
 const LOOKUP_TOL_MS = 7.5 * 60_000
 const JUMP = 4 // |Δbikes| within the horizon at/above this ≈ a rebalancing visit
 
@@ -51,6 +50,9 @@ function luxMidnightMs(day) {
   }
   return guess
 }
+
+// --horizons 1,3,6,24 (hours); P(>=1) calibration is reported for 1 h and 6 h when present
+const HORIZONS_H = args.horizons ? String(args.horizons).split(",").map(Number).filter((h) => h > 0) : [1, 3, 6, 24]
 
 const yesterday = new Date(Date.now() - 86400_000).toISOString().slice(0, 10)
 const FROM = args.from ?? yesterday
@@ -170,7 +172,7 @@ async function main() {
       const baseDate = new Date(Date.parse(baseLine.t))
       const hour = luxParts(targetDate).hour % 24
       const globalLiveMean = liveGlobalMean(baseLine, capacities)
-      const farBase = new Date(targetDate.getTime() - 13 * 3600_000) // beyond the blend horizon → pure profile
+      const farBase = new Date(targetDate.getTime() - 49 * 3600_000) // beyond the 48 h blend horizon → pure profile
       for (const [id, [actual]] of Object.entries(actualLine.s)) {
         const cap = capacities[id]?.capacity
         const base = baseLine.s[id]

@@ -1,11 +1,15 @@
 // Availability predictor.
 //
 // Sources, blended by what is available:
-//   1. Live snapshot (GBFS) — exact "now", decays over ~6 h (persistence).
+//   1. Live snapshot (GBFS) — exact "now"; its weight follows the learned
+//      blend table (calibrated per horizon × origin bucket, out to 48 h).
 //   2. Learned profiles (public/model/profiles.json, built by model/train.mjs
 //      from collected snapshots) — mean availability fraction per
-//      station × dayType × hour, shrunk toward the system-wide profile.
+//      station × dayType × hour, shrunk toward the system-wide profile, plus
+//      the station's mean residual of the last week (profiles.bias).
 //   3. Prior — system-wide live mean when nothing has been learned yet.
+//   4. Up to 6 h ahead, the median of the birth–death distribution (below)
+//      is averaged into the point forecast, tapering out by ~9 h.
 //
 // Fractions are bikes / capacity, clamped to [0, 1].
 
@@ -17,6 +21,13 @@ const PERSISTENCE_HOURS = 2.5 // legacy e-folding time, used only without learne
 const PERSISTENCE_HORIZON_H = 6 // legacy blend horizon
 const LEARNED_HORIZON_H = 12 // blend horizon when decay was measured from data
 const DECAY_SHRINK_K = 300 // pseudo-pairs pulling a bucket's rho toward the global one
+const BLEND_HORIZON_H = 48 // the blend table is fitted this far; pure profile beyond
+const BLEND_TAIL_H = 6 // a table that stops earlier fades out over this long
+// up to a nominal 6 h the point forecast averages in the flow-model median
+// (the slack keeps a "+6 h" target inside despite minute-level timestamp
+// jitter); its share then tapers to nothing by HYBRID_END_H
+const HYBRID_FULL_H = 6.25
+const HYBRID_END_H = 9.25
 const RAIN_FULL_TRUST_H = 24 // precipitation forecasts carry full weight up to here…
 const RAIN_ZERO_TRUST_H = 48 // …then fade linearly to nothing (day-2 skill is marginal)
 
@@ -88,6 +99,36 @@ function bucketRho(profiles, date) {
   return Math.min(Math.max(rho, 0.01), 0.995)
 }
 
+/** Calibrated live weight from the learned blend table (MAE-optimal per
+ *  horizon, fitted by model/train.mjs up to 48 h): the row of the ORIGIN
+ *  bucket, or the global row, linear between the fitted horizons with an
+ *  implicit (0 h, 1) knot. Nothing is assumed past the last fitted horizon —
+ *  the weight there just fades out (the 24 h bump is a same-hour-next-day
+ *  recurrence; holding it further measurably hurt the 30–42 h forecasts). */
+function tableWeight(blend, now, dtH) {
+  const row = blend.byKey?.[profileKey(now)] ?? blend.global
+  let h0 = 0
+  let w0 = 1
+  for (const h of blend.horizons) {
+    const w1 = row[h] ?? blend.global[h]
+    if (w1 == null) continue
+    if (dtH <= h) return w0 + ((w1 - w0) * (dtH - h0)) / (h - h0)
+    h0 = h
+    w0 = w1
+  }
+  return w0 * Math.max(0, 1 - (dtH - h0) / BLEND_TAIL_H)
+}
+
+/** Median of a distribution vector: the smallest count with CDF ≥ 0.5. */
+function distMedian(p) {
+  let cum = 0
+  for (let i = 0; i < p.length; i++) {
+    cum += p[i]
+    if (cum >= 0.5) return i
+  }
+  return p.length - 1
+}
+
 /**
  * Predict one station's availability at `target`.
  * @returns {{ frac: number, bikes: number, kind: 'live'|'blend'|'learned'|'prior' }}
@@ -115,21 +156,29 @@ export function predict(station, target, ctx) {
     Math.max(
       base +
         rainAdjustment(profiles, forecast, dtH) +
-        eventAdjustment(profiles, station, target, ctx),
+        eventAdjustment(profiles, station, target, ctx) +
+        // recent residual of this station × bucket (last week vs the long profile)
+        (profiles?.bias?.[station.id]?.[key] ?? 0),
       0
     ),
     1
   )
 
   let frac = base
-  const horizon = profiles?.decay ? LEARNED_HORIZON_H : PERSISTENCE_HORIZON_H
+  // anything but a well-formed table falls back to the rho path below
+  const b = profiles?.blend
+  const blend = b?.global && Array.isArray(b.horizons) && b.horizons.length ? b : null
+  const horizon = blend ? BLEND_HORIZON_H : profiles?.decay ? LEARNED_HORIZON_H : PERSISTENCE_HORIZON_H
   if (dtH < horizon) {
     let w
-    const rho0 = bucketRho(profiles, now)
-    if (rho0 != null) {
-      // the anomaly decays through every hour it traverses — multiply the
-      // per-bucket survival rates along the path (night hours barely decay,
-      // rush hours decay fast; measured, not assumed)
+    const rho0 = blend ? null : bucketRho(profiles, now)
+    if (blend) {
+      w = tableWeight(blend, now, dtH)
+    } else if (rho0 != null) {
+      // profiles without a blend table: the anomaly decays through every
+      // hour it traverses — multiply the per-bucket survival rates along the
+      // path (night hours barely decay, rush hours decay fast; measured, not
+      // assumed)
       w = 1
       let remaining = dtH
       for (let i = 0; remaining > 0 && i < 24; i++) {
@@ -141,7 +190,26 @@ export function predict(station, target, ctx) {
       w = Math.exp(-dtH / PERSISTENCE_HOURS)
     }
     frac = w * liveFrac + (1 - w) * base
-    if (w > 0.35) kind = 'blend'
+    // "short-term estimate" is a near-range label: the table's next-day bump
+    // can lift w past the threshold again a day out
+    if (w > 0.35 && dtH <= LEARNED_HORIZON_H) kind = 'blend'
+  }
+
+  // short range: MAE is minimised by a median, and the birth–death model
+  // knows the walls at 0 and capacity that the linear blend ignores — average
+  // the two point forecasts (50/50 backtested best up to 6 h). The median's
+  // share then tapers off instead of stopping dead, so scrubbing across the
+  // boundary does not jump the count (and it backtests better at 7–9 h).
+  const share =
+    dtH <= HYBRID_FULL_H
+      ? 0.5
+      : dtH < HYBRID_END_H
+        ? (0.5 * (HYBRID_END_H - dtH)) / (HYBRID_END_H - HYBRID_FULL_H)
+        : 0
+  const med = share > 0 ? flowMedianAt(station, dtH, now, profiles) : null
+  if (med != null) {
+    frac = ((1 - share) * frac * cap + share * med) / cap
+    if (kind === 'learned') kind = 'blend' // half of it is seeded by the live count
   }
 
   return { frac, bikes: Math.round(frac * cap), kind }
@@ -184,6 +252,38 @@ function bucketFlows(profiles, station, date) {
   }
 }
 
+const SLICE_H = 1 / 12 // 5 minutes
+
+/** Advances `state` = { p, next } (two buffers that swap roles) by `dt` hours
+ *  at the given rates. */
+function evolveSlice(state, flows, dt, cap) {
+  // sub-divide so per-substep event probabilities stay well below 1
+  const sub = Math.max(1, Math.ceil((flows.lam + flows.mu) * dt / 0.25))
+  const a = (flows.lam * dt) / sub
+  const d = (flows.mu * dt) / sub
+  for (let s = 0; s < sub; s++) {
+    const { p, next } = state
+    next.fill(0)
+    for (let i = 0; i <= cap; i++) {
+      const pi = p[i]
+      if (!pi) continue
+      const up = i < cap ? a : 0 // full station: returns bounce away
+      const down = i > 0 ? d : 0 // empty station: nothing to rent
+      next[i] += pi * (1 - up - down)
+      if (up) next[i + 1] += pi * up
+      if (down) next[i - 1] += pi * down
+    }
+    state.p = next
+    state.next = p
+  }
+}
+
+function startState(station, cap) {
+  const p = new Float64Array(cap + 1)
+  p[Math.min(station.bikes, cap)] = 1
+  return { p, next: new Float64Array(cap + 1) }
+}
+
 /** Probability vector p[i] = P(i bikes at `target`), or null without flow
  *  data. Only meaningful for future targets. */
 export function predictDistribution(station, target, { now, profiles }) {
@@ -191,33 +291,44 @@ export function predictDistribution(station, target, { now, profiles }) {
   const cap = Math.max(station.capacity, 1)
   const totalH = (target.getTime() - now.getTime()) / 3.6e6
   if (totalH <= 0 || totalH > 49) return null
-  let p = new Array(cap + 1).fill(0)
-  p[Math.min(station.bikes, cap)] = 1
-
-  const SLICE_H = 1 / 12 // 5 minutes
+  const state = startState(station, cap)
   for (let elapsed = 0; elapsed < totalH; elapsed += SLICE_H) {
     const dt = Math.min(SLICE_H, totalH - elapsed)
     const flows = bucketFlows(profiles, station, new Date(now.getTime() + elapsed * 3.6e6))
-    if (!flows) continue
-    // sub-divide so per-substep event probabilities stay well below 1
-    const sub = Math.max(1, Math.ceil((flows.lam + flows.mu) * dt / 0.25))
-    const a = (flows.lam * dt) / sub
-    const d = (flows.mu * dt) / sub
-    for (let s = 0; s < sub; s++) {
-      const next = new Array(cap + 1).fill(0)
-      for (let i = 0; i <= cap; i++) {
-        const pi = p[i]
-        if (!pi) continue
-        const up = i < cap ? a : 0 // full station: returns bounce away
-        const down = i > 0 ? d : 0 // empty station: nothing to rent
-        next[i] += pi * (1 - up - down)
-        if (up) next[i + 1] += pi * up
-        if (down) next[i - 1] += pi * down
-      }
-      p = next
-    }
+    if (flows) evolveSlice(state, flows, dt, cap)
   }
-  return p
+  return Array.from(state.p)
+}
+
+// predict() wants the distribution's median for every station at every scrub
+// step inside the hybrid range. Consecutive targets share the whole prefix of
+// the evolution, so each (station, live count, origin) keeps one forward pass
+// that is extended on demand, with the median remembered per 5-minute slice.
+const medianTracks = new WeakMap() // profiles → Map(key → { p, next, medians })
+const TRACKS_MAX = 2000
+
+/** Median bike count of the birth–death model `dtH` hours after `now` (to
+ *  the nearest 5-minute slice), or null without flow data. */
+function flowMedianAt(station, dtH, now, profiles) {
+  if (!profiles?.flows) return null
+  const cap = Math.max(station.capacity, 1)
+  let tracks = medianTracks.get(profiles)
+  if (!tracks) medianTracks.set(profiles, (tracks = new Map()))
+  const key = `${station.id}|${station.bikes}|${cap}|${now.getTime()}`
+  let tr = tracks.get(key)
+  if (!tr) {
+    if (tracks.size >= TRACKS_MAX) tracks.clear() // origins move on every minute; old ones never come back
+    tr = { ...startState(station, cap), medians: [Math.min(station.bikes, cap)] }
+    tracks.set(key, tr)
+  }
+  const idx = Math.max(1, Math.round(dtH / SLICE_H))
+  while (tr.medians.length <= idx) {
+    const elapsed = (tr.medians.length - 1) * SLICE_H
+    const flows = bucketFlows(profiles, station, new Date(now.getTime() + elapsed * 3.6e6))
+    if (flows) evolveSlice(tr, flows, SLICE_H, cap)
+    tr.medians.push(distMedian(tr.p))
+  }
+  return tr.medians[idx]
 }
 
 /** P(at least k bikes) from a distribution vector. */
