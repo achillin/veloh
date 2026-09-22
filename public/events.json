@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-21T09:01:14.402Z",
+ "updated": "2026-09-22T08:36:26.653Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,54 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-s1FHFCu8YmhSSigUXxjJ",
-   "name": "Urchin (#CinémathèqueUnreleased)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-21",
-   "to": "2026-09-21",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-QRu8hriwzCuuqwf7TzGw",
-   "name": "Le double coup de bouchon – Une soirée de fête ininterrompue",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-09-21",
-   "to": "2026-09-21",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-vpXWjjSIJV0XT4quTZPI",
-   "name": "Days of Being Wild (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-21",
-   "to": "2026-09-21",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-oCa9jn5UiZYKjKChBxDm",
@@ -899,6 +851,22 @@
    "auto": true
   },
   {
+   "id": "echo-Gc3mJEZofPP5l65SjWX5",
+   "name": "Lunchtime at Mudam",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-etBBF8wypq6iV1tcO6US",
    "name": "Les Nuits en Or 2026 Partie - I (Festival des meilleurs cour",
    "venue": "Théâtre des Capucins",
@@ -1043,6 +1011,22 @@
    "auto": true
   },
   {
+   "id": "echo-q1EGKtWHRr3IER6lT3wG",
+   "name": "Event",
+   "venue": "Luxembourg-Ville - Square Jan Palach (Place d'armes)",
+   "lat": 49.6111701,
+   "lon": 6.1287048,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-Rlt4j18wjKwqOpDD0WqJ",
    "name": "Le luxembourgeois taillé dans la pierre",
    "venue": "Square Jan Palach",
@@ -1053,6 +1037,38 @@
    "hours": [
     10,
     11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-O2pGasZ9N550086wasBh",
+   "name": "Event",
+   "venue": "Luxembourg-Hollerich - Tramsmusée",
+   "lat": 49.5996619,
+   "lon": 6.1078835,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-wnp5bITQ4VrNC9NviRnh",
+   "name": "Event",
+   "venue": "Luxembourg-Hollerich - Tramsmusée",
+   "lat": 49.5996619,
+   "lon": 6.1078835,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    10,
+    12
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1517,6 +1533,22 @@
    "hours": [
     11,
     12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-GNo0LlLAdPdA2fkuu1z3",
+   "name": "Art Detectives | Art Course | Age: 7-11",
+   "venue": "Paladium - Le Fortuna ",
+   "lat": 49.60511475,
+   "lon": 6.131283708,
+   "from": "2026-09-27",
+   "to": "2026-09-27",
+   "hours": [
+    11,
+    13
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2387,6 +2419,22 @@
    "auto": true
   },
   {
+   "id": "echo-dLhxemyusbcSx1auhUtJ",
+   "name": "Sushi Class",
+   "venue": "Aka Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-KxuhYNbSwpSpLWTjpUil",
    "name": "Sushi Class",
    "venue": "Aka Cité",
@@ -2477,6 +2525,22 @@
    "hours": [
     15,
     16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Ny9o8GOjs7TuWPDbTgSM",
+   "name": "Nature’s Colours – fall edition",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    15,
+    17
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2595,7 +2659,7 @@
    "auto": true
   },
   {
-   "id": "echo-ynHatoMhHPb5fheBfdyc",
+   "id": "echo-xFt2zn3oUMQdqeLG7DSi",
    "name": "MAMAGOESDANCING",
    "venue": "Apoteca",
    "lat": 49.611369,
@@ -2637,6 +2701,22 @@
    "hours": [
     9,
     11
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-UbAKxnt6lDSmYwRSjZh7",
+   "name": "Kids Life Skills Open Day",
+   "venue": "Kids Life Skills - PwC Academy",
+   "lat": 49.5807114,
+   "lon": 6.122027399999999,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    9,
+    12
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -2712,6 +2792,22 @@
    "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
    "lat": 49.610139,
    "lon": 6.135987,
+   "from": "2026-10-04",
+   "to": "2026-10-04",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-6ifkuzbk4kxyNa9tUAXf",
+   "name": "Workshop | The Clay Workshop ",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
    "from": "2026-10-04",
    "to": "2026-10-04",
    "hours": [
@@ -2829,6 +2925,70 @@
    "hours": [
     10,
     12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-0O37PYK5xHAA0nMlZOd0",
+   "name": "Sans toit ni loi (Why We Love Cinema)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-05",
+   "to": "2026-10-05",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-KXyWNrwNVrALYAfoxbKG",
+   "name": "Social Dance with taster class at Rotondes",
+   "venue": "Buvette Rotondes",
+   "lat": 49.60065880000001,
+   "lon": 6.137488299999999,
+   "from": "2026-10-05",
+   "to": "2026-10-05",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lBsvByERXsNpEfRH36lG",
+   "name": "Rear Window (Bicentenaire de la photographie)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-05",
+   "to": "2026-10-05",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-FWEIjfIcpE4cX7yDJaIw",
+   "name": "Coach de retraite bénévole ",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    9,
+    16
    ],
    "radiusM": 400,
    "scale": "minor",
