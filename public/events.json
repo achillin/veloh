@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-22T08:36:26.653Z",
+ "updated": "2026-09-23T08:38:57.490Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,182 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-oCa9jn5UiZYKjKChBxDm",
-   "name": "Youth Theatre Classes in English",
-   "venue": "Ecole de Théâtre Luxembourg asbl",
-   "lat": 49.622857,
-   "lon": 6.184302,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-po7G34tCQWfFbPcfuyDK",
-   "name": "Home Organising – Simplifier votre vie !",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-UOQKCCweFN99dUXK5vg4",
-   "name": "Mardis Littéraires - Nicolas Bouvier",
-   "venue": "Cercle Cité – Auditoire Henri Beck",
-   "lat": 49.6114687,
-   "lon": 6.1301651,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Y0eM4bmQCy48bBTGqvLQ",
-   "name": "Event",
-   "venue": "Luxembourg Ville - Cercle Cité- Auditoire Henri Beck",
-   "lat": 49.6114687,
-   "lon": 6.1301651,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-4MPqOoVwp1gXIR5Z0WpT",
-   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
-   "venue": "Tiers-Lieu Bonnevoie",
-   "lat": 49.598646995,
-   "lon": 6.138618116,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-7yAMKg2Yvux1e7VFpnBR",
-   "name": "Eraserhead (Cinémathèque Film Club)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-y8h3mNlSqziP1haGM3Nl",
-   "name": "Theatre Open Session",
-   "venue": "55, avenue de la Liberté",
-   "lat": 49.6022598,
-   "lon": 6.132361400000001,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-HZW2kkEjWWGsdZd9otCI",
-   "name": "Improv Theatre: 6-week course for beginners",
-   "venue": "Café-Théâtre \"Rocas\"",
-   "lat": 49.613273,
-   "lon": 6.129617,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-mMVneOgUWlVIELVQtxSn",
-   "name": "Opening +",
-   "venue": "LUCA – Luxembourg Center for Architecture ",
-   "lat": 49.61348568998791,
-   "lon": 6.144871252600094,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-all5GIXZ1oS333veSWCo",
-   "name": "FILIPPO SPREAFICO ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-nTbNBKZQ7OHmahQyOrAu",
-   "name": "Trioon",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-09-22",
-   "to": "2026-09-22",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-SagEbBWmYCGvUvVwr9Wc",
@@ -1283,6 +1107,22 @@
    "auto": true
   },
   {
+   "id": "echo-Y5RHRgyMHU5qqBaJLAYu",
+   "name": "100 Joer Interesseveräin Rollengergronn-Millebaach",
+   "venue": "Centre Culturel Jean-François Boch",
+   "lat": 49.62027626819425,
+   "lon": 6.103599932124314,
+   "from": "2026-09-26",
+   "to": "2026-09-26",
+   "hours": [
+    12,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-B6JmE5AGEtpm8kOY4OlL",
    "name": "Fête 2gether",
    "venue": "parc laval",
@@ -1539,7 +1379,7 @@
    "auto": true
   },
   {
-   "id": "echo-GNo0LlLAdPdA2fkuu1z3",
+   "id": "echo-hJHMJvpDmmPCYoXfk21m",
    "name": "Art Detectives | Art Course | Age: 7-11",
    "venue": "Paladium - Le Fortuna ",
    "lat": 49.60511475,
@@ -1779,7 +1619,7 @@
    "auto": true
   },
   {
-   "id": "echo-N180Q5RNddtpOuOgW6tX",
+   "id": "echo-uuuJk618IZpwGJilvlho",
    "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
    "venue": "Tiers-Lieu Bonnevoie",
    "lat": 49.598646995,
@@ -2499,6 +2339,22 @@
    "auto": true
   },
   {
+   "id": "echo-AAfOKhAcLmi2ykhnfFLk",
+   "name": "Mushroom Foraging & Risotto Experience in Luxembourg",
+   "venue": "La Dante Alighieri Luxembourg",
+   "lat": 49.607620014,
+   "lon": 6.136366519,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    14,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-2mujQo5IDK9AaZmSZhGA",
    "name": "Sum – poésie sonore et gestuelle pour petits corps",
    "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
@@ -2989,6 +2845,182 @@
    "hours": [
     9,
     16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-CQKN0sVxOS6HLrae4aUM",
+   "name": "Smartphone 2",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JMVipbFn3iBQd1jkxMlS",
+   "name": " Sous-Sols en tension ",
+   "venue": "Musée national d'histoire naturelle – Naturmusée",
+   "lat": 49.6097155,
+   "lon": 6.135622,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-UcthEHbtk1L6MQjW4nM1",
+   "name": "Virstellung vum KI-Kompass",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lJLnjWuAeSv220Tj9cd2",
+   "name": "My Darling Clementine (Great Restorations)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-RoMIEx9wVajNc8gnsndj",
+   "name": "Mardis Littéraires - Jemp Schuster",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-VCgJZXgp5f8j9gNUqMH9",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-dZqREZ3zXAumFyL72vAN",
+   "name": "La correspondance du couple Freud mise à nu",
+   "venue": "Institut Pierre Werner",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gjO40NymlxrpzA9GWJRk",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ytqTmV9cDgZ6zwjL4qRH",
+   "name": "BOARD GAME NIGHTS at De Gudde Wëllen",
+   "venue": "De Gudde Wëllen Culture Club",
+   "lat": 49.6093076511473,
+   "lon": 6.133510387672515,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DTO3ASma6R3kvosPntpu",
+   "name": "Alps (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-bI4chOJ8pGfuCk8TjEXo",
+   "name": "Sascha Ley & Murat Öztürk",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-06",
+   "to": "2026-10-06",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
