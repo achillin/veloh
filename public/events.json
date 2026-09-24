@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-23T08:38:57.490Z",
+ "updated": "2026-09-24T08:31:40.362Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,118 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-SagEbBWmYCGvUvVwr9Wc",
-   "name": "Meet the Winners! Ideas, Approaches and Project Stories",
-   "venue": "luca – Luxembourg Center for Architecture ",
-   "lat": 49.61348568998791,
-   "lon": 6.144871252600094,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-xErhxS6QR9r52t9hcdgs",
-   "name": "La Famille Bélier (Séance spéciale)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Jl53a3Xm3DWbCxPE14gp",
-   "name": "Wednesday’s Book Club",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-h1xhFfq8GzLHv6RB93WB",
-   "name": "A DECADE ",
-   "venue": "Galerie Artskoco",
-   "lat": 49.608715,
-   "lon": 6.098721,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Fu8YNhPFZ0qFupamEnky",
-   "name": "1986zig",
-   "venue": "den Atelier",
-   "lat": 49.598747,
-   "lon": 6.126118,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-4nPpOMBxlM9rWnec87D4",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-J6WU2TgjsDy6QAi5XBIZ",
-   "name": "High Life (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-23",
-   "to": "2026-09-23",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-MuX9OYUBdZiwMH3E7Pio",
@@ -717,6 +605,22 @@
    "hours": [
     18,
     21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-JWu7iOv57fDUvog1k6WR",
+   "name": "Celebration of the European Day of Languages",
+   "venue": "Parlement européen au Luxembourg",
+   "lat": 49.6205819,
+   "lon": 6.1461397,
+   "from": "2026-09-25",
+   "to": "2026-09-25",
+   "hours": [
+    18,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -1832,6 +1736,22 @@
    "venue": "Mirador",
    "lat": 49.612297,
    "lon": 6.1391179,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Dq8Xe5ccv1CCnnPcS7IL",
+   "name": "Die Zumutung der Liebe",
+   "venue": "Kasemattentheater",
+   "lat": 49.597781,
+   "lon": 6.135099,
    "from": "2026-09-30",
    "to": "2026-09-30",
    "hours": [
@@ -3021,6 +2941,118 @@
    "hours": [
     20,
     23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-twjx03Zy4yir7a8TYaMC",
+   "name": "Préparation à la retraite",
+   "venue": "Gero - Kompetenzzenter fir den Alter",
+   "lat": 49.5972234,
+   "lon": 6.1343843,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    12,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-FwiNRvxiLCKuDGF5vFjP",
+   "name": "Smartphone 2",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-7hvtshR305GO7tgIfyNt",
+   "name": "Philo-Café",
+   "venue": "De Gudde Wëllen Culture Club",
+   "lat": 49.6093076511473,
+   "lon": 6.133510387672515,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-G0z9IJaSlSLATtGGVY5K",
+   "name": "HISTOFEST. History on Full Blast ",
+   "venue": "Europa Experience",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    17,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-9NoxGCC2AFDxuUAGOnCR",
+   "name": "Magellan (#CinémathèqueUnreleased)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-DWmN6dlHOUxArw951LkX",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-ZiL6dPnId6SV5kB3Ehhs",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    20,
+    22
    ],
    "radiusM": 400,
    "scale": "minor",
