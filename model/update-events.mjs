@@ -89,7 +89,34 @@ function toEvent(hit) {
     radiusM: MINOR_RADIUS_M,
     scale: 'minor',
     auto: true,
+    // what echo.lu knows about the draw of the event — the raw material for
+    // weighting events by their expected crowd rather than one flat delta
+    cat: raw.categories?.[0] ?? null, // e.g. concerts, arts-scene-theatre, nightlife
+    venueCat: hit.rawVenues?.[0]?.categories?.[0] ?? null, // e.g. cultural-center, bar
+    views: hit.views ?? null, // echo.lu page views so far — the closest thing to attendance
+    free: !!hit.isFree,
   }
+}
+
+// Past instances would otherwise vanish from the calendar the morning after
+// (the 14-day query only returns what is still ahead), so the trainer could
+// never learn what a concert at den Atelier does to the stations around it.
+// Everything ever fetched is kept in data/, keyed by id, the latest sighting
+// winning (its view count is the most complete).
+const ARCHIVE = join(ROOT, 'data', 'events-archive.json')
+
+async function updateArchive(fresh) {
+  let archive = { events: [] }
+  try {
+    archive = JSON.parse(await readFile(ARCHIVE, 'utf8'))
+  } catch {
+    /* first run */
+  }
+  const byId = new Map((archive.events ?? []).map((ev) => [ev.id, ev]))
+  for (const ev of fresh) byId.set(ev.id, ev)
+  const events = [...byId.values()].sort((a, b) => (a.from < b.from ? -1 : a.from > b.from ? 1 : a.id < b.id ? -1 : 1))
+  await writeFile(ARCHIVE, JSON.stringify({ updated: new Date().toISOString(), events }, null, 1))
+  return events.length
 }
 
 async function main() {
@@ -109,7 +136,10 @@ async function main() {
   }
   const events = [...curated, ...fresh].sort((a, b) => (a.from < b.from ? -1 : 1))
   await writeFile(FILE, JSON.stringify({ updated: new Date().toISOString(), events }, null, 1))
-  console.log(`events.json: ${curated.length} curated + ${fresh.length} echo.lu instances (next ${LOOKAHEAD_DAYS} days)`)
+  const archived = await updateArchive(fresh)
+  console.log(
+    `events.json: ${curated.length} curated + ${fresh.length} echo.lu instances (next ${LOOKAHEAD_DAYS} days); archive: ${archived} instances`
+  )
 }
 
 main().catch((e) => {

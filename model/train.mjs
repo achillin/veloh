@@ -127,13 +127,22 @@ export async function loadCapacities(dataDir = DATA_DIR) {
   return JSON.parse(await readFile(join(dataDir, 'stations.json'), 'utf8')).stations
 }
 
+/** The curated calendar plus every echo.lu instance ever fetched (the app's
+ *  events.json only carries the next two weeks; the archive in data/ keeps
+ *  the past ones so their effects can be learned). */
 export async function loadEventCalendar() {
-  try {
-    const j = JSON.parse(await readFile(join(ROOT, 'public', 'events.json'), 'utf8'))
-    return Array.isArray(j?.events) ? j.events : []
-  } catch {
-    return []
+  const read = async (file) => {
+    try {
+      const j = JSON.parse(await readFile(file, 'utf8'))
+      return Array.isArray(j?.events) ? j.events : []
+    } catch {
+      return []
+    }
   }
+  const byId = new Map()
+  for (const ev of await read(join(ROOT, 'data', 'events-archive.json'))) byId.set(ev.id, ev)
+  for (const ev of await read(join(ROOT, 'public', 'events.json'))) byId.set(ev.id, ev) // current wins
+  return [...byId.values()]
 }
 
 /** Aggregates snapshot lines into the profiles structure the app's
