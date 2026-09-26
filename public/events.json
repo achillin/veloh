@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-25T08:53:39.989Z",
+ "updated": "2026-09-26T08:39:57.540Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,182 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-3uLQfpWfVQEehXdMG78r",
-   "name": "Knitting coffee at the Museum ",
-   "venue": "Musée Draï Eechelen",
-   "lat": 49.6165171,
-   "lon": 6.139485199999999,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    10,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-Gc3mJEZofPP5l65SjWX5",
-   "name": "Lunchtime at Mudam",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    12,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-etBBF8wypq6iV1tcO6US",
-   "name": "Les Nuits en Or 2026 Partie - I (Festival des meilleurs cour",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-gpgcflWe6Nv3vV3Q1s66",
-   "name": "Célébrons la diversité des langues en Europe",
-   "venue": "Parlement européen au Luxembourg",
-   "lat": 49.6205819,
-   "lon": 6.1461397,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-JWu7iOv57fDUvog1k6WR",
-   "name": "Celebration of the European Day of Languages",
-   "venue": "Parlement européen au Luxembourg",
-   "lat": 49.6205819,
-   "lon": 6.1461397,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-BfUMPA3pCZJZwgUAY2bg",
-   "name": "Event",
-   "venue": "Luxembourg-Kirchberg « Europa Expérience »  Bâtiment Konrad ",
-   "lat": 49.6210707,
-   "lon": 6.1483338,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-dPr0MKOhKLdlm2iRzjLE",
-   "name": "A DECADE ",
-   "venue": "Galerie Artskoco",
-   "lat": 49.608715,
-   "lon": 6.098721,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-DLtzzLovPGxL5XXkaCxx",
-   "name": "Yoga under the Stars",
-   "venue": "Parc de Merl ",
-   "lat": 49.603431,
-   "lon": 6.112478,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-shG93NOgo2lZOqWgyizP",
-   "name": "Jocul de-a vacanța",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-6TJMG2Cj3ToxsfuFbeLX",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
-  },
-  {
-   "id": "echo-seMCHJnwn93mcllpkvnQ",
-   "name": "Les Nuits en Or 2026 Partie - II (Festival des meilleurs cou",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-25",
-   "to": "2026-09-25",
-   "hours": [
-    21,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true
   },
   {
    "id": "echo-QYzehNC5XILl9OjKVCkt",
@@ -1027,7 +851,7 @@
    "auto": true
   },
   {
-   "id": "echo-hJHMJvpDmmPCYoXfk21m",
+   "id": "echo-NOB0uvS6hjLu1ipbc8VW",
    "name": "Art Detectives | Art Course | Age: 7-11",
    "venue": "Paladium - Le Fortuna ",
    "lat": 49.60511475,
@@ -2755,6 +2579,22 @@
    "auto": true
   },
   {
+   "id": "echo-tJNtVIRJ6CNm0ekTVqpl",
+   "name": "Robert Bronwasser",
+   "venue": "Rotondes",
+   "lat": 49.601386,
+   "lon": 6.136468,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
    "id": "echo-9NoxGCC2AFDxuUAGOnCR",
    "name": "Magellan (#CinémathèqueUnreleased)",
    "venue": "Théâtre des Capucins",
@@ -2954,6 +2794,182 @@
    "lon": 6.122905,
    "from": "2026-10-09",
    "to": "2026-10-09",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-lWBcMgJKUg1v4tNGyvX4",
+   "name": "HISTOFEST. History on Full Blast ",
+   "venue": "Europa Experience",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-gkcXj3ZGtC3fQg9JVI8g",
+   "name": "The Truman Show (Ciné-Campus)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-HQGbxu7pHjqnCsuaqvP4",
+   "name": "Danton (CinEast Festival 2026)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YvqkaAILRRBJusGKxtTc",
+   "name": "Les Histrioniques",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-1sd8K2riR4ofkSIT8cgd",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-LXhI3tjbYUpnB6TqWsgo",
+   "name": "Die unheilige Johanna von Orléans",
+   "venue": "Kasemattentheater",
+   "lat": 49.597781,
+   "lon": 6.135099,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-pjlhSo5ahL5aSKKzhG6l",
+   "name": "Malentendus",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-YBs2UWPdHvjP9iLlAXKn",
+   "name": "AMÈRES CONDOLÉANCES",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-IUX8hFqn0C0F9RbuqTij",
+   "name": "Malentendus",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-Rd0aRdPUPS2453uuFQ26",
+   "name": "Anna Khomichko – Récital de Piano",
+   "venue": "Centre Culturel Altrimenti",
+   "lat": 49.6077568,
+   "lon": 6.1231002,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true
+  },
+  {
+   "id": "echo-TzyHHFd7CuIBnSZX5Zgi",
+   "name": "Tuffi - Junior Atelier (4-7) ",
+   "venue": "Cercle Cité - Salle 503",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
    "hours": [
     10,
     12
