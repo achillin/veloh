@@ -72,6 +72,15 @@ function rainAdjustment(profiles, forecast, dtH) {
 
 const EVENT_DELTA_CAP = 0.35 // events can't swing a forecast past ±35% of capacity
 const EVENT_MIN_N = 300 // learned venue deltas need this many station-minutes
+// …and count in proportion to their evidence: a venue seen for one evening
+// (a few hundred station-minutes) is mostly noise, a whole Schueberfouer is not
+const EVENT_SHRINK_N = 3000
+
+/** Learned shift of one venue, shrunk toward zero by how much was observed. */
+export function venueDelta(eff) {
+  if (!eff || eff[1] < EVENT_MIN_N) return 0
+  return (eff[0] * eff[1]) / (eff[1] + EVENT_SHRINK_N)
+}
 
 /** Availability shift from learned per-venue event effects, for events
  *  active at the target time within radius of the station. */
@@ -81,10 +90,7 @@ function eventAdjustment(profiles, station, target, ctx) {
   if (!active?.length) return 0
   const near = eventsNear(active, station)
   let delta = 0
-  for (const ev of near) {
-    const eff = profiles?.eventEffects?.[ev.venue]
-    if (eff && eff[1] >= EVENT_MIN_N) delta += eff[0]
-  }
+  for (const ev of near) delta += venueDelta(profiles?.eventEffects?.[ev.venue])
   return Math.max(-EVENT_DELTA_CAP, Math.min(EVENT_DELTA_CAP, delta))
 }
 

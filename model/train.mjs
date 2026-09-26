@@ -17,6 +17,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { gunzipSync } from 'node:zlib'
 import { activeEventsAt, eventsNear } from '../src/lib/events.js'
+import { venueDelta } from '../src/lib/predictor.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 export const DATA_DIR = join(ROOT, 'data')
@@ -383,7 +384,7 @@ export function buildProfiles(lines, capacities, events = []) {
     const f = shrunk.get(id)?.get(key)
     if (f == null) return null
     let delta = 0
-    for (const ev of eventsNear(active, capacities[id])) delta += eventEffects[ev.venue]?.[0] ?? 0
+    for (const ev of eventsNear(active, capacities[id])) delta += venueDelta(eventEffects[ev.venue])
     delta = Math.max(-EVENT_DELTA_CAP, Math.min(EVENT_DELTA_CAP, delta))
     return Math.min(Math.max(f + delta, 0), 1)
   }

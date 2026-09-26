@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { predict, predictDistribution, predictSeries, globalMeanFraction } from '../src/lib/predictor.js'
+import { predict, predictDistribution, predictSeries, globalMeanFraction, venueDelta } from '../src/lib/predictor.js'
 
 // Wednesday 10:00 in Luxembourg (CEST) — a fixed instant, because profile
 // buckets are Luxembourg hours whatever zone the tests run in (CI is UTC)
@@ -292,6 +292,27 @@ describe('predict hybrid point forecast', () => {
     const p = predict(station, hoursAhead(2), { ...baseCtx, profiles: old })
     // blend alone: w = 0.25 → 0.275 · 20 = 5.5 bikes; (5.5 + 4) / 2 = 4.75
     expect(p.bikes).toBe(5)
+  })
+})
+
+describe('venueDelta', () => {
+  it('shrinks a learned venue shift toward zero by its evidence', () => {
+    expect(venueDelta([0.2, 3000])).toBeCloseTo(0.1, 6) // half the pseudo-count → half the shift
+    expect(venueDelta([0.2, 132000])).toBeCloseTo(0.2 * (132000 / 135000), 6) // a whole Schueberfouer: nearly all of it
+    expect(venueDelta([0.2, 300])).toBeCloseTo(0.2 * (300 / 3300), 6) // one evening: a sliver
+  })
+
+  it('ignores venues below the evidence floor or without data', () => {
+    expect(venueDelta([0.2, 299])).toBe(0)
+    expect(venueDelta(undefined)).toBe(0)
+  })
+
+  it('feeds the profile base through predict()', () => {
+    const near = { ...station, lat: 49.6, lon: 6.13 }
+    const events = [{ id: 'e', venue: 'V', lat: 49.6, lon: 6.13, from: '2026-07-08', to: '2026-07-08', hours: [0, 24], radiusM: 500 }]
+    const profiles = { global: flatProfile, stations: {}, eventEffects: { V: [0.2, 3000] } }
+    const p = predict(near, hoursAhead(24), { ...baseCtx, profiles, events })
+    expect(p.frac).toBeCloseTo(0.3, 5) // 0.2 profile + 0.1 shrunk venue shift
   })
 })
 
