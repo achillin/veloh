@@ -309,7 +309,8 @@ describe('venueDelta', () => {
 
   it('feeds the profile base through predict()', () => {
     const near = { ...station, lat: 49.6, lon: 6.13 }
-    const events = [{ id: 'e', venue: 'V', lat: 49.6, lon: 6.13, from: '2026-07-08', to: '2026-07-08', hours: [0, 24], radiusM: 500 }]
+    // active on the target day too (24 h ahead is Thursday)
+    const events = [{ id: 'e', venue: 'V', lat: 49.6, lon: 6.13, from: '2026-07-08', to: '2026-07-09', hours: [0, 24], radiusM: 500 }]
     const profiles = { global: flatProfile, stations: {}, eventEffects: { V: [0.2, 3000] } }
     const p = predict(near, hoursAhead(24), { ...baseCtx, profiles, events })
     expect(p.frac).toBeCloseTo(0.3, 5) // 0.2 profile + 0.1 shrunk venue shift
