@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-26T09:25:36.135Z",
+ "updated": "2026-09-27T09:20:03.961Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,586 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-QYzehNC5XILl9OjKVCkt",
-   "name": "Event",
-   "venue": "Luxembourg-Glacis - Institut national des langues Luxembourg",
-   "lat": 49.6034,
-   "lon": 6.10169,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    9,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences-culture",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-wnp5bITQ4VrNC9NviRnh",
-   "name": "Event",
-   "venue": "Luxembourg-Hollerich - Tramsmusée",
-   "lat": 49.5996619,
-   "lon": 6.1078835,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses-other",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-3dXBzgE4uct3iYYaH4aC",
-   "name": "Write Jokes That Resonate",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-mWRLtfYurbYe4TSWteWX",
-   "name": "Event",
-   "venue": "Luxembourg-Ville - Place Guillaume II - Knuedler- Stater Maa",
-   "lat": 49.6084505,
-   "lon": 6.1335793,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-CFQSpVpQDULxUkNUbRva",
-   "name": "Event",
-   "venue": "Luxembourg - Place Guillaume II - Knuedler- Stater Maart bei",
-   "lat": 49.6084505,
-   "lon": 6.1335793,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-vPr8opEaS7t1ld0Q1nys",
-   "name": "Social Volunteering Fair 2026",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "markets-other",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-9IdtDCc907bzRFczytwi",
-   "name": "Pride Family Day ",
-   "venue": "Place de la Constitution",
-   "lat": 49.6092652,
-   "lon": 6.129358799999999,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "markets-local-activity",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-wtgiUk0KaHYB8rKtCLYb",
-   "name": "The Italian Art of Living ",
-   "venue": "L'Art de Vivre à L'Italienne",
-   "lat": 49.5869872,
-   "lon": 6.1181445,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-design",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-rlCTs3GAQlcwaP6EiNAu",
-   "name": "Event",
-   "venue": "Luxembourg-Ville - City Bibliothèque",
-   "lat": 49.611623,
-   "lon": 6.130095,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-KQuwuaW5tLieccPVPGQK",
-   "name": "Organ recital",
-   "venue": "Cathédrale Notre-Dame",
-   "lat": 49.6099739,
-   "lon": 6.1288328,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": "memorial",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-n6AfVgkkjN3e67aoBlF1",
-   "name": "Sushi Class",
-   "venue": "Aka Cité",
-   "lat": 49.61166189999999,
-   "lon": 6.130113700000001,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "gastronomie",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-Z4oQUXPGaUgnaGK32HIo",
-   "name": "Event",
-   "venue": "Luxembourg-Ville - City Bibliothèque",
-   "lat": 49.611623,
-   "lon": 6.130095,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-85yP3zpEWiGkuxhy8I5q",
-   "name": "Event",
-   "venue": "Luxembourg-Ville - City Bibliothèque",
-   "lat": 49.611623,
-   "lon": 6.130095,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-6owjD7Djk0elfleTrXHV",
-   "name": "Event",
-   "venue": "Luxembourg-Ville - City Bibliothèque",
-   "lat": 49.611623,
-   "lon": 6.130095,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-u39JHo25sly41W84SHj1",
-   "name": "Event",
-   "venue": "Luxembourg-Ville - City Bibliothèque",
-   "lat": 49.611623,
-   "lon": 6.130095,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    12,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-Y5RHRgyMHU5qqBaJLAYu",
-   "name": "100 Joer Interesseveräin Rollengergronn-Millebaach",
-   "venue": "Centre Culturel Jean-François Boch",
-   "lat": 49.62027626819425,
-   "lon": 6.103599932124314,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    12,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "gastronomie-street-food",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-B6JmE5AGEtpm8kOY4OlL",
-   "name": "Fête 2gether",
-   "venue": "parc laval",
-   "lat": 49.627672,
-   "lon": 6.132918,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    12,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-6XUQ8wkVhiT0XAUCKaw3",
-   "name": "Luxembourg City off the beaten track",
-   "venue": "Auberge de Jeunesse Luxembourg",
-   "lat": 49.612542,
-   "lon": 6.137865,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    13,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "sport-other",
-   "venueCat": "other",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-xsFqyKmjs6H0YWJXeDPo",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-YtOrrfdATZpLYNk3IPN9",
-   "name": "Queers in Pink",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    15,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-hLTY61Ld9HzU5X9hrjxY",
-   "name": "Destination Moon! With Méliès, Fleischer & Aardman (Spacewal",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-HkwNpCdgHOgp94UAPSSS",
-   "name": "Les Nuits en Or 2026 Partie - III (Festival des meilleurs co",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-pDlJugi96RfqHVa68GyX",
-   "name": "Private House Exhibition ",
-   "venue": "Private House in Hamm",
-   "lat": 49.6064385,
-   "lon": 6.1563305,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "expositions",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-gLSQHOmcJsu8gwF0KJSw",
-   "name": "Jocul de-a vacanța",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-PiwqGwW2KTjitqbzCVy5",
-   "name": "Alison Moyet",
-   "venue": "den Atelier",
-   "lat": 49.598747,
-   "lon": 6.126118,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "theatre",
-   "views": 8,
-   "free": false
-  },
-  {
-   "id": "echo-ZaaPZ4dfQmIL3IorKGgs",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-IYNb42kaJ3b8q9WybcSB",
-   "name": "A Master’s Touch",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-classic",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-iXGWgLIatilX7P1XIZJG",
-   "name": "BEMY Live concert  ",
-   "venue": "Sang a Klang",
-   "lat": 49.6150616,
-   "lon": 6.1340425,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-indie",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-lvl8UhMCUHGopZRXN3Cy",
-   "name": "Les Nuits en Or 2026 Partie - IV (Festival des meilleurs cou",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-26",
-   "to": "2026-09-26",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": true
   },
   {
    "id": "echo-c5s6sUOcw2EbddrA0q1z",
@@ -3631,6 +3051,246 @@
    "auto": true,
    "cat": "cinema",
    "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-N2uMIIklG6DTgTPiSlVH",
+   "name": "Kora workshop with Massa Dembele",
+   "venue": "École de danses latines Danse-Salsa",
+   "lat": 49.628355,
+   "lon": 6.130346,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-afrobeats",
+   "venueCat": "school",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-vUiXvaJEmJ6Pdj9Ra8pg",
+   "name": "Urban Harmonies: A choir for one day",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-G39rwLZBCqr7HU0jfuLq",
+   "name": "Urban Harmonies",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-8YcdyyNyklW4tc2iAi4E",
+   "name": "Workshop : Principles of contact improvisation ",
+   "venue": "Banannefabrik ",
+   "lat": 49.59825430000001,
+   "lon": 6.135766599999999,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-dPs28JnoCpSoh6fZj9Tx",
+   "name": "Musical lecture on Women Musicians in 19th century Luxembour",
+   "venue": "Cercle Cité - Salon Bleu",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-J1ePpNYRKAiWI4Vd6YLh",
+   "name": "Museum Night 2026",
+   "venue": "Lëtzebuerg City Museum",
+   "lat": 49.610061,
+   "lon": 6.133655,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "museum",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-6vPbN0xuJ22lEGNqRrQt",
+   "name": "Calendar (Bicentenaire de la photographie)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-fSGUV8AHMCyNMcWWx6z5",
+   "name": " CONCERT REGGAE",
+   "venue": "Centre Culturel Altrimenti",
+   "lat": 49.6077568,
+   "lon": 6.1231002,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Pk8aYDl619XCS2xRrYn4",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-LHgJxmhHU5LhNRyAxKFD",
+   "name": "Die unheilige Johanna von Orléans",
+   "venue": "Kasemattentheater",
+   "lat": 49.597781,
+   "lon": 6.135099,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-jN4fya3e2zWkPSBn361G",
+   "name": "The Lobster (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-EOUN39uDP9OOhRbJwxzy",
+   "name": "ShekBand",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "cultural-center",
    "views": 0,
    "free": false
   },

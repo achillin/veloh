@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-26T09:25:36.142Z",
+ "updated": "2026-09-27T09:20:03.964Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -8586,6 +8586,146 @@
    "free": true
   },
   {
+   "id": "echo-6vPbN0xuJ22lEGNqRrQt",
+   "name": "Calendar (Bicentenaire de la photographie)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-8YcdyyNyklW4tc2iAi4E",
+   "name": "Workshop : Principles of contact improvisation ",
+   "venue": "Banannefabrik ",
+   "lat": 49.59825430000001,
+   "lon": 6.135766599999999,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-G39rwLZBCqr7HU0jfuLq",
+   "name": "Urban Harmonies",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-J1ePpNYRKAiWI4Vd6YLh",
+   "name": "Museum Night 2026",
+   "venue": "Lëtzebuerg City Museum",
+   "lat": 49.610061,
+   "lon": 6.133655,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "museum",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-LHgJxmhHU5LhNRyAxKFD",
+   "name": "Die unheilige Johanna von Orléans",
+   "venue": "Kasemattentheater",
+   "lat": 49.597781,
+   "lon": 6.135099,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-N2uMIIklG6DTgTPiSlVH",
+   "name": "Kora workshop with Massa Dembele",
+   "venue": "École de danses latines Danse-Salsa",
+   "lat": 49.628355,
+   "lon": 6.130346,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-afrobeats",
+   "venueCat": "school",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Pk8aYDl619XCS2xRrYn4",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-TzyHHFd7CuIBnSZX5Zgi",
    "name": "Tuffi - Junior Atelier (4-7) ",
    "venue": "Cercle Cité - Salle 503",
@@ -8606,6 +8746,66 @@
    "free": true
   },
   {
+   "id": "echo-dPs28JnoCpSoh6fZj9Tx",
+   "name": "Musical lecture on Women Musicians in 19th century Luxembour",
+   "venue": "Cercle Cité - Salon Bleu",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-fSGUV8AHMCyNMcWWx6z5",
+   "name": " CONCERT REGGAE",
+   "venue": "Centre Culturel Altrimenti",
+   "lat": 49.6077568,
+   "lon": 6.1231002,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-jN4fya3e2zWkPSBn361G",
+   "name": "The Lobster (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-kNH8oSaPZ1Hp8gygyhAu",
    "name": "Sátántangó (CinEast Festival 2026)",
    "venue": "Théâtre des Capucins",
@@ -8622,6 +8822,46 @@
    "auto": true,
    "cat": "cinema",
    "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-vUiXvaJEmJ6Pdj9Ra8pg",
+   "name": "Urban Harmonies: A choir for one day",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-EOUN39uDP9OOhRbJwxzy",
+   "name": "ShekBand",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "cultural-center",
    "views": 0,
    "free": false
   }
