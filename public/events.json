@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-27T09:20:03.961Z",
+ "updated": "2026-09-28T09:52:10.182Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,246 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-c5s6sUOcw2EbddrA0q1z",
-   "name": "Les Nuits en Or 2026 Partie - V (Festival des meilleurs cour",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    10,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-mRee1QzjLwJIiTzoE5dS",
-   "name": "Open Day at SERVIOR “Op der Rhum”",
-   "venue": "CIPA Op der Rhum",
-   "lat": 49.610028,
-   "lon": 6.139013,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    10,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "other",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-CHAYYwwAMitrsaBQRHyh",
-   "name": "CONCERT ACTART : LES BERGERIES",
-   "venue": "Conservatoire de la Ville de Luxembourg",
-   "lat": 49.602292,
-   "lon": 6.10683,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": "theatre",
-   "views": 10,
-   "free": true
-  },
-  {
-   "id": "echo-mrz0z9ExDa3AfwgpzZDC",
-   "name": "Bodem",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-NOB0uvS6hjLu1ipbc8VW",
-   "name": "Art Detectives | Art Course | Age: 7-11",
-   "venue": "Paladium - Le Fortuna ",
-   "lat": 49.60511475,
-   "lon": 6.131283708,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses-diy",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-HTlhQybPASIH7SveSOXt",
-   "name": "WALL-E (Cinema Paradiso)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    15,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-Lsuo3wH30kfUqoUQMseP",
-   "name": "Summer in the fortress",
-   "venue": "Plateau du Saint Esprit Luxembourg",
-   "lat": 49.608215,
-   "lon": 6.133268,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    15,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "other",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-DWELJBqwVg6AsVg0ZfhN",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    17,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-fVdtf1NSvhhQYTfMLyn3",
-   "name": "Julian the Drifter",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-Bwwn83KE5ez9r7noDwMd",
-   "name": "Only Angels Have Wings (Sense & Sensibility)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-M1PThABWXrrw6mQM8VXk",
-   "name": "🇸🇮 MARINA ORSAG ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-comedy",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-rFjy6O6iScyHhaqZC50H",
-   "name": "Rouge (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-27",
-   "to": "2026-09-27",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
   },
   {
    "id": "echo-PLRuQr5teHI4QpIqRk46",
@@ -1755,6 +1515,26 @@
    "free": false
   },
   {
+   "id": "echo-U9Pt4c1fR4T1rIHT6ZdX",
+   "name": "GALA CONCERT TRUMPET DAYS 2026",
+   "venue": "Lycée Michel-Rodange Luxembourg",
+   "lat": 49.600119,
+   "lon": 6.113623,
+   "from": "2026-10-03",
+   "to": "2026-10-03",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-00HSddrFuTWIrka5Tgmt",
    "name": "Match d'Improvisation Luxembourg VS France",
    "venue": "Théâtre Le  10",
@@ -2135,7 +1915,7 @@
    "free": true
   },
   {
-   "id": "echo-0O37PYK5xHAA0nMlZOd0",
+   "id": "echo-BNdpsmNdfWqQfCaYZUZr",
    "name": "Sans toit ni loi (Why We Love Cinema)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2175,8 +1955,8 @@
    "free": true
   },
   {
-   "id": "echo-lBsvByERXsNpEfRH36lG",
-   "name": "Rear Window (Bicentenaire de la photographie)",
+   "id": "echo-cFzHOMuOXey2ZTFJXtce",
+   "name": "Rear Window (Trough the Lens)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
    "lon": 6.130586,
@@ -2275,7 +2055,7 @@
    "free": true
   },
   {
-   "id": "echo-lJLnjWuAeSv220Tj9cd2",
+   "id": "echo-jcvIVXf9jZAPWcg3fAUA",
    "name": "My Darling Clementine (Great Restorations)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2395,7 +2175,7 @@
    "free": true
   },
   {
-   "id": "echo-DTO3ASma6R3kvosPntpu",
+   "id": "echo-jnTbjrhJtSl3g7iWAhaw",
    "name": "Alps (Efthimis Filippou)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2535,7 +2315,7 @@
    "free": true
   },
   {
-   "id": "echo-9NoxGCC2AFDxuUAGOnCR",
+   "id": "echo-cjgbYeHgb0LFq9t0o62R",
    "name": "Magellan (#CinémathèqueUnreleased)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2615,7 +2395,7 @@
    "free": true
   },
   {
-   "id": "echo-6iDTM9VjwD6oCjno3qT7",
+   "id": "echo-h2Z0ryvSxT4RO3a1IteU",
    "name": "Madame de... (Max Ophüls)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2715,8 +2495,8 @@
    "free": false
   },
   {
-   "id": "echo-FUWQv1LrB1IsIlMnrXu1",
-   "name": "Eyes of Laura Mars (Bicentenaire de la photographie)",
+   "id": "echo-lvsZnWOrk2g2dFw29FOx",
+   "name": "Eyes of Laura Mars (Trough the Lens)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
    "lon": 6.130586,
@@ -2815,7 +2595,7 @@
    "free": true
   },
   {
-   "id": "echo-gkcXj3ZGtC3fQg9JVI8g",
+   "id": "echo-rzClx1Ru5nnuDe3jE3N5",
    "name": "The Truman Show (Ciné-Campus)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2835,7 +2615,7 @@
    "free": false
   },
   {
-   "id": "echo-HQGbxu7pHjqnCsuaqvP4",
+   "id": "echo-Vety9ZM7jR9rvvxEvYKC",
    "name": "Danton (CinEast Festival 2026)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -3035,7 +2815,7 @@
    "free": true
   },
   {
-   "id": "echo-kNH8oSaPZ1Hp8gygyhAu",
+   "id": "echo-lBrPuciu4paAmtSvPSKF",
    "name": "Sátántangó (CinEast Festival 2026)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -3175,26 +2955,6 @@
    "free": false
   },
   {
-   "id": "echo-6vPbN0xuJ22lEGNqRrQt",
-   "name": "Calendar (Bicentenaire de la photographie)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-10",
-   "to": "2026-10-10",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
    "id": "echo-fSGUV8AHMCyNMcWWx6z5",
    "name": " CONCERT REGGAE",
    "venue": "Centre Culturel Altrimenti",
@@ -3213,6 +2973,26 @@
    "venueCat": "cultural-center",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-9fkfkkz9jt6NhtrgcfGb",
+   "name": "Calendar (Through the Lens)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-Pk8aYDl619XCS2xRrYn4",
@@ -3255,7 +3035,7 @@
    "free": false
   },
   {
-   "id": "echo-jN4fya3e2zWkPSBn361G",
+   "id": "echo-Alr3QppbRHeuiK14bFbL",
    "name": "The Lobster (Efthimis Filippou)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -3291,6 +3071,206 @@
    "auto": true,
    "cat": "concerts",
    "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-TAI9seg1fnWWUfg2f7iZ",
+   "name": "Workshop : Principles of contact improvisation ",
+   "venue": "Banannefabrik ",
+   "lat": 49.59825430000001,
+   "lon": 6.135766599999999,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-RbOj24AgZU7rweaDKByG",
+   "name": "Die wunderbare Reise des kleinen Nils Holgersson mit den Wil",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-WJ8swN0UUDoL0iLhXvrx",
+   "name": "Malentendus",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-7pDQ2S9ADrov7OE4z0MY",
+   "name": "Malentendus",
+   "venue": "Schluechthaus / Skatepark Hollerich",
+   "lat": 49.6012432,
+   "lon": 6.116325700000001,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-iGDIlLydMskPhq6cBtI2",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-XMl8jFJ2SooF6ngdB51f",
+   "name": "From Gaza with Love",
+   "venue": "Centre Culturel Altrimenti",
+   "lat": 49.6077568,
+   "lon": 6.1231002,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-R4DerR7wl6ROzDfiiYFs",
+   "name": "Gregório Entringer",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-I1WldGlPWOrpbFJNFOWu",
+   "name": "The Band Wagon (Ciné-Théâtre)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5QuNDHJ76j7XLxz63uDr",
+   "name": "The Eukrainian & debate on Ukraine",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-JCSiWlaCnn4R6qmLCVgo",
+   "name": "Blow-Up (Through the Lens)",
+   "venue": "Cinémathèque de la Ville de Luxembourg",
+   "lat": 49.613153,
+   "lon": 6.13087,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cinema",
    "views": 0,
    "free": false
   },
