@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-28T09:52:10.182Z",
+ "updated": "2026-09-29T09:54:49.053Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,86 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-PLRuQr5teHI4QpIqRk46",
-   "name": "Coach de retraite bénévole ",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-09-28",
-   "to": "2026-09-28",
-   "hours": [
-    9,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": null,
-   "views": 4,
-   "free": true
-  },
-  {
-   "id": "echo-utzbuPYa1Uy3ntzh778m",
-   "name": "Le Syndicat du crime (A Better Tomorrow) (Leslie Cheung)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-28",
-   "to": "2026-09-28",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-LEW2oQ0L30boHLpsPNB0",
-   "name": "Social Dance with taster class at Atmos",
-   "venue": "Atmos Bar & Restaurant",
-   "lat": 49.6114156,
-   "lon": 6.1270737,
-   "from": "2026-09-28",
-   "to": "2026-09-28",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife-dance",
-   "venueCat": "bar",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-aQrFpvl4GgNN9KGPrZc7",
-   "name": "The Worst Person in the World (Oslo Trilogies)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-28",
-   "to": "2026-09-28",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
   },
   {
    "id": "echo-S9Svqf38f4wGcMSLRgP4",
@@ -1915,7 +1835,7 @@
    "free": true
   },
   {
-   "id": "echo-BNdpsmNdfWqQfCaYZUZr",
+   "id": "echo-D0lPup18e3qoln4USuad",
    "name": "Sans toit ni loi (Why We Love Cinema)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -1955,7 +1875,7 @@
    "free": true
   },
   {
-   "id": "echo-cFzHOMuOXey2ZTFJXtce",
+   "id": "echo-SP74xLUertuW6uxp1W69",
    "name": "Rear Window (Trough the Lens)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2175,7 +2095,7 @@
    "free": true
   },
   {
-   "id": "echo-jnTbjrhJtSl3g7iWAhaw",
+   "id": "echo-HiBblKR4A1DR0Hym2ejH",
    "name": "Alps (Efthimis Filippou)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2595,7 +2515,7 @@
    "free": true
   },
   {
-   "id": "echo-rzClx1Ru5nnuDe3jE3N5",
+   "id": "echo-PFspcpHBC3OTB6zKJmA8",
    "name": "The Truman Show (Ciné-Campus)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -3035,7 +2955,7 @@
    "free": false
   },
   {
-   "id": "echo-Alr3QppbRHeuiK14bFbL",
+   "id": "echo-adbz5PrDE6IlLI2xiDto",
    "name": "The Lobster (Efthimis Filippou)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -3272,6 +3192,46 @@
    "cat": "cinema",
    "venueCat": "cinema",
    "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-n9W4nVI0vJKjfG69utw0",
+   "name": "Social Dance with taster class at Tetro",
+   "venue": "Tetro",
+   "lat": 49.61143939999999,
+   "lon": 6.131712299999999,
+   "from": "2026-10-12",
+   "to": "2026-10-12",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nightlife-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-E2QxjV39tqiyDdz2UciU",
+   "name": "Concert-surprise – laissez-vous toujours surprendre !",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-12",
+   "to": "2026-10-12",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 5,
    "free": false
   },
   {
