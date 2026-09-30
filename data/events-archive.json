@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-29T09:54:49.056Z",
+ "updated": "2026-09-30T09:46:56.789Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -6470,6 +6470,26 @@
    "auto": true
   },
   {
+   "id": "echo-bayQCk815GFHtG5ACvj0",
+   "name": "Kyuka: Before Summer's End",
+   "venue": "Ciné Utopia",
+   "lat": 49.617019,
+   "lon": 6.120959,
+   "from": "2026-09-30",
+   "to": "2026-09-30",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cinema",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-gxXGaiW0DYMgG6RbiCNt",
    "name": "Kyuka: Before Summer's End",
    "venue": "Ciné Utopia",
@@ -6768,6 +6788,26 @@
    "venueCat": null,
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-mhmiNXc6i83ycAuvdBBH",
+   "name": "FILM & CONFERENCE",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
+   "from": "2026-10-01",
+   "to": "2026-10-01",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
   },
   {
    "id": "echo-tYqxEQsJIP3BCn08fQzE",
@@ -7716,6 +7756,26 @@
    "hours": [
     18,
     21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-7dZSKv6ZpPDdZ9HHCG52",
+   "name": "Rear Window (Trough the Lens)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-05",
+   "to": "2026-10-05",
+   "hours": [
+    20,
+    23
    ],
    "radiusM": 400,
    "scale": "minor",
@@ -8846,6 +8906,26 @@
    "free": false
   },
   {
+   "id": "echo-tbRySeMtX1X2Qe8U6h1L",
+   "name": "Danton (CinEast Festival 2026)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-4fVrmD7SMZlrPBxXHbLq",
    "name": "Organ recital",
    "venue": "Cathédrale Notre-Dame",
@@ -9206,6 +9286,26 @@
    "free": true
   },
   {
+   "id": "echo-xDrCgwfjcQLF2ZekySp3",
+   "name": "Sátántangó (CinEast Festival 2026)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    11,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-5QuNDHJ76j7XLxz63uDr",
    "name": "The Eukrainian & debate on Ukraine",
    "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
@@ -9287,6 +9387,26 @@
   },
   {
    "id": "echo-JCSiWlaCnn4R6qmLCVgo",
+   "name": "Blow-Up (Through the Lens)",
+   "venue": "Cinémathèque de la Ville de Luxembourg",
+   "lat": 49.613153,
+   "lon": 6.13087,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cinema",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-NBHfrFDkfsb6sFnwxZ5K",
    "name": "Blow-Up (Through the Lens)",
    "venue": "Cinémathèque de la Ville de Luxembourg",
    "lat": 49.613153,
@@ -9464,6 +9584,126 @@
    "venueCat": null,
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-86nwOnb9ZNjTn22vOhlF",
+   "name": "Robert Ivanov Group ",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-MNmJKFFMYvie8kDl9GiV",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-W5XBbErUWbU6U5dC1KpM",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-ZUMFd6l4KFL55s9gyzaI",
+   "name": "Internet als Ort der Begegnung",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "conferences",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-ed9WSw0VVk1uNFGSoSTs",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport-other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-vUTeVWbbfaf4WSfSpTy5",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
   }
  ]
 }

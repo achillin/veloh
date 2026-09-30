@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-29T09:54:49.053Z",
+ "updated": "2026-09-30T09:46:56.787Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,166 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-S9Svqf38f4wGcMSLRgP4",
-   "name": "„KI“ – Was steckt dahinter?",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    14,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-1QhQ7ogYhVBloyNzgxYs",
-   "name": "Jules Prussen: Ein luxemburger Philosoph (1914-1976)",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-0ADwd1ZASx8RkIXVYFVj",
-   "name": "Aniki-Bóbó (Great Restorations)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-uuuJk618IZpwGJilvlho",
-   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
-   "venue": "Tiers-Lieu Bonnevoie",
-   "lat": 49.598646995,
-   "lon": 6.138618116,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "sport-other",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-eSq2xAa5P02ocjAaKRCe",
-   "name": "Kyuka: Before Summer's End",
-   "venue": "Ciné Utopia",
-   "lat": 49.617019,
-   "lon": 6.120959,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "cinema",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-JQYT2BGJVzCVse9NKTyf",
-   "name": "Theatre Open Session",
-   "venue": "55, avenue de la Liberté",
-   "lat": 49.6022598,
-   "lon": 6.132361400000001,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-frcGaZWIfee6IHtBuHCA",
-   "name": "2001: A Space Odyssey (Spacewalks)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-RV7b4DznBlhUc2eprr6P",
-   "name": "Liquid Jazz Jam Session",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-09-29",
-   "to": "2026-09-29",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
    "id": "echo-Hig4M2zDtS3bK0le6VpO",
    "name": "Meet the Winners! Erschafen, ausstellen, iwwermëttelen",
    "venue": "luca – Luxembourg Center for Architecture ",
@@ -675,7 +515,7 @@
    "free": false
   },
   {
-   "id": "echo-gxXGaiW0DYMgG6RbiCNt",
+   "id": "echo-bayQCk815GFHtG5ACvj0",
    "name": "Kyuka: Before Summer's End",
    "venue": "Ciné Utopia",
    "lat": 49.617019,
@@ -793,6 +633,26 @@
    "venueCat": "cinema",
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-mhmiNXc6i83ycAuvdBBH",
+   "name": "FILM & CONFERENCE",
+   "venue": "Café-Théâtre \"Rocas\"",
+   "lat": 49.613273,
+   "lon": 6.129617,
+   "from": "2026-10-01",
+   "to": "2026-10-01",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
   },
   {
    "id": "echo-SUhPorqmtkPEoDjO26ue",
@@ -1875,7 +1735,7 @@
    "free": true
   },
   {
-   "id": "echo-SP74xLUertuW6uxp1W69",
+   "id": "echo-7dZSKv6ZpPDdZ9HHCG52",
    "name": "Rear Window (Trough the Lens)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2535,7 +2395,7 @@
    "free": false
   },
   {
-   "id": "echo-Vety9ZM7jR9rvvxEvYKC",
+   "id": "echo-tbRySeMtX1X2Qe8U6h1L",
    "name": "Danton (CinEast Festival 2026)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -2735,7 +2595,7 @@
    "free": true
   },
   {
-   "id": "echo-lBrPuciu4paAmtSvPSKF",
+   "id": "echo-xDrCgwfjcQLF2ZekySp3",
    "name": "Sátántangó (CinEast Festival 2026)",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
@@ -3175,7 +3035,7 @@
    "free": false
   },
   {
-   "id": "echo-JCSiWlaCnn4R6qmLCVgo",
+   "id": "echo-NBHfrFDkfsb6sFnwxZ5K",
    "name": "Blow-Up (Through the Lens)",
    "venue": "Cinémathèque de la Ville de Luxembourg",
    "lat": 49.613153,
@@ -3233,6 +3093,126 @@
    "venueCat": "theatre",
    "views": 5,
    "free": false
+  },
+  {
+   "id": "echo-ZUMFd6l4KFL55s9gyzaI",
+   "name": "Internet als Ort der Begegnung",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "conferences",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-ed9WSw0VVk1uNFGSoSTs",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport-other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-W5XBbErUWbU6U5dC1KpM",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-MNmJKFFMYvie8kDl9GiV",
+   "name": "The Lobster considers",
+   "venue": "Théâtre National du Luxembourg (TNL)",
+   "lat": 49.606129,
+   "lon": 6.104515,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-vUTeVWbbfaf4WSfSpTy5",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-86nwOnb9ZNjTn22vOhlF",
+   "name": "Robert Ivanov Group ",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
   },
   {
    "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
