@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T10:13:27.193Z",
+ "updated": "2026-10-02T09:51:14.360Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,286 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-AlOt5crBefJY6MYavCJx",
-   "name": "2026 K-Culture Festival",
-   "venue": "Cercle Cité",
-   "lat": 49.61166189999999,
-   "lon": 6.130113700000001,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    13,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-design-crafts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-geBtbRUjHOWXCFhJSxGX",
-   "name": "Rhythmik-Workshop",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "sport",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-WjFwQ3EM6YiKWAJArDOC",
-   "name": " Journée Internationale des Personnes Âgées",
-   "venue": "Centre culturel de Bonnevoie",
-   "lat": 49.5968544,
-   "lon": 6.1375809,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    17,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-EtNlikA2Q3qHkMSWbEJV",
-   "name": "Le paysage historique urbain",
-   "venue": "7 rue du plébiscite",
-   "lat": 49.6047022,
-   "lon": 6.1290175,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-ht96Msfc7rvYJIpxb2W5",
-   "name": "We'll find happiness",
-   "venue": "Ciné Utopia",
-   "lat": 49.617019,
-   "lon": 6.120959,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "cinema",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-mhmiNXc6i83ycAuvdBBH",
-   "name": "FILM & CONFERENCE",
-   "venue": "Café-Théâtre \"Rocas\"",
-   "lat": 49.613273,
-   "lon": 6.129617,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-vpkaV87mBZII0dEU7Hfk",
-   "name": "Hommage à Gisèle Halimi",
-   "venue": "Institut Pierre Werner",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-joVoX2bMzJxC2er4BPVY",
-   "name": "Theatre Open Session",
-   "venue": "55, avenue de la Liberté",
-   "lat": 49.6022598,
-   "lon": 6.132361400000001,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-PTIBpuQj2MSefN9tavWL",
-   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
-   "venue": "Caribou Karaoke",
-   "lat": 49.6129308,
-   "lon": 6.1292805,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife-other",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-tYqxEQsJIP3BCn08fQzE",
-   "name": "2026 K-Culture Festival: Musical Performance",
-   "venue": "Cercle Cité",
-   "lat": 49.61166189999999,
-   "lon": 6.130113700000001,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-e7qRLj0LHBEcx0AAXZgE",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-ST2LzQlsiYA2WByv6QJW",
-   "name": "HOLLY HUDSON ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-comedy",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-tvBQPH3GlQlZBqEa4PoS",
-   "name": "Liquid Blues Jam Session",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-RFzckQPmYPwSb7wXnSpg",
-   "name": "Comedy Open Mic",
-   "venue": "Updown Bar ",
-   "lat": 49.608285,
-   "lon": 6.1349,
-   "from": "2026-10-01",
-   "to": "2026-10-01",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-comedy",
-   "venueCat": "bar",
-   "views": 0,
-   "free": true
   },
   {
    "id": "echo-0UypflnvOPZOloSD9DDd",
@@ -1415,8 +1135,8 @@
    "free": false
   },
   {
-   "id": "echo-AqYl3zUXFXBGnavjJvuI",
-   "name": "Together we groove",
+   "id": "echo-kM8yMXC48m9159PANgp0",
+   "name": "Together we groove (FULLY BOOKED)",
    "venue": "Schluechthaus / Skatepark Hollerich",
    "lat": 49.6012432,
    "lon": 6.116325700000001,
@@ -1953,6 +1673,26 @@
    "venueCat": "cultural-center",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-efbX3IB1sFUnWHEDyYqt",
+   "name": "Bradley's BIG BRAIN PUB QUIZ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-10-07",
+   "to": "2026-10-07",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nightlife-afterwork",
+   "venueCat": null,
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-cjgbYeHgb0LFq9t0o62R",
@@ -2795,6 +2535,26 @@
    "free": false
   },
   {
+   "id": "echo-62FjvNbJqvsYzNjrPRhI",
+   "name": "Event",
+   "venue": "Atmos Bar & Restaurant",
+   "lat": 49.6114156,
+   "lon": 6.1270737,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nightlife",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-adbz5PrDE6IlLI2xiDto",
    "name": "The Lobster (Efthimis Filippou)",
    "venue": "Théâtre des Capucins",
@@ -3175,6 +2935,26 @@
    "free": false
   },
   {
+   "id": "echo-6w4gpCukhk7ockTQ1Y60",
+   "name": "Patty is Such a Girly Name",
+   "venue": "Ciné Utopia",
+   "lat": 49.617019,
+   "lon": 6.120959,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cinema",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-MNmJKFFMYvie8kDl9GiV",
    "name": "The Lobster considers",
    "venue": "Théâtre National du Luxembourg (TNL)",
@@ -3410,6 +3190,366 @@
    "scale": "minor",
    "auto": true,
    "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-oRnTMhQAKh0N40EHI7Nk",
+   "name": "Patty is Such a Girly Name",
+   "venue": "Ciné Utopia",
+   "lat": 49.617019,
+   "lon": 6.120959,
+   "from": "2026-10-14",
+   "to": "2026-10-14",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cinema",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Y2UDxBEsnBOIZRcMkaWj",
+   "name": "Rhythmik-Workshop",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-J34cBa4F5M6Kgq3wG2Qc",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    18,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-B5YOC3uc2WuyS6xs1LxY",
+   "name": "Everything As It Should Be (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Q5CVInAHjRBStsAahxpJ",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-UFCFl2KtFyPeTzsSuQ2Z",
+   "name": "Anatomy of Ordinary Crimes & debate on online violence",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-dsTI3jkYB17r3K4voKda",
+   "name": "Event",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Xnp6OziXkEeTsQHwlKTm",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-opera",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-6gbMeF8ogQfXThL40j3P",
+   "name": "Ophélie Hocquard ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-KgjI3yaAievt7qElP3d8",
+   "name": "Mark Uncle Band",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-kK8h4GkmFyfZaxPANVki",
+   "name": "Honey Bunny (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-tfAmoF9TrHMoG2GhCyJc",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": "bar",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-SsSIhCa7x6fRhzpRs6YL",
+   "name": "Knitting coffee at the Museum ",
+   "venue": "Musée Draï Eechelen",
+   "lat": 49.6165171,
+   "lon": 6.139485199999999,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-TY1dNH914cMjIH9i63p1",
+   "name": "At the Heart of the State: Discover emblematic institutional",
+   "venue": "Ministère des Affaires étrangères et européennes, de la Défe",
+   "lat": 49.6121912,
+   "lon": 6.132994600000001,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-M8cB69MvxsDethrjZ6kK",
+   "name": "At the Heart of the State: Discover emblematic institutional",
+   "venue": "Ministère de la Culture",
+   "lat": 49.6084961,
+   "lon": 6.1317898,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-HVH9uIpd1p6PqcUlBSu0",
+   "name": "At the Heart of the State: Discover emblematic institutional",
+   "venue": "Ministère d'Etat",
+   "lat": 49.6095902,
+   "lon": 6.132068800000001,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-c41cvUUc6zXw4LUFbbwv",
+   "name": "At the Heart of the State: Discover emblematic institutional",
+   "venue": "Chambre des Députés et Palais grand-ducal ",
+   "lat": 49.61059969999999,
+   "lon": 6.1331276,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    10,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-xU3M6d5wUuWCq5TKNCbV",
+   "name": "Banannefabrik: from warehouse to creation, a living heritage",
+   "venue": "Banannefabrik ",
+   "lat": 49.59825430000001,
+   "lon": 6.135766599999999,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    10,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
    "venueCat": null,
    "views": 0,
    "free": true
