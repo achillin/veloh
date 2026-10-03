@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T09:51:14.360Z",
+ "updated": "2026-10-03T09:13:31.338Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,186 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-0UypflnvOPZOloSD9DDd",
-   "name": "Tease & Tell: A Theatrical Lecture on Burlesque",
-   "venue": "Rainbow Center - Zentrum fir queer Kultur",
-   "lat": 49.60938669999999,
-   "lon": 6.1334178,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-cstc5UG130ANV7E5ecgn",
-   "name": "Quiz Night",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-S5VeUxB7BjZLhgb0KAb0",
-   "name": "LES ANNÉES FOLLES",
-   "venue": "Sang a Klang",
-   "lat": 49.6150616,
-   "lon": 6.1340425,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    19,
-    24
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-jazz",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-CgthuGHSISVQNPgJy1AP",
-   "name": "Event",
-   "venue": "Grand Théâtre de la Ville de Luxembourg",
-   "lat": 49.617369,
-   "lon": 6.127164,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-I1lTdFbK5FzUd7ffQYxp",
-   "name": "Event",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-classic",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-TeaqtJcxRe2P2rBA0Atq",
-   "name": "L'Étage",
-   "venue": "Théâtre ouvert Luxembourg (TOL)",
-   "lat": 49.580802,
-   "lon": 6.149375,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    20,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-jazz",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-71ZbK0OX0vTYHlaUOFA3",
-   "name": "Luxembourg for Beginners",
-   "venue": "Café-Théâtre \"Rocas\"",
-   "lat": 49.613273,
-   "lon": 6.129617,
-   "from": "2026-10-02",
-   "to": "2026-10-02",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-comedy",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-RfZJyAfrRYT2sjLiHoG4",
-   "name": "ONa- Vague",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    9,
-    11
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-T7IesvjjBUNVt6TdSJng",
-   "name": "Sum – poésie sonore et gestuelle pour petits corps",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    10,
-    11
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
    "id": "echo-OIMQiLMcueDt6R5kHFUR",
    "name": "Tuffi - Junior Atelier (4-7) ",
    "venue": "Cercle Cité - Salle 503",
@@ -571,26 +391,6 @@
    "auto": true,
    "cat": "arts-scene-theatre",
    "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-nsgDTjoenFSktcy83suQ",
-   "name": "Choux pastry workshop",
-   "venue": "Cooking Studio MIELE - Gasperich",
-   "lat": 49.587431377,
-   "lon": 6.121446067,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    13,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "gastronomie",
-   "venueCat": null,
    "views": 0,
    "free": false
   },
@@ -3551,6 +3351,246 @@
    "auto": true,
    "cat": "arts-scene-dance",
    "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-JDNpUu05JpRLPXmFTPe2",
+   "name": "JOURNEES EUROPEENNES DU PATRIMOINE",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    12,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-tlkXv4vUOjwJVFMD0Jb3",
+   "name": "Local Citizens Panel",
+   "venue": "Luxembourg-Kirchberg « Europa Expérience »  Bâtiment Konrad ",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    16,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "conferences",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-KKWiliQHQZGxAv1cCWfU",
+   "name": "Banannefabrik: Heritage in Motion",
+   "venue": "Banannefabrik",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    16,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-m41IRXNLeYDkGB5z8Tf1",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    18,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-4WTpGMlpY9ADssfC5enX",
+   "name": "Dua (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-UteTm8O4KUQrcDhVvnB6",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-r1Ux7jmWGkdw0rRkWpdy",
+   "name": "Unseasoned Chicken Breast",
+   "venue": "Le Croque Bedaine",
+   "lat": 49.62451,
+   "lon": 6.12206,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": "restaurant",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-PnjuxKou5OS6eOLMrs1i",
+   "name": "A Safe Place (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-6y4ou910HDEmfHjJqnPz",
+   "name": "Banannefabrik: Heritage in Motion",
+   "venue": "Banannefabrik",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    9,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-A38nQOXrrUwlWY4NM1nT",
+   "name": "Banannefabrik: from warehouse to creation, a living heritage",
+   "venue": "Banannefabrik ",
+   "lat": 49.59825430000001,
+   "lon": 6.135766599999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Ooq2ecxW86VznvXnhwGh",
+   "name": "Tuffi - Pro Atelier (6-10) ",
+   "venue": "Cercle Cité - Salle 503",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-literature",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-4A1lK7IWpEwrPM2Tg8vJ",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "memorial",
    "views": 0,
    "free": true
   },

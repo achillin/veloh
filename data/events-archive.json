@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T09:51:14.364Z",
+ "updated": "2026-10-03T09:13:31.342Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -10626,6 +10626,26 @@
    "free": true
   },
   {
+   "id": "echo-4WTpGMlpY9ADssfC5enX",
+   "name": "Dua (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-HVH9uIpd1p6PqcUlBSu0",
    "name": "At the Heart of the State: Discover emblematic institutional",
    "venue": "Ministère d'Etat",
@@ -10642,6 +10662,46 @@
    "auto": true,
    "cat": "expositions-art",
    "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-JDNpUu05JpRLPXmFTPe2",
+   "name": "JOURNEES EUROPEENNES DU PATRIMOINE",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    12,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-KKWiliQHQZGxAv1cCWfU",
+   "name": "Banannefabrik: Heritage in Motion",
+   "venue": "Banannefabrik",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    16,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
    "views": 0,
    "free": true
   },
@@ -10664,6 +10724,26 @@
    "venueCat": null,
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-PnjuxKou5OS6eOLMrs1i",
+   "name": "A Safe Place (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-SsSIhCa7x6fRhzpRs6YL",
@@ -10706,6 +10786,26 @@
    "free": true
   },
   {
+   "id": "echo-UteTm8O4KUQrcDhVvnB6",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-c41cvUUc6zXw4LUFbbwv",
    "name": "At the Heart of the State: Discover emblematic institutional",
    "venue": "Chambre des Députés et Palais grand-ducal ",
@@ -10726,6 +10826,66 @@
    "free": true
   },
   {
+   "id": "echo-m41IRXNLeYDkGB5z8Tf1",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    18,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-r1Ux7jmWGkdw0rRkWpdy",
+   "name": "Unseasoned Chicken Breast",
+   "venue": "Le Croque Bedaine",
+   "lat": 49.62451,
+   "lon": 6.12206,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": "restaurant",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-tlkXv4vUOjwJVFMD0Jb3",
+   "name": "Local Citizens Panel",
+   "venue": "Luxembourg-Kirchberg « Europa Expérience »  Bâtiment Konrad ",
+   "lat": 49.6210707,
+   "lon": 6.1483338,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    16,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "conferences",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-xU3M6d5wUuWCq5TKNCbV",
    "name": "Banannefabrik: from warehouse to creation, a living heritage",
    "venue": "Banannefabrik ",
@@ -10741,6 +10901,86 @@
    "scale": "minor",
    "auto": true,
    "cat": "arts-scene-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-4A1lK7IWpEwrPM2Tg8vJ",
+   "name": "Organ recital",
+   "venue": "Cathédrale Notre-Dame",
+   "lat": 49.6099739,
+   "lon": 6.1288328,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "memorial",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-6y4ou910HDEmfHjJqnPz",
+   "name": "Banannefabrik: Heritage in Motion",
+   "venue": "Banannefabrik",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    9,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-A38nQOXrrUwlWY4NM1nT",
+   "name": "Banannefabrik: from warehouse to creation, a living heritage",
+   "venue": "Banannefabrik ",
+   "lat": 49.59825430000001,
+   "lon": 6.135766599999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Ooq2ecxW86VznvXnhwGh",
+   "name": "Tuffi - Pro Atelier (6-10) ",
+   "venue": "Cercle Cité - Salle 503",
+   "lat": 49.6114687,
+   "lon": 6.1301651,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-literature",
    "venueCat": null,
    "views": 0,
    "free": true
