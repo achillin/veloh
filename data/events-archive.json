@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T09:13:31.342Z",
+ "updated": "2026-10-04T09:52:57.570Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -10926,6 +10926,46 @@
    "free": true
   },
   {
+   "id": "echo-5EWn2QPNMt7SfKO1mN1m",
+   "name": "AAPL - Open House",
+   "venue": "Locaux de l'AAPL",
+   "lat": 49.6053856,
+   "lon": 6.139383599999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5mm3jNZNL9M0pex249R1",
+   "name": "Everything That’s Wrong With You (CinEast Festival 2026)",
+   "venue": "Cercle Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-6y4ou910HDEmfHjJqnPz",
    "name": "Banannefabrik: Heritage in Motion",
    "venue": "Banannefabrik",
@@ -10942,6 +10982,26 @@
    "auto": true,
    "cat": "arts-scene",
    "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-8951dtaVi8PelotmrRs8",
+   "name": "Dyeing silk | SOLD OUT",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "museum",
    "views": 0,
    "free": true
   },
@@ -10966,6 +11026,126 @@
    "free": true
   },
   {
+   "id": "echo-BXaBB2KlACjYGurY5BYb",
+   "name": "LE PORTEUR D'HISTOIRE",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DV2NFJFaiCnwEKoN7wDm",
+   "name": "Music for Toddlers 101",
+   "venue": "Cloche d'Or Shopping Center",
+   "lat": 49.5856546,
+   "lon": 6.1189142,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    17,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "other",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DwtpV89DGwW1LMkNoCor",
+   "name": "La chasse aux trésors perdus",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": "fair",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-L2iP3P7iDpGnciuaiK1V",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-MZ1goDbS6qNYodiD6yCS",
+   "name": "Storytelling workshop",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Ni4ncHjyCpb2oRslxDbf",
+   "name": "The Hunt for Lost Treasures",
+   "venue": "Quartier de Clausen",
+   "lat": 49.6134207,
+   "lon": 6.1448744,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-Ooq2ecxW86VznvXnhwGh",
    "name": "Tuffi - Pro Atelier (6-10) ",
    "venue": "Cercle Cité - Salle 503",
@@ -10982,6 +11162,366 @@
    "auto": true,
    "cat": "arts-scene-literature",
    "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-PstQykyZvwJ2lAbumXPz",
+   "name": "Kids Skate Jam",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Ts1PktCoD4uXA2cwFT6l",
+   "name": " Guided tours of the \"SHAPES - Beyond Geometry\" exhibition ",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Vq6sW49HWEA8RfRHv75J",
+   "name": "Kids Show",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-X2atP6XLCvZwHOSDz7HZ",
+   "name": "Letter to an Unknown Woman (Max Ophüls)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Xy9gw5DR048f0qzFIYtn",
+   "name": "La chasse aux trésors perdus",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": "fair",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-ZwCp8fDBEadW5vNXRjcx",
+   "name": "Sushi Class",
+   "venue": "Aka Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "gastronomie",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-bUcelOeNai72npioCBEN",
+   "name": "Sein oder Nichtsein",
+   "venue": "TNL Atelier",
+   "lat": 49.606735,
+   "lon": 6.106988,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-d9CNCj6TERdgHF4I2y43",
+   "name": "JOURNEES EUROPEENNES DU PATRIMOINE",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    12,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-gMDD6xJs69DRKIHBqNWh",
+   "name": "Short Fiction Films Marathon (North) (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    16,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-gpPIirAvp5JJFqH1Moon",
+   "name": "Rear Window (Trough the Lens)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-hSpxCBMkVgzxxbfLUaIX",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-kmcfj4z9LjG2GvpngFWs",
+   "name": "Mayflies (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-pQbh7uTthr7ri5llhv4F",
+   "name": "Die Wilden Hühner (Afternoon Adventures)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-2N7hhTRsdXrQaWcgQQdZ",
+   "name": "That was my time, now what? ",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-N6Q6yv85bwIg5EvStCt8",
+   "name": "Hôtel de la Loge",
+   "venue": "Hôtel de la Loge",
+   "lat": 49.6108062,
+   "lon": 6.1341035,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    11,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-VaVMtLvqCByPNZlGofyR",
+   "name": "CONCERT ACTART : TIME TRAVELLING FLUTE",
+   "venue": "Conservatoire de la Ville de Luxembourg",
+   "lat": 49.602292,
+   "lon": 6.10683,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "theatre",
+   "views": 13,
+   "free": true
+  },
+  {
+   "id": "echo-iROOHk6mTws1VN5k8yt4",
+   "name": "Wladigeroff Brothers feat. Stoil Ivanov",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-zjPg53exFYaatTmIaxLa",
+   "name": "Second Chance",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    10,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design-fashion",
+   "venueCat": "cultural-center",
    "views": 0,
    "free": true
   }

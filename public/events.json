@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T09:13:31.338Z",
+ "updated": "2026-10-04T09:52:57.566Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,446 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-OIMQiLMcueDt6R5kHFUR",
-   "name": "Tuffi - Junior Atelier (4-7) ",
-   "venue": "Cercle Cité - Salle 503",
-   "lat": 49.6114687,
-   "lon": 6.1301651,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-OVsMW2pgSZh785HAEHEe",
-   "name": "Organ recital",
-   "venue": "Cathédrale Notre-Dame",
-   "lat": 49.6099739,
-   "lon": 6.1288328,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": "memorial",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-SPrgcOrgBDiTFUaqvtVh",
-   "name": "teNir",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-dLhxemyusbcSx1auhUtJ",
-   "name": "Sushi Class",
-   "venue": "Aka Cité",
-   "lat": 49.61166189999999,
-   "lon": 6.130113700000001,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "gastronomie",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-KxuhYNbSwpSpLWTjpUil",
-   "name": "Sushi Class",
-   "venue": "Aka Cité",
-   "lat": 49.61166189999999,
-   "lon": 6.130113700000001,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "gastronomie",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-e4tJ4DRFMeJrCCCBezhY",
-   "name": "Sum – poésie sonore et gestuelle pour petits corps",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    13,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-5vl4x9qkaZP0dYU0kUC9",
-   "name": "ONa- Vague",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    14,
-    15
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-AAfOKhAcLmi2ykhnfFLk",
-   "name": "Mushroom Foraging & Risotto Experience in Luxembourg",
-   "venue": "La Dante Alighieri Luxembourg",
-   "lat": 49.607620014,
-   "lon": 6.136366519,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    14,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "sport",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-2mujQo5IDK9AaZmSZhGA",
-   "name": "Sum – poésie sonore et gestuelle pour petits corps",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-2qeWnuzDtDVO9TQrEnZC",
-   "name": "Bernar Venet — Conférence",
-   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
-   "lat": 49.617095,
-   "lon": 6.140337,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "expositions",
-   "venueCat": "museum",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-Yzegz2W4W4ajhHmmftEu",
-   "name": "teNir",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-6bhFcx0tV8oD6udCal5q",
-   "name": "Schluechthaus Session",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    16,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-jKB4gbiVGVPqybaDDSVK",
-   "name": "Event",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-classic",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-x13xeI3JetRVOfDANe8H",
-   "name": "Event",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-c2cT9flw2wHp0C11WS4y",
-   "name": " Ouverture Black History Month 2026",
-   "venue": " Forum Geesseknäppchen",
-   "lat": 49.6005117,
-   "lon": 6.1136285,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    17,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences-other",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-V3hXgF3ZCHciYNipGUcA",
-   "name": "3 du TROIS | WORK IN PROGRESS – OCTOBRE 26",
-   "venue": "TROIS C-L | Maison pour la danse",
-   "lat": 49.598244,
-   "lon": 6.135757,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-dance",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-qHprZOXbcrB1Pz2eO6pM",
-   "name": "The Lobster considers",
-   "venue": "Théâtre National du Luxembourg (TNL)",
-   "lat": 49.606129,
-   "lon": 6.104515,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-U9Pt4c1fR4T1rIHT6ZdX",
-   "name": "GALA CONCERT TRUMPET DAYS 2026",
-   "venue": "Lycée Michel-Rodange Luxembourg",
-   "lat": 49.600119,
-   "lon": 6.113623,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-yLIaN6PKiuk54QgNUjzL",
-   "name": "Event",
-   "venue": "Philharmonie Luxembourg",
-   "lat": 49.618602,
-   "lon": 6.142702,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts-classic",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-00HSddrFuTWIrka5Tgmt",
-   "name": "Match d'Improvisation Luxembourg VS France",
-   "venue": "Théâtre Le  10",
-   "lat": 49.6230234,
-   "lon": 6.184419399999999,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-xFt2zn3oUMQdqeLG7DSi",
-   "name": "MAMAGOESDANCING",
-   "venue": "Apoteca",
-   "lat": 49.611369,
-   "lon": 6.132919,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife",
-   "venueCat": "bar",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-9VVZI6jNTcMy5AvkgPhr",
-   "name": "Concert – Echo Des Balafons",
-   "venue": " Forum Geesseknäppchen",
-   "lat": 49.6005117,
-   "lon": 6.1136285,
-   "from": "2026-10-03",
-   "to": "2026-10-03",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
    "id": "echo-nbG3Ur4JQ2sCXHZOO9lm",
    "name": "GO electric day",
    "venue": "Centre National Sportif & Culturel COQUE",
@@ -733,26 +293,6 @@
    "venueCat": "cultural-center",
    "views": 0,
    "free": true
-  },
-  {
-   "id": "echo-8EpyBsTRWVQqkBFB93sH",
-   "name": "ONa- Vague",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    9,
-    11
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
   },
   {
    "id": "echo-UbAKxnt6lDSmYwRSjZh7",
@@ -813,66 +353,6 @@
    "venueCat": "city",
    "views": 0,
    "free": true
-  },
-  {
-   "id": "echo-oA3AQLlYT9iInTWnWOTM",
-   "name": "Sum – poésie sonore et gestuelle pour petits corps",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    10,
-    11
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-lR7G7K3OkIcfDcGxfrj6",
-   "name": "CONCERT ACTART : PERSPECTIVES TRIADIQUES",
-   "venue": "Conservatoire de la Ville de Luxembourg",
-   "lat": 49.602292,
-   "lon": 6.10683,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": "theatre",
-   "views": 5,
-   "free": true
-  },
-  {
-   "id": "echo-5veSkct9iGOmxDPTzh6c",
-   "name": "teNir",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
   },
   {
    "id": "echo-LJYxp9rphToQd9wTAJMJ",
@@ -3591,6 +3071,546 @@
    "auto": true,
    "cat": "concerts",
    "venueCat": "memorial",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-ZwCp8fDBEadW5vNXRjcx",
+   "name": "Sushi Class",
+   "venue": "Aka Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "gastronomie",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-d9CNCj6TERdgHF4I2y43",
+   "name": "JOURNEES EUROPEENNES DU PATRIMOINE",
+   "venue": "TROIS C-L | Maison pour la danse",
+   "lat": 49.598244,
+   "lon": 6.135757,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    12,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Xy9gw5DR048f0qzFIYtn",
+   "name": "La chasse aux trésors perdus",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": "fair",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-MZ1goDbS6qNYodiD6yCS",
+   "name": "Storytelling workshop",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5EWn2QPNMt7SfKO1mN1m",
+   "name": "AAPL - Open House",
+   "venue": "Locaux de l'AAPL",
+   "lat": 49.6053856,
+   "lon": 6.139383599999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Ts1PktCoD4uXA2cwFT6l",
+   "name": " Guided tours of the \"SHAPES - Beyond Geometry\" exhibition ",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Vq6sW49HWEA8RfRHv75J",
+   "name": "Kids Show",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Ni4ncHjyCpb2oRslxDbf",
+   "name": "The Hunt for Lost Treasures",
+   "venue": "Quartier de Clausen",
+   "lat": 49.6134207,
+   "lon": 6.1448744,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-8951dtaVi8PelotmrRs8",
+   "name": "Dyeing silk | SOLD OUT",
+   "venue": "Casino Luxembourg - Forum d'art contemporain",
+   "lat": 49.609787,
+   "lon": 6.12714,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "museum",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-PstQykyZvwJ2lAbumXPz",
+   "name": "Kids Skate Jam",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-hSpxCBMkVgzxxbfLUaIX",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    15,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-pQbh7uTthr7ri5llhv4F",
+   "name": "Die Wilden Hühner (Afternoon Adventures)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DwtpV89DGwW1LMkNoCor",
+   "name": "La chasse aux trésors perdus",
+   "venue": "luca – Luxembourg Center for Architecture ",
+   "lat": 49.61348568998791,
+   "lon": 6.144871252600094,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    16,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": "fair",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-gMDD6xJs69DRKIHBqNWh",
+   "name": "Short Fiction Films Marathon (North) (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    16,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DV2NFJFaiCnwEKoN7wDm",
+   "name": "Music for Toddlers 101",
+   "venue": "Cloche d'Or Shopping Center",
+   "lat": 49.5856546,
+   "lon": 6.1189142,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    17,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "other",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-X2atP6XLCvZwHOSDz7HZ",
+   "name": "Letter to an Unknown Woman (Max Ophüls)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-kmcfj4z9LjG2GvpngFWs",
+   "name": "Mayflies (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-bUcelOeNai72npioCBEN",
+   "name": "Sein oder Nichtsein",
+   "venue": "TNL Atelier",
+   "lat": 49.606735,
+   "lon": 6.106988,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-L2iP3P7iDpGnciuaiK1V",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-BXaBB2KlACjYGurY5BYb",
+   "name": "LE PORTEUR D'HISTOIRE",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-gpPIirAvp5JJFqH1Moon",
+   "name": "Rear Window (Trough the Lens)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5mm3jNZNL9M0pex249R1",
+   "name": "Everything That’s Wrong With You (CinEast Festival 2026)",
+   "venue": "Cercle Cité",
+   "lat": 49.61166189999999,
+   "lon": 6.130113700000001,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-2N7hhTRsdXrQaWcgQQdZ",
+   "name": "That was my time, now what? ",
+   "venue": "Rainbow Center - Zentrum fir queer Kultur",
+   "lat": 49.60938669999999,
+   "lon": 6.1334178,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-zjPg53exFYaatTmIaxLa",
+   "name": "Second Chance",
+   "venue": "Schluechthaus",
+   "lat": 49.60094781333426,
+   "lon": 6.117339457671003,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    10,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design-fashion",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-VaVMtLvqCByPNZlGofyR",
+   "name": "CONCERT ACTART : TIME TRAVELLING FLUTE",
+   "venue": "Conservatoire de la Ville de Luxembourg",
+   "lat": 49.602292,
+   "lon": 6.10683,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "theatre",
+   "views": 13,
+   "free": true
+  },
+  {
+   "id": "echo-iROOHk6mTws1VN5k8yt4",
+   "name": "Wladigeroff Brothers feat. Stoil Ivanov",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-N6Q6yv85bwIg5EvStCt8",
+   "name": "Hôtel de la Loge",
+   "venue": "Hôtel de la Loge",
+   "lat": 49.6108062,
+   "lon": 6.1341035,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    11,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
    "views": 0,
    "free": true
   },
