@@ -59,6 +59,7 @@ const luxFmt = new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
   weekday: 'short',
   hour: 'numeric',
+  minute: 'numeric',
   hour12: false,
 })
 const luxCache = new Map() // minute → parts (predict() asks thousands of times per render)
@@ -67,7 +68,7 @@ export function luxParts(date) {
   let p = luxCache.get(k)
   if (p) return p
   const raw = Object.fromEntries(luxFmt.formatToParts(date).map((x) => [x.type, x.value]))
-  p = { year: +raw.year, month: +raw.month, day: +raw.day, weekday: raw.weekday, hour: +raw.hour % 24 }
+  p = { year: +raw.year, month: +raw.month, day: +raw.day, weekday: raw.weekday, hour: +raw.hour % 24, minute: +raw.minute }
   if (luxCache.size > 20_000) luxCache.clear()
   luxCache.set(k, p)
   return p

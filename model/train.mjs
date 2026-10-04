@@ -17,7 +17,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { gunzipSync } from 'node:zlib'
 import { activeEventsAt, eventsNear } from '../src/lib/events.js'
-import { venueDelta } from '../src/lib/predictor.js'
+import { profileKeysAround, venueDelta } from '../src/lib/predictor.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 export const DATA_DIR = join(ROOT, 'data')
@@ -380,9 +380,18 @@ export function buildProfiles(lines, capacities, events = []) {
     }
     shrunk.set(id, m)
   }
-  const baseFrac = (id, key, active) => {
-    const f = shrunk.get(id)?.get(key)
-    if (f == null) return null
+  const baseFrac = (id, date, active) => {
+    // interpolated across the hour exactly as the predictor does
+    let f = 0
+    let wSum = 0
+    for (const { key, w } of profileKeysAround(date)) {
+      const v = shrunk.get(id)?.get(key)
+      if (v == null || !w) continue
+      f += v * w
+      wSum += w
+    }
+    if (!wSum) return null
+    f /= wSum
     let delta = 0
     for (const ev of eventsNear(active, capacities[id])) delta += venueDelta(eventEffects[ev.venue])
     delta = Math.max(-EVENT_DELTA_CAP, Math.min(EVENT_DELTA_CAP, delta))
@@ -437,7 +446,7 @@ export function buildProfiles(lines, capacities, events = []) {
         const cap = capacities[id]?.capacity
         const rec = origin.line.s[id]
         if (!cap || !rec) continue
-        const base = baseFrac(id, key1, active)
+        const base = baseFrac(id, new Date(target.ms), active)
         if (base == null) continue
         const live = Math.min(rec[0] / cap, 1)
         for (let i = 0; i < W_STEPS; i++) {
@@ -485,7 +494,7 @@ export function buildProfiles(lines, capacities, events = []) {
     for (const [id, [bikes]] of Object.entries(line.s)) {
       const cap = capacities[id]?.capacity
       if (!cap) continue
-      const base = baseFrac(id, key, active)
+      const base = baseFrac(id, new Date(ms), active)
       if (base == null) continue
       let byKey = biasAcc.get(id)
       if (!byKey) biasAcc.set(id, (byKey = new Map()))

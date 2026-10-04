@@ -50,6 +50,16 @@ describe('predict', () => {
     expect(p.kind).toBe('learned') // n = 92 ≥ 20
   })
 
+  it('interpolates the profile across the hour instead of stepping at the full hour', () => {
+    const profiles = { global: { 'wd-10': [0.4, 100], 'wd-11': [0.2, 100] }, stations: {} }
+    const at = (h) => predict(station, hoursAhead(h), { ...baseCtx, profiles }).frac
+    expect(at(24.5)).toBeCloseTo(0.4, 5) // Thu 10:30: the middle of the 10 h bucket
+    expect(at(24.75)).toBeCloseTo(0.35, 5) // 10:45: a quarter of the way to the 11 h bucket
+    expect(at(25)).toBeCloseTo(0.3, 5) // 11:00: halfway between the two
+    expect(at(25.5)).toBeCloseTo(0.2, 5) // 11:30
+    expect(at(26)).toBeCloseTo(0.2, 5) // 12:00: the 12 h bucket is unknown → the 11 h one alone
+  })
+
   it('treats sparse station buckets as prior-quality', () => {
     const profiles = {
       global: { 'wd-10': [0.3, 500] },
@@ -197,7 +207,7 @@ describe('predict with a recent per-station bias', () => {
   const profiles = {
     global: { 'wd-10': [0.4, 100], 'wd-11': [0.05, 100] },
     stations: {},
-    bias: { 1: { 'wd-10': -0.1, 'wd-11': -0.1 } },
+    bias: { 1: { 'wd-9': -0.1, 'wd-10': -0.1, 'wd-11': -0.1 } }, // cells are interpolated across the hour too
   }
 
   it('adds the station × bucket cell to the profile base', () => {
@@ -212,7 +222,7 @@ describe('predict with a recent per-station bias', () => {
   })
 
   it('clamps the corrected base to [0, 1]', () => {
-    const p = predict(station, hoursAhead(25), { ...baseCtx, profiles })
+    const p = predict(station, hoursAhead(25.5), { ...baseCtx, profiles }) // Thu 11:30: 0.05 − 0.1
     expect(p.frac).toBe(0)
   })
 

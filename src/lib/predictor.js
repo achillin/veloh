@@ -59,6 +59,41 @@ function learnedFraction(profiles, stationId, key) {
   return { frac: (n * sMean + SHRINK_K * gMean) / (n + SHRINK_K), n }
 }
 
+/** The hour buckets an instant draws on, with weights. A bucket's mean
+ *  describes the middle of its hour, so between two half-hour marks the
+ *  value is interpolated from the neighbouring buckets: 10:30 is all of the
+ *  10 h bucket, 11:00 half 10 h and half 11 h. Without this, every learned
+ *  quantity would step at the full hour as the scrub moves through it. */
+export function profileKeysAround(date) {
+  const x = luxParts(date).minute / 60 - 0.5 // position relative to the bucket centre
+  const other = new Date(date.getTime() + (x >= 0 ? 1 : -1) * 3.6e6)
+  const t = Math.abs(x)
+  return [
+    { key: profileKey(date), w: 1 - t },
+    { key: profileKey(other), w: t },
+  ]
+}
+
+/** learnedFraction interpolated across the hour (see profileKeysAround);
+ *  n is that of the bucket the instant falls in. */
+function learnedFractionAt(profiles, stationId, date) {
+  const [a, b] = profileKeysAround(date)
+  const la = learnedFraction(profiles, stationId, a.key)
+  const lb = b.w > 0 ? learnedFraction(profiles, stationId, b.key) : null
+  if (!la) return lb
+  if (!lb) return la
+  return { frac: la.frac * a.w + lb.frac * b.w, n: la.n }
+}
+
+/** The recent-residual correction, interpolated the same way (missing cells count as 0). */
+function biasAt(profiles, stationId, date) {
+  const cells = profiles?.bias?.[stationId]
+  if (!cells) return 0
+  let v = 0
+  for (const { key, w } of profileKeysAround(date)) v += (cells[key] ?? 0) * w
+  return v
+}
+
 function rainAdjustment(profiles, forecast, dtH) {
   if (!profiles?.rain || !forecast) return 0
   const wet = (forecast.precip ?? 0) >= 0.2 || (forecast.precipProb ?? 0) >= 60
@@ -147,8 +182,7 @@ export function predict(station, target, ctx) {
 
   if (dtH <= 0.01) return { frac: liveFrac, bikes: station.bikes, kind: 'live' }
 
-  const key = profileKey(target)
-  const learned = learnedFraction(profiles, station.id, key)
+  const learned = learnedFractionAt(profiles, station.id, target)
   let base
   let kind
   if (learned) {
@@ -164,7 +198,7 @@ export function predict(station, target, ctx) {
         rainAdjustment(profiles, forecast, dtH) +
         eventAdjustment(profiles, station, target, ctx) +
         // recent residual of this station × bucket (last week vs the long profile)
-        (profiles?.bias?.[station.id]?.[key] ?? 0),
+        biasAt(profiles, station.id, target),
       0
     ),
     1
