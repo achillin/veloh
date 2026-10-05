@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T09:52:57.570Z",
+ "updated": "2026-10-05T10:32:52.412Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -10866,6 +10866,26 @@
    "free": false
   },
   {
+   "id": "echo-rQjSSmVXDXb8TNcgjrid",
+   "name": "Open Day: New Hybrid Exhibition by the ZLS",
+   "venue": "Ministère de la Culture - Grand-Duché de Luxembourg",
+   "lat": 49.608802,
+   "lon": 6.131675,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    9,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "other",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-tlkXv4vUOjwJVFMD0Jb3",
    "name": "Local Citizens Panel",
    "venue": "Luxembourg-Kirchberg « Europa Expérience »  Bâtiment Konrad ",
@@ -10902,6 +10922,26 @@
    "auto": true,
    "cat": "arts-scene-dance",
    "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-2fUH6CgNLFXsh3WahVXN",
+   "name": "European Heritage Days: New Hybrid Exhibition by the ZLS",
+   "venue": "Ministère de la Culture - Grand-Duché de Luxembourg",
+   "lat": 49.608802,
+   "lon": 6.131675,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "other",
    "views": 0,
    "free": true
   },
@@ -11426,6 +11466,26 @@
    "free": false
   },
   {
+   "id": "echo-wJTl7JUtuBXFSpXLLkZZ",
+   "name": "LE PORTEUR D'HISTOIRE",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-2N7hhTRsdXrQaWcgQQdZ",
    "name": "That was my time, now what? ",
    "venue": "Rainbow Center - Zentrum fir queer Kultur",
@@ -11442,6 +11502,86 @@
    "auto": true,
    "cat": "arts-scene",
    "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-6nocZP3wWDIkI5nKsI87",
+   "name": "AAPL - Open House",
+   "venue": "Locaux de l'AAPL",
+   "lat": 49.6053856,
+   "lon": 6.139383599999999,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    13,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-74CD5Nl3dIlTS2xSBclq",
+   "name": "Hirnyk (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-H0qvSw9HzPnAhA8fv78l",
+   "name": "Cinédebate & Outdoor Event “Second Wind”",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-MNrnMPQ4P2sczVp7HLOa",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-opera",
+   "venueCat": "theatre",
    "views": 0,
    "free": false
   },
@@ -11466,6 +11606,66 @@
    "free": true
   },
   {
+   "id": "echo-TRVbnyLND4DNarAmm2Ic",
+   "name": "FAMU for Kids : One + One = Us (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-TdYsCgWBRNdZcqU2HWTg",
+   "name": "Fête d’inauguration de l’INECC Luxembourg",
+   "venue": "INECC - Bonnevoie ",
+   "lat": 49.60288,
+   "lon": 6.1394411,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    12,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-VE53UcCLPlEZx6Qpv8aN",
+   "name": "Cours de danse Boogie Rock ",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport-dance",
+   "venueCat": "other",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-VaVMtLvqCByPNZlGofyR",
    "name": "CONCERT ACTART : TIME TRAVELLING FLUTE",
    "venue": "Conservatoire de la Ville de Luxembourg",
@@ -11484,6 +11684,86 @@
    "venueCat": "theatre",
    "views": 13,
    "free": true
+  },
+  {
+   "id": "echo-WU5ER2xYMzqqHdVLUI2p",
+   "name": "La Magie Karel Zeman (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-YerRAmHz2DcIodjPEZcU",
+   "name": "Le Testament du docteur Cordelier (Dr. Jekyll & Mr. Hyde)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Ywx0GLxzcXdz3HXoZHcU",
+   "name": "Kinds of Kindness (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-dDmdRygCrvFZfhvR2MfM",
+   "name": "AMÈRES CONDOLÉANCES",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-iROOHk6mTws1VN5k8yt4",
@@ -11506,6 +11786,86 @@
    "free": false
   },
   {
+   "id": "echo-oXbYasPq71SbSzR3OyA8",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    14,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-pjR1MeSOSPcc9P1QStdB",
+   "name": "“Luxembourg, Old Quarters and Fortifications, World Heritage",
+   "venue": "Place Guillaume II",
+   "lat": 49.6106802,
+   "lon": 6.1311262,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-qXqY9yzGpWzgVQAHC1Ct",
+   "name": "Heritage and Migration: A Relationship Reinvented Every Day",
+   "venue": "Balade patrimoine et migrations",
+   "lat": 49.6070082,
+   "lon": 6.1277924,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-rAd99cQjOwCGkNQ55RyR",
+   "name": "Short Animated Films Marathon (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-zjPg53exFYaatTmIaxLa",
    "name": "Second Chance",
    "venue": "Schluechthaus",
@@ -11524,6 +11884,26 @@
    "venueCat": "cultural-center",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-zytoz5qxzOvbxY9igL1p",
+   "name": " Small Things (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
   }
  ]
 }

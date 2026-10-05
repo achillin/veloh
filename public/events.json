@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T09:52:57.566Z",
+ "updated": "2026-10-05T10:32:52.409Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,286 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-nbG3Ur4JQ2sCXHZOO9lm",
-   "name": "GO electric day",
-   "venue": "Centre National Sportif & Culturel COQUE",
-   "lat": 49.623762,
-   "lon": 6.15394,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    9,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "exhibition",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-UbAKxnt6lDSmYwRSjZh7",
-   "name": "Kids Life Skills Open Day",
-   "venue": "Kids Life Skills - PwC Academy",
-   "lat": 49.5807114,
-   "lon": 6.122027399999999,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    9,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-JDmJJsg0I0f8MrgPyRTI",
-   "name": "Pilates & Brunch",
-   "venue": "Luxembourg Marriott Hotel Alfa ",
-   "lat": 49.6006703,
-   "lon": 6.133112,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    10,
-    15
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "sport-other",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-hMiYRB11TuTHeGoTH7yk",
-   "name": "Konscht Am Gronn",
-   "venue": "Pont du Grund",
-   "lat": 49.609224,
-   "lon": 6.135862,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    10,
-    18
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-design",
-   "venueCat": "city",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-LJYxp9rphToQd9wTAJMJ",
-   "name": "Workshop | The Clay Workshop  | SOLD OUT",
-   "venue": "Casino Luxembourg - Forum d'art contemporain",
-   "lat": 49.609787,
-   "lon": 6.12714,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    11,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": "museum",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-KKo1yA7qIYaCTk5rx1FF",
-   "name": "Father's Day ",
-   "venue": "Brasserie Alfa ",
-   "lat": 49.6038711,
-   "lon": 6.1328598,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    12,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "gastronomie-degustation",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-HqdD3l2u3ewkDkNEsIPB",
-   "name": "Sum – poésie sonore et gestuelle pour petits corps",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    13,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-kM8yMXC48m9159PANgp0",
-   "name": "Together we groove (FULLY BOOKED)",
-   "venue": "Schluechthaus / Skatepark Hollerich",
-   "lat": 49.6012432,
-   "lon": 6.116325700000001,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    13,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-JOpU967bIGzY6bGjV1l9",
-   "name": "ONa- Vague",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    14,
-    15
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-9isut1dtWuH2j9cj180F",
-   "name": "Sum – poésie sonore et gestuelle pour petits corps",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    15,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-LhhC0nAvLH8TBZmhTT20",
-   "name": "teNir",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-QdZYO4s9kN4OrovIUlYj",
-   "name": "LES POUVOIRS DU MAGICIEN",
-   "venue": "Théâtre Le  10",
-   "lat": 49.6230234,
-   "lon": 6.184419399999999,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    16,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-9MMCdPE4mdJr1lozLkgL",
-   "name": "The Lobster considers",
-   "venue": "Théâtre National du Luxembourg (TNL)",
-   "lat": 49.606129,
-   "lon": 6.104515,
-   "from": "2026-10-04",
-   "to": "2026-10-04",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-mgs427YVgh7r9z2Ibt9D",
-   "name": "E-Banking",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-05",
-   "to": "2026-10-05",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
   },
   {
    "id": "echo-D0lPup18e3qoln4USuad",
@@ -2715,6 +2435,26 @@
    "free": true
   },
   {
+   "id": "echo-rQjSSmVXDXb8TNcgjrid",
+   "name": "Open Day: New Hybrid Exhibition by the ZLS",
+   "venue": "Ministère de la Culture - Grand-Duché de Luxembourg",
+   "lat": 49.608802,
+   "lon": 6.131675,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    9,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "other",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-SsSIhCa7x6fRhzpRs6YL",
    "name": "Knitting coffee at the Museum ",
    "venue": "Musée Draï Eechelen",
@@ -3011,6 +2751,26 @@
    "auto": true,
    "cat": "arts-scene",
    "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-2fUH6CgNLFXsh3WahVXN",
+   "name": "European Heritage Days: New Hybrid Exhibition by the ZLS",
+   "venue": "Ministère de la Culture - Grand-Duché de Luxembourg",
+   "lat": 49.608802,
+   "lon": 6.131675,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": "other",
    "views": 0,
    "free": true
   },
@@ -3455,7 +3215,7 @@
    "free": false
   },
   {
-   "id": "echo-BXaBB2KlACjYGurY5BYb",
+   "id": "echo-wJTl7JUtuBXFSpXLLkZZ",
    "name": "LE PORTEUR D'HISTOIRE",
    "venue": "Théâtre Le  10",
    "lat": 49.6230234,
@@ -3613,6 +3373,326 @@
    "venueCat": null,
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-TdYsCgWBRNdZcqU2HWTg",
+   "name": "Fête d’inauguration de l’INECC Luxembourg",
+   "venue": "INECC - Bonnevoie ",
+   "lat": 49.60288,
+   "lon": 6.1394411,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    12,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-6nocZP3wWDIkI5nKsI87",
+   "name": "AAPL - Open House",
+   "venue": "Locaux de l'AAPL",
+   "lat": 49.6053856,
+   "lon": 6.139383599999999,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    13,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-oXbYasPq71SbSzR3OyA8",
+   "name": " Luxembourg Ladies Tennis Masters 2026 ",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    14,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-pjR1MeSOSPcc9P1QStdB",
+   "name": "“Luxembourg, Old Quarters and Fortifications, World Heritage",
+   "venue": "Place Guillaume II",
+   "lat": 49.6106802,
+   "lon": 6.1311262,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-WU5ER2xYMzqqHdVLUI2p",
+   "name": "La Magie Karel Zeman (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-qXqY9yzGpWzgVQAHC1Ct",
+   "name": "Heritage and Migration: A Relationship Reinvented Every Day",
+   "venue": "Balade patrimoine et migrations",
+   "lat": 49.6070082,
+   "lon": 6.1277924,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-VE53UcCLPlEZx6Qpv8aN",
+   "name": "Cours de danse Boogie Rock ",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport-dance",
+   "venueCat": "other",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-TRVbnyLND4DNarAmm2Ic",
+   "name": "FAMU for Kids : One + One = Us (Cinema Paradiso)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-rAd99cQjOwCGkNQ55RyR",
+   "name": "Short Animated Films Marathon (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-dDmdRygCrvFZfhvR2MfM",
+   "name": "AMÈRES CONDOLÉANCES",
+   "venue": "Théâtre Le  10",
+   "lat": 49.6230234,
+   "lon": 6.184419399999999,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-MNrnMPQ4P2sczVp7HLOa",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-opera",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-YerRAmHz2DcIodjPEZcU",
+   "name": "Le Testament du docteur Cordelier (Dr. Jekyll & Mr. Hyde)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-74CD5Nl3dIlTS2xSBclq",
+   "name": "Hirnyk (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-H0qvSw9HzPnAhA8fv78l",
+   "name": "Cinédebate & Outdoor Event “Second Wind”",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-Ywx0GLxzcXdz3HXoZHcU",
+   "name": "Kinds of Kindness (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-zytoz5qxzOvbxY9igL1p",
+   "name": " Small Things (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
   },
   {
    "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
