@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05T10:32:52.409Z",
+ "updated": "2026-10-06T10:24:17.367Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,66 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-D0lPup18e3qoln4USuad",
-   "name": "Sans toit ni loi (Why We Love Cinema)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-05",
-   "to": "2026-10-05",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-KXyWNrwNVrALYAfoxbKG",
-   "name": "Social Dance with taster class at Rotondes",
-   "venue": "Buvette Rotondes",
-   "lat": 49.60065880000001,
-   "lon": 6.137488299999999,
-   "from": "2026-10-05",
-   "to": "2026-10-05",
-   "hours": [
-    19,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife-dance",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-7dZSKv6ZpPDdZ9HHCG52",
-   "name": "Rear Window (Trough the Lens)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-05",
-   "to": "2026-10-05",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
   },
   {
    "id": "echo-FWEIjfIcpE4cX7yDJaIw",
@@ -635,7 +575,7 @@
    "free": true
   },
   {
-   "id": "echo-G0z9IJaSlSLATtGGVY5K",
+   "id": "echo-rpfqSnqrN175N22MPh0B",
    "name": "HISTOFEST. History on Full Blast ",
    "venue": "Europa Experience",
    "lat": 49.6210707,
@@ -815,7 +755,7 @@
    "free": true
   },
   {
-   "id": "echo-W5JOvhGNu2I7pxPuFwjf",
+   "id": "echo-ZccwhhK2uFfgr8Cdz5ig",
    "name": "HISTOFEST. History on Full Blast ",
    "venue": "Europa Experience",
    "lat": 49.6210707,
@@ -955,7 +895,7 @@
    "free": true
   },
   {
-   "id": "echo-lWBcMgJKUg1v4tNGyvX4",
+   "id": "echo-QGCfC3tV1J8QJZY7myZl",
    "name": "HISTOFEST. History on Full Blast ",
    "venue": "Europa Experience",
    "lat": 49.6210707,
@@ -1795,6 +1735,26 @@
    "free": false
   },
   {
+   "id": "echo-HHhpdiPc66ReLm8m7vqH",
+   "name": "SAMIA OROSEMANE ",
+   "venue": "Carlitos Comedy Club",
+   "lat": 49.6014606,
+   "lon": 6.1343878,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-qFyhMkYzX8gV5SZqlpUu",
    "name": "The Eukrainian & debate on Ukraine with Jean Asselborn",
    "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
@@ -2595,6 +2555,26 @@
    "free": true
   },
   {
+   "id": "echo-TXA3u3D7DFWqtgDDMPF2",
+   "name": "Hanbok Workshop",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design-crafts",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-tlkXv4vUOjwJVFMD0Jb3",
    "name": "Local Citizens Panel",
    "venue": "Luxembourg-Kirchberg « Europa Expérience »  Bâtiment Konrad ",
@@ -2695,7 +2675,7 @@
    "free": false
   },
   {
-   "id": "echo-r1Ux7jmWGkdw0rRkWpdy",
+   "id": "echo-DF0hcYDKnFmkGsudfBHM",
    "name": "Unseasoned Chicken Breast",
    "venue": "Le Croque Bedaine",
    "lat": 49.62451,
@@ -2751,6 +2731,26 @@
    "auto": true,
    "cat": "arts-scene",
    "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-X3DoMMPYNEkumEhMso1g",
+   "name": "Hanbok Workshop",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-design-crafts",
+   "venueCat": "cultural-center",
    "views": 0,
    "free": true
   },
@@ -3375,7 +3375,7 @@
    "free": true
   },
   {
-   "id": "echo-TdYsCgWBRNdZcqU2HWTg",
+   "id": "echo-I66B4Wsti5HHV24H7tP0",
    "name": "Fête d’inauguration de l’INECC Luxembourg",
    "venue": "INECC - Bonnevoie ",
    "lat": 49.60288,
@@ -3693,6 +3693,146 @@
    "venueCat": null,
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-qCqWwx1ppdXi6Xc8r04H",
+   "name": "Only Beautiful Things to Look At (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-tEcED8061uLi1SXiG3t4",
+   "name": "L'armée des ombres. Introduction à un classique sur la Résis",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-mfNOu19uXeb57Wisc10O",
+   "name": "Conférence + L'Armée des ombres (Film & Politik)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-4YPFjflg4DZ5vJIROjqm",
+   "name": "Women's Event: Where Do I Belong? (film & debate)",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-IZTo3RwpMCWITyTyMb8s",
+   "name": "Social Dance with taster class at Come à la Maison",
+   "venue": "Come à la Maison",
+   "lat": 49.601715,
+   "lon": 6.119908,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nightlife-dance",
+   "venueCat": "restaurant",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-j07f40Zmxggci3B25bOR",
+   "name": "Shame And Money (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DbD8L4UJ4OCInLf4XIUQ",
+   "name": "Kleines 1x1 der digitalen Welt",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
   },
   {
    "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
