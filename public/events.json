@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T10:24:17.367Z",
+ "updated": "2026-10-07T10:20:58.861Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -273,246 +273,6 @@
    "radiusM": 800,
    "scale": "major",
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
-  },
-  {
-   "id": "echo-FWEIjfIcpE4cX7yDJaIw",
-   "name": "Coach de retraite bénévole ",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    9,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": null,
-   "views": 4,
-   "free": true
-  },
-  {
-   "id": "echo-CQKN0sVxOS6HLrae4aUM",
-   "name": "Smartphone 2",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-JMVipbFn3iBQd1jkxMlS",
-   "name": " Sous-Sols en tension ",
-   "venue": "Musée national d'histoire naturelle – Naturmusée",
-   "lat": 49.6097155,
-   "lon": 6.135622,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    17,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-UcthEHbtk1L6MQjW4nM1",
-   "name": "Virstellung vum KI-Kompass",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "science",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-jcvIVXf9jZAPWcg3fAUA",
-   "name": "My Darling Clementine (Great Restorations)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-RoMIEx9wVajNc8gnsndj",
-   "name": "Mardis Littéraires - Jemp Schuster",
-   "venue": "Cercle Cité - Auditorium Cité",
-   "lat": 49.6116227,
-   "lon": 6.130095,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-VCgJZXgp5f8j9gNUqMH9",
-   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
-   "venue": "Tiers-Lieu Bonnevoie",
-   "lat": 49.598646995,
-   "lon": 6.138618116,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    19,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "sport-other",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-dZqREZ3zXAumFyL72vAN",
-   "name": "La correspondance du couple Freud mise à nu",
-   "venue": "Institut Pierre Werner",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-literature",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-gjO40NymlxrpzA9GWJRk",
-   "name": "Theatre Open Session",
-   "venue": "55, avenue de la Liberté",
-   "lat": 49.6022598,
-   "lon": 6.132361400000001,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-ytqTmV9cDgZ6zwjL4qRH",
-   "name": "BOARD GAME NIGHTS at De Gudde Wëllen",
-   "venue": "De Gudde Wëllen Culture Club",
-   "lat": 49.6093076511473,
-   "lon": 6.133510387672515,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "other",
-   "venueCat": "bar",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-HiBblKR4A1DR0Hym2ejH",
-   "name": "Alps (Efthimis Filippou)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-fZ2rtRYDO7ZtWvZHQCA2",
-   "name": "Sascha Ley & Murat Öztürk",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-10-06",
-   "to": "2026-10-06",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
   },
   {
    "id": "echo-twjx03Zy4yir7a8TYaMC",
@@ -915,6 +675,26 @@
    "free": true
   },
   {
+   "id": "echo-rpIGdP58oivBvrGTPDnP",
+   "name": "Guided tour of the exhibition",
+   "venue": "Bibliothèque nationale du Luxembourg",
+   "lat": 49.6288111,
+   "lon": 6.1649861,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-PFspcpHBC3OTB6zKJmA8",
    "name": "The Truman Show (Ciné-Campus)",
    "venue": "Théâtre des Capucins",
@@ -933,6 +713,26 @@
    "venueCat": "theatre",
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-TEVYffvdbbqCc9aMi5eL",
+   "name": "Guided tour of the exhibition",
+   "venue": "Bibliothèque nationale du Luxembourg",
+   "lat": 49.6288111,
+   "lon": 6.1649861,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    17,
+    18
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": null,
+   "views": 0,
+   "free": true
   },
   {
    "id": "echo-xvK6eUNr4CQ2qYpg3NEY",
@@ -1155,6 +955,26 @@
    "free": false
   },
   {
+   "id": "echo-mgoB1x2epFItQ1AYa7pC",
+   "name": "The European Athletics Coaching Summit",
+   "venue": "Centre National Sportif & Culturel COQUE",
+   "lat": 49.623762,
+   "lon": 6.15394,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    9,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "business-events-international",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-UUUnVmuCcjEpD1UuMoTH",
    "name": "Audition Workshop",
    "venue": "TROIS C-L | Maison pour la danse",
@@ -1215,6 +1035,26 @@
    "free": true
   },
   {
+   "id": "echo-fkM5hP08iLKjrDB9lw3f",
+   "name": "Guided tour of the exhibition",
+   "venue": "Bibliothèque nationale du Luxembourg",
+   "lat": 49.6288111,
+   "lon": 6.1649861,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-xDrCgwfjcQLF2ZekySp3",
    "name": "Sátántangó (CinEast Festival 2026)",
    "venue": "Théâtre des Capucins",
@@ -1251,6 +1091,26 @@
    "auto": true,
    "cat": "other",
    "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-xcMy2z4ifaakWODYBZv3",
+   "name": "Guided tour of the exhibition",
+   "venue": "Bibliothèque nationale du Luxembourg",
+   "lat": 49.6288111,
+   "lon": 6.1649861,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": null,
    "views": 0,
    "free": true
   },
@@ -3695,6 +3555,46 @@
    "free": false
   },
   {
+   "id": "echo-1IQw0BgU3NUdHqzYUrrX",
+   "name": "Guided tour of the exhibition",
+   "venue": "Bibliothèque nationale du Luxembourg",
+   "lat": 49.6288111,
+   "lon": 6.1649861,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-nLZxZ1VeA3PpCXhhzq1K",
+   "name": "Guided tour of the exhibition",
+   "venue": "Bibliothèque nationale du Luxembourg",
+   "lat": 49.6288111,
+   "lon": 6.1649861,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    18,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-qCqWwx1ppdXi6Xc8r04H",
    "name": "Only Beautiful Things to Look At (CinEast Festival 2026)",
    "venue": "Cercle Cité - Auditorium Cité",
@@ -3833,6 +3733,246 @@
    "venueCat": "school",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-AaRU95soVH3225DOTyu2",
+   "name": "Skills in the AI Era",
+   "venue": " Forum Geesseknäppchen",
+   "lat": 49.6005117,
+   "lon": 6.1136285,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    14,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "science-innovation",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-TWdM9CmhMqSRu3fdAEW3",
+   "name": "Das politische Denken in der islamischen Welt | Teil 1",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "conferences",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-YxfqS1O180qWiktpYU28",
+   "name": "Ashes and Diamonds (Great Restorations)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-rzS235GdDO23JR2FJXLe",
+   "name": "Mardis Littéraires - Nadège Sanou",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-literature",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-qOiTB8rBavboFo4g7vD9",
+   "name": "🏃🏽LËTZ RUN FOR EQUALITY🏃🏿‍♂️",
+   "venue": "Tiers-Lieu Bonnevoie",
+   "lat": 49.598646995,
+   "lon": 6.138618116,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    19,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport-other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-IBfxl0U8GdaJXIO4Xv6i",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-MTZ3u69nBm6j07m5HYN7",
+   "name": "Feels Like Home & discussion",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-NkgQ3AMTonrNvodD4300",
+   "name": "Seven Methods of Killing Kylie Jenner",
+   "venue": "Théâtre du Centaure",
+   "lat": 49.611955,
+   "lon": 6.131995,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-yfaHpOFukm0dd5sE3We3",
+   "name": "Pit Dahm Group",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-GvbuTdUnjFyR2Za8LKJn",
+   "name": "The Conductor [feat. Pepol & the People] (CinEast Festival 2",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-iQYr61XWpWcVxtQr22Gi",
+   "name": "Internetführerschein",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-ERNF1waDUh2bfQD1IrdJ",
+   "name": "Start ins Internet",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": false
   },
   {
    "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
