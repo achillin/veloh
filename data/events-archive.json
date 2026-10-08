@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T10:20:58.865Z",
+ "updated": "2026-10-08T10:40:39.244Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -8846,6 +8846,26 @@
    "free": true
   },
   {
+   "id": "echo-h1OSKalfKoeDT9hTkh4k",
+   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-10-08",
+   "to": "2026-10-08",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nightlife-other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-h2Z0ryvSxT4RO3a1IteU",
    "name": "Madame de... (Max Ophüls)",
    "venue": "Théâtre des Capucins",
@@ -9442,6 +9462,26 @@
    "auto": true,
    "cat": "cinema",
    "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-FSj2BGM2HiRDgkSvUSEU",
+   "name": "Museum Night 2026",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": "museum",
    "views": 0,
    "free": false
   },
@@ -10544,6 +10584,26 @@
    "venueCat": null,
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-g2ZNzxfVG0IAmDf2fI63",
+   "name": "CHICKEN WINGS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-10-14",
+   "to": "2026-10-14",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "gastronomie-other",
+   "venueCat": "other",
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-oRnTMhQAKh0N40EHI7Nk",
@@ -12206,6 +12266,26 @@
    "free": false
   },
   {
+   "id": "echo-H5L4c2LqcKuKG83qHWgO",
+   "name": "Introduction à un classique sur la Résistance + L'Armée des ",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    18,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-IZTo3RwpMCWITyTyMb8s",
    "name": "Social Dance with taster class at Come à la Maison",
    "venue": "Come à la Maison",
@@ -12546,6 +12626,86 @@
    "free": true
   },
   {
+   "id": "echo-1RyuiPTRV5mlO2KwxTib",
+   "name": "Luxembourg Comedy Showcase in English - George Egg (UK)",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5AQEnTPoxXoW8bqhlT57",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-opera",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-CMWOXhOMPqaGgbV972nq",
+   "name": "Rosebush Pruning (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-CllARgnIDAcxMsvb0W0i",
+   "name": "CHICKEN WINGS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "gastronomie-other",
+   "venueCat": "other",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-ERNF1waDUh2bfQD1IrdJ",
    "name": "Start ins Internet",
    "venue": "ErwuesseBildung",
@@ -12562,6 +12722,106 @@
    "auto": true,
    "cat": "courses",
    "venueCat": "school",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-FRuRJrWQiP9Kf31hLFKd",
+   "name": "TABU THEMA – Diagnose: Systemfehler",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "health",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Q28vwF2pjfvl9KLFeDuy",
+   "name": " Dr. Jekyll and Mr. Hyde (1931)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-UvXcSROibr6p59MQMIeM",
+   "name": "Kirchberg Arboretum - Autumn colors, acorns and beechnuts",
+   "venue": "[object Object]",
+   "lat": 49.6293407,
+   "lon": 6.1609134,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nature",
+   "venueCat": "nature",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-ZTlEVoGvDaxq4Gdgv12L",
+   "name": "Un crime presque parfait",
+   "venue": "Institut Pierre Werner",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-literature",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-gboGyj4wp4nIOWOP7mdz",
+   "name": "Not Made for Politics & debate on Belarus with Sviatlana Tsi",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
    "views": 0,
    "free": false
   },
@@ -12584,6 +12844,106 @@
    "venueCat": "school",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-jFRkTYzPO2MPUonm1vqw",
+   "name": "If Pigeons Turned to Gold (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-pWeJ7CoZHrTXKRLvltxI",
+   "name": "Hunger Strike Breakfast (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-rbm8QZSEQT1solcGlZa7",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-7LuL8CEjlFoM2HPfMDVT",
+   "name": "Internetführerschein",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-rXaNmflw9naPfuqbgcse",
+   "name": "Start ins Internet",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": false
   }
  ]
 }

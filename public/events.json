@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T10:20:58.861Z",
+ "updated": "2026-10-08T10:40:39.240Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,186 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-twjx03Zy4yir7a8TYaMC",
-   "name": "Préparation à la retraite",
-   "venue": "Gero - Kompetenzzenter fir den Alter",
-   "lat": 49.5972234,
-   "lon": 6.1343843,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    12,
-    14
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-FwiNRvxiLCKuDGF5vFjP",
-   "name": "Smartphone 2",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-7hvtshR305GO7tgIfyNt",
-   "name": "Philo-Café",
-   "venue": "De Gudde Wëllen Culture Club",
-   "lat": 49.6093076511473,
-   "lon": 6.133510387672515,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    17,
-    19
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "conferences",
-   "venueCat": "bar",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-rpfqSnqrN175N22MPh0B",
-   "name": "HISTOFEST. History on Full Blast ",
-   "venue": "Europa Experience",
-   "lat": 49.6210707,
-   "lon": 6.1483338,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    17,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "expositions",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-tJNtVIRJ6CNm0ekTVqpl",
-   "name": "Robert Bronwasser",
-   "venue": "Rotondes",
-   "lat": 49.601386,
-   "lon": 6.136468,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    18,
-    20
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-design",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-efbX3IB1sFUnWHEDyYqt",
-   "name": "Bradley's BIG BRAIN PUB QUIZ",
-   "venue": "Carlitos Comedy Club",
-   "lat": 49.6014606,
-   "lon": 6.1343878,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife-afterwork",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-cjgbYeHgb0LFq9t0o62R",
-   "name": "Magellan (#CinémathèqueUnreleased)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-DWmN6dlHOUxArw951LkX",
-   "name": "The Lobster considers",
-   "venue": "Théâtre National du Luxembourg (TNL)",
-   "lat": 49.606129,
-   "lon": 6.104515,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-ZiL6dPnId6SV5kB3Ehhs",
-   "name": "Standup Comedy Openmic",
-   "venue": "Bar Grand’Place",
-   "lat": 49.610388,
-   "lon": 6.1321721,
-   "from": "2026-10-07",
-   "to": "2026-10-07",
-   "hours": [
-    20,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-comedy",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
    "id": "echo-qjIlT2ox0Y2QzanxiGoY",
    "name": "Smartphone 2",
    "venue": "ErwuesseBildung",
@@ -573,6 +393,26 @@
    "venueCat": "theatre",
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-h1OSKalfKoeDT9hTkh4k",
+   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-10-08",
+   "to": "2026-10-08",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nightlife-other",
+   "venueCat": null,
+   "views": 0,
+   "free": true
   },
   {
    "id": "echo-lvsZnWOrk2g2dFw29FOx",
@@ -1235,6 +1075,26 @@
    "free": false
   },
   {
+   "id": "echo-FSj2BGM2HiRDgkSvUSEU",
+   "name": "Museum Night 2026",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    17,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": "museum",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-SMjLRkex8XndcThfd5mU",
    "name": "HOW TO CATCH A CHEATER",
    "venue": "Le Croque Bedaine",
@@ -1853,6 +1713,26 @@
    "venueCat": "school",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-g2ZNzxfVG0IAmDf2fI63",
+   "name": "CHICKEN WINGS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-10-14",
+   "to": "2026-10-14",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "gastronomie-other",
+   "venueCat": "other",
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-PWmI2LqlurB9d6TZykRW",
@@ -3635,8 +3515,8 @@
    "free": true
   },
   {
-   "id": "echo-mfNOu19uXeb57Wisc10O",
-   "name": "Conférence + L'Armée des ombres (Film & Politik)",
+   "id": "echo-H5L4c2LqcKuKG83qHWgO",
+   "name": "Introduction à un classique sur la Résistance + L'Armée des ",
    "venue": "Théâtre des Capucins",
    "lat": 49.612623,
    "lon": 6.130586,
@@ -3973,6 +3853,286 @@
    "venueCat": "school",
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-CllARgnIDAcxMsvb0W0i",
+   "name": "CHICKEN WINGS",
+   "venue": "Brauerei - Big Beer Company",
+   "lat": 49.612662,
+   "lon": 6.142091,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    17,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "gastronomie-other",
+   "venueCat": "other",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-UvXcSROibr6p59MQMIeM",
+   "name": "Kirchberg Arboretum - Autumn colors, acorns and beechnuts",
+   "venue": "[object Object]",
+   "lat": 49.6293407,
+   "lon": 6.1609134,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "nature",
+   "venueCat": "nature",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-pWeJ7CoZHrTXKRLvltxI",
+   "name": "Hunger Strike Breakfast (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-FRuRJrWQiP9Kf31hLFKd",
+   "name": "TABU THEMA – Diagnose: Systemfehler",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "health",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Q28vwF2pjfvl9KLFeDuy",
+   "name": " Dr. Jekyll and Mr. Hyde (1931)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-ZTlEVoGvDaxq4Gdgv12L",
+   "name": "Un crime presque parfait",
+   "venue": "Institut Pierre Werner",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-literature",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5AQEnTPoxXoW8bqhlT57",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-opera",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-gboGyj4wp4nIOWOP7mdz",
+   "name": "Not Made for Politics & debate on Belarus with Sviatlana Tsi",
+   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
+   "lat": 49.610139,
+   "lon": 6.135987,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-rbm8QZSEQT1solcGlZa7",
+   "name": "Standup Comedy Openmic",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-1RyuiPTRV5mlO2KwxTib",
+   "name": "Luxembourg Comedy Showcase in English - George Egg (UK)",
+   "venue": "Caribou Karaoke",
+   "lat": 49.6129308,
+   "lon": 6.1292805,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-jFRkTYzPO2MPUonm1vqw",
+   "name": "If Pigeons Turned to Gold (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-CMWOXhOMPqaGgbV972nq",
+   "name": "Rosebush Pruning (Efthimis Filippou)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-rXaNmflw9naPfuqbgcse",
+   "name": "Start ins Internet",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-7LuL8CEjlFoM2HPfMDVT",
+   "name": "Internetführerschein",
+   "venue": "ErwuesseBildung",
+   "lat": 49.607776,
+   "lon": 6.122905,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    10,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "courses",
+   "venueCat": "school",
+   "views": 0,
+   "free": true
   },
   {
    "id": "winterlights-christmas-market-place-d-ar-2026-11-20",
