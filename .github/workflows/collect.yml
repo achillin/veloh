@@ -1,32 +1,69 @@
 # 1-minute-resolution collection despite GitHub's scheduling reality: cron
-# here fires every 1–3 hours in practice (GitHub heavily throttles scheduled
-# workflows), so each run that DOES start collects for ~3 hours — one
-# snapshot per minute, committing every 30 minutes. Meanwhile the next
-# scheduled run waits in the concurrency queue and takes over the moment
-# this one ends, so coverage chains with only the ~30 s job startup as gap.
-# The local collector (per-minute, gapless) remains the primary source; the
-# trainer de-duplicates overlapping minutes.
+# here fires every 1–7 hours in practice (GitHub heavily throttles scheduled
+# workflows), so a run that DOES start collects for ~3 hours — one snapshot
+# per minute, committing every 30 minutes — and then dispatches its own
+# successor, which starts within seconds: a relay that keeps collecting
+# around the clock without depending on cron. The schedule is only the
+# watchdog that restarts the relay if a link ever breaks (a runner dying, a
+# failed dispatch); a scheduled run that finds the relay alive just leaves.
+# The local collector (per-minute, gapless while the machine is on) remains
+# the second source; the trainer de-duplicates overlapping minutes.
 name: collect
 on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
 
-concurrency:
-  group: collect
-  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write # a run dispatches its successor
 
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 215
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Only one collector at a time
+        id: guard
+        run: |
+          # Any older run still queued or collecting? A relay successor gives its
+          # parent a few minutes to finish its last seconds; a watchdog
+          # (schedule) run leaves at once — the relay is alive, nothing to do.
+          # Two relays must never run side by side: they would double the API
+          # load and the data files.
+          older() {
+            gh run list -R "$GITHUB_REPOSITORY" --workflow=collect.yml --limit 30 \
+              --json databaseId,status \
+              -q "[.[] | select((.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\" or .status == \"requested\") and .databaseId < $GITHUB_RUN_ID)] | length"
+          }
+          for attempt in $(seq 1 20); do
+            n=$(older || echo 0)
+            if [ "${n:-0}" = "0" ]; then
+              echo "proceed=yes" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+              echo "a collector is already running — the relay is alive"
+              echo "proceed=no" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "waiting for the predecessor to finish ($n still active)…"
+            sleep 15
+          done
+          echo "predecessor still running after 5 min — leaving the relay to it"
+          echo "proceed=no" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v5
+        if: steps.guard.outputs.proceed == 'yes'
+      - uses: actions/setup-node@v5
+        if: steps.guard.outputs.proceed == 'yes'
         with:
           node-version: 24
+
       - name: Collect for ~3 h, one snapshot per minute, committing every 30 min
+        if: steps.guard.outputs.proceed == 'yes'
         env:
           # Optional richer fields from the official JCDecaux API:
           # add a repo secret JCDECAUX_API_KEY (free key from developer.jcdecaux.com)
@@ -57,3 +94,18 @@ jobs:
               done
             fi
           done
+
+      - name: Hand over to the next run
+        # not after a cancellation (the platform is tearing us down) and not
+        # while another collector is active — that one carries the relay on
+        if: steps.guard.outputs.proceed == 'yes' && !cancelled()
+        run: |
+          active=$(gh run list -R "$GITHUB_REPOSITORY" --workflow=collect.yml --limit 30 \
+            --json databaseId,status \
+            -q "[.[] | select((.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\" or .status == \"requested\") and .databaseId != $GITHUB_RUN_ID)] | length" || echo 0)
+          if [ "${active:-0}" != "0" ]; then
+            echo "another collector is active — not dispatching a successor"
+            exit 0
+          fi
+          gh workflow run collect.yml -R "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"
+          echo "successor dispatched"
