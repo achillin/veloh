@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T10:40:39.240Z",
+ "updated": "2026-10-09T10:39:18.213Z",
  "events": [
   {
    "id": "luxembourg-city-film-festival-2026-03-05",
@@ -275,246 +275,6 @@
    "source": "https://www.luxembourg-city.com/en/what-s-on/event/braderie"
   },
   {
-   "id": "echo-qjIlT2ox0Y2QzanxiGoY",
-   "name": "Smartphone 2",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    14,
-    16
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-h2Z0ryvSxT4RO3a1IteU",
-   "name": "Madame de... (Max Ophüls)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-fyzBEMzF4PCXmmOMmDZU",
-   "name": "\"Crossroads\" exhibition opening",
-   "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
-   "lat": 49.610139,
-   "lon": 6.135987,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    18,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-design",
-   "venueCat": "cultural-center",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-ZccwhhK2uFfgr8Cdz5ig",
-   "name": "HISTOFEST. History on Full Blast ",
-   "venue": "Europa Experience",
-   "lat": 49.6210707,
-   "lon": 6.1483338,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    18,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "expositions",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-dkH9t48QuegamaIOA4Wn",
-   "name": "Theatre Open Session",
-   "venue": "55, avenue de la Liberté",
-   "lat": 49.6022598,
-   "lon": 6.132361400000001,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene",
-   "venueCat": null,
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-I2Bt43KKqECzJkDOqsyQ",
-   "name": "Improv Jam",
-   "venue": "Café-Théâtre \"Rocas\"",
-   "lat": 49.613273,
-   "lon": 6.129617,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    19,
-    21
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-theatre",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-h1OSKalfKoeDT9hTkh4k",
-   "name": "꧁꧂ Pub quiz at Caribou ꧁꧂",
-   "venue": "Caribou Karaoke",
-   "lat": 49.6129308,
-   "lon": 6.1292805,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    19,
-    22
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "nightlife-other",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-lvsZnWOrk2g2dFw29FOx",
-   "name": "Eyes of Laura Mars (Trough the Lens)",
-   "venue": "Théâtre des Capucins",
-   "lat": 49.612623,
-   "lon": 6.130586,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "cinema",
-   "venueCat": "theatre",
-   "views": 0,
-   "free": false
-  },
-  {
-   "id": "echo-EaSsq7d8pCkTGvrUggzR",
-   "name": "Empty Arms Blues Band",
-   "venue": "Liquid Bar",
-   "lat": 49.60904350000001,
-   "lon": 6.1357594,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    20,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "concerts",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-9tga85yIZou4j2FsjVxu",
-   "name": "Comedy Open Mic",
-   "venue": "Updown Bar ",
-   "lat": 49.608285,
-   "lon": 6.1349,
-   "from": "2026-10-08",
-   "to": "2026-10-08",
-   "hours": [
-    21,
-    23
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "arts-scene-comedy",
-   "venueCat": "bar",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-QuRTQmkztBx207Zuyi3x",
-   "name": "E-Banking",
-   "venue": "ErwuesseBildung",
-   "lat": 49.607776,
-   "lon": 6.122905,
-   "from": "2026-10-09",
-   "to": "2026-10-09",
-   "hours": [
-    10,
-    12
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "courses",
-   "venueCat": "school",
-   "views": 0,
-   "free": true
-  },
-  {
-   "id": "echo-QGCfC3tV1J8QJZY7myZl",
-   "name": "HISTOFEST. History on Full Blast ",
-   "venue": "Europa Experience",
-   "lat": 49.6210707,
-   "lon": 6.1483338,
-   "from": "2026-10-09",
-   "to": "2026-10-09",
-   "hours": [
-    11,
-    13
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "expositions",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
    "id": "echo-rpIGdP58oivBvrGTPDnP",
    "name": "Guided tour of the exhibition",
    "venue": "Bibliothèque nationale du Luxembourg",
@@ -551,6 +311,26 @@
    "auto": true,
    "cat": "cinema",
    "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-zzuw2wuFo5ubtqlAWMpc",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
    "views": 0,
    "free": false
   },
@@ -651,6 +431,26 @@
    "auto": true,
    "cat": "arts-scene-theatre",
    "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-QpHBXDrCUTDJdlPm841O",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-afrobeats",
+   "venueCat": "theatre",
    "views": 0,
    "free": false
   },
@@ -795,6 +595,26 @@
    "free": false
   },
   {
+   "id": "echo-ECW5kmrzFi5ASeqshdnR",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-09",
+   "to": "2026-10-09",
+   "hours": [
+    21,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-blues",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-mgoB1x2epFItQ1AYa7pC",
    "name": "The European Athletics Coaching Summit",
    "venue": "Centre National Sportif & Culturel COQUE",
@@ -911,6 +731,26 @@
    "auto": true,
    "cat": "cinema",
    "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-TUkc7n3TM05a0TfUvmgw",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
    "views": 0,
    "free": false
   },
@@ -1035,6 +875,46 @@
    "free": false
   },
   {
+   "id": "echo-vmqcY8Avf8vTbwe63JOI",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-NNUBRC7O73i7sM0JXPhg",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-other",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-dPs28JnoCpSoh6fZj9Tx",
    "name": "Musical lecture on Women Musicians in 19th century Luxembour",
    "venue": "Cercle Cité - Salon Bleu",
@@ -1091,6 +971,26 @@
    "auto": true,
    "cat": "expositions-art",
    "venueCat": "museum",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-1wLlolgcqYturzo1g8bf",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-afrobeats",
+   "venueCat": "theatre",
    "views": 0,
    "free": false
   },
@@ -1195,6 +1095,26 @@
    "free": false
   },
   {
+   "id": "echo-9QIZ41j70hmPJ2n6uan0",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-10",
+   "to": "2026-10-10",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-afrobeats",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-62FjvNbJqvsYzNjrPRhI",
    "name": "Event",
    "venue": "Atmos Bar & Restaurant",
@@ -1275,6 +1195,26 @@
    "free": true
   },
   {
+   "id": "echo-UJaC2DknQFhm8ggpxVDL",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    11,
+    12
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-EOUN39uDP9OOhRbJwxzy",
    "name": "ShekBand",
    "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
@@ -1295,6 +1235,26 @@
    "free": false
   },
   {
+   "id": "echo-TDpyVVHb8W6cwvEGjqzL",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-TAI9seg1fnWWUfg2f7iZ",
    "name": "Workshop : Principles of contact improvisation ",
    "venue": "Banannefabrik ",
@@ -1311,6 +1271,26 @@
    "auto": true,
    "cat": "courses-dance",
    "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-fnV7RaJgcexcrtQLKcZl",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-11",
+   "to": "2026-10-11",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
    "views": 0,
    "free": false
   },
@@ -1555,6 +1535,46 @@
    "free": false
   },
   {
+   "id": "echo-uhCKxKKl3OEAlu949Imq",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    12,
+    14
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-HRjl0SsUirofccNSuhdm",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-ZUMFd6l4KFL55s9gyzaI",
    "name": "Internet als Ort der Begegnung",
    "venue": "ErwuesseBildung",
@@ -1675,6 +1695,26 @@
    "free": false
   },
   {
+   "id": "echo-GGzeAVFDveidjjMvvXGi",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-13",
+   "to": "2026-10-13",
+   "hours": [
+    20,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-86nwOnb9ZNjTn22vOhlF",
    "name": "Robert Ivanov Group ",
    "venue": "Liquid Bar",
@@ -1773,6 +1813,26 @@
    "venueCat": "school",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-FwuhmByuU33kSY03i77W",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-14",
+   "to": "2026-10-14",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-indie",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-D82NnagGOFqroJEUnA8s",
@@ -2035,6 +2095,26 @@
    "free": false
   },
   {
+   "id": "echo-0HCT9FzEglK0fhPZ4bZI",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-15",
+   "to": "2026-10-15",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-Xnp6OziXkEeTsQHwlKTm",
    "name": "Event",
    "venue": "Grand Théâtre de la Ville de Luxembourg",
@@ -2235,26 +2315,6 @@
    "free": true
   },
   {
-   "id": "echo-c41cvUUc6zXw4LUFbbwv",
-   "name": "At the Heart of the State: Discover emblematic institutional",
-   "venue": "Chambre des Députés et Palais grand-ducal ",
-   "lat": 49.61059969999999,
-   "lon": 6.1331276,
-   "from": "2026-10-16",
-   "to": "2026-10-16",
-   "hours": [
-    10,
-    17
-   ],
-   "radiusM": 400,
-   "scale": "minor",
-   "auto": true,
-   "cat": "expositions-art",
-   "venueCat": null,
-   "views": 0,
-   "free": true
-  },
-  {
    "id": "echo-xU3M6d5wUuWCq5TKNCbV",
    "name": "Banannefabrik: from warehouse to creation, a living heritage",
    "venue": "Banannefabrik ",
@@ -2313,6 +2373,46 @@
    "venueCat": "cultural-center",
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-MrZ14FVyQs2QI41zYxqo",
+   "name": "UNESCO Promenade - Free guided tour",
+   "venue": "Place Guillaume II",
+   "lat": 49.6106802,
+   "lon": 6.1311262,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-0UM4FJsRqZPMmnuWpQtz",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-tlkXv4vUOjwJVFMD0Jb3",
@@ -2415,6 +2515,26 @@
    "free": false
   },
   {
+   "id": "echo-A9SXCs8msZhk5zcUY2kj",
+   "name": "Jazz Break Party",
+   "venue": "Bar Grand’Place",
+   "lat": 49.610388,
+   "lon": 6.1321721,
+   "from": "2026-10-16",
+   "to": "2026-10-16",
+   "hours": [
+    19,
+    24
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "sport-dance",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-DF0hcYDKnFmkGsudfBHM",
    "name": "Unseasoned Chicken Breast",
    "venue": "Le Croque Bedaine",
@@ -2515,6 +2635,26 @@
    "free": true
   },
   {
+   "id": "echo-hnbrEnMz5SEjjOKLePrA",
+   "name": "At the Heart of the State: Discover emblematic institutional",
+   "venue": "Chambre des Députés et Palais grand-ducal ",
+   "lat": 49.61059969999999,
+   "lon": 6.1331276,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    10,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-A38nQOXrrUwlWY4NM1nT",
    "name": "Banannefabrik: from warehouse to creation, a living heritage",
    "venue": "Banannefabrik ",
@@ -2591,6 +2731,26 @@
    "auto": true,
    "cat": "gastronomie",
    "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-YZTf5hoVMrzhdcucJJ0W",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
    "views": 0,
    "free": false
   },
@@ -2673,6 +2833,46 @@
    "venueCat": null,
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-4N6PDXpZIpZQq6hHUDgq",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-cZPuNdkjkEIdFCGvKHkY",
+   "name": "UNESCO Promenade - Free guided tour",
+   "venue": "Place Guillaume II",
+   "lat": 49.6106802,
+   "lon": 6.1311262,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": null,
+   "views": 0,
+   "free": true
   },
   {
    "id": "echo-Ts1PktCoD4uXA2cwFT6l",
@@ -2915,6 +3115,46 @@
    "free": false
   },
   {
+   "id": "echo-zIWD7r93J5W9937VfAKw",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-miN9yjTWdVGNvqftB35j",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-alternative",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-bUcelOeNai72npioCBEN",
    "name": "Sein oder Nichtsein",
    "venue": "TNL Atelier",
@@ -3035,7 +3275,7 @@
    "free": false
   },
   {
-   "id": "echo-zjPg53exFYaatTmIaxLa",
+   "id": "echo-D7e4tMf6oFCk2ixUHiAh",
    "name": "Second Chance",
    "venue": "Schluechthaus",
    "lat": 49.60094781333426,
@@ -3115,6 +3355,26 @@
    "free": true
   },
   {
+   "id": "echo-gUUd9XBpH1xllRrvZwfw",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-I66B4Wsti5HHV24H7tP0",
    "name": "Fête d’inauguration de l’INECC Luxembourg",
    "venue": "INECC - Bonnevoie ",
@@ -3171,6 +3431,26 @@
    "auto": true,
    "cat": "sport",
    "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-xcEJXsdkcJMHO5nYgbk9",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
    "views": 0,
    "free": false
   },
@@ -3575,6 +3855,26 @@
    "free": true
   },
   {
+   "id": "echo-K7oOiJcYz79jYt3W9g6v",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-19",
+   "to": "2026-10-19",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-j07f40Zmxggci3B25bOR",
    "name": "Shame And Money (CinEast Festival 2026)",
    "venue": "Cercle Cité - Auditorium Cité",
@@ -3775,6 +4075,26 @@
    "free": false
   },
   {
+   "id": "echo-08K5wKWOqsKaxcW8QftU",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-20",
+   "to": "2026-10-20",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-blues",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-yfaHpOFukm0dd5sE3We3",
    "name": "Pit Dahm Group",
    "venue": "Liquid Bar",
@@ -3853,6 +4173,26 @@
    "venueCat": "school",
    "views": 0,
    "free": false
+  },
+  {
+   "id": "echo-VR6ycBVLjfusgZnhVLMN",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    12,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-other",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": true
   },
   {
    "id": "echo-CllARgnIDAcxMsvb0W0i",
@@ -3971,6 +4311,26 @@
    "auto": true,
    "cat": "arts-scene-literature",
    "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-HnQYb8wM6lzfD7SuFLhS",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-21",
+   "to": "2026-10-21",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-classic",
+   "venueCat": "theatre",
    "views": 0,
    "free": false
   },
@@ -4131,6 +4491,226 @@
    "auto": true,
    "cat": "courses",
    "venueCat": "school",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-Q1jIp2R5P0woVLNeFKOb",
+   "name": "Sherlock Jr. (15 ans Kino mat Häerz)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-R350JDBQpgVqrIFcYWQV",
+   "name": "CeCiL's Screenings - I am … among the others ",
+   "venue": "Cercle  Cité",
+   "lat": 49.6113131,
+   "lon": 6.1302011,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-J5IwtI2NMMeZMlPjFRP8",
+   "name": "Lola Montès (Max Ophüls)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-5pGFIhUqfhzqfXaRFWJP",
+   "name": "Mommy Blue (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    18,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-EmoVfY4DITFsu0n0nSx2",
+   "name": "Theatre Open Session",
+   "venue": "55, avenue de la Liberté",
+   "lat": 49.6022598,
+   "lon": 6.132361400000001,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-dhRDKglCen5r1J1Uxdf0",
+   "name": "Event",
+   "venue": "Grand Théâtre de la Ville de Luxembourg",
+   "lat": 49.617369,
+   "lon": 6.127164,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-dance",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-JJVUoRm3VzMsfS66lbzn",
+   "name": "Sein oder Nichtsein",
+   "venue": "TNL Atelier",
+   "lat": 49.606735,
+   "lon": 6.106988,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    19,
+    21
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-3nx1Msen2FrinyzjA5Mo",
+   "name": "17 (CineEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-6EG8KcSMTO39yE2uqYvR",
+   "name": "Pascal Karenbo & Les Garagistes",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-K2nuYvMyRmcgJDlwBAaJ",
+   "name": "Blow-Up (Through the Lens)",
+   "venue": "Cinémathèque de la Ville de Luxembourg",
+   "lat": 49.613153,
+   "lon": 6.13087,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    20,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "cinema",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-ctWZ9GWB8F5xQRE2BHhU",
+   "name": "Comedy Open Mic",
+   "venue": "Updown Bar ",
+   "lat": 49.608285,
+   "lon": 6.1349,
+   "from": "2026-10-22",
+   "to": "2026-10-22",
+   "hours": [
+    21,
+    23
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-comedy",
+   "venueCat": "bar",
    "views": 0,
    "free": true
   },
