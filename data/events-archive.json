@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T10:05:30.276Z",
+ "updated": "2026-10-12T10:56:36.806Z",
  "events": [
   {
    "id": "echo-Fc1fwauHjE8ptFBQi1si",
@@ -10986,6 +10986,26 @@
    "free": true
   },
   {
+   "id": "echo-fDF14nFG8XsS1Y7q8Ns8",
+   "name": "Curatorial Tour - Kaihō (EN)",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-10-14",
+   "to": "2026-10-14",
+   "hours": [
+    18,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": "museum",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-g2ZNzxfVG0IAmDf2fI63",
    "name": "CHICKEN WINGS",
    "venue": "Brauerei - Big Beer Company",
@@ -11886,6 +11906,26 @@
    "free": true
   },
   {
+   "id": "echo-9WvegIzDkjUPrAQeYVnB",
+   "name": "Eiko Otake: A Body in Fukushima",
+   "venue": "Mudam Luxembourg – Musée d'Art Moderne Grand-Duc Jean",
+   "lat": 49.617095,
+   "lon": 6.140337,
+   "from": "2026-10-17",
+   "to": "2026-10-17",
+   "hours": [
+    14,
+    15
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-art",
+   "venueCat": "museum",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-A38nQOXrrUwlWY4NM1nT",
    "name": "Banannefabrik: from warehouse to creation, a living heritage",
    "venue": "Banannefabrik ",
@@ -12586,6 +12626,26 @@
    "free": true
   },
   {
+   "id": "echo-DPUS5JlqsXMJZIBkplEG",
+   "name": "La Magie Karel Zeman (Cinema Paradiso meets CinEast Festival",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-H0qvSw9HzPnAhA8fv78l",
    "name": "Cinédebate & Outdoor Event “Second Wind”",
    "venue": "neimënster - Centre Culturel de Rencontre Abbaye de Neumünst",
@@ -12684,6 +12744,26 @@
    "venueCat": null,
    "views": 0,
    "free": true
+  },
+  {
+   "id": "echo-Pn9in4O8ewcaub3LbZ54",
+   "name": "FAMU for Kids : One + One = Us (Cinema Paradiso meets CinEas",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-18",
+   "to": "2026-10-18",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
   },
   {
    "id": "echo-TRVbnyLND4DNarAmm2Ic",
@@ -14846,6 +14926,26 @@
    "free": false
   },
   {
+   "id": "echo-kBZaTw2gOwGYIcuEZSSW",
+   "name": "The gloomy past of the fortress",
+   "venue": "Place Guillaume II - De Knuedler",
+   "lat": 49.610958,
+   "lon": 6.131671,
+   "from": "2026-10-24",
+   "to": "2026-10-24",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-mfk4iEkSKW3m3GZPJtRp",
    "name": "Sein oder Nichtsein",
    "venue": "TNL Atelier",
@@ -14966,6 +15066,26 @@
    "free": false
   },
   {
+   "id": "echo-0n4yDKSqwTBrT9FFrlJX",
+   "name": "Répétition du film ayant remporté le Grand Prix du festival ",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-0ulqnOKg9OUs8AjVy8Yy",
    "name": "CONCERT ACTART : JEUX DE MAINS - JEUX DE MOTS",
    "venue": "Conservatoire de la Ville de Luxembourg",
@@ -15006,6 +15126,146 @@
    "free": false
   },
   {
+   "id": "echo-7R6CjofSuRo6cX4Y0ebv",
+   "name": "Bertha Guadalupe Perez & Gautier Laurent",
+   "venue": "Liquid Bar",
+   "lat": 49.60904350000001,
+   "lon": 6.1357594,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": null,
+   "views": 0,
+   "free": true
+  },
+  {
+   "id": "echo-88oput5t1A5nT2Vb3TdD",
+   "name": "She & She",
+   "venue": "Centre Culturel Altrimenti",
+   "lat": 49.6077568,
+   "lon": 6.1231002,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    18,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "cultural-center",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DGD6SlAAstfxUQXuRgB9",
+   "name": "To Hold A Mountain (CinEast Festival 2026)",
+   "venue": "Cercle Cité - Auditorium Cité",
+   "lat": 49.6116227,
+   "lon": 6.130095,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": null,
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-DwwxcMLCbJ2xjLr6BAIb",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    11,
+    13
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-J2nZhchjILSFxtVaBhDa",
+   "name": "M*A*S*H (Comedy Classics)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    19,
+    22
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-O3Px5MrYmDwHdkYQgxiE",
+   "name": "La Magie Karel Zeman (Cinema Paradiso meets CinEast)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    16,
+    17
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-P42EbTcFDOkzWhloHbX0",
+   "name": "CONCERT DES LAURÉATS AVEC L'OCL",
+   "venue": "Forum Campus Geesseknäppchen",
+   "lat": 49.600555,
+   "lon": 6.113614,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts",
+   "venueCat": "other",
+   "views": 0,
+   "free": true
+  },
+  {
    "id": "echo-SndF2k7ijL283vJKWcSl",
    "name": "Krixkrax & Bill!",
    "venue": "ErwuesseBildung",
@@ -15026,6 +15286,46 @@
    "free": true
   },
   {
+   "id": "echo-U0uMBEUrz0ZxVa3VcWKC",
+   "name": "La Pianiste (Why We Love Cinema)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    17,
+    20
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-ULanzF8IHSeOyJK78eVA",
+   "name": "City Promenade",
+   "venue": "Place Guillaume II - De Knuedler",
+   "lat": 49.610958,
+   "lon": 6.131671,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
    "id": "echo-Uqbcyv9ppCB0P0d6Nrnm",
    "name": "Special Workshop by KINETIC/ORCHESTRA",
    "venue": "TROIS C-L | Maison pour la danse",
@@ -15041,6 +15341,66 @@
    "scale": "minor",
    "auto": true,
    "cat": "arts-scene",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-WppmOyzcpE0qKYgpAviB",
+   "name": "Bock Casemates - Guided Tour",
+   "venue": "Casemates du Bock",
+   "lat": 49.611981,
+   "lon": 6.1384523,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    14,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "expositions-history",
+   "venueCat": "nature",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-cLI6cSFrwuqjSN0ycQBD",
+   "name": "Sein oder Nichtsein",
+   "venue": "TNL Atelier",
+   "lat": 49.606735,
+   "lon": 6.106988,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    17,
+    19
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "arts-scene-theatre",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-iOyMxZpLTMQ0q97IRDEl",
+   "name": "Event",
+   "venue": "Philharmonie Luxembourg",
+   "lat": 49.618602,
+   "lon": 6.142702,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "concerts-other",
    "venueCat": "theatre",
    "views": 0,
    "free": false
@@ -15081,6 +15441,26 @@
    "scale": "minor",
    "auto": true,
    "cat": "concerts-other",
+   "venueCat": "theatre",
+   "views": 0,
+   "free": false
+  },
+  {
+   "id": "echo-v5aTbd1RmG8l7NkvcmHk",
+   "name": "Les Mésaventures de Joe (Cinema Paradiso meets CinEast)",
+   "venue": "Théâtre des Capucins",
+   "lat": 49.612623,
+   "lon": 6.130586,
+   "from": "2026-10-25",
+   "to": "2026-10-25",
+   "hours": [
+    15,
+    16
+   ],
+   "radiusM": 400,
+   "scale": "minor",
+   "auto": true,
+   "cat": "cinema",
    "venueCat": "theatre",
    "views": 0,
    "free": false
